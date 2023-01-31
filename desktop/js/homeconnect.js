@@ -126,21 +126,23 @@ function addCmdToTable(_cmd) {
     _cmd.configuration = {};
   }
   var tr = '<tr class="cmd" data-cmd_id="' + init(_cmd.id) + '">'
-  tr += '<td class="hidden-xs">'
-  tr += '    <span class="cmdAttr" data-l1key="id" style="display:none;"></span>'
+  tr += '<td class="hidden-xs" style="display:none">'
+  tr += '<span class="cmdAttr" data-l1key="id" ></span>'
+  tr += '</td>'
+  tr += '<td>'
   tr += '    <div class="input-group">'
   tr += '        <input class="cmdAttr form-control input-sm roundedLeft" data-l1key="name" placeholder="{{Nom de la commande}}">'
   tr += '        <span class="input-group-btn"><a class="cmdAction btn btn-sm btn-default" data-l1key="chooseIcon" title="{{Choisir une icône}}"><i class="fas fa-icons"></i></a></span>'
-  tr += '        <span class="cmdAttr input-group-addon roundedRight" data-l1key="display" data-l2key="icon" style="font-size:19px;padding:0 5px 0 0!important;background:var(--btn-default-color) !important";width:2%;></span>'
+  tr += '        <span class="cmdAttr input-group-addon roundedRight" data-l1key="display" data-l2key="icon" style="font-size:19px;padding:0 5px 0 0!important;"></span>'
   tr += '    </div>'
-  tr += '    <select class="cmdAttr form-control input-sm" data-l1key="value" style="display:none;margin-top:5px;max-width:50%" title="{{Commande info liée}}">'
+  tr += '    <select class="cmdAttr form-control input-sm" data-l1key="value" style="display:none;margin-top:5px;max-width:50%;float:right;" title="{{Commande info liée}}">'
   tr += '        <option value="">{{Aucune}}</option>'
   tr += '    </select>'
   tr += '</td>'
 
-  tr += '<td>';
-  tr += '<input class="cmdAttr form-control type input-sm" data-l1key="type" value="action" disabled style="display:inline-block;margin-bottom:5px;max-width:120px;" />';
-  tr += '<input class="cmdAttr form-control type input-sm" data-l1key="subType" value="action" disabled style="display:inline-block;margin-bottom:5px;max-width:120px;" />';
+  tr += '<td style="min-width:120px;width:140px;">';
+  tr += '    <span class="type" type="' + init(_cmd.type) + '" >' + jeedom.cmd.availableType() + '</span>';
+  tr += '    <span class="subType" subType="' + init(_cmd.subType) + '"></span>';
   tr += '</td>';
 
   tr += '<td>'

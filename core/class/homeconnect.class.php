@@ -47,40 +47,40 @@ class homeconnect extends eqLogic {
 	 */
         $return = $_value;
         $table = new homeconnect_capabilities();
-		$tableData = $table->appliancesCapabilities;
-		if(array_key_exists($_key, $tableData)){
-		    if(array_key_exists('enum', $tableData[$_key])){
-		        if(array_key_exists($_value, $tableData[$_key]['enum'])){
-                    $return = $tableData[$_key]['enum'][$_value]['name'];
-                }
-            } elseif (array_key_exists($_value, $tableData)) {
-                $return = $tableData[$_value]['name'];
-            } else {
-			    log::add(__CLASS__,'debug',__FUNCTION__ . ' La clé ' . $_key . ' existe, mais valeur ' . $_value . ' est introuvable');
-            }
-		} else {
-		    log::add(__CLASS__,'debug',__FUNCTION__ . ' La clé ' . $_key . ' est introuvable');
-        }
-        return $return;
+				$tableData = $table->appliancesCapabilities;
+				if(array_key_exists($_key, $tableData)){
+				    if(array_key_exists('enum', $tableData[$_key])){
+				        if(array_key_exists($_value, $tableData[$_key]['enum'])){
+		                $return = $tableData[$_key]['enum'][$_value]['name'];
+		            }
+		        } elseif (array_key_exists($_value, $tableData)) {
+		            $return = $tableData[$_value]['name'];
+		        } else {
+					      log::add(__CLASS__,'debug',__FUNCTION__ . ' La clé ' . $_key . ' existe, mais valeur ' . $_value . ' est introuvable');
+		        }
+		    } else {
+				    log::add(__CLASS__,'debug',__FUNCTION__ . ' La clé ' . $_key . ' est introuvable');
+		    }
+	      return $return;
     }
 
-	public static function getCmdDetailTranslation($_key, $_detail) {
-		/**
-		* Récupère la traduction du nom d'une commande
-		*
-		* @param	$_key		string		Clé de la commande
-		* @return	$return		string		Valeur traduite de la clé
-		*/
-        $table = new homeconnect_capabilities();
-		$tableData = $table->appliancesCapabilities;
-        if (isset($tableData[$_key])) {
-			return $tableData[$_key][$_detail];
-		} else {
-			return $_key;
-			log::add(__CLASS__,'debug',__FUNCTION__ . ' La clé ' . $_key . ' est introuvable');
+		public static function getCmdDetailTranslation($_key, $_detail) {
+			/**
+			* Récupère la traduction du nom d'une commande
+			*
+			* @param	$_key		string		Clé de la commande
+			* @return	$return		string		Valeur traduite de la clé
+			*/
+	        $table = new homeconnect_capabilities();
+			$tableData = $table->appliancesCapabilities;
+	        if (isset($tableData[$_key])) {
+				return $tableData[$_key][$_detail];
+			} else {
+				return $_key;
+				log::add(__CLASS__,'debug',__FUNCTION__ . ' La clé ' . $_key . ' est introuvable');
+			}
+			return false;
 		}
-		return false;
-	}
 
     public static function deamon_info() {
         $return = array();
@@ -351,7 +351,7 @@ class homeconnect extends eqLogic {
 		@session_start();
 		$authorizationUrl = self::baseUrl() . self::API_AUTH_URL;
 		$clientId = config::byKey('client_id','homeconnect','',true);
-		$redirectUri = urlencode(network::getNetworkAccess('external') . '/plugins/homeconnect/core/php/callback.php?apikey=' . jeedom::getApiKey('homeconnect'));
+		$redirectUri = urlencode(trim(network::getNetworkAccess('external')) . '/plugins/homeconnect/core/php/callback.php?apikey=' . jeedom::getApiKey('homeconnect'));
 		if (config::byKey('demo_mode','homeconnect')) {
 			$parameters['scope'] = implode(' ', ['IdentifyAppliance', 'Monitor', 'Settings',
 				'CoffeeMaker-Control', 'Dishwasher-Control', 'Dryer-Control', 'Washer-Control']);
@@ -359,7 +359,7 @@ class homeconnect extends eqLogic {
 			$parameters['client_id'] = config::byKey('demo_client_id','homeconnect','',true);
 		} else {
 			$parameters['scope'] = implode(' ', ['IdentifyAppliance', 'Monitor', 'Settings', 'Control']);
-			$parameters['redirect_uri'] = network::getNetworkAccess('external') . '/plugins/homeconnect/core/php/callback.php?apikey=' . jeedom::getApiKey('homeconnect');
+			$parameters['redirect_uri'] = trim(network::getNetworkAccess('external')) . '/plugins/homeconnect/core/php/callback.php?apikey=' . jeedom::getApiKey('homeconnect');
 			$parameters['client_id'] = config::byKey('client_id','homeconnect','',true);
 		}
 		$parameters['response_type'] = 'code';
@@ -460,7 +460,7 @@ class homeconnect extends eqLogic {
 		if (!config::byKey('demo_mode','homeconnect')) {
 			$parameters['client_secret'] = config::byKey('client_secret','homeconnect','',true);
 		}
-		$parameters['redirect_uri'] = network::getNetworkAccess('external') . '/plugins/homeconnect/core/php/callback.php?apikey=' . jeedom::getApiKey('homeconnect');
+		$parameters['redirect_uri'] = trim(network::getNetworkAccess('external')) . '/plugins/homeconnect/core/php/callback.php?apikey=' . jeedom::getApiKey('homeconnect');
 		$parameters['grant_type'] = 'authorization_code';
 		$parameters['code'] = config::byKey('auth','homeconnect');
 		log::add(__CLASS__, 'debug', "Post fields = ". json_encode($parameters));
@@ -962,7 +962,7 @@ class homeconnect extends eqLogic {
                     if (is_object($eqLogic) && $eqLogic->getIsEnable()){
                         $cat = 'Option';
                         $cmdLogicalId = 'GET::' . $items['key'];
-                        if (!isset($items['uri'])) continue;
+                        //if (!isset($items['uri'])) continue;
                         $sections = explode('/', $items['uri']);
                         $path = implode('/',array($sections[4],$sections[5]));
                         $cmdAction = $eqLogic->getCmd('action', 'PUT::'.$items['key']);

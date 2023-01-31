@@ -12,7 +12,7 @@ if (!jeedom::apiAccess(init('apikey'), 'homeconnect')) {
 	die();
 }
 if (!cache::exist('homeconnect::state')) {
-	echo 'Vous ne pouvez appeler cette page sans être connecté. Veuillez vous connecter à votre Jeedom <a href=' . network::getNetworkAccess() . '/index.php>ici</a> avant et refaire l\'opération de connexion à Home Connect';
+	echo 'Vous ne pouvez appeler cette page sans être connecté. Veuillez vous connecter à votre Jeedom <a href=' . trim(network::getNetworkAccess()) . '/index.php>ici</a> avant et refaire l\'opération de connexion à Home Connect';
 	die();
 }
 $state = cache::byKey('homeconnect::state')->getValue();
@@ -29,4 +29,4 @@ config::save('auth', init('code'), 'homeconnect');
 log::add('homeconnect', 'debug', "│ Code d'authorisation sauvegardé (".init('code').").");
 homeconnect::tokenRequest();
 log::add('homeconnect', 'debug',"└────────── Fin de Callback");
-redirect(network::getNetworkAccess('external') . '/index.php?v=d&p=plugin&id=homeconnect');
+redirect(trim(network::getNetworkAccess('external')) . '/index.php?v=d&p=plugin&id=homeconnect');

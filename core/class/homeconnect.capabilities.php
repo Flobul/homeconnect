@@ -1571,6 +1571,14 @@ class homeconnect_capabilities {
                 'name' => __("Séchage terminé", __FILE__) ,
                 'action' => 'Event'
             ),
+            'LaundryCare.Dryer.Event.IDos1FillLevelPoor' => array(
+                'name' => __("Niveau de lessive bas", __FILE__) ,
+                'action' => 'Event'
+            ),
+            'LaundryCare.Dryer.Event.IDos2FillLevelPoor' => array(
+                'name' => __("Niveau d'adoucissant bas", __FILE__) ,
+                'action' => 'Event'
+            ),
             'LaundryCare.Common.Option.VarioPerfect' => array(
                 'name' => __("VarioPerfect", __FILE__) ,
                 'action' => 'Option',
@@ -1994,7 +2002,7 @@ class homeconnect_capabilities {
                 'action' => 'Option'
             ) ,
             'LaundryCare.Washer.Option.IDos1DosingLevel' => array(
-                'name' => __("Dosage i-Dos de détergent", __FILE__) ,
+                'name' => __("Dosage i-Dos d'adoucissant", __FILE__) ,
                 'action' => 'Option',
                 'type' => 'Enumeration',
                 'enum' => array(
