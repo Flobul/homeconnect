@@ -141,20 +141,35 @@ function addCmdToTable(_cmd) {
   tr += '</td>'
 
   tr += '<td style="min-width:120px;width:140px;">';
+  tr += '    <span><input type="checkbox" class="cmdAttr" data-size="mini" data-l1key="isVisible" checked/> {{Afficher}}<br/></span>';
+  tr += '    <span><input type="checkbox" class="cmdAttr" data-l1key="isHistorized"/> {{Historiser}}</span>';
+  tr += '</td>';
+
+  tr += '<td style="min-width:120px;width:140px;">';
   tr += '    <span class="type" type="' + init(_cmd.type) + '" >' + jeedom.cmd.availableType() + '</span>';
   tr += '    <span class="subType" subType="' + init(_cmd.subType) + '"></span>';
   tr += '</td>';
 
-  tr += '<td>'
-  tr += '<label class="checkbox-inline"><input type="checkbox" class="cmdAttr" data-l1key="isVisible" checked/>{{Afficher}}</label> '
-  tr += '<label class="checkbox-inline"><input type="checkbox" class="cmdAttr" data-l1key="isHistorized" checked/>{{Historiser}}</label> '
-  tr += '<label class="checkbox-inline"><input type="checkbox" class="cmdAttr" data-l1key="display" data-l2key="invertBinary"/>{{Inverser}}</label> '
-  tr += '<div style="margin-top:7px;">'
-  tr += '<input class="tooltips cmdAttr form-control input-sm" data-l1key="configuration" data-l2key="minValue" placeholder="{{Min}}" title="{{Min}}" style="width:30%;max-width:80px;display:inline-block;margin-right:2px;">'
-  tr += '<input class="tooltips cmdAttr form-control input-sm" data-l1key="configuration" data-l2key="maxValue" placeholder="{{Max}}" title="{{Max}}" style="width:30%;max-width:80px;display:inline-block;margin-right:2px;">'
-  tr += '<input class="tooltips cmdAttr form-control input-sm" data-l1key="unite" placeholder="Unité" title="{{Unité}}" style="width:30%;max-width:80px;display:inline-block;margin-right:2px;">'
-  tr += '</div>'
-  tr += '</td>'
+  tr += '<td style="min-width:120px;width:200px;">';
+  if (init(_cmd.subType) == 'numeric') {
+    tr += '    <input class="cmdAttr form-control input-sm" data-l1key="configuration" data-l2key="minValue" placeholder="{{Min}}" title="{{Min}}" style="display:inline-block;width: 50px;"></input>';
+    tr += '    <input class="cmdAttr form-control input-sm" data-l1key="unite" placeholder="{{Unité}}" title="{{Unité}}" style="display:inline-block;width: 50px;"></input>';
+    tr += '    <style>.select {}</style>';
+    tr += '    <input class="cmdAttr form-control input-sm" data-l1key="configuration" data-l2key="maxValue" placeholder="{{Max}}" title="{{Max}}" style="width: 50px;"></input>';
+  }
+  if (init(_cmd.subType) == 'select') {
+    tr += '    <input class="cmdAttr form-control input-sm" data-l1key="configuration" data-l2key="listValue" placeholder="{{Liste de valeur|texte séparé par ;}}" title="{{Liste}}">';
+  }
+  if (['select', 'slider', 'color'].includes(init(_cmd.subType)) || init(_cmd.configuration.updateCmdId) != '') {
+    tr += '    <select class="cmdAttr form-control input-sm" data-l1key="configuration" data-l2key="updateCmdId" title="{{Commande d\'information à mettre à jour}}">';
+    tr += '        <option value="">Aucune</option>';
+    tr += '    </select>';
+    tr += '    <input class="tooltips cmdAttr form-control input-sm" data-l1key="configuration" data-l2key="value" placeholder="{{Valeur de l\'information}}">';
+  }
+  if (init(_cmd.type) == 'info') {
+    tr += '<span class="cmdAttr" data-l1key="htmlstate" style="display:block;text-align:center;"></span>';
+  }
+  tr += '</td>';
 
   tr += '<td style="min-width:100px;width:150px;">';
   tr += '<div class="input-group">';
