@@ -1573,11 +1573,79 @@ class homeconnect_capabilities {
             ),
             'LaundryCare.Dryer.Event.IDos1FillLevelPoor' => array(
                 'name' => __("Niveau de lessive bas", __FILE__) ,
-                'action' => 'Event'
+                'action' => 'Event',
+                'type' => 'Enumeration',
+                'enum' => array(
+                    'BSH.Common.EnumType.EventPresentState.Present' => array(
+                        'name' => __("Présent", __FILE__) ,
+                        'action' => 'Status'
+                    ) ,
+                    'BSH.Common.EnumType.EventPresentState.Off' => array(
+                        'name' => __("Désactivé", __FILE__) ,
+                        'action' => 'Status'
+                    ) ,
+                    'BSH.Common.EnumType.EventPresentState.Confirmed' => array(
+                        'name' => __("Confirmé", __FILE__) ,
+                        'action' => 'Status'
+                    ) ,
+                ),
             ),
             'LaundryCare.Dryer.Event.IDos2FillLevelPoor' => array(
                 'name' => __("Niveau d'adoucissant bas", __FILE__) ,
-                'action' => 'Event'
+                'action' => 'Event',
+                'type' => 'Enumeration',
+                'enum' => array(
+                    'BSH.Common.EnumType.EventPresentState.Present' => array(
+                        'name' => __("Présent", __FILE__) ,
+                        'action' => 'Status'
+                    ) ,
+                    'BSH.Common.EnumType.EventPresentState.Off' => array(
+                        'name' => __("Désactivé", __FILE__) ,
+                        'action' => 'Status'
+                    ) ,
+                    'BSH.Common.EnumType.EventPresentState.Confirmed' => array(
+                        'name' => __("Confirmé", __FILE__) ,
+                        'action' => 'Status'
+                    ) ,
+                ),
+            ),
+            'LaundryCare.Washer.Event.IDos1FillLevelPoor' => array(
+                'name' => __("Niveau de lessive bas", __FILE__) ,
+                'action' => 'Event',
+                'type' => 'Enumeration',
+                'enum' => array(
+                    'BSH.Common.EnumType.EventPresentState.Present' => array(
+                        'name' => __("Présent", __FILE__) ,
+                        'action' => 'Status'
+                    ) ,
+                    'BSH.Common.EnumType.EventPresentState.Off' => array(
+                        'name' => __("Désactivé", __FILE__) ,
+                        'action' => 'Status'
+                    ) ,
+                    'BSH.Common.EnumType.EventPresentState.Confirmed' => array(
+                        'name' => __("Confirmé", __FILE__) ,
+                        'action' => 'Status'
+                    ) ,
+                ),
+            ),
+            'LaundryCare.Washer.Event.IDos2FillLevelPoor' => array(
+                'name' => __("Niveau d'adoucissant bas", __FILE__) ,
+                'action' => 'Event',
+                'type' => 'Enumeration',
+                'enum' => array(
+                    'BSH.Common.EnumType.EventPresentState.Present' => array(
+                        'name' => __("Présent", __FILE__) ,
+                        'action' => 'Status'
+                    ) ,
+                    'BSH.Common.EnumType.EventPresentState.Off' => array(
+                        'name' => __("Désactivé", __FILE__) ,
+                        'action' => 'Status'
+                    ) ,
+                    'BSH.Common.EnumType.EventPresentState.Confirmed' => array(
+                        'name' => __("Confirmé", __FILE__) ,
+                        'action' => 'Status'
+                    ) ,
+                ),
             ),
             'LaundryCare.Common.Option.VarioPerfect' => array(
                 'name' => __("VarioPerfect", __FILE__) ,
