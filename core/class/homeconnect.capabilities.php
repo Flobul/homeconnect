@@ -1730,6 +1730,10 @@ class homeconnect_capabilities {
                 'name' => __("Rinçage/Essorage", __FILE__) ,
                 'action' => 'Program'
             ) ,
+            'LaundryCare.Washer.Program.Rinse.RinseSpinDrain' => array(
+                'name' => __("Rinçage/Essorage/Vidange", __FILE__) ,
+                'action' => 'Program'
+            ) ,
             'LaundryCare.Washer.Program.WashAndDry.60' => array(
                 'name' => __("Lavage&Séchage 60 min.", __FILE__) ,
                 'action' => 'Program'
@@ -1796,6 +1800,10 @@ class homeconnect_capabilities {
             ) ,
             'LaundryCare.Washer.Program.WaterProof' => array(
                 'name' => __("Imperméabiliser", __FILE__) ,
+                'action' => 'Program'
+            ) ,
+            'LaundryCare.Washer.Program.Super153045.Super15' => array(
+                'name' => __("Express 15 min.", __FILE__) ,
                 'action' => 'Program'
             ) ,
             'LaundryCare.Washer.Program.Super153045.Super1530' => array(
