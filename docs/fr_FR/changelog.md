@@ -15,7 +15,7 @@ Traductions et améliorations visuelles contribuées par Flobul.
 # Version du 31/01/2023
 Modification page des commandes
 Prise en compte de tous les événements en commande info.
-Correction traduction et ajout. 
+Correction traduction et ajout.
 
-# To Do List
-- Pour le moment l'actualisation se fait par un cron, passer à un démon en utilisant les événements envoyés par le serveur
+# Version du 03/02/2023
+Ajout d'un bouton pour sauvegarder les modifications de path, key, category d'une commande
