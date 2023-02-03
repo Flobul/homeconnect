@@ -36,6 +36,11 @@ $jsonPresent = false;
 
 <div role="tabpanel">
   <div class="tab-content" id="div_displayCmdConfigure" style="overflow-x:hidden">
+  <div class="input-group pull-right" style="display:inline-flex">
+    <span class="input-group-btn">
+      </a><a class="btn btn-success btn-sm roundedRight" id="bt_cmdConfigureSave"><i class="fas fa-check-circle"></i> {{Sauvegarder}}</a>
+    </span>
+  </div>
     <div role="tabpanel" class="tab-pane active" id="cmd_information">
       <br/>
       <div class="row">
@@ -164,4 +169,27 @@ $('.bt_testEnum').off('click').on('click',function() {
 		}
 	});
 });
+
+  $('#bt_cmdConfigureSave').on('click', function(event) {
+    var cmd = $('#div_displayCmdConfigure').getValues('.cmdAttr')[0];
+    cmdInfo.configuration.path = cmd.configuration.path;
+    cmdInfo.configuration.key = cmd.configuration.key;
+    cmdInfo.configuration.category = cmd.configuration.category;
+    jeedom.cmd.save({
+      cmd: cmdInfo,
+      error: function(error) {
+        $('#md_displayCmdConfigure').showAlert({
+          message: error.message,
+          level: 'danger'
+        })
+      },
+      success: function() {
+        modifyWithoutSave = false
+        $('#md_displayCmdConfigure').showAlert({
+          message: '{{Sauvegarde réussie}}',
+          level: 'success'
+        })
+      }
+    })
+  })
 </script>
