@@ -160,7 +160,6 @@ $('.bt_testEnum').off('click').on('click',function() {
 			handleAjaxError(request, status, error);
 		},
 		success: function (data) {
-          console.log(data)
 			if (data.state != 'ok') {
 				$('#div_alert').showAlert({message: data.result, level: 'danger'});
 				return;
@@ -172,6 +171,7 @@ $('.bt_testEnum').off('click').on('click',function() {
 
   $('#bt_cmdConfigureSave').on('click', function(event) {
     var cmd = $('#div_displayCmdConfigure').getValues('.cmdAttr')[0];
+    cmdInfo.configuration = {}
     cmdInfo.configuration.path = cmd.configuration.path;
     cmdInfo.configuration.key = cmd.configuration.key;
     cmdInfo.configuration.category = cmd.configuration.category;
@@ -183,7 +183,7 @@ $('.bt_testEnum').off('click').on('click',function() {
           level: 'danger'
         })
       },
-      success: function() {
+      success: function(data) {
         modifyWithoutSave = false
         $('#md_displayCmdConfigure').showAlert({
           message: '{{Sauvegarde réussie}}',
