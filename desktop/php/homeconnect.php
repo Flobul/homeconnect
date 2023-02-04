@@ -17,9 +17,9 @@ $eqLogics = eqLogic::byType($plugin->getId());
 				<span>{{Synchronisation}}</span>
 			</div>
 			<div class="cursor eqLogicAction logoSecondary" data-action="gotoPluginConf" >
-					<i class="fas fa-wrench"></i>
-					<br>
-					<span>{{Configuration}}</span>
+				<i class="fas fa-wrench"></i>
+				<br>
+				<span>{{Configuration}}</span>
 			</div>
 			<div class="cursor logoSecondary" id="bt_healthHomeConnect">
 				<i class="fas fa-medkit"></i>
@@ -44,16 +44,16 @@ $eqLogics = eqLogic::byType($plugin->getId());
 			// Liste des équipements du plugin
 			echo '<div class="eqLogicThumbnailContainer">';
         	foreach ($eqLogics as $eqLogic) {
-                $opacity = ($eqLogic->getIsEnable()) ? '' : 'disableCard';
-                echo '<div class="eqLogicDisplayCard cursor '.$opacity.'" data-eqLogic_id="' . $eqLogic->getId() . '">';
-                echo '    <img src="' . $eqLogic->getImage() . '">';
-                echo '    <br\>';
-                echo '    <span class="name">' . $eqLogic->getHumanName(true, true) . '</span>';
-                echo '    <span class="hiddenAsCard displayTableRight hidden">';
-                echo ($eqLogic->getIsVisible() == 1) ? '<i class="fas fa-eye" title="{{Equipement visible}}"></i>' : '<i class="fas fa-eye-slash" title="{{Equipement non visible}}"></i>';
-                echo '    </span>';
-                echo '</div>';
-			}
+						$opacity = ($eqLogic->getIsEnable()) ? '' : 'disableCard';
+						echo '<div class="eqLogicDisplayCard cursor '.$opacity.'" data-eqLogic_id="' . $eqLogic->getId() . '">';
+						echo '    <img src="' . $eqLogic->getImage() . '">';
+						echo '    <br\>';
+						echo '    <span class="name">' . $eqLogic->getHumanName(true, true) . '</span>';
+						echo '    <span class="hiddenAsCard displayTableRight hidden">';
+						echo ($eqLogic->getIsVisible() == 1) ? '<i class="fas fa-eye" title="{{Equipement visible}}"></i>' : '<i class="fas fa-eye-slash" title="{{Equipement non visible}}"></i>';
+						echo '    </span>';
+						echo '</div>';
+					}
 			echo '</div>';
 		}
 		?>
@@ -127,28 +127,28 @@ $eqLogics = eqLogic::byType($plugin->getId());
 				<div class="col-lg-6">
 					<legend><i class="fas fa-info"></i> {{Informations}}</legend>
 					<div class="form-group">
-						<label class="col-sm-3 control-label">{{Type}}</label>
-						<div>
+						<div class="col-sm-12">
+						    <label class="col-sm-3 control-label">{{Type}}</label>
 							<span class="eqLogicAttr label label-info" data-l1key="configuration" data-l2key="type"></span>
 						</div>
 					</div>
 					<div class="form-group">
-						<label class="col-sm-3 control-label">{{Marque}}</label>
-						<div>
+						<div class="col-sm-12">
+						    <label class="col-sm-3 control-label">{{Marque}}</label>
 							<span class="eqLogicAttr label label-info" data-l1key="configuration" data-l2key="brand"></span>
 						</div>
 					</div>
 
 					<div class="form-group">
-						<label class="col-sm-3 control-label">{{Modèle}}</label>
-						<div>
+						<div class="col-sm-12">
+						    <label class="col-sm-3 control-label">{{Modèle}}</label>
 							<span class="eqLogicAttr label label-info" data-l1key="configuration" data-l2key="vib"></span>
 						</div>
 					</div>
 
 					<div class="form-group">
-						<label class="col-sm-3 control-label">{{Identifiant}}</label>
-						<div>
+						<div class="col-sm-12">
+						    <label class="col-sm-3 control-label">{{Identifiant}}</label>
 							<span class="eqLogicAttr label label-info" data-l1key="configuration" data-l2key="haid"></span>
 						</div>
 					</div>
@@ -156,36 +156,36 @@ $eqLogics = eqLogic::byType($plugin->getId());
 				<div class="col-sm-6">
 					<form class="form-horizontal">
 						<fieldset>
-                            <div class="form-group">
-                                <label class="col-sm-2 control-label"></label>
-                                <div class="col-sm-8">
-                                    <img src="core/img/no_image.gif" data-original=".png" id="img_device" class="img-responsive" style="max-height : 250px;" onerror="this.src='plugins/homeconnect/plugin_info/homeconnect_icon.png'"/>
-                                </div>
-                            </div>
-					</fieldset>
-				    </form>
+							<div class="form-group">
+								<label class="col-sm-2 control-label"></label>
+								<div class="col-sm-8">
+									<img src="core/img/no_image.gif" data-original=".png" id="img_device" class="img-responsive" style="max-height : 250px;" onerror="this.src='plugins/homeconnect/plugin_info/homeconnect_icon.png'"/>
+								</div>
+							</div>
+						</fieldset>
+					</form>
 				</div>
-
 			</div>
 
 			<div role="tabpanel" class="tab-pane" id="commandtab">
-				<a class="btn btn-success btn-sm cmdAction pull-right" data-action="add" style="margin-top:5px;"><i class="fas fa-plus-circle"></i> {{Commandes}}</a><br/><br/>
-
-				<table id="table_cmd" class="table table-bordered table-condensed">
-					<thead>
-						<tr>
-							<th style="display:none">{{ID}}</th>
-							<th style="width: 450px;">{{Nom}}</th>
-							<th>{{Afficher/Historiser}}</th>
-							<th>{{Type}}</th>
-							<th>{{Paramètres}}</th>
-							<th>{{Action}}</th>
-                        </tr>
-					</thead>
-					<tbody>
-					</tbody>
-				</table>
-
+				<a class="btn btn-success btn-sm cmdAction pull-right" data-action="add" style="margin-top:5px;"><i class="fas fa-plus-circle"></i> {{Commandes}}</a>
+                <br><br>
+				<div class="table-responsive">
+					<table id="table_cmd" class="table table-bordered table-condensed">
+						<thead>
+							<tr>
+								<th class="hidden-xs" style="min-width:50px;width:70px;">ID</th>
+								<th style="min-width:200px;width:450px;">{{Nom}}</th>
+								<th>{{Afficher/Historiser}}</th>
+								<th>{{Type}}</th>
+								<th>{{Paramètres}}</th>
+								<th style="min-width:80px;width:150px;">{{Actions}}</th>
+							</tr>
+						</thead>
+						<tbody>
+						</tbody>
+					</table>
+				</div>
 			</div>
 		</div>
 	</div>

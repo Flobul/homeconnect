@@ -126,8 +126,8 @@ function addCmdToTable(_cmd) {
     _cmd.configuration = {};
   }
   var tr = '<tr class="cmd" data-cmd_id="' + init(_cmd.id) + '">'
-  tr += '<td class="hidden-xs" style="display:none">'
-  tr += '<span class="cmdAttr" data-l1key="id" ></span>'
+  tr += '<td class="hidden-xs">'
+  tr += '<span class="cmdAttr" data-l1key="id"></span>'
   tr += '</td>'
   tr += '<td>'
   tr += '    <div class="input-group">'
@@ -140,17 +140,17 @@ function addCmdToTable(_cmd) {
   tr += '    </select>'
   tr += '</td>'
 
-  tr += '<td style="min-width:120px;width:140px;">';
+  tr += '<td>';
   tr += '    <span><input type="checkbox" class="cmdAttr" data-size="mini" data-l1key="isVisible" checked/> {{Afficher}}<br/></span>';
   tr += '    <span><input type="checkbox" class="cmdAttr" data-l1key="isHistorized"/> {{Historiser}}</span>';
   tr += '</td>';
 
-  tr += '<td style="min-width:120px;width:140px;">';
+  tr += '<td>';
   tr += '    <span class="type" type="' + init(_cmd.type) + '" >' + jeedom.cmd.availableType() + '</span>';
   tr += '    <span class="subType" subType="' + init(_cmd.subType) + '"></span>';
   tr += '</td>';
 
-  tr += '<td style="min-width:120px;width:200px;">';
+  tr += '<td>';
   if (init(_cmd.subType) == 'numeric') {
     tr += '    <input class="cmdAttr form-control input-sm" data-l1key="configuration" data-l2key="minValue" placeholder="{{Min}}" title="{{Min}}" style="display:inline-block;width: 50px;"></input>';
     tr += '    <input class="cmdAttr form-control input-sm" data-l1key="unite" placeholder="{{Unité}}" title="{{Unité}}" style="display:inline-block;width: 50px;"></input>';
@@ -171,7 +171,7 @@ function addCmdToTable(_cmd) {
   }
   tr += '</td>';
 
-  tr += '<td style="min-width:100px;width:150px;">';
+  tr += '<td>';
   tr += '<div class="input-group">';
   if (is_numeric(_cmd.id) && _cmd.id != '') {
     tr += '<a class="btn btn-default btn-xs cmdAction roundedLeft" data-action="configure" title="{{Configuration de la commande}} ' + _cmd.type + '"><i class="fa fa-cogs"></i></a>';
