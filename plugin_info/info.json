@@ -7,7 +7,7 @@
     },
     "licence":"AGPL",
     "installation":"Vérifiez bien que vous avez correctement configuré la partie Générale -> Administration -> Configuration puis reseaux, en effet il faut lors de l'association de Jeedom au compte Home Connect que votre Jeedom soit accessible de l'exterieur.",
-    "author":"Sartog",
+    "author":"Sartog (modifié par Flobul)",
     "require":"3.3",
     "category":"devicecommunication",
     "changelog":"https://flobul.github.io/homeconnect/#language#/changelog",
@@ -20,7 +20,11 @@
     },
     "language":[
         "fr_FR",
-        "en_US"
+        "en_US",
+        "es_ES",
+        "pt_PT",
+        "de_DE",
+        "it_IT"
     ],
     "compatibility":[
         "miniplus",
