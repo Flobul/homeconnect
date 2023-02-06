@@ -171,6 +171,8 @@ $('.bt_testEnum').off('click').on('click',function() {
 
   $('#bt_cmdConfigureSave').on('click', function(event) {
     var cmd = $('#div_displayCmdConfigure').getValues('.cmdAttr')[0];
+    var req = (cmdInfo.type == 'action')?'PUT::':'GET::';
+    cmdInfo.logicalId = req + cmd.configuration.key;
     cmdInfo.configuration = {}
     cmdInfo.configuration.path = cmd.configuration.path;
     cmdInfo.configuration.key = cmd.configuration.key;
