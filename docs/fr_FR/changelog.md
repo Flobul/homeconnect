@@ -20,5 +20,8 @@ Correction traduction et ajout.
 # Version du 03/02/2023
 Ajout d'un bouton pour sauvegarder les modifications de path, key, category d'une commande
 
-# Version du 03/02/2023
+# Version du 04/02/2023
 Ménage dans le code et harmonisation des logs et affichage
+
+# Version du 07/02/2023
+Ajout d'un bouton Assistant commande pour créer ses commandes action.
