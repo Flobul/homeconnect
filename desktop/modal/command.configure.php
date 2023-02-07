@@ -38,7 +38,7 @@ $jsonPresent = false;
   <div class="tab-content" id="div_displayCmdConfigure" style="overflow-x:hidden">
   <div class="input-group pull-right" style="display:inline-flex">
     <span class="input-group-btn">
-      </a><a class="btn btn-success btn-sm roundedRight" id="bt_cmdConfigureSave"><i class="fas fa-check-circle"></i> {{Sauvegarder}}</a>
+      </a><a class="btn btn-success btn-sm roundedLeft roundedRight" id="bt_cmdConfigureSave"><i class="fas fa-check-circle"></i> {{Ajouter}}</a>
     </span>
   </div>
     <div role="tabpanel" class="tab-pane active" id="cmd_information">

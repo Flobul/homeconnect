@@ -265,7 +265,7 @@ class homeconnect extends eqLogic {
         log::add(__CLASS__, 'debug', __('Nombre de requêtes envoyées aujourd\'hui ', __FILE__) . $totalRequests);
 
         if ($code == '200' || $code == '204') {
-            log::add(__CLASS__, 'debug', __('La requête ', __FILE__) . $method . ' : ' . $url . __('a réussi, code ', __FILE__) . $code . __(', résultat ', __FILE__) . $result);
+            log::add(__CLASS__, 'debug', __('La requête ', __FILE__) . $method . ' : ' . $url . __(' a réussi, code ', __FILE__) . $code . __(', résultat ', __FILE__) . $result);
             return $result;
         } else {
             // Traitement des erreurs
@@ -273,7 +273,6 @@ class homeconnect extends eqLogic {
             switch ($code) {
                 case 400:
                     // "Bad Request", desc: "Error occurred (e.g. validation error - value is out of range)"
-
                 break;
                 case 401:
                     // "Unauthorized", desc: "No or invalid access token"
