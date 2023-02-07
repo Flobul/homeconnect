@@ -116,7 +116,10 @@ class homeconnect_capabilities {
             ) ,
             'ConsumerProducts.CoffeeMaker.Program.Beverage.Ristretto' => array(
                 'name' => __("Ristretto", __FILE__) ,
-                'action' => 'Program'
+                'action' => 'Program',
+                'available' => array(
+                    'CoffeeMaker'
+                )
             ) ,
             'ConsumerProducts.CoffeeMaker.Program.Beverage.Espresso' => array(
                 'name' => __("Espresso", __FILE__) ,
@@ -124,115 +127,199 @@ class homeconnect_capabilities {
             ) ,
             'ConsumerProducts.CoffeeMaker.Program.Beverage.EspressoDoppio' => array(
                 'name' => __("Double Espresso", __FILE__) ,
-                'action' => 'Program'
+                'action' => 'Program',
+                'available' => array(
+                    'CoffeeMaker'
+                )
             ) ,
             'ConsumerProducts.CoffeeMaker.Program.Beverage.Coffee' => array(
                 'name' => __("Café", __FILE__) ,
-                'action' => 'Program'
+                'action' => 'Program',
+                'available' => array(
+                    'CoffeeMaker'
+                )
             ) ,
             'ConsumerProducts.CoffeeMaker.Program.Beverage.XLCoffee' => array(
                 'name' => __("Café XL", __FILE__) ,
-                'action' => 'Program'
+                'action' => 'Program',
+                'available' => array(
+                    'CoffeeMaker'
+                )
             ) ,
             'ConsumerProducts.CoffeeMaker.Program.Beverage.EspressoMacchiato' => array(
                 'name' => __("Espresso macchiato", __FILE__) ,
-                'action' => 'Program'
+                'action' => 'Program',
+                'available' => array(
+                    'CoffeeMaker'
+                )
             ) ,
             'ConsumerProducts.CoffeeMaker.Program.Beverage.Cappuccino' => array(
                 'name' => __("Cappuccino", __FILE__) ,
-                'action' => 'Program'
+                'action' => 'Program',
+                'available' => array(
+                    'CoffeeMaker'
+                )
             ) ,
             'ConsumerProducts.CoffeeMaker.Program.Beverage.LatteMacchiato' => array(
                 'name' => __("Macchiato au lait", __FILE__) ,
-                'action' => 'Program'
+                'action' => 'Program',
+                'available' => array(
+                    'CoffeeMaker'
+                )
             ) ,
             'ConsumerProducts.CoffeeMaker.Program.Beverage.CaffeLatte' => array(
                 'name' => __("Café au lait", __FILE__) ,
-                'action' => 'Program'
+                'action' => 'Program',
+                'available' => array(
+                    'CoffeeMaker'
+                )
             ) ,
             'ConsumerProducts.CoffeeMaker.Program.Beverage.MilkFroth' => array(
                 'name' => __("Mousse de lait", __FILE__) ,
-                'action' => 'Program'
+                'action' => 'Program',
+                'available' => array(
+                    'CoffeeMaker'
+                )
             ) ,
             'ConsumerProducts.CoffeeMaker.Program.Beverage.WarmMilk' => array(
                 'name' => __("Lait chaud", __FILE__) ,
-                'action' => 'Program'
+                'action' => 'Program',
+                'available' => array(
+                    'CoffeeMaker'
+                )
             ) ,
             'ConsumerProducts.CoffeeMaker.Program.CoffeeWorld.KleinerBrauner' => array(
                 'name' => __("Petit café", __FILE__) ,
-                'action' => 'Program'
+                'action' => 'Program',
+                'available' => array(
+                    'CoffeeMaker'
+                )
             ) ,
             'ConsumerProducts.CoffeeMaker.Program.CoffeeWorld.GrosserBrauner' => array(
                 'name' => __("Grand café", __FILE__) ,
-                'action' => 'Program'
+                'action' => 'Program',
+                'available' => array(
+                    'CoffeeMaker'
+                )
             ) ,
             'ConsumerProducts.CoffeeMaker.Program.CoffeeWorld.Verlaengerter' => array(
                 'name' => __("Rallongé", __FILE__) ,
-                'action' => 'Program'
+                'action' => 'Program',
+                'available' => array(
+                    'CoffeeMaker'
+                )
             ) ,
             'ConsumerProducts.CoffeeMaker.Program.CoffeeWorld.VerlaengerterBraun' => array(
                 'name' => __("Café brun rallongé", __FILE__) ,
-                'action' => 'Program'
+                'action' => 'Program',
+                'available' => array(
+                    'CoffeeMaker'
+                )
             ) ,
             'ConsumerProducts.CoffeeMaker.Program.CoffeeWorld.WienerMelange' => array(
                 'name' => __("Mélange viennois", __FILE__) ,
-                'action' => 'Program'
+                'action' => 'Program',
+                'available' => array(
+                    'CoffeeMaker'
+                )
             ) ,
             'ConsumerProducts.CoffeeMaker.Program.CoffeeWorld.FlatWhite' => array(
                 'name' => __("Blanc pur", __FILE__) ,
-                'action' => 'Program'
+                'action' => 'Program',
+                'available' => array(
+                    'CoffeeMaker'
+                )
             ) ,
             'ConsumerProducts.CoffeeMaker.Program.CoffeeWorld.Cortado' => array(
                 'name' => __("Coupé", __FILE__) ,
-                'action' => 'Program'
+                'action' => 'Program',
+                'available' => array(
+                    'CoffeeMaker'
+                )
             ) ,
             'ConsumerProducts.CoffeeMaker.Program.CoffeeWorld.CafeCortado' => array(
                 'name' => __("Café coupé", __FILE__) ,
-                'action' => 'Program'
+                'action' => 'Program',
+                'available' => array(
+                    'CoffeeMaker'
+                )
             ) ,
             'ConsumerProducts.CoffeeMaker.Program.CoffeeWorld.CafeConLeche' => array(
                 'name' => __("Cafe con leche", __FILE__) ,
-                'action' => 'Program'
+                'action' => 'Program',
+                'available' => array(
+                    'CoffeeMaker'
+                )
             ) ,
             'ConsumerProducts.CoffeeMaker.Program.CoffeeWorld.CafeAuLait' => array(
                 'name' => __("Cafe Au Lait", __FILE__) ,
-                'action' => 'Program'
+                'action' => 'Program',
+                'available' => array(
+                    'CoffeeMaker'
+                )
             ) ,
             'ConsumerProducts.CoffeeMaker.Program.CoffeeWorld.Doppio' => array(
                 'name' => __("Double", __FILE__) ,
-                'action' => 'Program'
+                'action' => 'Program',
+                'available' => array(
+                    'CoffeeMaker'
+                )
             ) ,
             'ConsumerProducts.CoffeeMaker.Program.CoffeeWorld.Kaapi' => array(
                 'name' => __("Kaapi", __FILE__) ,
-                'action' => 'Program'
+                'action' => 'Program',
+                'available' => array(
+                    'CoffeeMaker'
+                )
             ) ,
             'ConsumerProducts.CoffeeMaker.Program.CoffeeWorld.KoffieVerkeerd' => array(
                 'name' => __("Mauvais café", __FILE__) ,
-                'action' => 'Program'
+                'action' => 'Program',
+                'available' => array(
+                    'CoffeeMaker'
+                )
             ) ,
             'ConsumerProducts.CoffeeMaker.Program.CoffeeWorld.Galao' => array(
                 'name' => __("Galao", __FILE__) ,
-                'action' => 'Program'
+                'action' => 'Program',
+                'available' => array(
+                    'CoffeeMaker'
+                )
             ) ,
             'ConsumerProducts.CoffeeMaker.Program.CoffeeWorld.Garoto' => array(
                 'name' => __("Garoto", __FILE__) ,
-                'action' => 'Program'
+                'action' => 'Program',
+                'available' => array(
+                    'CoffeeMaker'
+                )
             ) ,
             'ConsumerProducts.CoffeeMaker.Program.CoffeeWorld.Americano' => array(
                 'name' => __("American", __FILE__) ,
-                'action' => 'Program'
+                'action' => 'Program',
+                'available' => array(
+                    'CoffeeMaker'
+                )
             ) ,
             'ConsumerProducts.CoffeeMaker.Program.CoffeeWorld.RedEye' => array(
                 'name' => __("RedEye", __FILE__) ,
-                'action' => 'Program'
+                'action' => 'Program',
+                'available' => array(
+                    'CoffeeMaker'
+                )
             ) ,
             'ConsumerProducts.CoffeeMaker.Program.CoffeeWorld.BlackEye' => array(
                 'name' => __("BlackEye", __FILE__) ,
-                'action' => 'Program'
+                'action' => 'Program',
+                'available' => array(
+                    'CoffeeMaker'
+                )
             ) ,
             'ConsumerProducts.CoffeeMaker.Program.CoffeeWorld.DeadEye' => array(
                 'name' => __("DeadEye", __FILE__) ,
-                'action' => 'Program'
+                'action' => 'Program',
+                'available' => array(
+                    'CoffeeMaker'
+                )
             ) ,
             'ConsumerProducts.CoffeeMaker.Option.BeanAmount' => array(
                 'name' => __("Quantité de grains", __FILE__) ,
@@ -404,7 +491,10 @@ class homeconnect_capabilities {
             ) ,
             'ConsumerProducts.CoffeeMaker.Option.MultipleBeverages' => array(
                 'name' => __("Boissons multiples", __FILE__) ,
-                'action' => 'Option'
+                'action' => 'Option',
+                'available' => array(
+                    'CoffeeMaker'
+                )
             ) ,
             'ConsumerProducts.CoffeeMaker.Setting.CupWarmer' => array(
                 'name' => __("Chauffe-tasse", __FILE__) ,
@@ -412,7 +502,7 @@ class homeconnect_capabilities {
                 'type' => 'Boolean',
                 'available' => array(
                     'CoffeeMachine'
-                ) ,
+                )
             ) ,
             'ConsumerProducts.CoffeeMaker.Status.BeverageCounterCoffee' => array(
                 'name' => __("Nombre de tasses de café consommées", __FILE__) ,
@@ -420,7 +510,7 @@ class homeconnect_capabilities {
                 'type' => 'Int',
                 'available' => array(
                     'CoffeeMachine'
-                ) ,
+                )
             ) ,
             'ConsumerProducts.CoffeeMaker.Status.BeverageCounterPowderCoffee' => array(
                 'name' => __("Nombre de tasses de café en poudre consommées", __FILE__) ,
@@ -660,15 +750,24 @@ class homeconnect_capabilities {
             ) ,
             'ConsumerProducts.CleaningRobot.Program.Cleaning.CleanAll' => array(
                 'name' => __("Nettoyer tout", __FILE__) ,
-                'action' => 'Program'
+                'action' => 'Program',
+                'available' => array(
+                    'CleaningRobot'
+                )
             ) ,
             'ConsumerProducts.CleaningRobot.Program.Cleaning.CleanMap' => array(
                 'name' => __("Nettoyer la carte", __FILE__) ,
-                'action' => 'Program'
+                'action' => 'Program',
+                'available' => array(
+                    'CleaningRobot'
+                )
             ) ,
             'ConsumerProducts.CleaningRobot.Program.Basic.GoHome' => array(
                 'name' => __("Retour à la station d'accueil", __FILE__) ,
-                'action' => 'Program'
+                'action' => 'Program',
+                'available' => array(
+                    'CleaningRobot'
+                )
             ) ,
             'ConsumerProducts.CleaningRobot.Status.LastSelectedMap' => array(
                 'name' => __("Dernière carte sélectionnée", __FILE__) ,
@@ -785,71 +884,122 @@ class homeconnect_capabilities {
             ) ,
             'Dishcare.Dishwasher.Program.PreRinse' => array(
                 'name' => __("Pré-rinçage", __FILE__) ,
-                'action' => 'Program'
+                'action' => 'Program',
+                'available' => array(
+                    'Dishwasher'
+                ) ,
             ) ,
             'Dishcare.Dishwasher.Program.Auto1' => array(
                 'name' => __("Auto 35-45 °C", __FILE__) ,
-                'action' => 'Program'
+                'action' => 'Program',
+                'available' => array(
+                    'Dishwasher'
+                ) ,
             ) ,
             'Dishcare.Dishwasher.Program.Auto2' => array(
                 'name' => __("Auto 45-65 °C", __FILE__) ,
-                'action' => 'Program'
+                'action' => 'Program',
+                'available' => array(
+                    'Dishwasher'
+                ) ,
             ) ,
             'Dishcare.Dishwasher.Program.Auto3' => array(
                 'name' => __("Auto 65-75 °C", __FILE__) ,
-                'action' => 'Program'
+                'action' => 'Program',
+                'available' => array(
+                    'Dishwasher'
+                ) ,
             ) ,
             'Dishcare.Dishwasher.Program.Eco50' => array(
                 'name' => __("Eco 50 °C", __FILE__) ,
-                'action' => 'Program'
+                'action' => 'Program',
+                'available' => array(
+                    'Dishwasher'
+                ) ,
             ) ,
             'Dishcare.Dishwasher.Program.Quick45' => array(
                 'name' => __("Rapide 45 °C", __FILE__) ,
-                'action' => 'Program'
+                'action' => 'Program',
+                'available' => array(
+                    'Dishwasher'
+                ) ,
             ) ,
             'Dishcare.Dishwasher.Program.Intensiv70' => array(
                 'name' => __("Intensif 70 °C", __FILE__) ,
-                'action' => 'Program'
+                'action' => 'Program',
+                'available' => array(
+                    'Dishwasher'
+                ) ,
             ) ,
             'Dishcare.Dishwasher.Program.Normal65' => array(
                 'name' => __("Normal 65 °C", __FILE__) ,
-                'action' => 'Program'
+                'action' => 'Program',
+                'available' => array(
+                    'Dishwasher'
+                ) ,
             ) ,
             'Dishcare.Dishwasher.Program.Glas40' => array(
                 'name' => __("Verres 40 °C", __FILE__) ,
-                'action' => 'Program'
+                'action' => 'Program',
+                'available' => array(
+                    'Dishwasher'
+                ) ,
             ) ,
             'Dishcare.Dishwasher.Program.GlassCare' => array(
                 'name' => __("Soin des verres", __FILE__) ,
-                'action' => 'Program'
+                'action' => 'Program',
+                'available' => array(
+                    'Dishwasher'
+                ) ,
             ) ,
             'Dishcare.Dishwasher.Program.NightWash' => array(
                 'name' => __("Silence 50 °C", __FILE__) ,
-                'action' => 'Program'
+                'action' => 'Program',
+                'available' => array(
+                    'Dishwasher'
+                ) ,
             ) ,
             'Dishcare.Dishwasher.Program.Quick65' => array(
                 'name' => __("Rapide 65 °C", __FILE__) ,
-                'action' => 'Program'
+                'action' => 'Program',
+                'available' => array(
+                    'Dishwasher'
+                ) ,
             ) ,
             'Dishcare.Dishwasher.Program.Normal45' => array(
                 'name' => __("Normal 45 °C", __FILE__) ,
-                'action' => 'Program'
+                'action' => 'Program',
+                'available' => array(
+                    'Dishwasher'
+                ) ,
             ) ,
             'Dishcare.Dishwasher.Program.Intensiv45' => array(
                 'name' => __("Intensif 45 °C", __FILE__) ,
-                'action' => 'Program'
+                'action' => 'Program',
+                'available' => array(
+                    'Dishwasher'
+                ) ,
             ) ,
             'Dishcare.Dishwasher.Program.AutoHalfLoad' => array(
                 'name' => __("Auto demi-charge", __FILE__) ,
-                'action' => 'Program'
+                'action' => 'Program',
+                'available' => array(
+                    'Dishwasher'
+                ) ,
             ) ,
             'Dishcare.Dishwasher.Program.IntensivPower' => array(
                 'name' => __("Puissance intensive", __FILE__) ,
-                'action' => 'Program'
+                'action' => 'Program',
+                'available' => array(
+                    'Dishwasher'
+                ) ,
             ) ,
             'Dishcare.Dishwasher.Program.MagicDaily' => array(
                 'name' => __("Magie quotidienne", __FILE__) ,
-                'action' => 'Program'
+                'action' => 'Program',
+                'available' => array(
+                    'Dishwasher'
+                ) ,
             ) ,
             'Dishcare.Dishwasher.Program.Super60' => array(
                 'name' => __("Super 60 °C", __FILE__) ,
@@ -857,23 +1007,38 @@ class homeconnect_capabilities {
             ) ,
             'Dishcare.Dishwasher.Program.Kurz60' => array(
                 'name' => __("Court 60 °C", __FILE__) ,
-                'action' => 'Program'
+                'action' => 'Program',
+                'available' => array(
+                    'Dishwasher'
+                ) ,
             ) ,
             'Dishcare.Dishwasher.Program.ExpressSparkle65' => array(
                 'name' => __("Rapide étincellant 65 °C", __FILE__) ,
-                'action' => 'Program'
+                'action' => 'Program',
+                'available' => array(
+                    'Dishwasher'
+                ) ,
             ) ,
             'Dishcare.Dishwasher.Program.MachineCare' => array(
                 'name' => __("Soin de la machine", __FILE__) ,
-                'action' => 'Program'
+                'action' => 'Program',
+                'available' => array(
+                    'Dishwasher'
+                ) ,
             ) ,
             'Dishcare.Dishwasher.Program.SteamFresh' => array(
                 'name' => __("Rinçage et séchage hygiénique", __FILE__) ,
-                'action' => 'Program'
+                'action' => 'Program',
+                'available' => array(
+                    'Dishwasher'
+                ) ,
             ) ,
             'Dishcare.Dishwasher.Program.MaximumCleaning' => array(
                 'name' => __("Nettoyage complet", __FILE__) ,
-                'action' => 'Program'
+                'action' => 'Program',
+                'available' => array(
+                    'Dishwasher'
+                ) ,
             ) ,
             'Dishcare.Dishwasher.Option.IntensivZone' => array(
                 'name' => __("Zone intensive", __FILE__) ,
@@ -933,7 +1098,10 @@ class homeconnect_capabilities {
             ) ,
             'Cooking.Hob.Program.PowerLevelMode' => array(
                 'name' => __("Mode niveau de puissance", __FILE__) ,
-                'action' => 'Program'
+                'action' => 'Program',
+                'available' => array(
+                    'Hob'
+                ) ,
             ) ,
             'Cooking.Hob.Option.ZoneSelector' => array(
                 'name' => __("Sélecteur de zone", __FILE__) ,
@@ -1021,204 +1189,354 @@ class homeconnect_capabilities {
             ) ,
             'Cooking.Oven.Program.HeatingMode.PreHeating' => array(
                 'name' => __("Préchauffage", __FILE__) ,
-                'action' => 'Program'
+                'action' => 'Program',
+                'available' => array(
+                    'Oven'
+                )
             ) ,
             'Cooking.Oven.Program.HeatingMode.HotAir' => array(
                 'name' => __("Convection 3D", __FILE__) ,
-                'action' => 'Program'
+                'action' => 'Program',
+                'available' => array(
+                    'Oven'
+                )
             ) ,
             'Cooking.Oven.Program.HeatingMode.HotAirEco' => array(
                 'name' => __("Chaleur tournante éco", __FILE__) ,
-                'action' => 'Program'
+                'action' => 'Program',
+                'available' => array(
+                    'Oven'
+                )
             ) ,
             'Cooking.Oven.Program.HeatingMode.HotAirGrilling' => array(
                 'name' => __("Gril à convection", __FILE__) ,
-                'action' => 'Program'
+                'action' => 'Program',
+                'available' => array(
+                    'Oven'
+                )
             ) ,
             'Cooking.Oven.Program.HeatingMode.TopBottomHeating' => array(
                 'name' => __("Cuisson", __FILE__) ,
-                'action' => 'Program'
+                'action' => 'Program',
+                'available' => array(
+                    'Oven'
+                )
             ) ,
             'Cooking.Oven.Program.HeatingMode.TopBottomHeatingEco' => array(
                 'name' => __("Cuisson éco", __FILE__) ,
-                'action' => 'Program'
+                'action' => 'Program',
+                'available' => array(
+                    'Oven'
+                )
             ) ,
             'Cooking.Oven.Program.HeatingMode.BottomHeating' => array(
                 'name' => __("Résistance de sole", __FILE__) ,
-                'action' => 'Program'
+                'action' => 'Program',
+                'available' => array(
+                    'Oven'
+                )
             ) ,
             'Cooking.Oven.Program.HeatingMode.PizzaSetting' => array(
                 'name' => __("Pizza", __FILE__) ,
-                'action' => 'Program'
+                'action' => 'Program',
+                'available' => array(
+                    'Oven'
+                )
             ) ,
             'Cooking.Oven.Program.HeatingMode.SlowCook' => array(
                 'name' => __("Cuisson lente", __FILE__) ,
-                'action' => 'Program'
+                'action' => 'Program',
+                'available' => array(
+                    'Oven'
+                )
             ) ,
             'Cooking.Oven.Program.HeatingMode.IntensiveHeat' => array(
                 'name' => __("Chaleur intensive", __FILE__) ,
-                'action' => 'Program'
+                'action' => 'Program',
+                'available' => array(
+                    'Oven'
+                )
             ) ,
             'Cooking.Oven.Program.HeatingMode.KeepWarm' => array(
                 'name' => __("Maintien au chaud", __FILE__) ,
-                'action' => 'Program'
+                'action' => 'Program',
+                'available' => array(
+                    'Oven'
+                )
             ) ,
             'Cooking.Oven.Program.HeatingMode.PreheatOvenware' => array(
                 'name' => __("Préchauffer le four", __FILE__) ,
-                'action' => 'Program'
+                'action' => 'Program',
+                'available' => array(
+                    'Oven'
+                )
             ) ,
             'Cooking.Oven.Program.HeatingMode.FrozenHeatupSpecial' => array(
                 'name' => __("Réchauffage produit surgelé", __FILE__) ,
-                'action' => 'Program'
+                'action' => 'Program',
+                'available' => array(
+                    'Oven'
+                )
             ) ,
             'Cooking.Oven.Program.HeatingMode.Desiccation' => array(
                 'name' => __("Déshydratation", __FILE__) ,
-                'action' => 'Program'
+                'action' => 'Program',
+                'available' => array(
+                    'Oven'
+                )
             ) ,
             'Cooking.Oven.Program.HeatingMode.Defrost' => array(
                 'name' => __("Décongélation", __FILE__) ,
-                'action' => 'Program'
+                'action' => 'Program',
+                'available' => array(
+                    'Oven'
+                )
             ) ,
             'Cooking.Oven.Program.HeatingMode.Proof' => array(
                 'name' => __("Levain", __FILE__) ,
-                'action' => 'Program'
+                'action' => 'Program',
+                'available' => array(
+                    'Oven'
+                )
             ) ,
             'Cooking.Oven.Program.HeatingMode.WarmingDrawer' => array(
                 'name' => __("Tiroir chauffant", __FILE__) ,
-                'action' => 'Program'
+                'action' => 'Program',
+                'available' => array(
+                    'Oven'
+                )
             ) ,
             'Cooking.Oven.Program.HeatingMode.GrillSmallArea' => array(
                 'name' => __("Gril basse puissance", __FILE__) ,
-                'action' => 'Program'
+                'action' => 'Program',
+                'available' => array(
+                    'Oven'
+                )
             ) ,
             //puissance moyenne
             'Cooking.Oven.Program.HeatingMode.GrillLargeArea' => array(
                 'name' => __("Gril grande puissance", __FILE__) ,
-                'action' => 'Program'
+                'action' => 'Program',
+                'available' => array(
+                    'Oven'
+                )
             ) ,
             'Cooking.Oven.Program.HeatingMode.LetRest' => array(
                 'name' => __("Laisser reposer", __FILE__) ,
-                'action' => 'Program'
+                'action' => 'Program',
+                'available' => array(
+                    'Oven'
+                )
             ) ,
             'Cooking.Oven.Program.Dish.Automatic.Conv.PotRoastedBeef' => array(
                 'name' => __("Boœuf braisé", __FILE__) ,
-                'action' => 'Program'
+                'action' => 'Program',
+                'available' => array(
+                    'Oven'
+                )
             ) ,
             'Cooking.Oven.Program.Dish.Automatic.Conv.UnstuffedDuck' => array(
                 'name' => __("Canard, non farci", __FILE__) ,
-                'action' => 'Program'
+                'action' => 'Program',
+                'available' => array(
+                    'Oven'
+                )
             ) ,
             'Cooking.Oven.Program.Dish.Automatic.Conv.BonelessPorkNeckJoint' => array(
                 'name' => __("Cou de porc désossé", __FILE__) ,
-                'action' => 'Program'
+                'action' => 'Program',
+                'available' => array(
+                    'Oven'
+                )
             ) ,
             'Cooking.Oven.Program.Dish.Automatic.Conv.PorkNeckJoint' => array(
                 'name' => __("Cou de porc rôti", __FILE__) ,
-                'action' => 'Program'
+                'action' => 'Program',
+                'available' => array(
+                    'Oven'
+                )
             ) ,
             'Cooking.Oven.Program.Dish.Automatic.Conv.PommesFrites' => array(
                 'name' => __("Frites", __FILE__) ,
-                'action' => 'Program'
+                'action' => 'Program',
+                'available' => array(
+                    'Oven'
+                )
             ) ,
             'Cooking.Oven.Program.Dish.Automatic.Conv.BonelessLegOfLambMedium' => array(
                 'name' => __("Gigot d'agneau désossé, à point", __FILE__) ,
-                'action' => 'Program'
+                'action' => 'Program',
+                'available' => array(
+                    'Oven'
+                )
             ) ,
             'Cooking.Oven.Program.Dish.Automatic.Conv.BonelessLegOfLambWellDone' => array(
                 'name' => __("Gigot d'agneau désossé, bien cuit", __FILE__) ,
-                'action' => 'Program'
+                'action' => 'Program',
+                'available' => array(
+                    'Oven'
+                )
             ) ,
             'Cooking.Oven.Program.Dish.Automatic.Conv.BonelessLegOfVenison' => array(
                 'name' => __("Gigot de venaison désossé", __FILE__) ,
-                'action' => 'Program'
+                'action' => 'Program',
+                'available' => array(
+                    'Oven'
+                )
             ) ,
             'Cooking.Oven.Program.Dish.Automatic.Conv.Goulash' => array(
                 'name' => __("Goulash", __FILE__) ,
-                'action' => 'Program'
+                'action' => 'Program',
+                'available' => array(
+                    'Oven'
+                )
             ) ,
             'Cooking.Oven.Program.Dish.Automatic.Conv.PotatoGratin' => array(
                 'name' => __("Gratin de pommes de terre, avec pommes de terre crues", __FILE__) ,
-                'action' => 'Program'
+                'action' => 'Program',
+                'available' => array(
+                    'Oven'
+                )
             ) ,
             'Cooking.Oven.Program.Dish.Automatic.Conv.WholeRabbit' => array(
                 'name' => __("Lapin, entier", __FILE__) ,
-                'action' => 'Program'
+                'action' => 'Program',
+                'available' => array(
+                    'Oven'
+                )
             ) ,
             'Cooking.Oven.Program.Dish.Automatic.Conv.FrozenLasagne' => array(
                 'name' => __("Lasagne", __FILE__) ,
-                'action' => 'Program'
+                'action' => 'Program',
+                'available' => array(
+                    'Oven'
+                )
             ) ,
             'Cooking.Oven.Program.Dish.Automatic.Conv.StewWithVegetables' => array(
                 'name' => __("Mijoté aux légumes", __FILE__) ,
-                'action' => 'Program'
+                'action' => 'Program',
+                'available' => array(
+                    'Oven'
+                )
             ) ,
             'Cooking.Oven.Program.Dish.Automatic.Conv.StewWithMeat' => array(
                 'name' => __("Mijoté avec de la viande", __FILE__) ,
-                'action' => 'Program'
+                'action' => 'Program',
+                'available' => array(
+                    'Oven'
+                )
             ) ,
             'Cooking.Oven.Program.Dish.Automatic.Conv.ChickenParts' => array(
                 'name' => __("Morceaux de poulet", __FILE__) ,
-                'action' => 'Program'
+                'action' => 'Program',
+                'available' => array(
+                    'Oven'
+                )
             ) ,
             'Cooking.Oven.Program.Dish.Automatic.Conv.UnstuffedGoose' => array(
                 'name' => __("Oie, non farcie", __FILE__) ,
-                'action' => 'Program'
+                'action' => 'Program',
+                'available' => array(
+                    'Oven'
+                )
             ) ,
             'Cooking.Oven.Program.Dish.Automatic.Conv.MeatLoafMadeFromFreshMincedMeat' => array(
                 'name' => __("Pain de viande, avec viande hachée fraîche", __FILE__) ,
-                'action' => 'Program'
+                'action' => 'Program',
+                'available' => array(
+                    'Oven'
+                )
             ) ,
             'Cooking.Oven.Program.Dish.Automatic.Conv.PastaBake' => array(
                 'name' => __("Pâtes au four", __FILE__) ,
-                'action' => 'Program'
+                'action' => 'Program',
+                'available' => array(
+                    'Oven'
+                )
             ) ,
             'Cooking.Oven.Program.Dish.Automatic.Conv.PartCookedBreadRollsOrBaguette' => array(
                 'name' => __("Petits pains ou baguette, pré-cuits", __FILE__) ,
-                'action' => 'Program'
+                'action' => 'Program',
+                'available' => array(
+                    'Oven'
+                )
             ) ,
             'Cooking.Oven.Program.Dish.Automatic.Conv.FrozenDeepPanPizza' => array(
                 'name' => __("Pizza à pâte épaisse", __FILE__) ,
-                'action' => 'Program'
+                'action' => 'Program',
+                'available' => array(
+                    'Oven'
+                )
             ) ,
             'Cooking.Oven.Program.Dish.Automatic.Conv.FrozenThinCrustPizza' => array(
                 'name' => __("Pizza à pâte mince", __FILE__) ,
-                'action' => 'Program'
+                'action' => 'Program',
+                'available' => array(
+                    'Oven'
+                )
             ) ,
             'Cooking.Oven.Program.Dish.Automatic.Conv.WholeFish' => array(
                 'name' => __("Poisson, entier", __FILE__) ,
-                'action' => 'Program'
+                'action' => 'Program',
+                'available' => array(
+                    'Oven'
+                )
             ) ,
             'Cooking.Oven.Program.Dish.Automatic.Conv.TurkeyBreast' => array(
                 'name' => __("Poitrine de dinde", __FILE__) ,
-                'action' => 'Program'
+                'action' => 'Program',
+                'available' => array(
+                    'Oven'
+                )
             ) ,
             'Cooking.Oven.Program.Dish.Automatic.Conv.WholeBakedPotatoes' => array(
                 'name' => __("Pommes de terre au four, entières", __FILE__) ,
-                'action' => 'Program'
+                'action' => 'Program',
+                'available' => array(
+                    'Oven'
+                )
             ) ,
             'Cooking.Oven.Program.Dish.Automatic.Conv.UnstuffedChicken' => array(
                 'name' => __("Poulet, non farci", __FILE__) ,
-                'action' => 'Program'
+                'action' => 'Program',
+                'available' => array(
+                    'Oven'
+                )
             ) ,
             'Cooking.Oven.Program.Dish.Automatic.Conv.JointOfPorkWithCrackling' => array(
                 'name' => __("Rôti de porc avec couenne croustillante", __FILE__) ,
-                'action' => 'Program'
+                'action' => 'Program',
+                'available' => array(
+                    'Oven'
+                )
             ) ,
             'Cooking.Oven.Program.Dish.Automatic.Conv.JointOfVealLean' => array(
                 'name' => __("Rôti de veau, maigre", __FILE__) ,
-                'action' => 'Program'
+                'action' => 'Program',
+                'available' => array(
+                    'Oven'
+                )
             ) ,
             'Cooking.Oven.Program.Dish.Automatic.Conv.JointOfVealMarbled' => array(
                 'name' => __("Rôti de veau, persillé", __FILE__) ,
-                'action' => 'Program'
+                'action' => 'Program',
+                'available' => array(
+                    'Oven'
+                )
             ) ,
             'Cooking.Oven.Program.Dish.Automatic.Conv.BeefRoulade' => array(
                 'name' => __("Roulade au bœuf", __FILE__) ,
-                'action' => 'Program'
+                'action' => 'Program',
+                'available' => array(
+                    'Oven'
+                )
             ) ,
             'Cooking.Oven.Program.Dish.Automatic.Conv.SirloinMedium' => array(
                 'name' => __("Surlonge, à point", __FILE__) ,
-                'action' => 'Program'
+                'action' => 'Program',
+                'available' => array(
+                    'Oven'
+                )
             ) ,
             'Cooking.Oven.Option.SetpointTemperature' => array(
                 'name' => __("Température cible pour l'enceinte", __FILE__) ,
@@ -1395,131 +1713,259 @@ class homeconnect_capabilities {
             ) ,
             'LaundryCare.Dryer.Program.Cotton' => array(
                 'name' => __("Coton", __FILE__) ,
-                'action' => 'Program'
+                'action' => 'Program',
+                'available' => array(
+                    'Dryer',
+                    'WasherDryer'
+                )
             ) ,
             'LaundryCare.Dryer.Program.Cotton.Eco4060' => array(
                 'name' => __("Coton éco 40-60 °C", __FILE__) ,
-                'action' => 'Program'
+                'action' => 'Program',
+                'available' => array(
+                    'Dryer',
+                    'WasherDryer'
+                )
             ) ,
             'LaundryCare.Dryer.Program.EasyCare.EasyCare' => array(
                 'name' => __("Entretien facile", __FILE__) ,
-                'action' => 'Program'
+                'action' => 'Program',
+                'available' => array(
+                    'Dryer',
+                    'WasherDryer'
+                )
             ) ,
             'LaundryCare.Dryer.Program.Synthetic' => array(
                 'name' => __("Synthétiques", __FILE__) ,
-                'action' => 'Program'
+                'action' => 'Program',
+                'available' => array(
+                    'Dryer',
+                    'WasherDryer'
+                )
             ) ,
             'LaundryCare.Dryer.Program.Mix' => array(
                 'name' => __("Mélangé", __FILE__) ,
-                'action' => 'Program'
+                'action' => 'Program',
+                'available' => array(
+                    'Dryer',
+                    'WasherDryer'
+                )
             ) ,
             'LaundryCare.Dryer.Program.Wool.Wool' => array(
                 'name' => __("Laine", __FILE__) ,
-                'action' => 'Program'
+                'action' => 'Program',
+                'available' => array(
+                    'Dryer',
+                    'WasherDryer'
+                )
             ) ,
             'LaundryCare.Dryer.Program.WaterProof.WaterProof' => array(
                 'name' => __("Imperméabiliser", __FILE__) ,
-                'action' => 'Program'
+                'action' => 'Program',
+                'available' => array(
+                    'Dryer',
+                    'WasherDryer'
+                )
             ) ,
             'LaundryCare.Dryer.Program.Refresh.RefreshwoHS' => array(
                 'name' => __("RefreshwoHS", __FILE__) ,
-                'action' => 'Program'
+                'action' => 'Program',
+                'available' => array(
+                    'Dryer',
+                    'WasherDryer'
+                )
             ) ,
             'LaundryCare.Dryer.Program.Blankets' => array(
                 'name' => __("Blankets", __FILE__) ,
-                'action' => 'Program'
+                'action' => 'Program',
+                'available' => array(
+                    'Dryer',
+                    'WasherDryer'
+                )
             ) ,
             'LaundryCare.Dryer.Program.BusinessShirts' => array(
                 'name' => __("Chemises de travail", __FILE__) ,
-                'action' => 'Program'
+                'action' => 'Program',
+                'available' => array(
+                    'Dryer',
+                    'WasherDryer'
+                )
             ) ,
             'LaundryCare.Dryer.Program.DownFeathers' => array(
                 'name' => __("Plumes de duvet", __FILE__) ,
-                'action' => 'Program'
+                'action' => 'Program',
+                'available' => array(
+                    'Dryer',
+                    'WasherDryer'
+                )
             ) ,
             'LaundryCare.Dryer.Program.Hygiene' => array(
                 'name' => __("Hygiénique", __FILE__) ,
-                'action' => 'Program'
+                'action' => 'Program',
+                'available' => array(
+                    'Dryer',
+                    'WasherDryer'
+                )
             ) ,
             'LaundryCare.Dryer.Program.TimeWarm' => array(
                 'name' => __("Temps chaud", __FILE__) ,
-                'action' => 'Program'
+                'action' => 'Program',
+                'available' => array(
+                    'Dryer',
+                    'WasherDryer'
+                )
             ) ,
             'LaundryCare.Dryer.Program.Jeans' => array(
                 'name' => __("Jeans", __FILE__) ,
-                'action' => 'Program'
+                'action' => 'Program',
+                'available' => array(
+                    'Dryer',
+                    'WasherDryer'
+                )
             ) ,
             'LaundryCare.Dryer.Program.Outdoor' => array(
                 'name' => __("Extérieur", __FILE__) ,
-                'action' => 'Program'
+                'action' => 'Program',
+                'available' => array(
+                    'Dryer',
+                    'WasherDryer'
+                )
             ) ,
             'LaundryCare.Dryer.Program.SyntheticRefresh' => array(
                 'name' => __("Rafraîchissement synthétiques", __FILE__) ,
-                'action' => 'Program'
+                'action' => 'Program',
+                'available' => array(
+                    'Dryer',
+                    'WasherDryer'
+                )
             ) ,
             'LaundryCare.Dryer.Program.Towels' => array(
                 'name' => __("Serviettes", __FILE__) ,
-                'action' => 'Program'
+                'action' => 'Program',
+                'available' => array(
+                    'Dryer',
+                    'WasherDryer'
+                )
             ) ,
             'LaundryCare.Dryer.Program.Delicates' => array(
                 'name' => __("Délicat", __FILE__) ,
-                'action' => 'Program'
+                'action' => 'Program',
+                'available' => array(
+                    'Dryer',
+                    'WasherDryer'
+                )
             ) ,
             'LaundryCare.Dryer.Program.Super40' => array(
                 'name' => __("Super 40 °C", __FILE__) ,
-                'action' => 'Program'
+                'action' => 'Program',
+                'available' => array(
+                    'Dryer',
+                    'WasherDryer'
+                )
             ) ,
             'LaundryCare.Dryer.Program.Shirts15' => array(
                 'name' => __("Chemises 15°C", __FILE__) ,
-                'action' => 'Program'
+                'action' => 'Program',
+                'available' => array(
+                    'Dryer',
+                    'WasherDryer'
+                )
             ) ,
             'LaundryCare.Dryer.Program.Pillow' => array(
                 'name' => __("Oreillers", __FILE__) ,
-                'action' => 'Program'
+                'action' => 'Program',
+                'available' => array(
+                    'Dryer',
+                    'WasherDryer'
+                )
             ) ,
             'LaundryCare.Dryer.Program.AntiShrink' => array(
                 'name' => __("Anti-rétrécissement", __FILE__) ,
-                'action' => 'Program'
+                'action' => 'Program',
+                'available' => array(
+                    'Dryer',
+                    'WasherDryer'
+                )
             ) ,
             'LaundryCare.Dryer.Program.MyTime.MyDryingTime' => array(
                 'name' => __("Mon temps de séchage", __FILE__) ,
-                'action' => 'Program'
+                'action' => 'Program',
+                'available' => array(
+                    'Dryer',
+                    'WasherDryer'
+                )
             ) ,
             'LaundryCare.Dryer.Program.TimeCold' => array(
                 'name' => __("Temps froid", __FILE__) ,
-                'action' => 'Program'
+                'action' => 'Program',
+                'available' => array(
+                    'Dryer',
+                    'WasherDryer'
+                )
             ) ,
             'LaundryCare.Dryer.Program.InBasket' => array(
                 'name' => __("Dans le panier", __FILE__) ,
-                'action' => 'Program'
+                'action' => 'Program',
+                'available' => array(
+                    'Dryer',
+                    'WasherDryer'
+                )
             ) ,
             'LaundryCare.Dryer.Program.TimeColdFix.TimeCold20' => array(
                 'name' => __("Temps froid 20 °C", __FILE__) ,
-                'action' => 'Program'
+                'action' => 'Program',
+                'available' => array(
+                    'Dryer',
+                    'WasherDryer'
+                )
             ) ,
             'LaundryCare.Dryer.Program.TimeColdFix.TimeCold30' => array(
                 'name' => __("Temps froid 30 °C", __FILE__) ,
-                'action' => 'Program'
+                'action' => 'Program',
+                'available' => array(
+                    'Dryer',
+                    'WasherDryer'
+                )
             ) ,
             'LaundryCare.Dryer.Program.TimeColdFix.TimeCold60' => array(
                 'name' => __("Temps froid 40 °C", __FILE__) ,
-                'action' => 'Program'
+                'action' => 'Program',
+                'available' => array(
+                    'Dryer',
+                    'WasherDryer'
+                )
             ) ,
             'LaundryCare.Dryer.Program.TimeWarmFix.TimeWarm30' => array(
                 'name' => __("Temps chaud 30 °C", __FILE__) ,
-                'action' => 'Program'
+                'action' => 'Program',
+                'available' => array(
+                    'Dryer',
+                    'WasherDryer'
+                )
             ) ,
             'LaundryCare.Dryer.Program.TimeWarmFix.TimeWarm40' => array(
                 'name' => __("Temps chaud 40 °C", __FILE__) ,
-                'action' => 'Program'
+                'action' => 'Program',
+                'available' => array(
+                    'Dryer',
+                    'WasherDryer'
+                )
             ) ,
             'LaundryCare.Dryer.Program.TimeWarmFix.TimeWarm60' => array(
                 'name' => __("Temps chaud 60 °C", __FILE__) ,
-                'action' => 'Program'
+                'action' => 'Program',
+                'available' => array(
+                    'Dryer',
+                    'WasherDryer'
+                )
             ) ,
             'LaundryCare.Dryer.Program.Dessous' => array(
                 'name' => __("Dessous", __FILE__) ,
-                'action' => 'Program'
+                'action' => 'Program',
+                'available' => array(
+                    'Dryer',
+                    'WasherDryer'
+                )
             ) ,
             'LaundryCare.Dryer.Option.DryingTarget' => array(
                 'name' => __("Degré de séchage", __FILE__) ,
@@ -1680,139 +2126,275 @@ class homeconnect_capabilities {
             ) ,
             'LaundryCare.Washer.Program.Cotton' => array(
                 'name' => __("Coton", __FILE__) ,
-                'action' => 'Program'
+                'action' => 'Program',
+                'available' => array(
+                    'Washer',
+                    'WasherDryer'
+                )
             ) ,
             'LaundryCare.Washer.Program.Cotton.CottonEco' => array(
                 'name' => __("Coton éco", __FILE__) ,
-                'action' => 'Program'
+                'action' => 'Program',
+                'available' => array(
+                    'Washer',
+                    'WasherDryer'
+                )
             ) ,
             'LaundryCare.Washer.Program.Cotton.Eco4060' => array(
                 'name' => __("Coton éco 40-60 °C", __FILE__) ,
-                'action' => 'Program'
+                'action' => 'Program',
+                'available' => array(
+                    'Washer',
+                    'WasherDryer'
+                )
             ) ,
             'LaundryCare.Washer.Program.Cotton.Colour' => array(
                 'name' => __("Coton couleur", __FILE__) ,
-                'action' => 'Program'
+                'action' => 'Program',
+                'available' => array(
+                    'Washer',
+                    'WasherDryer'
+                )
             ) ,
             'LaundryCare.Washer.Program.EasyCare' => array(
                 'name' => __("Entretien facile", __FILE__) ,
-                'action' => 'Program'
+                'action' => 'Program',
+                'available' => array(
+                    'Washer',
+                    'WasherDryer'
+                )
             ) ,
             'LaundryCare.Washer.Program.Mix' => array(
                 'name' => __("Mélangé", __FILE__) ,
-                'action' => 'Program'
+                'action' => 'Program',
+                'available' => array(
+                    'Washer',
+                    'WasherDryer'
+                )
             ) ,
             'LaundryCare.Washer.Program.DelicatesSilk' => array(
                 'name' => __("Délicat/Soie", __FILE__) ,
-                'action' => 'Program'
+                'action' => 'Program',
+                'available' => array(
+                    'Washer',
+                    'WasherDryer'
+                )
             ) ,
             'LaundryCare.Washer.Program.Wool' => array(
                 'name' => __("Laine", __FILE__) ,
-                'action' => 'Program'
+                'action' => 'Program',
+                'available' => array(
+                    'Washer',
+                    'WasherDryer'
+                )
             ) ,
             'LaundryCare.Washer.Program.DrumClean' => array(
                 'name' => __("Nettoyage tambour", __FILE__) ,
-                'action' => 'Program'
+                'action' => 'Program',
+                'available' => array(
+                    'Washer',
+                    'WasherDryer'
+                )
             ) ,
             'LaundryCare.Washer.Program.Spin.SpinDrain' => array(
                 'name' => __("Essorage/Vidange", __FILE__) ,
-                'action' => 'Program'
+                'action' => 'Program',
+                'available' => array(
+                    'Washer',
+                    'WasherDryer'
+                )
             ) ,
             'LaundryCare.Washer.Program.Rinse' => array(
                 'name' => __("Rinçage", __FILE__) ,
-                'action' => 'Program'
+                'action' => 'Program',
+                'available' => array(
+                    'Washer',
+                    'WasherDryer'
+                )
             ) ,
             'LaundryCare.Washer.Program.Rinse.Rinse' => array(
                 'name' => __("Rinçage", __FILE__) ,
-                'action' => 'Program'
+                'action' => 'Program',
+                'available' => array(
+                    'Washer',
+                    'WasherDryer'
+                )
             ) ,
             'LaundryCare.Washer.Program.Rinse.RinseSpin' => array(
                 'name' => __("Rinçage/Essorage", __FILE__) ,
-                'action' => 'Program'
+                'action' => 'Program',
+                'available' => array(
+                    'Washer',
+                    'WasherDryer'
+                )
             ) ,
             'LaundryCare.Washer.Program.Rinse.RinseSpinDrain' => array(
                 'name' => __("Rinçage/Essorage/Vidange", __FILE__) ,
-                'action' => 'Program'
+                'action' => 'Program',
+                'available' => array(
+                    'Washer',
+                    'WasherDryer'
+                )
             ) ,
             'LaundryCare.Washer.Program.WashAndDry.60' => array(
                 'name' => __("Lavage&Séchage 60 min.", __FILE__) ,
-                'action' => 'Program'
+                'action' => 'Program',
+                'available' => array(
+                    'Washer',
+                    'WasherDryer'
+                )
             ) ,
             'LaundryCare.Washer.Program.WashAndDry.90' => array(
                 'name' => __("Lavage&Séchage 90 min.", __FILE__) ,
-                'action' => 'Program'
+                'action' => 'Program',
+                'available' => array(
+                    'Washer',
+                    'WasherDryer'
+                )
             ) ,
             'LaundryCare.Washer.Program.Sensitive' => array(
                 'name' => __("Sensible", __FILE__) ,
-                'action' => 'Program'
+                'action' => 'Program',
+                'available' => array(
+                    'Washer',
+                    'WasherDryer'
+                )
             ) ,
             'LaundryCare.Washer.Program.Auto30' => array(
                 'name' => __("Auto 30°C", __FILE__) ,
-                'action' => 'Program'
+                'action' => 'Program',
+                'available' => array(
+                    'Washer',
+                    'WasherDryer'
+                )
             ) ,
             'LaundryCare.Washer.Program.Auto40' => array(
                 'name' => __("Auto 40°C", __FILE__) ,
-                'action' => 'Program'
+                'action' => 'Program',
+                'available' => array(
+                    'Washer',
+                    'WasherDryer'
+                )
             ) ,
             'LaundryCare.Washer.Program.Auto60' => array(
                 'name' => __("Auto 60°C", __FILE__) ,
-                'action' => 'Program'
+                'action' => 'Program',
+                'available' => array(
+                    'Washer',
+                    'WasherDryer'
+                )
             ) ,
             'LaundryCare.Washer.Program.Chiffon' => array(
                 'name' => __("Mousseline de soie", __FILE__) ,
-                'action' => 'Program'
+                'action' => 'Program',
+                'available' => array(
+                    'Washer',
+                    'WasherDryer'
+                )
             ) ,
             'LaundryCare.Washer.Program.Curtains' => array(
                 'name' => __("Rideaux", __FILE__) ,
-                'action' => 'Program'
+                'action' => 'Program',
+                'available' => array(
+                    'Washer',
+                    'WasherDryer'
+                )
             ) ,
             'LaundryCare.Washer.Program.DarkWash' => array(
                 'name' => __("Spécial couleurs sombres", __FILE__) ,
-                'action' => 'Program'
+                'action' => 'Program',
+                'available' => array(
+                    'Washer',
+                    'WasherDryer'
+                )
             ) ,
             'LaundryCare.Washer.Program.Dessous' => array(
                 'name' => __("Lingerie", __FILE__) ,
-                'action' => 'Program'
+                'action' => 'Program',
+                'available' => array(
+                    'Washer',
+                    'WasherDryer'
+                )
             ) ,
             'LaundryCare.Washer.Program.Monsoon' => array(
                 'name' => __("Mousson", __FILE__) ,
-                'action' => 'Program'
+                'action' => 'Program',
+                'available' => array(
+                    'Washer',
+                    'WasherDryer'
+                )
             ) ,
             'LaundryCare.Washer.Program.Outdoor' => array(
                 'name' => __("Extérieur", __FILE__) ,
-                'action' => 'Program'
+                'action' => 'Program',
+                'available' => array(
+                    'Washer',
+                    'WasherDryer'
+                )
             ) ,
             'LaundryCare.Washer.Program.PlushToy' => array(
                 'name' => __("Peluche", __FILE__) ,
-                'action' => 'Program'
+                'action' => 'Program',
+                'available' => array(
+                    'Washer',
+                    'WasherDryer'
+                )
             ) ,
             'LaundryCare.Washer.Program.ShirtsBlouses' => array(
                 'name' => __("Chemises", __FILE__) ,
-                'action' => 'Program'
+                'action' => 'Program',
+                'available' => array(
+                    'Washer',
+                    'WasherDryer'
+                )
             ) ,
             'LaundryCare.Washer.Program.SportFitness' => array(
                 'name' => __("Textiles sport", __FILE__) ,
-                'action' => 'Program'
+                'action' => 'Program',
+                'available' => array(
+                    'Washer',
+                    'WasherDryer'
+                )
             ) ,
             'LaundryCare.Washer.Program.Towels' => array(
                 'name' => __("Serviettes", __FILE__) ,
-                'action' => 'Program'
+                'action' => 'Program',
+                'available' => array(
+                    'Washer',
+                    'WasherDryer'
+                )
             ) ,
             'LaundryCare.Washer.Program.WaterProof' => array(
                 'name' => __("Imperméabiliser", __FILE__) ,
-                'action' => 'Program'
+                'action' => 'Program',
+                'available' => array(
+                    'Washer',
+                    'WasherDryer'
+                )
             ) ,
             'LaundryCare.Washer.Program.Super153045.Super15' => array(
                 'name' => __("Express 15 min.", __FILE__) ,
-                'action' => 'Program'
+                'action' => 'Program',
+                'available' => array(
+                    'Washer',
+                    'WasherDryer'
+                )
             ) ,
             'LaundryCare.Washer.Program.Super153045.Super1530' => array(
                 'name' => __("Express 15/30 min.", __FILE__) ,
-                'action' => 'Program'
+                'action' => 'Program',
+                'available' => array(
+                    'Washer',
+                    'WasherDryer'
+                )
             ) ,
             'LaundryCare.Washer.Program.MyTime' => array(
                 'name' => __("Mon temps", __FILE__) ,
-                'action' => 'Program'
+                'action' => 'Program',
+                'available' => array(
+                    'Washer',
+                    'WasherDryer'
+                )
             ) ,
             'LaundryCare.Washer.Option.Temperature' => array(
                 'name' => __("Température", __FILE__) ,
@@ -2121,51 +2703,87 @@ class homeconnect_capabilities {
             ) ,
             'LaundryCare.WasherDryer.Program.Cotton' => array(
                 'name' => __("Coton", __FILE__) ,
-                'action' => 'Program'
+                'action' => 'Program',
+                'available' => array(
+                    'WasherDryer'
+                )
             ) ,
             'LaundryCare.WasherDryer.Program.Cotton.Eco4060' => array(
                 'name' => __("Coton éco 40-60 min.", __FILE__) ,
-                'action' => 'Program'
+                'action' => 'Program',
+                'available' => array(
+                    'WasherDryer'
+                )
             ) ,
             'LaundryCare.WasherDryer.Program.EasyCare' => array(
                 'name' => __("Synthétiques", __FILE__) ,
-                'action' => 'Program'
+                'action' => 'Program',
+                'available' => array(
+                    'WasherDryer'
+                )
             ) ,
             'LaundryCare.WasherDryer.Program.Mix' => array(
                 'name' => __("Mélangé", __FILE__) ,
-                'action' => 'Program'
+                'action' => 'Program',
+                'available' => array(
+                    'WasherDryer'
+                )
             ) ,
             'LaundryCare.WasherDryer.Program.Wool.Wool' => array(
                 'name' => __("Laine", __FILE__) ,
-                'action' => 'Program'
+                'action' => 'Program',
+                'available' => array(
+                    'WasherDryer'
+                )
             ) ,
             'LaundryCare.WasherDryer.Program.Rinse.Rinse' => array(
                 'name' => __("Rinçage", __FILE__) ,
-                'action' => 'Program'
+                'action' => 'Program',
+                'available' => array(
+                    'WasherDryer'
+                )
             ) ,
             'LaundryCare.WasherDryer.Program.Rinse.RinseSpin' => array(
                 'name' => __("Rinçage/Essorage", __FILE__) ,
-                'action' => 'Program'
+                'action' => 'Program',
+                'available' => array(
+                    'WasherDryer'
+                )
             ) ,
             'LaundryCare.WasherDryer.Program.WaterProof.WaterProof' => array(
                 'name' => __("Imperméabiliser", __FILE__) ,
-                'action' => 'Program'
+                'action' => 'Program',
+                'available' => array(
+                    'WasherDryer'
+                )
             ) ,
             'LaundryCare.WasherDryer.Program.WashAndDry.60' => array(
                 'name' => __("Lavage&Séchage 60 min.", __FILE__) ,
-                'action' => 'Program'
+                'action' => 'Program',
+                'available' => array(
+                    'WasherDryer'
+                )
             ) ,
             'LaundryCare.WasherDryer.Program.WashAndDry.90' => array(
                 'name' => __("Lavage&Séchage 90 min.", __FILE__) ,
-                'action' => 'Program'
+                'action' => 'Program',
+                'available' => array(
+                    'WasherDryer'
+                )
             ) ,
             'LaundryCare.WasherDryer.Program.Towels.Towels' => array(
                 'name' => __("Serviettes", __FILE__) ,
-                'action' => 'Program'
+                'action' => 'Program',
+                'available' => array(
+                    'WasherDryer'
+                )
             ) ,
             'LaundryCare.WasherDryer.Program.ShirtsBlouses.ShirtsBlouses' => array(
                 'name' => __("Chemises", __FILE__) ,
-                'action' => 'Program'
+                'action' => 'Program',
+                'available' => array(
+                    'WasherDryer'
+                )
             ) ,
             'Refrigeration.FridgeFreezer.Setting.SetpointTemperatureFreezer' => array(
                 'name' => __("Température cible congélateur", __FILE__) ,
@@ -3197,14 +3815,14 @@ class homeconnect_capabilities {
                             'Dishwasher'
                         ) ,
                     ) ,
-										'BSH.Common.EnumType.AmbientLightColor.Color1' => array(
-										    'name' => __("Couleur 1", __FILE__) ,
-										    'action' => 'Status',
-										    'available' => array(
-										        'Hood',
-										        'Dishwasher'
-										    ) ,
-										) ,
+                    'BSH.Common.EnumType.AmbientLightColor.Color1' => array(
+                    'name' => __("Couleur 1", __FILE__) ,
+                        'action' => 'Status',
+                        'available' => array(
+                            'Hood',
+                            'Dishwasher'
+                        ) ,
+                    ) ,
 										'BSH.Common.EnumType.AmbientLightColor.Color2' => array(
 										    'name' => __("Couleur 2", __FILE__) ,
 										    'action' => 'Status',
