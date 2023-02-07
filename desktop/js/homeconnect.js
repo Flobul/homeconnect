@@ -95,22 +95,29 @@ function syncHC(force = false) {
 	});
 });
 
- $('#bt_healthHomeConnect').on('click', function () {
+$('#bt_healthHomeConnect').on('click', function () {
 	$('#md_modal').dialog({title: "{{Santé Home Connect}}"});
 	$('#md_modal').load('index.php?v=d&plugin=homeconnect&modal=health').dialog('open');
 });
 
-  $('body').delegate('.cmdAttr[data-action=configureCommand]', 'click', function() {
+$('body').delegate('.cmdAttr[data-action=configureCommand]', 'click', function() {
     $('#md_modal').dialog({
-      title: "{{Configuration de la commande}}"
+        title: "{{Configuration de la commande}}"
     });
     $('#md_modal').load('index.php?v=d&plugin=homeconnect&modal=command.configure&id=' + $(this).closest('.cmd').getValues('.cmdAttr')[0]['id']).dialog('open');
-  });
+});
 
- $('.eqLogicAttr[data-l1key=configuration][data-l2key=type]').on('change',function(){
-	if($(this).value() == null){
-		return;
-	}
+$('.cmdAction[data-action=addCommand]').on('click', function() {
+    $('#md_modal').dialog({
+        title: "{{Assistant de création de commande}}"
+    });
+    $('#md_modal').load('index.php?v=d&plugin=homeconnect&modal=addCommand&eqLogic_id='+$('.eqLogicAttr[data-l1key=id]').value()).dialog('open');
+});
+
+$('.eqLogicAttr[data-l1key=configuration][data-l2key=type]').on('change',function(){
+    if($(this).value() == null){
+	    return;
+    }
 	$('#img_device').attr("src", 'plugins/homeconnect/core/config/images/'+$(this).value()+'.png');
 });
 
@@ -169,6 +176,10 @@ function addCmdToTable(_cmd) {
   if (init(_cmd.type) == 'info') {
     tr += '<span class="cmdAttr" data-l1key="htmlstate" style="display:block;text-align:center;"></span>';
   }
+  tr += '    <input class="tooltips cmdAttr form-control input-sm" data-l1key="logicalId" style="display:none;">';
+  tr += '    <input class="tooltips cmdAttr form-control input-sm" data-l1key="configuration" data-l2key="key" style="display:none;">';
+  tr += '    <input class="tooltips cmdAttr form-control input-sm" data-l1key="configuration" data-l2key="path" style="display:none;">';
+  tr += '    <input class="tooltips cmdAttr form-control input-sm" data-l1key="configuration" data-l2key="category" style="display:none;">';
   tr += '</td>';
 
   tr += '<td>';
