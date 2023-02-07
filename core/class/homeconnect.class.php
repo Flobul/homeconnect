@@ -265,11 +265,11 @@ class homeconnect extends eqLogic {
         log::add(__CLASS__, 'debug', __('Nombre de requêtes envoyées aujourd\'hui ', __FILE__) . $totalRequests);
 
         if ($code == '200' || $code == '204') {
-            log::add(__CLASS__, 'debug', __('La requête', __FILE__) . $method . ' : ' . $url . __('a réussi, code ', __FILE__) . $code . __(', résultat ', __FILE__) . $result);
+            log::add(__CLASS__, 'debug', __('La requête ', __FILE__) . $method . ' : ' . $url . __('a réussi, code ', __FILE__) . $code . __(', résultat ', __FILE__) . $result);
             return $result;
         } else {
             // Traitement des erreurs
-            log::add(__CLASS__, 'debug', __('La requête', __FILE__) . $method . ' : ' . $url . __(' a retourné un code d\'erreur ', __FILE__) . $code . __(', résultat ', __FILE__) . $result);
+            log::add(__CLASS__, 'debug', __('La requête ', __FILE__) . $method . ' : ' . $url . __(' a retourné un code d\'erreur ', __FILE__) . $code . __(', résultat ', __FILE__) . $result);
             switch ($code) {
                 case 400:
                     // "Bad Request", desc: "Error occurred (e.g. validation error - value is out of range)"
@@ -293,7 +293,7 @@ class homeconnect extends eqLogic {
                 break;
                 case 405:
                     // "Method not allowed", desc: "The HTTP Method is not allowed for this resource" },
-                    log::add(__CLASS__, 'debug', __('La méthode $method n\'est pas permise pour cette ressource', __FILE__));
+                    log::add(__CLASS__, 'debug', __('La méthode n\'est pas permise pour cette ressource', __FILE__) . $method);
                 break;
                 case 406:
                     // "Not Acceptable", desc: "The resource identified by the request is only capable of generating response entities which have content characteristics not acceptable according to the accept headers sent in the request."
