@@ -169,6 +169,7 @@ $eqLogics = eqLogic::byType($plugin->getId());
 
 			<div role="tabpanel" class="tab-pane" id="commandtab">
 				<a class="btn btn-success btn-sm cmdAction pull-right" data-action="add" style="margin-top:5px;"><i class="fas fa-plus-circle"></i> {{Commandes}}</a>
+				<a class="btn btn-warning btn-sm cmdAction pull-right" data-action="addCommand" style="margin-top:5px;"><i class="fas fa-plus-circle"></i> {{Assistant commande}}</a>
                 <br><br>
 				<div class="table-responsive">
 					<table id="table_cmd" class="table table-bordered table-condensed">
