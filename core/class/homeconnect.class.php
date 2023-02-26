@@ -1124,7 +1124,7 @@ class homeconnect extends eqLogic {
         }
         log::add(__CLASS__, 'debug', __('Création d\'une commande action', __FILE__) . ', key : ' . $key . ', path : ' . $path . ', category : ' . $category);
         $logicalIdCmd = 'PUT::' . $key;
-        if ($category == 'Program' && config::byKey('demo_mode', 'homeconnect', false)) {
+        if ($category == 'Program' && config::byKey('listValueProgramm', 'homeconnect', false)) {
             $logicalIdCmd = 'PUT::program';
         }
         $cmd = $this->getCmd(null, $logicalIdCmd);
@@ -1209,7 +1209,7 @@ class homeconnect extends eqLogic {
                 $cmd->setSubType('color');
                 $cmd->setConfiguration('value', '#color#');
                 $cmd->save();
-            } elseif ($category == 'Program' && config::byKey('demo_mode', 'homeconnect', false)) {
+            } elseif ($category == 'Program' && config::byKey('listValueProgramm', 'homeconnect', false)) {
                 log::add(__CLASS__, 'debug', __('Nouvelle commande other Program logicalId ', __FILE__) . $logicalIdCmd . __(', nom ', __FILE__) . $cmd->getName());
                 $cmd->setName('Action Programmes');
                 $cmd->setSubType('select');
@@ -1226,7 +1226,7 @@ class homeconnect extends eqLogic {
                 $cmd->save();
             }
         } else {
-           if ($category == 'Program' && $logicalIdCmd == 'PUT::program' && config::byKey('demo_mode', 'homeconnect', false)) {
+           if ($category == 'Program' && $logicalIdCmd == 'PUT::program' && config::byKey('listValueProgramm', 'homeconnect', false)) {
                 log::add(__CLASS__, 'debug', __('Mise à jour commande other Program logicalId ', __FILE__) . $logicalIdCmd . __(', nom ', __FILE__) . $cmd->getName());
                 $elements = array_filter(explode(';', $cmd->getConfiguration('listValue', '')));
                 $elements[] = $key . '|' . self::getCmdDetailTranslation($key, 'name');
