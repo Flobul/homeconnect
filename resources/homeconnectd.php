@@ -23,6 +23,9 @@ require_once dirname(__FILE__) . '/../core/class/homeconnect.class.php';
         $result = curl_exec($ch);
         $req_data = curl_getinfo($ch);
         curl_close($ch);
+        $totalRequests = intval(cache::byKey('homeconnect::requests::total')->getValue());
+        $totalRequests++;
+        cache::set('homeconnect::requests::total', $totalRequests, '');
     } catch (Exception $e) {
         homeconnect::deamon_stop();
     }

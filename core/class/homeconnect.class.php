@@ -1124,6 +1124,9 @@ class homeconnect extends eqLogic {
         }
         log::add(__CLASS__, 'debug', __('Création d\'une commande action', __FILE__) . ', key : ' . $key . ', path : ' . $path . ', category : ' . $category);
         $logicalIdCmd = 'PUT::' . $key;
+        if ($category == 'Program') {
+            $logicalIdCmd = 'PUT::program';
+        }
         $cmd = $this->getCmd(null, $logicalIdCmd);
         if (!is_object($cmd)) {
             // La commande n'existe pas, on la créée
@@ -1206,6 +1209,14 @@ class homeconnect extends eqLogic {
                 $cmd->setSubType('color');
                 $cmd->setConfiguration('value', '#color#');
                 $cmd->save();
+            } elseif ($category == 'Program') {
+                log::add(__CLASS__, 'debug', __('Nouvelle commande other Program logicalId ', __FILE__) . $logicalIdCmd . __(', nom ', __FILE__) . $cmd->getName());
+                $cmd->setName('Action Programmes');
+                $cmd->setSubType('select');
+                $cmd->setConfiguration('value', '#select#');
+                $listValue = $key . '|' . self::getCmdDetailTranslation($key, 'name');
+                $cmd->setConfiguration('listValue', $listValue);
+                $cmd->save();
             } else {
                 log::add(__CLASS__, 'debug', __('Nouvelle commande other logicalId ', __FILE__) . $logicalIdCmd . __(', nom ', __FILE__) . $cmd->getName());
                 $cmd->setSubType('other');
@@ -1215,7 +1226,16 @@ class homeconnect extends eqLogic {
                 $cmd->save();
             }
         } else {
-            log::add(__CLASS__, 'debug', __('La commande ', __FILE__) . $logicalIdCmd . __(' et nom ', __FILE__) . $cmd->getName() . __(' existe déjà', __FILE__));
+           if ($category == 'Program' && $logicalIdCmd == 'PUT::program') {
+                log::add(__CLASS__, 'debug', __('Mise à jour commande other Program logicalId ', __FILE__) . $logicalIdCmd . __(', nom ', __FILE__) . $cmd->getName());
+                $elements = array_filter(explode(';', $cmd->getConfiguration('listValue', '')));
+                $elements[] = $key . '|' . self::getCmdDetailTranslation($key, 'name');
+                $elements = array_unique($elements);
+                $listValue = implode(';', $elements);
+                $cmd->setConfiguration('listValue', $listValue);
+                $cmd->save();
+           }
+           log::add(__CLASS__, 'debug', __('La commande ', __FILE__) . $logicalIdCmd . __(' et nom ', __FILE__) . $cmd->getName() . __(' existe déjà', __FILE__));
         }
         return $cmd;
     }
@@ -1707,7 +1727,7 @@ class homeconnect extends eqLogic {
         }
         $currentProgram = self::request(self::API_REQUEST_URL . '/' . $this->getLogicalId() . '/programs/' . strtolower($programType) , null, 'GET', array());
         if ($currentProgram !== false) {
-            log::add(__CLASS__, 'debug', __FUNCTION__ . __('Réponse pour program ', __FILE__) . $programType . __('dans lookProgram ', __FILE__) . $currentProgram);
+            log::add(__CLASS__, 'debug', __FUNCTION__ . __(' Réponse pour program ', __FILE__) . $programType . __('dans lookProgram ', __FILE__) . $currentProgram);
             $currentProgram = json_decode($currentProgram, true);
             if (isset($currentProgram['data']['key']) && $currentProgram['data']['key'] !== 'SDK.Error.NoProgram' . $programType) {
                 $key = $currentProgram['data']['key'];
@@ -1761,7 +1781,7 @@ class homeconnect extends eqLogic {
             $programdata = json_decode($programdata, true);
 
             if (isset($programdata['data']['key'])) {
-                $actionCmd = $this->createActionCmd($programdata['data'], 'programs/' . strtolower($programType) , 'Program');
+                $actionCmd = $this->createActionCmd($programdata['data'], 'programs/' . strtolower($programType), 'Program');
                 if ($programType == 'Selected' || $programType == 'Active') {
                     $infoCmd = $this->getCmd('info', 'GET::BSH.Common.Root.' . $programType . 'Program');
                     if (is_object($infoCmd)) {
