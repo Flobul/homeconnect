@@ -1214,6 +1214,8 @@ class homeconnect extends eqLogic {
                 $cmd->setName('Action Programmes');
                 $cmd->setSubType('select');
                 $cmd->setConfiguration('value', '#select#');
+                $cmd->setConfiguration('key', null);
+                $cmd->setConfiguration('path', 'programs/active');
                 $listValue = $key . '|' . self::getCmdDetailTranslation($key, 'name');
                 $cmd->setConfiguration('listValue', $listValue);
                 $cmd->save();
