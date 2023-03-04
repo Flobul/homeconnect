@@ -2105,64 +2105,63 @@ class homeconnectCmd extends cmd {
 
         if ($method == 'DELETE') {
             $payload = null;
-        } else {
-            if ($this->getLogicalId() !== 'PUT::BSH.Common.Option.StartInRelative') {
-                // La commande départ différé doit être envoyée au moment du lancer de programme.
-                $parameters = array(
-                    'data' => array()
-                );
-                if ($this->getConfiguration('key') !== '') {
-                    $parameters['data']['key'] = $this->getConfiguration('key', '');
-                }
-                if ($this->getConfiguration('value') !== '') {
-                    if (is_bool($this->getConfiguration('value'))) {
-                        if ($this->getValue() != '') {
-                            $cmdValue = cmd::byId($this->getValue());
-                            if (is_object($cmdValue)) {
-                                $parameters['data']['value'] = !$cmdValue->execCmd();
-                            }
-                        } else {
-                            $parameters['data']['value'] = $this->getConfiguration('value');
+        }
+        if ($this->getLogicalId() !== 'PUT::BSH.Common.Option.StartInRelative') {
+            // La commande départ différé doit être envoyée au moment du lancer de programme.
+            $parameters = array(
+                'data' => array()
+            );
+            if ($this->getConfiguration('key') !== '') {
+                $parameters['data']['key'] = $this->getConfiguration('key', '');
+            }
+            if ($this->getConfiguration('value') !== '') {
+                if (is_bool($this->getConfiguration('value'))) {
+                    if ($this->getValue() != '') {
+                        $cmdValue = cmd::byId($this->getValue());
+                        if (is_object($cmdValue)) {
+                            $parameters['data']['value'] = !$cmdValue->execCmd();
                         }
                     } else {
-                        $parameters['data']['value'] = str_replace(array_keys($replace) , $replace, $this->getConfiguration('value', ''));
+                        $parameters['data']['value'] = $this->getConfiguration('value');
                     }
+                } else {
+                    $parameters['data']['value'] = str_replace(array_keys($replace) , $replace, $this->getConfiguration('value', ''));
                 }
-                if ($this->getConfiguration('unit', '') !== '') {
-                    $parameters['data']['unit'] = $this->getConfiguration('unit', '');
-                }
-                if ($this->getConfiguration('type', '') !== '') {
-                    $parameters['data']['type'] = $this->getConfiguration('type', '');
-                }
-                $payload = json_encode($parameters, JSON_NUMERIC_CHECK);
+            }
+            if ($this->getConfiguration('unit', '') !== '') {
+                $parameters['data']['unit'] = $this->getConfiguration('unit', '');
+            }
+            if ($this->getConfiguration('type', '') !== '') {
+                $parameters['data']['type'] = $this->getConfiguration('type', '');
+            }
+            $payload = json_encode($parameters, JSON_NUMERIC_CHECK);
 
-                $url = homeconnect::API_REQUEST_URL . '/' . $haid . '/' . $path;
-                log::add('homeconnect', 'debug', __('Paramètres de la requête pour exécuter la commande ', __FILE__));
-                log::add('homeconnect', 'debug', 'Method : ' . $method);
-                log::add('homeconnect', 'debug', 'Url : ' . $url);
-                log::add('homeconnect', 'debug', 'Payload : ' . $payload);
-                $response = homeconnect::request($url, $payload, $method, $headers);
-                log::add('homeconnect', 'debug', __('Réponse du serveur ', __FILE__) . $response);
-                // si la requête est de category program il faut mettre à jour les options
-                if ($this->getConfiguration('category') == 'Program') {
-                    $typeProgram = homeconnect::lastSegment('/', $url);
-                    $eqLogic->adjustProgramOptions($typeProgram, $this->getConfiguration('key'));
-                    // A voir dans ce cas ce qu'il faut mettre à jour.
-                }
-                $eqLogic->updateApplianceData();
-            } else {
-                $value = str_replace(array_keys($replace) , $replace, $this->getConfiguration('value', ''));
-                if ($value !== '' && $value !== 0) {
-                    $parameters = array(
-                        'key' => 'BSH.Common.Option.StartInRelative',
-                        'value' => $value,
-                        'unit' => 'seconds'
-                    );
-                    $payload = json_encode($parameters, JSON_NUMERIC_CHECK);
-                    //$payload = '{"key":"BSH.Common.Option.StartInRelative","value":' . $value. ',"unit":"seconds"}';
-                    cache::set('homeconnect::startinrelative::' . $eqLogic->getId() , $payload, '');
-                    // il faut mémoriser la valeur du départ différé.
-                }
+            $url = homeconnect::API_REQUEST_URL . '/' . $haid . '/' . $path;
+            log::add('homeconnect', 'debug', __('Paramètres de la requête pour exécuter la commande ', __FILE__));
+            log::add('homeconnect', 'debug', 'Method : ' . $method);
+            log::add('homeconnect', 'debug', 'Url : ' . $url);
+            log::add('homeconnect', 'debug', 'Payload : ' . $payload);
+            $response = homeconnect::request($url, $payload, $method, $headers);
+            log::add('homeconnect', 'debug', __('Réponse du serveur ', __FILE__) . $response);
+            // si la requête est de category program il faut mettre à jour les options
+            if ($this->getConfiguration('category') == 'Program') {
+                $typeProgram = homeconnect::lastSegment('/', $url);
+                $eqLogic->adjustProgramOptions($typeProgram, $this->getConfiguration('key'));
+                // A voir dans ce cas ce qu'il faut mettre à jour.
+            }
+            $eqLogic->updateApplianceData();
+        } else {
+            $value = str_replace(array_keys($replace) , $replace, $this->getConfiguration('value', ''));
+            if ($value !== '' && $value !== 0) {
+                $parameters = array(
+                    'key' => 'BSH.Common.Option.StartInRelative',
+                    'value' => $value,
+                    'unit' => 'seconds'
+                );
+                $payload = json_encode($parameters, JSON_NUMERIC_CHECK);
+                //$payload = '{"key":"BSH.Common.Option.StartInRelative","value":' . $value. ',"unit":"seconds"}';
+                cache::set('homeconnect::startinrelative::' . $eqLogic->getId() , $payload, '');
+                // il faut mémoriser la valeur du départ différé.
             }
         }
     }
