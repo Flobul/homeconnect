@@ -1124,7 +1124,7 @@ class homeconnect extends eqLogic {
         }
         log::add(__CLASS__, 'debug', __('Création d\'une commande action', __FILE__) . ', key : ' . $key . ', path : ' . $path . ', category : ' . $category);
         $logicalIdCmd = 'PUT::' . $key;
-        if ($category == 'Program' && config::byKey('listValueProgramm', 'homeconnect', false)) {
+        if ($category == 'Program' && config::byKey('listValueProgram', 'homeconnect', false)) {
             $logicalIdCmd = 'PUT::program';
         }
         $cmd = $this->getCmd(null, $logicalIdCmd);
@@ -1209,7 +1209,7 @@ class homeconnect extends eqLogic {
                 $cmd->setSubType('color');
                 $cmd->setConfiguration('value', '#color#');
                 $cmd->save();
-            } elseif ($category == 'Program' && config::byKey('listValueProgramm', 'homeconnect', false)) {
+            } elseif ($category == 'Program' && config::byKey('listValueProgram', 'homeconnect', false)) {
                 log::add(__CLASS__, 'debug', __('Nouvelle commande other Program logicalId ', __FILE__) . $logicalIdCmd . __(', nom ', __FILE__) . $cmd->getName());
                 $cmd->setName('Action Programmes');
                 $cmd->setSubType('select');
@@ -1228,8 +1228,8 @@ class homeconnect extends eqLogic {
                 $cmd->save();
             }
         } else {
-           if ($category == 'Program' && $logicalIdCmd == 'PUT::program' && config::byKey('listValueProgramm', 'homeconnect', false)) {
-                log::add(__CLASS__, 'debug', __('Mise à jour commande other Program logicalId ', __FILE__) . $logicalIdCmd . __(', nom ', __FILE__) . $cmd->getName());
+           if ($category == 'Program' && $logicalIdCmd == 'PUT::program' && config::byKey('listValueProgram', 'homeconnect', false)) {
+                log::add(__CLASS__, 'debug', __('Mise à jour commande other Program logicalId ', __FILE__) . $logicalIdCmd . __(', nom ', __FILE__) . $cmd->getName() . __(', clé ', __FILE__) . $key);
                 $elements = array_filter(explode(';', $cmd->getConfiguration('listValue', '')));
                 $elements[] = $key . '|' . self::getCmdDetailTranslation($key, 'name');
                 $elements = array_unique($elements);
@@ -1778,12 +1778,16 @@ class homeconnect extends eqLogic {
          * @return
          */
         $programdata = self::request(self::API_REQUEST_URL . '/' . $this->getLogicalId() . '/programs/available/' . $applianceProgram['key'], null, 'GET', array());
-        log::add(__CLASS__, 'debug', 'Appliance Program available' . print_r($programdata, true));
+        log::add(__CLASS__, 'debug', __FUNCTION__ . __(' Programme pour les appareils ménagers disponible1 ', __FILE__) . json_encode($applianceProgram));
+        log::add(__CLASS__, 'debug', __FUNCTION__ . __(' Programme pour les appareils ménagers disponible2 ', __FILE__) . json_encode($programdata));
+//{"key":"Cooking.Oven.Program.HeatingMode.GrillLargeArea","options":[{"key":"Cooking.Oven.Option.Level","value":"Cooking.Oven.EnumType.Level.Level01","name":"Niveau de sortie du type de chauffe","displayvalue":"Niveau 1"},{"key":"BSH.Common.Option.Duration","value":360,"unit":"seconds","name":"Ajuster la dur\u00e9e"},{"key":"BSH.Common.Option.ProgramProgress","value":3,"unit":"%","name":"Avancement actuel du programme"},{"key":"BSH.Common.Option.ElapsedProgramTime","value":12,"unit":"seconds","name":"Dur\u00e9e \u00e9coul\u00e9e"},{"key":"BSH.Common.Option.RemainingProgramTime","value":348,"unit":"seconds","name":"Dur\u00e9e restante "},{"key":"Cooking.Oven.Option.CavitySelector","value":"Cooking.Oven.EnumType.CavitySelector.Main","displayvalue":"Enceinte"}],"name":"Gril"}
+
         if ($programdata !== false && $programdata !== 'SDK.Error.UnsupportedProgram') {
             $programdata = json_decode($programdata, true);
 
             if (isset($programdata['data']['key'])) {
                 $actionCmd = $this->createActionCmd($programdata['data'], 'programs/' . strtolower($programType), 'Program');
+                log::add(__CLASS__, 'debug', __FUNCTION__ . __(' Création commande action Programme disponible ', __FILE__) . json_encode($programName['data']));
                 if ($programType == 'Selected' || $programType == 'Active') {
                     $infoCmd = $this->getCmd('info', 'GET::BSH.Common.Root.' . $programType . 'Program');
                     if (is_object($infoCmd)) {
@@ -1795,6 +1799,12 @@ class homeconnect extends eqLogic {
                         log::add(__CLASS__, 'debug', __FUNCTION__ . __('Pas de commande info GET::BSH.Common.Root.', __FILE__) . $programType . 'Program');
                     }
                 }
+            }
+        } else if ($programdata == 'SDK.Error.UnsupportedProgram') {
+            if (config::byKey('forceAddProgram', 'homeconnect', false)) {
+                $data = array('key' => '');
+                $actionCmd = $this->createActionCmd($applianceProgram, 'programs/' . strtolower($programType), 'Program');
+                log::add(__CLASS__, 'debug', __FUNCTION__ . __(' Création commande action Programme non disponible ', __FILE__) . json_encode($applianceProgram));
             }
         }
     }

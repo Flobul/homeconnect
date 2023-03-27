@@ -25,3 +25,6 @@ Ménage dans le code et harmonisation des logs et affichage
 
 # Version du 07/02/2023
 Ajout d'un bouton Assistant commande pour créer ses commandes action.
+
+# Version du 27/03/2023
+Ajout d'un bouton pour ajouter tous les programmes (actifs et sélectionnés) à la liste (supportés ou non par l'API)

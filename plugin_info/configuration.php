@@ -130,7 +130,16 @@ if (!isConnect()) {
 				</sup>
             </label>
 			<div class="col-sm-2">
-				<input id="listValueProgramm" type="checkbox" class="configKey tooltips" data-l1key="listValueProgramm">
+				<input id="listValueProgram" type="checkbox" class="configKey tooltips" data-l1key="listValueProgram">
+			</div>
+			<label class="col-sm-3 control-label">
+                {{Force l'ajout de tous les programmes}}
+                <sup>
+					<i class="fa fa-question-circle tooltips" title="{{Ajoute les programmes actifs et sélectionnés à la liste, qu'ils soient supportées ou non par l'API}}" style="font-size : 1em;color:grey;"></i>
+				</sup>
+            </label>
+			<div class="col-sm-2">
+				<input id="forceAddProgram" type="checkbox" class="configKey tooltips" data-l1key="forceAddProgram">
 			</div>
 		</div>
 

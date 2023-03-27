@@ -2253,7 +2253,7 @@ class homeconnect_capabilities {
                 )
             ) ,
             'LaundryCare.Washer.Program.Sensitive' => array(
-                'name' => __("Sensible", __FILE__) ,
+                'name' => __("Alergie", __FILE__) ,
                 'action' => 'Program',
                 'available' => array(
                     'Washer',
@@ -2723,7 +2723,7 @@ class homeconnect_capabilities {
                 )
             ) ,
             'LaundryCare.WasherDryer.Program.Mix' => array(
-                'name' => __("Mélangé", __FILE__) ,
+                'name' => __("Mix rapide", __FILE__) ,
                 'action' => 'Program',
                 'available' => array(
                     'WasherDryer'
