@@ -12,6 +12,8 @@
     "category":"devicecommunication",
     "changelog":"https://flobul.github.io/homeconnect/#language#/changelog",
     "documentation":"https://flobul.github.io/homeconnect/#language#/",
+    "changelog_beta"":"https://flobul.github.io/homeconnect/#language#/changelog",
+    "documentation_beta"":"https://flobul.github.io/homeconnect/#language#/",
     "hasDependency":false,
     "hasOwnDeamon":true,
     "maxDependancyInstallTime":0,
