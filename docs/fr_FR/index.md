@@ -3,7 +3,7 @@ Présentation
 Ce plugin permet de récupérer des informations des appareils utilisant le protocole Home Connect .
 Il a été développé à l'origine par Sartog.
 
-Un mode démo utilisant des appareils simulés est disponible vous permettant de tester le plugin même si vous ne possédez pas d'appareil ménager Home Connect. 
+Un mode démo utilisant des appareils simulés est disponible vous permettant de tester le plugin même si vous ne possédez pas d'appareil ménager Home Connect.
 Six appareils sont disponible en mode démo: une machine à café, un réfrigérateur congélateur, un lave linge, un four, un lave vaiselle, un sèche linge.
 
 
@@ -24,10 +24,10 @@ Associez les appareils à l'app en suivant le guide joint aux appareils.
 Précautions importantes à bien observer lors de la suite des opérations
 ---
 
-**Prérequis** : Il faut absolument que l'accès externe de votre Jeedom soit bien configuré. Allez dans  Administration -> Configuration puis Réseaux et vérifiez que c'est bien le cas. 
-Si votre Jeedom n'est pas accessible de l'extérieur  l'association de Jeedom au compte Home Connect ne marchera pas et le plugin ne pourra pas fonctionner.
+**Prérequis** : Il faut absolument que l'accès externe de votre Jeedom soit bien configuré. Allez dans Administration -> Configuration puis Réseaux et vérifiez que c'est bien le cas.
+Si votre Jeedom n'est pas accessible de l'extérieur, l'association de Jeedom au compte Home Connect ne marchera pas et le plugin ne pourra pas fonctionner.
 
-**IMPORTANT** Il faut faire toute la procédure de connexion en étant connecté à votre Jeedom par l'adresse externe en https://.... si vous la faites en etant connecté par l'adresse interne en 192.168.x.y, vous aurez bien les dialogues du serveur Home Coonnect
+**IMPORTANT** Il faut faire toute la procédure de connexion en étant connecté à votre Jeedom par l'adresse externe en https://.... si vous la faites en étant connecté par l'adresse interne en 192.168.x.y, vous aurez bien les dialogues du serveur Home Coonnect
 vous demandant de vous identifier et le dialogue vous demandant de confirmer, mais au retour dans votre Jeedom vous obtiendrez un message d'erreur.
 
 Vérifiez aussi que que dans Configuration -> API il y a bien une **Clé API Home Connect** et que l'accès API de cette clé est sur **Activé**.
@@ -46,8 +46,7 @@ Enregistrez une nouvelle application sur la page https://developer.home-connect.
 - Application ID : par exemple Jeedom
 - OAuth Flow : Authorization Code Grant Flow
 - Home Connect User Account for Testing : l'adresse mail utilisée à l'étape précédente dans l'app Home Connect pour Smartphone
-- Redirect URI : l’url de retour disponible sur la page de configuration du plugin (elle est de la forme https://xxxxxxxxxxx.jeedom.com/plugins/homeconnect/core/php/callback.php?apikey=yyyyyyyyyyyyy 
-si vous utilisez les DNS Jeedom ou https://zzzzzzz/plugins/homeconnect/core/php/callback.php?apikey=yyyyyyyyyyyyy si vous utilisez un autre moyen de sécuriser l’accès externe de votre Jeedom).
+- Redirect URI : l’url de retour disponible sur la page de configuration du plugin (elle est de la forme https://xxxxxxxxxxx.eu.jeedom.link/plugins/homeconnect/core/php/callback.php?apikey=yyyyyyyyyyyyy si vous utilisez les DNS Jeedom ou https://zzzzzzz/plugins/homeconnect/core/php/callback.php?apikey=yyyyyyyyyyyyy si vous utilisez un autre moyen de sécuriser l’accès externe de votre Jeedom).
 - Surtout ne cochez pas la case Enable One Time Token Mode
 
 Si plus tard vous désirez revoir les détails de votre application ou les modifier, allez sur la page https://developer.home-connect.com/applications
@@ -58,18 +57,18 @@ Si vous voulez que le plugin fonctionne avec vos appareils réels, copiez le Cli
 
 ![configuration](../images/configuration.png)
 
-Suivant le mode choisi, cliquez sur le bouton **Appareils réels** et indiquez l'adresse mail et le mot de passe de votre compte Home Connect (celui donné dans l'app sur le smartphone pas celui du site développeur) et confirmer que vous autorisez l'accès.
+Suivant le mode choisi, cliquez sur le bouton **Appareils réels** et indiquez l'adresse mail et le mot de passe de votre compte Home Connect (celui donné dans l'app sur le smartphone, surtout pas celui du site développeur) et confirmez que vous autorisez l'accès.
 
-Pour le mode démo cliquez sur le bouton **Démo (Simulateurs)** vous n'aurez rien à indiquer.
+Pour le mode démo, cliquez sur le bouton **Démo (Simulateurs)** vous n'aurez rien à indiquer.
 
 Découverte de vos appareils Home Connect
 ---
 
 ![Appareils](../images/equipements.png)
 
-**IMPORTANT** : Avant une synchronisation, vérifiez que vos appareils sont bien allumés, connectés au WiFi et qu'aucun programme n'est en cours. Si ce n'est pas le cas, pour certains appareils la synchronisation semblera marcher mais ensuite il manquera des commandes.
+**IMPORTANT** : Avant une synchronisation, vérifiez que vos appareils sont bien allumés, connectés au Wi-Fi et qu'aucun programme n'est en cours. Si ce n'est pas le cas, pour certains appareils, la synchronisation semblera marcher mais ensuite il manquera des commandes.
 
-Rendez vous sur la page équipement du plugin (Menu Plugins -> Objets connectés -> Home Connect) et cliquez sur le bouton Synchronisation.
+Rendez-vous sur la page équipement du plugin (Menu Plugins -> Objets connectés -> Home Connect) et cliquez sur le bouton Synchronisation.
 
 Vos appareils apparaissent dans la section **Mes appareils** avec une image les représentant suivant leur type.
 

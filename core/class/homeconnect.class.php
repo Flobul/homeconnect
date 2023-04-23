@@ -112,6 +112,7 @@ class homeconnect extends eqLogic {
          * @return	 		bool		Etat du lancement du démon
          */
         log::add(__CLASS__, 'info', __('Lancement du service homeconnect', __FILE__));
+        self::tokenRefresh();
         $deamon_info = self::deamon_info();
         if ($deamon_info['launchable'] != 'ok') {
             throw new Exception(__('Veuillez vérifier la configuration', __FILE__));
@@ -391,16 +392,16 @@ class homeconnect extends eqLogic {
         log::add(__CLASS__, 'debug', __('Début ', __FILE__) . __FUNCTION__);
         @session_start();
         $authorizationUrl = self::baseUrl() . self::API_AUTH_URL;
-        $clientId = config::byKey('client_id', 'homeconnect', '', true);
+        $clientId = trim(config::byKey('client_id', 'homeconnect', '', true));
         $redirectUri = urlencode(trim(network::getNetworkAccess('external')) . '/plugins/homeconnect/core/php/callback.php?apikey=' . jeedom::getApiKey('homeconnect'));
         if (config::byKey('demo_mode', 'homeconnect')) {
             $parameters['scope'] = implode(' ', ['IdentifyAppliance', 'Monitor', 'Settings', 'CoffeeMaker-Control', 'Dishwasher-Control', 'Dryer-Control', 'Washer-Control']);
             $parameters['user'] = 'me'; // Can be anything non-zero length
-            $parameters['client_id'] = config::byKey('demo_client_id', 'homeconnect', '', true);
+            $parameters['client_id'] = trim(config::byKey('demo_client_id', 'homeconnect', '', true));
         } else {
             $parameters['scope'] = implode(' ', ['IdentifyAppliance', 'Monitor', 'Settings', 'Control']);
             $parameters['redirect_uri'] = trim(network::getNetworkAccess('external')) . '/plugins/homeconnect/core/php/callback.php?apikey=' . jeedom::getApiKey('homeconnect');
-            $parameters['client_id'] = config::byKey('client_id', 'homeconnect', '', true);
+            $parameters['client_id'] = trim(config::byKey('client_id', 'homeconnect', '', true));
         }
         $parameters['response_type'] = 'code';
         $state = bin2hex(random_bytes(16));
@@ -470,9 +471,9 @@ class homeconnect extends eqLogic {
 
         log::add(__CLASS__, 'debug', __('Début ', __FILE__) . __FUNCTION__);
         if (!config::byKey('demo_mode', 'homeconnect')) {
-            $clientId = config::byKey('client_id', 'homeconnect', '', true);
+            $clientId = trim(config::byKey('client_id', 'homeconnect', '', true));
         } else {
-            $clientId = config::byKey('demo_client_id', 'homeconnect', '', true);
+            $clientId = trim(config::byKey('demo_client_id', 'homeconnect', '', true));
         }
         // Vérification de la présence du code d'authorisation avant de demander le token.
         if (empty(config::byKey('auth', 'homeconnect'))) {
@@ -487,7 +488,7 @@ class homeconnect extends eqLogic {
         $parameters = array();
         $parameters['client_id'] = $clientId;
         if (!config::byKey('demo_mode', 'homeconnect')) {
-            $parameters['client_secret'] = config::byKey('client_secret', 'homeconnect', '', true);
+            $parameters['client_secret'] = trim(config::byKey('client_secret', 'homeconnect', '', true));
         }
         $parameters['redirect_uri'] = trim(network::getNetworkAccess('external')) . '/plugins/homeconnect/core/php/callback.php?apikey=' . jeedom::getApiKey('homeconnect');
         $parameters['grant_type'] = 'authorization_code';
@@ -555,7 +556,7 @@ class homeconnect extends eqLogic {
         $parameters = array();
         $parameters['grant_type'] = 'refresh_token';
         if (!config::byKey('demo_mode', 'homeconnect')) {
-            $parameters['client_secret'] = config::byKey('client_secret', 'homeconnect', '', true);
+            $parameters['client_secret'] = trim(config::byKey('client_secret', 'homeconnect', '', true));
         }
         $parameters['refresh_token'] = config::byKey('refresh_token', 'homeconnect', '', true);
         log::add(__CLASS__, 'debug', "Post fields : " . json_encode($parameters));
