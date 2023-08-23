@@ -307,7 +307,7 @@ class homeconnect extends eqLogic {
                     // "Conflict", desc: "Command/Query cannot be executed for the home appliance, the error response contains the error details"
                     $result = json_decode($result, true);
                     $errorMsg = isset($result['error']['description']) ? $result['error']['description'] : '';
-                    log::add(__CLASS__, 'error', __('Cette action ne peut pas être exécutée pour cet appareil ', __FILE__) . $errorMsg);
+                    log::add(__CLASS__, 'debug', __('Cette action ne peut pas être exécutée pour cet appareil ', __FILE__) . $errorMsg);
                 break;
                 case 415:
                     // "Unsupported Media Type", desc: "The request's Content-Type is not supported"
@@ -417,7 +417,7 @@ class homeconnect extends eqLogic {
 
     public static function authDemoRequest() {
         /**
-         * Récupère un code d'authorisation à échanger contre un token.
+         * Récupère un code d'autorisation à échanger contre un token.
          *
          * @param			|*Cette fonction ne retourne pas de valeur*|
          * @return			|*Cette fonction ne retourne pas de valeur*|
@@ -430,7 +430,7 @@ class homeconnect extends eqLogic {
 
         // Envoie d'une requête GET et récupération du header.
         $curl = curl_init();
-        $options = [CURLOPT_URL => $url, CURLOPT_RETURNTRANSFER => True, CURLOPT_SSL_VERIFYPEER => False, CURLOPT_HEADER => True, CURLINFO_HEADER_OUT => true, ];
+        $options = [CURLOPT_URL => $url, CURLOPT_RETURNTRANSFER => True, CURLOPT_SSL_VERIFYPEER => False, CURLOPT_HEADER => True, CURLINFO_HEADER_OUT => true ];
         curl_setopt_array($curl, $options);
         $response = curl_exec($curl);
         $info = curl_getinfo($curl);
@@ -447,13 +447,13 @@ class homeconnect extends eqLogic {
 
         $params = parse_url($info['redirect_url']); // Récupération de l'url de redirection avec paramêtre.
         $params = explode("&", $params['query']); // Explode des paramêtres de l'url afin d'isoler l'authorize code.
-        // Récupération du code d'authorisation.
+        // Récupération du code d'autorisation.
         foreach ($params as $key => $value) {
             $explode = explode("=", $value);
 
             if ($explode[0] == "code") {
                 config::save('auth', $explode[1], 'homeconnect');
-                log::add(__CLASS__, 'debug', __('Code d\'authorisation récupéré ', __FILE__) . $explode[1]);
+                log::add(__CLASS__, 'debug', __('Code d\'autorisation récupéré ', __FILE__) . $explode[1]);
                 homeconnect::tokenRequest();
             }
         }
@@ -475,7 +475,7 @@ class homeconnect extends eqLogic {
         } else {
             $clientId = trim(config::byKey('demo_client_id', 'homeconnect', '', true));
         }
-        // Vérification de la présence du code d'authorisation avant de demander le token.
+        // Vérification de la présence du code d'autorisation avant de demander le token.
         if (empty(config::byKey('auth', 'homeconnect'))) {
             log::add(__CLASS__, 'debug', __('Erreur : Code d’authentification vide', __FILE__));
             throw new Exception("Erreur : Veuillez connecter votre compte via le menu configuration du plugin.");
@@ -497,7 +497,7 @@ class homeconnect extends eqLogic {
 
         // Récupération du Token.
         $curl = curl_init();
-        $options = [CURLOPT_URL => $url, CURLOPT_RETURNTRANSFER => True, CURLOPT_SSL_VERIFYPEER => false, CURLOPT_POST => True, CURLOPT_POSTFIELDS => self::buildQueryString($parameters) , ];
+        $options = [CURLOPT_URL => $url, CURLOPT_RETURNTRANSFER => True, CURLOPT_SSL_VERIFYPEER => false, CURLOPT_POST => True, CURLOPT_POSTFIELDS => self::buildQueryString($parameters) ];
         curl_setopt_array($curl, $options);
         $response = json_decode(curl_exec($curl) , true);
         log::add(__CLASS__, 'debug', "Response = " . print_r($response, true));
@@ -543,7 +543,7 @@ class homeconnect extends eqLogic {
 
         log::add(__CLASS__, 'debug', __('Début ', __FILE__) . __FUNCTION__);
 
-        // Vérification de la présence du code d'authorisation avant de demander le token.
+        // Vérification de la présence du code d'autorisation avant de demander le token.
         if (empty(config::byKey('auth', 'homeconnect'))) {
             log::add(__CLASS__, 'debug', __('Erreur : Code d’authentification vide', __FILE__));
             throw new Exception("Erreur : Veuillez connecter votre compte via le menu configuration du plugin.");
@@ -563,7 +563,7 @@ class homeconnect extends eqLogic {
 
         // Récupération du Token.
         $curl = curl_init();
-        $options = [CURLOPT_URL => $url, CURLOPT_RETURNTRANSFER => True, CURLOPT_SSL_VERIFYPEER => false, CURLOPT_POST => True, CURLOPT_POSTFIELDS => self::buildQueryString($parameters) , ];
+        $options = [CURLOPT_URL => $url, CURLOPT_RETURNTRANSFER => True, CURLOPT_SSL_VERIFYPEER => false, CURLOPT_POST => True, CURLOPT_POSTFIELDS => self::buildQueryString($parameters) ];
         curl_setopt_array($curl, $options);
         $response = json_decode(curl_exec($curl) , true);
         log::add(__CLASS__, 'debug', "Response : " . print_r($response, true));
