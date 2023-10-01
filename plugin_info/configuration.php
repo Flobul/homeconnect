@@ -122,7 +122,26 @@ if (!isConnect()) {
 				<a class="btn btn-warning" id="bt_loginHomeConnect"><i class="fas fa-sign-in-alt"></i> {{Appareils réels}}</a>				  <a class="btn btn-warning" id="bt_loginDemoHomeConnect"><i class="fas fa-sign-in-alt"></i> {{Démo (Simulateurs)}}</a>
 			</div>
 		</div>
-
+		<div class="form-group">
+			<label class="col-sm-3 control-label">
+                {{Génère les programmes dans une seule commande en liste}}
+                <sup>
+					<i class="fa fa-question-circle tooltips" title="{{Cochez la case pour n'avoir qu'une seule commande select pour afficher l'ensemble des programmes}}" style="font-size : 1em;color:grey;"></i>
+				</sup>
+            </label>
+			<div class="col-sm-2">
+				<input id="listValueProgram" type="checkbox" class="configKey tooltips" data-l1key="listValueProgram">
+			</div>
+			<label class="col-sm-3 control-label">
+                {{Force l'ajout de tous les programmes}}
+                <sup>
+					<i class="fa fa-question-circle tooltips" title="{{Ajoute les programmes actifs et sélectionnés à la liste, qu'ils soient supportées ou non par l'API}}" style="font-size : 1em;color:grey;"></i>
+				</sup>
+            </label>
+			<div class="col-sm-2">
+				<input id="forceAddProgram" type="checkbox" class="configKey tooltips" data-l1key="forceAddProgram">
+			</div>
+		</div>
 
   </fieldset>
 </form>

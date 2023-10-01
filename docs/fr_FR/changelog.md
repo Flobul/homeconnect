@@ -12,6 +12,19 @@
 Suite au changement de politique de Home Connect il est maintenant possible de piloter fours et plaques de cuisson.
 Traductions et améliorations visuelles contribuées par Flobul.
 
-# To Do List
-- Pour le moment l'actualisation se fait par un cron, passer à un démon en utilisant les événements envoyés par le serveur
+# Version du 31/01/2023
+Modification page des commandes
+Prise en compte de tous les événements en commande info.
+Correction traduction et ajout.
 
+# Version du 03/02/2023
+Ajout d'un bouton pour sauvegarder les modifications de path, key, category d'une commande
+
+# Version du 04/02/2023
+Ménage dans le code et harmonisation des logs et affichage
+
+# Version du 07/02/2023
+Ajout d'un bouton Assistant commande pour créer ses commandes action.
+
+# Version du 27/03/2023
+Ajout d'un bouton pour ajouter tous les programmes (actifs et sélectionnés) à la liste (supportés ou non par l'API)
