@@ -28,3 +28,7 @@ Ajout d'un bouton Assistant commande pour créer ses commandes action.
 
 # Version du 27/03/2023
 Ajout d'un bouton pour ajouter tous les programmes (actifs et sélectionnés) à la liste (supportés ou non par l'API)
+
+# Version du 29/01/2024
+- Ajout du champ Value dans la page Configuration de la commande.
+- Correction de la vérification des champs de getConfiguration.
