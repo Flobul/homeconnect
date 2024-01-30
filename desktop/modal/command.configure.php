@@ -66,6 +66,14 @@ $jsonPresent = false;
                 	<input class="cmdAttr form-control input-sm" data-l1key="configuration" data-l2key="category" placeholder="{{Catégorie}}" title="{{Catégorie}}" style="display:inline-block"></input>
                 </div>
               </div>
+
+              <div class="form-group">
+                <label class="col-xs-3 control-label">{{Value}}</label>
+                <div class="col-xs-9">
+                    <input class="cmdAttr form-control input-sm" data-l1key="configuration" data-l2key="value" placeholder="{{Valeur}}" title="{{Valeur}}" style="display:inline-block"></input>
+                </div>
+              </div>
+
               <div class="form-group">
                 <div class="col-xs-3"></div>
 
@@ -161,7 +169,7 @@ $('.bt_testEnum').off('click').on('click',function() {
 		},
 		success: function (data) {
 			if (data.state != 'ok') {
-				$('#div_alert').showAlert({message: data.result, level: 'danger'});
+				$.fn.showAlert({message: data.result, level: 'danger'});
 				return;
 			}
             elbutton.next('#resultTestEnum').html(data)
@@ -177,6 +185,7 @@ $('.bt_testEnum').off('click').on('click',function() {
     cmdInfo.configuration.path = cmd.configuration.path;
     cmdInfo.configuration.key = cmd.configuration.key;
     cmdInfo.configuration.category = cmd.configuration.category;
+    cmdInfo.configuration.value = cmd.configuration.value;
     jeedom.cmd.save({
       cmd: cmdInfo,
       error: function(error) {

@@ -2125,10 +2125,10 @@ class homeconnectCmd extends cmd {
             $parameters = array(
                 'data' => array()
             );
-            if ($this->getConfiguration('key') !== '') {
-                $parameters['data']['key'] = $this->getConfiguration('key', '');
+            if ($this->getConfiguration('key', '') !== '') {
+                $parameters['data']['key'] = $this->getConfiguration('key');
             }
-            if ($this->getConfiguration('value') !== '') {
+            if ($this->getConfiguration('value', '') !== '') {
                 if (is_bool($this->getConfiguration('value'))) {
                     if ($this->getValue() != '') {
                         $cmdValue = cmd::byId($this->getValue());
@@ -2140,9 +2140,9 @@ class homeconnectCmd extends cmd {
                     }
                 } else {
                     if (!isset($parameters['data']['key'])) {
-                        $parameters['data']['key'] = str_replace(array_keys($replace) , $replace, $this->getConfiguration('value', ''));
+                        $parameters['data']['key'] = str_replace(array_keys($replace) , $replace, $this->getConfiguration('value'));
                     } else {
-                        $parameters['data']['value'] = str_replace(array_keys($replace) , $replace, $this->getConfiguration('value', ''));
+                        $parameters['data']['value'] = str_replace(array_keys($replace) , $replace, $this->getConfiguration('value'));
                     }
                 }
             }
