@@ -114,6 +114,380 @@ class homeconnect_capabilities {
                     ) ,
                 )
             ) ,
+            'ConsumerProducts.CoffeeMaker.Event.KeepMilkTankCool' => array(
+                'name' => __("Garder le réservoir à lait au frais", __FILE__) ,
+                'action' => 'Event',
+                'type' => 'Enumeration',
+                'available' => array(
+                    'CoffeeMachine'
+                ) ,
+                'enum' => array(
+                    'BSH.Common.EnumType.EventPresentState.Present' => array(
+                        'name' => __("Présent", __FILE__) ,
+                        'action' => 'Status'
+                    ) ,
+                    'BSH.Common.EnumType.EventPresentState.Off' => array(
+                        'name' => __("Désactivé", __FILE__) ,
+                        'action' => 'Status'
+                    ) ,
+                    'BSH.Common.EnumType.EventPresentState.Confirmed' => array(
+                        'name' => __("Confirmé", __FILE__) ,
+                        'action' => 'Status'
+                    ) ,
+                )
+            ) ,
+            'ConsumerProducts.CoffeeMaker.Event.DescalingIn20Cups' => array(
+                'name' => __("Détartrage dans 20 tasses", __FILE__) ,
+                'action' => 'Event',
+                'type' => 'Enumeration',
+                'available' => array(
+                    'CoffeeMachine'
+                ) ,
+                'enum' => array(
+                    'BSH.Common.EnumType.EventPresentState.Present' => array(
+                        'name' => __("Présent", __FILE__) ,
+                        'action' => 'Status'
+                    ) ,
+                    'BSH.Common.EnumType.EventPresentState.Off' => array(
+                        'name' => __("Désactivé", __FILE__) ,
+                        'action' => 'Status'
+                    ) ,
+                    'BSH.Common.EnumType.EventPresentState.Confirmed' => array(
+                        'name' => __("Confirmé", __FILE__) ,
+                        'action' => 'Status'
+                    ) ,
+                )
+            ) ,
+            'ConsumerProducts.CoffeeMaker.Event.DescalingIn15Cups' => array(
+                'name' => __("Détartrage dans 15 tasses", __FILE__) ,
+                'action' => 'Event',
+                'type' => 'Enumeration',
+                'available' => array(
+                    'CoffeeMachine'
+                ) ,
+                'enum' => array(
+                    'BSH.Common.EnumType.EventPresentState.Present' => array(
+                        'name' => __("Présent", __FILE__) ,
+                        'action' => 'Status'
+                    ) ,
+                    'BSH.Common.EnumType.EventPresentState.Off' => array(
+                        'name' => __("Désactivé", __FILE__) ,
+                        'action' => 'Status'
+                    ) ,
+                    'BSH.Common.EnumType.EventPresentState.Confirmed' => array(
+                        'name' => __("Confirmé", __FILE__) ,
+                        'action' => 'Status'
+                    ) ,
+                )
+            ) ,
+            'ConsumerProducts.CoffeeMaker.Event.DescalingIn10Cups' => array(
+                'name' => __("Détartrage dans 10 tasses", __FILE__) ,
+                'action' => 'Event',
+                'type' => 'Enumeration',
+                'available' => array(
+                    'CoffeeMachine'
+                ) ,
+                'enum' => array(
+                    'BSH.Common.EnumType.EventPresentState.Present' => array(
+                        'name' => __("Présent", __FILE__) ,
+                        'action' => 'Status'
+                    ) ,
+                    'BSH.Common.EnumType.EventPresentState.Off' => array(
+                        'name' => __("Désactivé", __FILE__) ,
+                        'action' => 'Status'
+                    ) ,
+                    'BSH.Common.EnumType.EventPresentState.Confirmed' => array(
+                        'name' => __("Confirmé", __FILE__) ,
+                        'action' => 'Status'
+                    ) ,
+                )
+            ) ,
+            'ConsumerProducts.CoffeeMaker.Event.DescalingIn5Cups' => array(
+                'name' => __("Détartrage dans 5 tasses", __FILE__) ,
+                'action' => 'Event',
+                'type' => 'Enumeration',
+                'available' => array(
+                    'CoffeeMachine'
+                ) ,
+                'enum' => array(
+                    'BSH.Common.EnumType.EventPresentState.Present' => array(
+                        'name' => __("Présent", __FILE__) ,
+                        'action' => 'Status'
+                    ) ,
+                    'BSH.Common.EnumType.EventPresentState.Off' => array(
+                        'name' => __("Désactivé", __FILE__) ,
+                        'action' => 'Status'
+                    ) ,
+                    'BSH.Common.EnumType.EventPresentState.Confirmed' => array(
+                        'name' => __("Confirmé", __FILE__) ,
+                        'action' => 'Status'
+                    ) ,
+                )
+            ) ,
+            'ConsumerProducts.CoffeeMaker.Event.DeviceShouldBeDescaled' => array(
+                'name' => __("L'appareil doit être détartré", __FILE__) ,
+                'action' => 'Event',
+                'type' => 'Enumeration',
+                'available' => array(
+                    'CoffeeMachine'
+                ) ,
+                'enum' => array(
+                    'BSH.Common.EnumType.EventPresentState.Present' => array(
+                        'name' => __("Présent", __FILE__) ,
+                        'action' => 'Status'
+                    ) ,
+                    'BSH.Common.EnumType.EventPresentState.Off' => array(
+                        'name' => __("Désactivé", __FILE__) ,
+                        'action' => 'Status'
+                    ) ,
+                    'BSH.Common.EnumType.EventPresentState.Confirmed' => array(
+                        'name' => __("Confirmé", __FILE__) ,
+                        'action' => 'Status'
+                    ) ,
+                )
+            ) ,
+            'ConsumerProducts.CoffeeMaker.Event.DeviceDescalingOverdue' => array(
+                'name' => __("Détartrage de l'appareil en retard", __FILE__) ,
+                'action' => 'Event',
+                'type' => 'Enumeration',
+                'available' => array(
+                    'CoffeeMachine'
+                ) ,
+                'enum' => array(
+                    'BSH.Common.EnumType.EventPresentState.Present' => array(
+                        'name' => __("Présent", __FILE__) ,
+                        'action' => 'Status'
+                    ) ,
+                    'BSH.Common.EnumType.EventPresentState.Off' => array(
+                        'name' => __("Désactivé", __FILE__) ,
+                        'action' => 'Status'
+                    ) ,
+                    'BSH.Common.EnumType.EventPresentState.Confirmed' => array(
+                        'name' => __("Confirmé", __FILE__) ,
+                        'action' => 'Status'
+                    ) ,
+                )
+            ) ,
+            'ConsumerProducts.CoffeeMaker.Event.DeviceDescalingBlockage' => array(
+                'name' => __("Blocage du détartrage de l'appareil", __FILE__) ,
+                'action' => 'Event',
+                'type' => 'Enumeration',
+                'available' => array(
+                    'CoffeeMachine'
+                ) ,
+                'enum' => array(
+                    'BSH.Common.EnumType.EventPresentState.Present' => array(
+                        'name' => __("Présent", __FILE__) ,
+                        'action' => 'Status'
+                    ) ,
+                    'BSH.Common.EnumType.EventPresentState.Off' => array(
+                        'name' => __("Désactivé", __FILE__) ,
+                        'action' => 'Status'
+                    ) ,
+                    'BSH.Common.EnumType.EventPresentState.Confirmed' => array(
+                        'name' => __("Confirmé", __FILE__) ,
+                        'action' => 'Status'
+                    ) ,
+                )
+            ) ,
+            'ConsumerProducts.CoffeeMaker.Event.DeviceShouldBeCleaned' => array(
+                'name' => __("L'appareil doit être nettoyé", __FILE__) ,
+                'action' => 'Event',
+                'type' => 'Enumeration',
+                'available' => array(
+                    'CoffeeMachine'
+                ) ,
+                'enum' => array(
+                    'BSH.Common.EnumType.EventPresentState.Present' => array(
+                        'name' => __("Présent", __FILE__) ,
+                        'action' => 'Status'
+                    ) ,
+                    'BSH.Common.EnumType.EventPresentState.Off' => array(
+                        'name' => __("Désactivé", __FILE__) ,
+                        'action' => 'Status'
+                    ) ,
+                    'BSH.Common.EnumType.EventPresentState.Confirmed' => array(
+                        'name' => __("Confirmé", __FILE__) ,
+                        'action' => 'Status'
+                    ) ,
+                )
+            ) ,
+            'ConsumerProducts.CoffeeMaker.Event.DeviceCleaningOverdue' => array(
+                'name' => __("Nettoyage de l'appareil en retard", __FILE__) ,
+                'action' => 'Event',
+                'type' => 'Enumeration',
+                'available' => array(
+                    'CoffeeMachine'
+                ) ,
+                'enum' => array(
+                    'BSH.Common.EnumType.EventPresentState.Present' => array(
+                        'name' => __("Présent", __FILE__) ,
+                        'action' => 'Status'
+                    ) ,
+                    'BSH.Common.EnumType.EventPresentState.Off' => array(
+                        'name' => __("Désactivé", __FILE__) ,
+                        'action' => 'Status'
+                    ) ,
+                    'BSH.Common.EnumType.EventPresentState.Confirmed' => array(
+                        'name' => __("Confirmé", __FILE__) ,
+                        'action' => 'Status'
+                    ) ,
+                )
+            ) ,
+            'ConsumerProducts.CoffeeMaker.Event.CalcNCleanIn20Cups' => array(
+                'name' => __("Programme d'entretien dans 20 tasses", __FILE__) ,
+                'action' => 'Event',
+                'type' => 'Enumeration',
+                'available' => array(
+                    'CoffeeMachine'
+                ) ,
+                'enum' => array(
+                    'BSH.Common.EnumType.EventPresentState.Present' => array(
+                        'name' => __("Présent", __FILE__) ,
+                        'action' => 'Status'
+                    ) ,
+                    'BSH.Common.EnumType.EventPresentState.Off' => array(
+                        'name' => __("Désactivé", __FILE__) ,
+                        'action' => 'Status'
+                    ) ,
+                    'BSH.Common.EnumType.EventPresentState.Confirmed' => array(
+                        'name' => __("Confirmé", __FILE__) ,
+                        'action' => 'Status'
+                    ) ,
+                )
+            ) ,
+            'ConsumerProducts.CoffeeMaker.Event.CalcNCleanIn15Cups' => array(
+                'name' => __("Programme d'entretien dans 15 tasses", __FILE__) ,
+                'action' => 'Event',
+                'type' => 'Enumeration',
+                'available' => array(
+                    'CoffeeMachine'
+                ) ,
+                'enum' => array(
+                    'BSH.Common.EnumType.EventPresentState.Present' => array(
+                        'name' => __("Présent", __FILE__) ,
+                        'action' => 'Status'
+                    ) ,
+                    'BSH.Common.EnumType.EventPresentState.Off' => array(
+                        'name' => __("Désactivé", __FILE__) ,
+                        'action' => 'Status'
+                    ) ,
+                    'BSH.Common.EnumType.EventPresentState.Confirmed' => array(
+                        'name' => __("Confirmé", __FILE__) ,
+                        'action' => 'Status'
+                    ) ,
+                )
+            ) ,
+            'ConsumerProducts.CoffeeMaker.Event.CalcNCleanIn10Cups' => array(
+                'name' => __("Programme d'entretien dans 10 tasses", __FILE__) ,
+                'action' => 'Event',
+                'type' => 'Enumeration',
+                'available' => array(
+                    'CoffeeMachine'
+                ) ,
+                'enum' => array(
+                    'BSH.Common.EnumType.EventPresentState.Present' => array(
+                        'name' => __("Présent", __FILE__) ,
+                        'action' => 'Status'
+                    ) ,
+                    'BSH.Common.EnumType.EventPresentState.Off' => array(
+                        'name' => __("Désactivé", __FILE__) ,
+                        'action' => 'Status'
+                    ) ,
+                    'BSH.Common.EnumType.EventPresentState.Confirmed' => array(
+                        'name' => __("Confirmé", __FILE__) ,
+                        'action' => 'Status'
+                    ) ,
+                )
+            ) ,
+            'ConsumerProducts.CoffeeMaker.Event.CalcNCleanIn5Cups' => array(
+                'name' => __("Programme d'entretien dans 5 tasses", __FILE__) ,
+                'action' => 'Event',
+                'type' => 'Enumeration',
+                'available' => array(
+                    'CoffeeMachine'
+                ) ,
+                'enum' => array(
+                    'BSH.Common.EnumType.EventPresentState.Present' => array(
+                        'name' => __("Présent", __FILE__) ,
+                        'action' => 'Status'
+                    ) ,
+                    'BSH.Common.EnumType.EventPresentState.Off' => array(
+                        'name' => __("Désactivé", __FILE__) ,
+                        'action' => 'Status'
+                    ) ,
+                    'BSH.Common.EnumType.EventPresentState.Confirmed' => array(
+                        'name' => __("Confirmé", __FILE__) ,
+                        'action' => 'Status'
+                    ) ,
+                )
+            ) ,
+            'ConsumerProducts.CoffeeMaker.Event.DeviceShouldBeCalcNCleaned' => array(
+                'name' => __("L'entretient de l'appareil doit être réalisé", __FILE__) ,
+                'action' => 'Event',
+                'type' => 'Enumeration',
+                'available' => array(
+                    'CoffeeMachine'
+                ) ,
+                'enum' => array(
+                    'BSH.Common.EnumType.EventPresentState.Present' => array(
+                        'name' => __("Présent", __FILE__) ,
+                        'action' => 'Status'
+                    ) ,
+                    'BSH.Common.EnumType.EventPresentState.Off' => array(
+                        'name' => __("Désactivé", __FILE__) ,
+                        'action' => 'Status'
+                    ) ,
+                    'BSH.Common.EnumType.EventPresentState.Confirmed' => array(
+                        'name' => __("Confirmé", __FILE__) ,
+                        'action' => 'Status'
+                    ) ,
+                )
+            ) ,
+            'ConsumerProducts.CoffeeMaker.Event.DeviceCalcNCleanOverdue' => array(
+                'name' => __("L'entretien de l'appareil est dépassé", __FILE__) ,
+                'action' => 'Event',
+                'type' => 'Enumeration',
+                'available' => array(
+                    'CoffeeMachine'
+                ) ,
+                'enum' => array(
+                    'BSH.Common.EnumType.EventPresentState.Present' => array(
+                        'name' => __("Présent", __FILE__) ,
+                        'action' => 'Status'
+                    ) ,
+                    'BSH.Common.EnumType.EventPresentState.Off' => array(
+                        'name' => __("Désactivé", __FILE__) ,
+                        'action' => 'Status'
+                    ) ,
+                    'BSH.Common.EnumType.EventPresentState.Confirmed' => array(
+                        'name' => __("Confirmé", __FILE__) ,
+                        'action' => 'Status'
+                    ) ,
+                )
+            ) ,
+            'ConsumerProducts.CoffeeMaker.Event.DeviceCalcNCleanBlockage' => array(
+                'name' => __("Blocage de l'entretien de l'appareil", __FILE__) ,
+                'action' => 'Event',
+                'type' => 'Enumeration',
+                'available' => array(
+                    'CoffeeMachine'
+                ) ,
+                'enum' => array(
+                    'BSH.Common.EnumType.EventPresentState.Present' => array(
+                        'name' => __("Présent", __FILE__) ,
+                        'action' => 'Status'
+                    ) ,
+                    'BSH.Common.EnumType.EventPresentState.Off' => array(
+                        'name' => __("Désactivé", __FILE__) ,
+                        'action' => 'Status'
+                    ) ,
+                    'BSH.Common.EnumType.EventPresentState.Confirmed' => array(
+                        'name' => __("Confirmé", __FILE__) ,
+                        'action' => 'Status'
+                    ) ,
+                )
+            ) ,
             'ConsumerProducts.CoffeeMaker.Program.Beverage.Ristretto' => array(
                 'name' => __("Ristretto", __FILE__) ,
                 'action' => 'Program',
@@ -494,6 +868,187 @@ class homeconnect_capabilities {
                 'action' => 'Option',
                 'available' => array(
                     'CoffeeMaker'
+                )
+            ) ,
+            'ConsumerProducts.CoffeeMaker.Option.CoffeeMilkRatio' => array(
+                'name' => __("Ratio café-lait", __FILE__) ,
+                'action' => 'Option',
+                'type' => 'Enumeration',
+                'available' => array(
+                    'CoffeeMachine'
+                ) ,
+                'enum' => array(
+                    'ConsumerProducts.CoffeeMaker.EnumType.CoffeeMilkRatio.10Percent' => array(
+                        'name' => __("10 %", __FILE__) ,
+                        'action' => 'Status'
+                    ) ,
+                    'ConsumerProducts.CoffeeMaker.EnumType.CoffeeMilkRatio.20Percent' => array(
+                        'name' => __("20 %", __FILE__) ,
+                        'action' => 'Status'
+                    ) ,
+                    'ConsumerProducts.CoffeeMaker.EnumType.CoffeeMilkRatio.25Percent' => array(
+                        'name' => __("25 %", __FILE__) ,
+                        'action' => 'Status'
+                    ) ,
+                    'ConsumerProducts.CoffeeMaker.EnumType.CoffeeMilkRatio.30Percent' => array(
+                        'name' => __("30 %", __FILE__) ,
+                        'action' => 'Status'
+                    ) ,
+                    'ConsumerProducts.CoffeeMaker.EnumType.CoffeeMilkRatio.40Percent' => array(
+                        'name' => __("40 %", __FILE__) ,
+                        'action' => 'Status'
+                    ) ,
+                    'ConsumerProducts.CoffeeMaker.EnumType.CoffeeMilkRatio.50Percent' => array(
+                        'name' => __("50 %", __FILE__) ,
+                        'action' => 'Status'
+                    ) ,
+                    'ConsumerProducts.CoffeeMaker.EnumType.CoffeeMilkRatio.55Percent' => array(
+                        'name' => __("55 %", __FILE__) ,
+                        'action' => 'Status'
+                    ) ,
+                    'ConsumerProducts.CoffeeMaker.EnumType.CoffeeMilkRatio.60Percent' => array(
+                        'name' => __("60 %", __FILE__) ,
+                        'action' => 'Status'
+                    ) ,
+                    'ConsumerProducts.CoffeeMaker.EnumType.CoffeeMilkRatio.65Percent' => array(
+                        'name' => __("65 %", __FILE__) ,
+                        'action' => 'Status'
+                    ) ,
+                    'ConsumerProducts.CoffeeMaker.EnumType.CoffeeMilkRatio.67Percent' => array(
+                        'name' => __("67 %", __FILE__) ,
+                        'action' => 'Status'
+                    ) ,
+                    'ConsumerProducts.CoffeeMaker.EnumType.CoffeeMilkRatio.70Percent' => array(
+                        'name' => __("70 %", __FILE__) ,
+                        'action' => 'Status'
+                    ) ,
+                    'ConsumerProducts.CoffeeMaker.EnumType.CoffeeMilkRatio.75Percent' => array(
+                        'name' => __("75 %", __FILE__) ,
+                        'action' => 'Status'
+                    ) ,
+                    'ConsumerProducts.CoffeeMaker.EnumType.CoffeeMilkRatio.80Percent' => array(
+                        'name' => __("80 %", __FILE__) ,
+                        'action' => 'Status'
+                    ) ,
+                    'ConsumerProducts.CoffeeMaker.EnumType.CoffeeMilkRatio.85Percent' => array(
+                        'name' => __("85 %", __FILE__) ,
+                        'action' => 'Status'
+                    ) ,
+                    'ConsumerProducts.CoffeeMaker.EnumType.CoffeeMilkRatio.90Percent' => array(
+                        'name' => __("90 %", __FILE__) ,
+                        'action' => 'Status'
+                    ) ,
+                )
+            ) ,
+
+            'ConsumerProducts.CoffeeMaker.Option.HotWaterTemperature' => array(
+                'name' => __("Température de l'eau chaude", __FILE__) ,
+                'action' => 'Option',
+                'type' => 'Enumeration',
+                'available' => array(
+                    'CoffeeMachine'
+                ) ,
+                'enum' => array(
+                    'ConsumerProducts.CoffeeMaker.EnumType.HotWaterTemperature.WhiteTea' => array(
+                        'name' => __("Thé blanc", __FILE__) ,
+                        'action' => 'Status'
+                    ) ,
+                    'ConsumerProducts.CoffeeMaker.EnumType.HotWaterTemperature.GreenTea' => array(
+                        'name' => __("Thé vert", __FILE__) ,
+                        'action' => 'Status'
+                    ) ,
+                    'ConsumerProducts.CoffeeMaker.EnumType.HotWaterTemperature.BlackTea' => array(
+                        'name' => __("Thé noir", __FILE__) ,
+                        'action' => 'Status'
+                    ) ,
+                    'ConsumerProducts.CoffeeMaker.EnumType.HotWaterTemperature.50C' => array(
+                        'name' => __("50 °C", __FILE__) ,
+                        'action' => 'Status'
+                    ) ,
+                    'ConsumerProducts.CoffeeMaker.EnumType.HotWaterTemperature.55C' => array(
+                        'name' => __("55 °C", __FILE__) ,
+                        'action' => 'Status'
+                    ) ,
+                    'ConsumerProducts.CoffeeMaker.EnumType.HotWaterTemperature.60C' => array(
+                        'name' => __("60 °C", __FILE__) ,
+                        'action' => 'Status'
+                    ) ,
+                    'ConsumerProducts.CoffeeMaker.EnumType.HotWaterTemperature.65C' => array(
+                        'name' => __("65 °C", __FILE__) ,
+                        'action' => 'Status'
+                    ) ,
+                    'ConsumerProducts.CoffeeMaker.EnumType.HotWaterTemperature.70C' => array(
+                        'name' => __("70 °C", __FILE__) ,
+                        'action' => 'Status'
+                    ) ,
+                    'ConsumerProducts.CoffeeMaker.EnumType.HotWaterTemperature.75C' => array(
+                        'name' => __("75 °C", __FILE__) ,
+                        'action' => 'Status'
+                    ) ,
+                    'ConsumerProducts.CoffeeMaker.EnumType.HotWaterTemperature.80C' => array(
+                        'name' => __("80 °C", __FILE__) ,
+                        'action' => 'Status'
+                    ) ,
+                    'ConsumerProducts.CoffeeMaker.EnumType.HotWaterTemperature.85C' => array(
+                        'name' => __("85 °C", __FILE__) ,
+                        'action' => 'Status'
+                    ) ,
+                    'ConsumerProducts.CoffeeMaker.EnumType.HotWaterTemperature.90C' => array(
+                        'name' => __("90 °C", __FILE__) ,
+                        'action' => 'Status'
+                    ) ,
+                    'ConsumerProducts.CoffeeMaker.EnumType.HotWaterTemperature.95C' => array(
+                        'name' => __("95 °C", __FILE__) ,
+                        'action' => 'Status'
+                    ) ,
+                    'ConsumerProducts.CoffeeMaker.EnumType.HotWaterTemperature.97C' => array(
+                        'name' => __("97 °C", __FILE__) ,
+                        'action' => 'Status'
+                    ) ,
+                    'ConsumerProducts.CoffeeMaker.EnumType.HotWaterTemperature.122F' => array(
+                        'name' => __("122 °F", __FILE__) ,
+                        'action' => 'Status'
+                    ) ,
+                    'ConsumerProducts.CoffeeMaker.EnumType.HotWaterTemperature.131F' => array(
+                        'name' => __("122 °F", __FILE__) ,
+                        'action' => 'Status'
+                    ) ,
+                    'ConsumerProducts.CoffeeMaker.EnumType.HotWaterTemperature.140F' => array(
+                        'name' => __("140 °F", __FILE__) ,
+                        'action' => 'Status'
+                    ) ,
+                    'ConsumerProducts.CoffeeMaker.EnumType.HotWaterTemperature.149F' => array(
+                        'name' => __("149 °F", __FILE__) ,
+                        'action' => 'Status'
+                    ) ,
+                    'ConsumerProducts.CoffeeMaker.EnumType.HotWaterTemperature.158F' => array(
+                        'name' => __("158 °F", __FILE__) ,
+                        'action' => 'Status'
+                    ) ,
+                    'ConsumerProducts.CoffeeMaker.EnumType.HotWaterTemperature.167F' => array(
+                        'name' => __("167 °F", __FILE__) ,
+                        'action' => 'Status'
+                    ) ,
+                    'ConsumerProducts.CoffeeMaker.EnumType.HotWaterTemperature.176F' => array(
+                        'name' => __("176 °F", __FILE__) ,
+                        'action' => 'Status'
+                    ) ,
+                    'ConsumerProducts.CoffeeMaker.EnumType.HotWaterTemperature.185F' => array(
+                        'name' => __("185 °F", __FILE__) ,
+                        'action' => 'Status'
+                    ) ,
+                    'ConsumerProducts.CoffeeMaker.EnumType.HotWaterTemperature.194F' => array(
+                        'name' => __("194 °F", __FILE__) ,
+                        'action' => 'Status'
+                    ) ,
+                    'ConsumerProducts.CoffeeMaker.EnumType.HotWaterTemperature.203F' => array(
+                        'name' => __("203 °F", __FILE__) ,
+                        'action' => 'Status'
+                    ) ,
+                    'ConsumerProducts.CoffeeMaker.EnumType.HotWaterTemperature.Max' => array(
+                        'name' => __("Max", __FILE__) ,
+                        'action' => 'Status'
+                    ) ,
                 )
             ) ,
             'ConsumerProducts.CoffeeMaker.Setting.CupWarmer' => array(
@@ -882,6 +1437,50 @@ class homeconnect_capabilities {
                     ) ,
                 )
             ) ,
+            'Dishcare.Dishwasher.Event.SaltNearlyEmpty' => array(
+                'name' => __("Sel presque vide", __FILE__) ,
+                'action' => 'Event',
+                'type' => 'Enumeration',
+                'available' => array(
+                    'Dishwasher'
+                ) ,
+                'enum' => array(
+                    'BSH.Common.EnumType.EventPresentState.Present' => array(
+                        'name' => __("Présent", __FILE__) ,
+                        'action' => 'Status'
+                    ) ,
+                    'BSH.Common.EnumType.EventPresentState.Off' => array(
+                        'name' => __("Désactivé", __FILE__) ,
+                        'action' => 'Status'
+                    ) ,
+                    'BSH.Common.EnumType.EventPresentState.Confirmed' => array(
+                        'name' => __("Confirmé", __FILE__) ,
+                        'action' => 'Status'
+                    ) ,
+                )
+            ) ,
+            'Dishcare.Dishwasher.Event.RinseAidNearlyEmpty' => array(
+                'name' => __("Liquide de rinçage presque vide", __FILE__) ,
+                'action' => 'Event',
+                'type' => 'Enumeration',
+                'available' => array(
+                    'Dishwasher'
+                ) ,
+                'enum' => array(
+                    'BSH.Common.EnumType.EventPresentState.Present' => array(
+                        'name' => __("Présent", __FILE__) ,
+                        'action' => 'Status'
+                    ) ,
+                    'BSH.Common.EnumType.EventPresentState.Off' => array(
+                        'name' => __("Désactivé", __FILE__) ,
+                        'action' => 'Status'
+                    ) ,
+                    'BSH.Common.EnumType.EventPresentState.Confirmed' => array(
+                        'name' => __("Confirmé", __FILE__) ,
+                        'action' => 'Status'
+                    ) ,
+                )
+            ) ,
             'Dishcare.Dishwasher.Program.PreRinse' => array(
                 'name' => __("Pré-rinçage", __FILE__) ,
                 'action' => 'Program',
@@ -1094,6 +1693,66 @@ class homeconnect_capabilities {
                 'type' => 'Boolean',
                 'available' => array(
                     'Dishwasher'
+                )
+            ) ,
+            'Dishcare.Dishwasher.Option.EcoDry' => array(
+                'name' => __("Séchage éco", __FILE__) ,
+                'action' => 'Option',
+                'type' => 'Boolean',
+                'available' => array(
+                    'Dishwasher'
+                )
+            ) ,
+            'Dishcare.Dishwasher.Option.ZeoliteDry' => array(
+                'name' => __("Séchage Zéolith", __FILE__) ,
+                'action' => 'Option',
+                'type' => 'Boolean',
+                'available' => array(
+                    'Dishwasher'
+                )
+            ) ,
+            'Cooking.Common.Event.Hood.GreaseFilterMaxSaturationNearlyReached' => array(
+                'name' => __("Saturation maximale du filtre à graisse presque atteinte", __FILE__) ,
+                'action' => 'Event',
+                'type' => 'Enumeration',
+                'available' => array(
+                    'Hood'
+                ) ,
+                'enum' => array(
+                    'BSH.Common.EnumType.EventPresentState.Present' => array(
+                        'name' => __("Présent", __FILE__) ,
+                        'action' => 'Status'
+                    ) ,
+                    'BSH.Common.EnumType.EventPresentState.Off' => array(
+                        'name' => __("Désactivé", __FILE__) ,
+                        'action' => 'Status'
+                    ) ,
+                    'BSH.Common.EnumType.EventPresentState.Confirmed' => array(
+                        'name' => __("Confirmé", __FILE__) ,
+                        'action' => 'Status'
+                    ) ,
+                )
+            ) ,
+            'Cooking.Common.Event.Hood.GreaseFilterMaxSaturationReached' => array(
+                'name' => __("Saturation maximale du filtre à graisse atteinte", __FILE__) ,
+                'action' => 'Event',
+                'type' => 'Enumeration',
+                'available' => array(
+                    'Hood'
+                ) ,
+                'enum' => array(
+                    'BSH.Common.EnumType.EventPresentState.Present' => array(
+                        'name' => __("Présent", __FILE__) ,
+                        'action' => 'Status'
+                    ) ,
+                    'BSH.Common.EnumType.EventPresentState.Off' => array(
+                        'name' => __("Désactivé", __FILE__) ,
+                        'action' => 'Status'
+                    ) ,
+                    'BSH.Common.EnumType.EventPresentState.Confirmed' => array(
+                        'name' => __("Confirmé", __FILE__) ,
+                        'action' => 'Status'
+                    ) ,
                 )
             ) ,
             'Cooking.Hob.Program.PowerLevelMode' => array(
@@ -1625,6 +2284,28 @@ class homeconnect_capabilities {
                     ) ,
                 )
             ) ,
+            'Cooking.Oven.Event.RegularPreheatFinished' => array(
+                'name' => __("Préchauffage normal terminé", __FILE__) ,
+                'action' => 'Event',
+                'type' => 'Enumeration',
+                'available' => array(
+                    'Oven'
+                ) ,
+                'enum' => array(
+                    'BSH.Common.EnumType.EventPresentState.Present' => array(
+                        'name' => __("Présent", __FILE__) ,
+                        'action' => 'Status'
+                    ) ,
+                    'BSH.Common.EnumType.EventPresentState.Off' => array(
+                        'name' => __("Désactivé", __FILE__) ,
+                        'action' => 'Status'
+                    ) ,
+                    'BSH.Common.EnumType.EventPresentState.Confirmed' => array(
+                        'name' => __("Confirmé", __FILE__) ,
+                        'action' => 'Status'
+                    ) ,
+                )
+            ) ,
             'Cooking.Common.Option.Hood.VentingLevel' => array(
                 'name' => __("Niveau de ventilation", __FILE__) ,
                 'action' => 'Option',
@@ -1705,6 +2386,53 @@ class homeconnect_capabilities {
                 'unit' => '%',
                 'constraints' => array(
                     'min' => 10,
+                    'max' => 100
+                ),
+                'available' => array(
+                    'Hood'
+                ) ,
+            ) ,
+            'Cooking.Hood.Setting.ColorTemperature' => array(
+                'name' => __("Température de couleur", __FILE__) ,
+                'action' => 'Option',
+                'type' => 'Enumeration',
+                'available' => array(
+                    'Hood'
+                ),
+                'enum' => array(
+                    'Cooking.Hood.EnumType.ColorTemperature.custom' => array(
+                        'name' => __("Personalisé", __FILE__) ,
+                        'action' => 'Option'
+                    ) ,
+                    'Cooking.Hood.EnumType.ColorTemperature.warm' => array(
+                        'name' => __("Chaud", __FILE__) ,
+                        'action' => 'Option'
+                    ) ,
+                    'Cooking.Hood.EnumType.ColorTemperature.warmToNeutral' => array(
+                        'name' => __("Entre chaud et neutre", __FILE__) ,
+                        'action' => 'Option'
+                    ) ,
+                    'Cooking.Hood.EnumType.ColorTemperature.neutral' => array(
+                        'name' => __("Neutre", __FILE__) ,
+                        'action' => 'Option'
+                    ) ,
+                    'Cooking.Hood.EnumType.ColorTemperature.neutralToCold' => array(
+                        'name' => __("Neutre à froid", __FILE__) ,
+                        'action' => 'Option'
+                    ) ,
+                    'Cooking.Hood.EnumType.ColorTemperature.cold' => array(
+                        'name' => __("Froid", __FILE__) ,
+                        'action' => 'Option'
+                    ) ,
+                )
+            ) ,
+            'Cooking.Hood.Setting.ColorTemperaturePercent' => array(
+                'name' => __("Pourcentage de température de couleur", __FILE__) ,
+                'action' => 'Option',
+                'type' => 'Int',
+                'unit' => '%',
+                'constraints' => array(
+                    'min' => 0,
                     'max' => 100
                 ),
                 'available' => array(
@@ -2015,7 +2743,22 @@ class homeconnect_capabilities {
             ) ,
             'LaundryCare.Dryer.Event.DryingProcessFinished' => array(
                 'name' => __("Séchage terminé", __FILE__) ,
-                'action' => 'Event'
+                'action' => 'Event',
+                'type' => 'Enumeration',
+                'enum' => array(
+                    'BSH.Common.EnumType.EventPresentState.Present' => array(
+                        'name' => __("Présent", __FILE__) ,
+                        'action' => 'Status'
+                    ) ,
+                    'BSH.Common.EnumType.EventPresentState.Off' => array(
+                        'name' => __("Désactivé", __FILE__) ,
+                        'action' => 'Status'
+                    ) ,
+                    'BSH.Common.EnumType.EventPresentState.Confirmed' => array(
+                        'name' => __("Confirmé", __FILE__) ,
+                        'action' => 'Status'
+                    ) ,
+                ),
             ),
             'LaundryCare.Dryer.Event.IDos1FillLevelPoor' => array(
                 'name' => __("Niveau de lessive bas", __FILE__) ,
@@ -2926,6 +3669,60 @@ class homeconnect_capabilities {
                     'Refrigerator'
                 ) ,
             ) ,
+            'Refrigeration.Common.Setting.Light.External.Power' => array(
+                'name' => __("Éclairage externe", __FILE__) ,
+                'action' => 'Setting',
+                'type' => 'Boolean',
+                'available' => array(
+                    'Freezer',
+                    'FridgeFreezer',
+                    'Refrigerator',
+                    'WineCooler'
+                ) ,
+            ) ,
+            'Refrigeration.Common.Setting.Light.Internal.Power' => array(
+                'name' => __("Éclairage interne", __FILE__) ,
+                'action' => 'Setting',
+                'type' => 'Boolean',
+                'available' => array(
+                    'Freezer',
+                    'FridgeFreezer',
+                    'Refrigerator',
+                    'WineCooler'
+                ) ,
+            ) ,
+            'Refrigeration.Common.Setting.Light.External.Brightness' => array(
+                'name' => __("Luminosité de l'éclairage externe", __FILE__) ,
+                'action' => 'Option',
+                'type' => 'Int',
+                'unit' => '%',
+                'constraints' => array(
+                    'min' => 0,
+                    'max' => 100
+                ),
+                'available' => array(
+                    'Freezer',
+                    'FridgeFreezer',
+                    'Refrigerator',
+                    'WineCooler'
+                ) ,
+            ) ,
+            'Refrigeration.Common.Setting.Light.Internal.Brightness' => array(
+                'name' => __("Luminosité de l'éclairage interne", __FILE__) ,
+                'action' => 'Option',
+                'type' => 'Int',
+                'unit' => '%',
+                'constraints' => array(
+                    'min' => 0,
+                    'max' => 100
+                ),
+                'available' => array(
+                    'Freezer',
+                    'FridgeFreezer',
+                    'Refrigerator',
+                    'WineCooler'
+                ) ,
+            ) ,
             'Refrigeration.Common.Setting.WineCompartment.SetpointTemperature' => array(
                 'name' => __("Température cible bac à vins 1", __FILE__) ,
                 'action' => 'Setting',
@@ -2980,6 +3777,151 @@ class homeconnect_capabilities {
                     'Refrigerator'
                 ) ,
             ) ,
+            'Refrigeration.Common.Setting.Dispenser.Enabled' => array(
+                'name' => __("Distributeur activé", __FILE__) ,
+                'action' => 'Setting',
+                'type' => 'Boolean',
+                'available' => array(
+                    'Freezer',
+                    'FridgeFreezer'
+                ) ,
+            ) ,
+            'Refrigeration.Common.Setting.Door.AssistantFridge' => array(
+                'name' => __("Assistant de porte réfrigérateur", __FILE__) ,
+                'action' => 'Setting',
+                'type' => 'Boolean',
+                'available' => array(
+                    'Freezer',
+                    'FridgeFreezer'
+                ) ,
+            ) ,
+            'Refrigeration.Common.Setting.Door.AssistantFreezer' => array(
+                'name' => __("Assistant de porte congélateur", __FILE__) ,
+                'action' => 'Setting',
+                'type' => 'Boolean',
+                'available' => array(
+                    'Freezer',
+                    'FridgeFreezer'
+                ) ,
+            ) ,
+            'Refrigeration.Common.Setting.Door.AssistantForceFridge' => array(
+                'name' => __("Force assistant de porte de réfrigérateur", __FILE__) ,
+                'action' => 'Event',
+                'type' => 'Enumeration',
+                'available' => array(
+                    'Freezer',
+                    'FridgeFreezer'
+                ) ,
+                'enum' => array(
+                    'Refrigeration.Common.EnumType.Door.AssistantForce.LowForce' => array(
+                        'name' => __("Faible", __FILE__) ,
+                        'action' => 'Status'
+                    ) ,
+                    'Refrigeration.Common.EnumType.Door.AssistantForce.MiddleForce' => array(
+                        'name' => __("Moyenne", __FILE__) ,
+                        'action' => 'Status'
+                    ) ,
+                    'Refrigeration.Common.EnumType.Door.AssistantForce.HighForce' => array(
+                        'name' => __("Forte", __FILE__) ,
+                        'action' => 'Status'
+                    ) ,
+                )
+            ) ,
+            'Refrigeration.Common.Setting.Door.AssistantForceFreezer' => array(
+                'name' => __("Force assistant de porte de congélateur", __FILE__) ,
+                'action' => 'Event',
+                'type' => 'Enumeration',
+                'available' => array(
+                    'Freezer',
+                    'FridgeFreezer'
+                ) ,
+                'enum' => array(
+                    'Refrigeration.Common.EnumType.Door.AssistantForce.LowForce' => array(
+                        'name' => __("Faible", __FILE__) ,
+                        'action' => 'Status'
+                    ) ,
+                    'Refrigeration.Common.EnumType.Door.AssistantForce.MiddleForce' => array(
+                        'name' => __("Moyenne", __FILE__) ,
+                        'action' => 'Status'
+                    ) ,
+                    'Refrigeration.Common.EnumType.Door.AssistantForce.HighForce' => array(
+                        'name' => __("Forte", __FILE__) ,
+                        'action' => 'Status'
+                    ) ,
+                )
+            ) ,
+            'Refrigeration.Common.Setting.Door.AssistantTimeoutFridge' => array(
+                'name' => __("Durée de l'assistant de porte de réfrigérateur", __FILE__) ,
+                'action' => 'Option',
+                'type' => 'Int',
+                'unit' => 'seconds',
+                'constraints' => array(
+                    'min' => 0
+                ),
+                'available' => array(
+                    'Freezer',
+                    'FridgeFreezer'
+                ) ,
+            ) ,
+            'Refrigeration.Common.Setting.Door.AssistantTimeoutFreezer' => array(
+                'name' => __("Durée de l'assistant de porte de congélateur", __FILE__) ,
+                'action' => 'Option',
+                'type' => 'Int',
+                'unit' => 'seconds',
+                'constraints' => array(
+                    'min' => 0
+                ),
+                'available' => array(
+                    'Freezer',
+                    'FridgeFreezer'
+                ) ,
+            ) ,
+            'Refrigeration.Common.Setting.Door.AssistantTriggerFridge' => array(
+                'name' => __("Mode d'ouverture de porte de réfrigérateur", __FILE__) ,
+                'action' => 'Event',
+                'type' => 'Enumeration',
+                'available' => array(
+                    'Freezer',
+                    'FridgeFreezer'
+                ) ,
+                'enum' => array(
+                    'Refrigeration.Common.EnumType.Door.AssistantTrigger.Push' => array(
+                        'name' => __("Pousser", __FILE__) ,
+                        'action' => 'Status'
+                    ) ,
+                    'Refrigeration.Common.EnumType.Door.AssistantTrigger.Pull' => array(
+                        'name' => __("Tirer", __FILE__) ,
+                        'action' => 'Status'
+                    ) ,
+                    'Refrigeration.Common.EnumType.Door.AssistantTrigger.PushPull' => array(
+                        'name' => __("Pousser-tirer", __FILE__) ,
+                        'action' => 'Status'
+                    ) ,
+                )
+            ) ,
+            'Refrigeration.Common.Setting.Door.AssistantTriggerFreezer' => array(
+                'name' => __("Mode d'ouverture de porte de congélateur", __FILE__) ,
+                'action' => 'Event',
+                'type' => 'Enumeration',
+                'available' => array(
+                    'Freezer',
+                    'FridgeFreezer'
+                ) ,
+                'enum' => array(
+                    'Refrigeration.Common.EnumType.Door.AssistantTrigger.Push' => array(
+                        'name' => __("Pousser", __FILE__) ,
+                        'action' => 'Status'
+                    ) ,
+                    'Refrigeration.Common.EnumType.Door.AssistantTrigger.Pull' => array(
+                        'name' => __("Tirer", __FILE__) ,
+                        'action' => 'Status'
+                    ) ,
+                    'Refrigeration.Common.EnumType.Door.AssistantTrigger.PushPull' => array(
+                        'name' => __("Pousser-tirer", __FILE__) ,
+                        'action' => 'Status'
+                    ) ,
+                )
+            ) ,
             'Refrigeration.Common.Setting.FreshMode' => array(
                 'name' => __("Mode frais", __FILE__) ,
                 'action' => 'Setting',
@@ -2988,6 +3930,213 @@ class homeconnect_capabilities {
                     'FridgeFreezer',
                     'Refrigerator'
                 ) ,
+            ) ,
+            'Refrigeration.Common.Status.Door.BottleCooler' => array(
+                'name' => __("État de la porte", __FILE__) ,
+                'action' => 'Event',
+                'type' => 'Enumeration',
+                'available' => array(
+                    'Freezer',
+                    'FridgeFreezer'
+                ) ,
+                'enum' => array(
+                    'BSH.Common.EnumType.DoorState.Open' => array(
+                        'name' => __("Ouverte", __FILE__) ,
+                        'action' => 'Status'
+                    ) ,
+                    'BSH.Common.EnumType.DoorState.Closed' => array(
+                        'name' => __("Fermée", __FILE__) ,
+                        'action' => 'Status'
+                    ) ,
+                )
+            ) ,
+            'Refrigeration.Common.Status.Door.ChillerCommon' => array(
+                'name' => __("État de la porte du refroidisseur commun", __FILE__) ,
+                'action' => 'Event',
+                'type' => 'Enumeration',
+                'available' => array(
+                    'Freezer',
+                    'FridgeFreezer'
+                ) ,
+                'enum' => array(
+                    'BSH.Common.EnumType.DoorState.Open' => array(
+                        'name' => __("Ouverte", __FILE__) ,
+                        'action' => 'Status'
+                    ) ,
+                    'BSH.Common.EnumType.DoorState.Closed' => array(
+                        'name' => __("Fermée", __FILE__) ,
+                        'action' => 'Status'
+                    ) ,
+                )
+            ) ,
+            'Refrigeration.Common.Status.Door.Chiller' => array(
+                'name' => __("État de la porte du refroidisseur", __FILE__) ,
+                'action' => 'Event',
+                'type' => 'Enumeration',
+                'available' => array(
+                    'Freezer',
+                    'FridgeFreezer'
+                ) ,
+                'enum' => array(
+                    'BSH.Common.EnumType.DoorState.Open' => array(
+                        'name' => __("Ouverte", __FILE__) ,
+                        'action' => 'Status'
+                    ) ,
+                    'BSH.Common.EnumType.DoorState.Closed' => array(
+                        'name' => __("Fermée", __FILE__) ,
+                        'action' => 'Status'
+                    ) ,
+                )
+            ) ,
+            'Refrigeration.Common.Status.Door.ChillerLeft' => array(
+                'name' => __("État de la porte du refroidisseur gauche", __FILE__) ,
+                'action' => 'Event',
+                'type' => 'Enumeration',
+                'available' => array(
+                    'Freezer',
+                    'FridgeFreezer'
+                ) ,
+                'enum' => array(
+                    'BSH.Common.EnumType.DoorState.Open' => array(
+                        'name' => __("Ouverte", __FILE__) ,
+                        'action' => 'Status'
+                    ) ,
+                    'BSH.Common.EnumType.DoorState.Closed' => array(
+                        'name' => __("Fermée", __FILE__) ,
+                        'action' => 'Status'
+                    ) ,
+                )
+            ) ,
+            'Refrigeration.Common.Status.Door.ChillerRight' => array(
+                'name' => __("État de la porte du refroidisseur droit", __FILE__) ,
+                'action' => 'Event',
+                'type' => 'Enumeration',
+                'available' => array(
+                    'Freezer',
+                    'FridgeFreezer'
+                ) ,
+                'enum' => array(
+                    'BSH.Common.EnumType.DoorState.Open' => array(
+                        'name' => __("Ouverte", __FILE__) ,
+                        'action' => 'Status'
+                    ) ,
+                    'BSH.Common.EnumType.DoorState.Closed' => array(
+                        'name' => __("Fermée", __FILE__) ,
+                        'action' => 'Status'
+                    ) ,
+                )
+            ) ,
+            'Refrigeration.Common.Status.Door.FlexCompartment' => array(
+                'name' => __("État de la porte du compartiment", __FILE__) ,
+                'action' => 'Event',
+                'type' => 'Enumeration',
+                'available' => array(
+                    'FridgeFreezer'
+                ) ,
+                'enum' => array(
+                    'BSH.Common.EnumType.DoorState.Open' => array(
+                        'name' => __("Ouverte", __FILE__) ,
+                        'action' => 'Status'
+                    ) ,
+                    'BSH.Common.EnumType.DoorState.Closed' => array(
+                        'name' => __("Fermée", __FILE__) ,
+                        'action' => 'Status'
+                    ) ,
+                )
+            ) ,
+            'Refrigeration.Common.Status.Door.Freezer' => array(
+                'name' => __("État de la porte du congélateur", __FILE__) ,
+                'action' => 'Event',
+                'type' => 'Enumeration',
+                'available' => array(
+                    'Freezer',
+                    'FridgeFreezer'
+                ) ,
+                'enum' => array(
+                    'BSH.Common.EnumType.DoorState.Open' => array(
+                        'name' => __("Ouverte", __FILE__) ,
+                        'action' => 'Status'
+                    ) ,
+                    'BSH.Common.EnumType.DoorState.Closed' => array(
+                        'name' => __("Fermée", __FILE__) ,
+                        'action' => 'Status'
+                    ) ,
+                )
+            ) ,
+            'Refrigeration.Common.Status.Door.Refrigerator' => array(
+                'name' => __("État de la porte du réfrigérateur", __FILE__) ,
+                'action' => 'Event',
+                'type' => 'Enumeration',
+                'available' => array(
+                    'FridgeFreezer',
+                    'Refrigerator'
+                ) ,
+                'enum' => array(
+                    'BSH.Common.EnumType.DoorState.Open' => array(
+                        'name' => __("Ouverte", __FILE__) ,
+                        'action' => 'Status'
+                    ) ,
+                    'BSH.Common.EnumType.DoorState.Closed' => array(
+                        'name' => __("Fermée", __FILE__) ,
+                        'action' => 'Status'
+                    ) ,
+                )
+            ) ,
+            'Refrigeration.Common.Status.Door.Refrigerator2' => array(
+                'name' => __("État de la porte du réfrigérateur 2", __FILE__) ,
+                'action' => 'Event',
+                'type' => 'Enumeration',
+                'available' => array(
+                    'FridgeFreezer',
+                    'Refrigerator'
+                ) ,
+                'enum' => array(
+                    'BSH.Common.EnumType.DoorState.Open' => array(
+                        'name' => __("Ouverte", __FILE__) ,
+                        'action' => 'Status'
+                    ) ,
+                    'BSH.Common.EnumType.DoorState.Closed' => array(
+                        'name' => __("Fermée", __FILE__) ,
+                        'action' => 'Status'
+                    ) ,
+                )
+            ) ,
+            'Refrigeration.Common.Status.Door.Refrigerator3' => array(
+                'name' => __("État de la porte du réfrigérateur 3", __FILE__) ,
+                'action' => 'Event',
+                'type' => 'Enumeration',
+                'available' => array(
+                    'FridgeFreezer',
+                    'Refrigerator'
+                ) ,
+                'enum' => array(
+                    'BSH.Common.EnumType.DoorState.Open' => array(
+                        'name' => __("Ouverte", __FILE__) ,
+                        'action' => 'Status'
+                    ) ,
+                    'BSH.Common.EnumType.DoorState.Closed' => array(
+                        'name' => __("Fermée", __FILE__) ,
+                        'action' => 'Status'
+                    ) ,
+                )
+            ) ,
+            'Refrigeration.Common.Status.Door.WineCompartment' => array(
+                'name' => __("État de la porte du compartiment à vins", __FILE__) ,
+                'action' => 'Event',
+                'type' => 'Enumeration',
+                'available' => array(
+                    'WineCooler'
+                ) ,
+                'enum' => array(
+                    'BSH.Common.EnumType.DoorState.Open' => array(
+                        'name' => __("Ouverte", __FILE__) ,
+                        'action' => 'Status'
+                    ) ,
+                    'BSH.Common.EnumType.DoorState.Closed' => array(
+                        'name' => __("Fermée", __FILE__) ,
+                        'action' => 'Status'
+                    ) ,
+                )
             ) ,
             'LaundryCare.Washer.Setting.IDos1BaseLevel' => array(
                 'name' => __("Volume de dosage i-Dos de détergent 1", __FILE__) ,
@@ -3097,6 +4246,40 @@ class homeconnect_capabilities {
                 'available' => array(
                     'CoffeeMachine',
                     'Hood',
+                    'Oven',
+                    'Dishwasher',
+                    'Dryer',
+                    'Washer',
+                    'WasherDryer'
+                ) ,
+            ) ,
+            'BSH.Common.Option.RemainingProgramTimeIsEstimated' => array(
+                'name' => __("Temps de programme restant estimé", __FILE__) ,
+                'action' => 'Option',
+                'type' => 'Int',
+                'unit' => 'seconds',
+                'constraints' => array(
+                    'min' => 0,
+                    'max' => 86340
+                ),
+                'available' => array(
+                    'Oven',
+                    'Dishwasher',
+                    'Dryer',
+                    'Washer',
+                    'WasherDryer'
+                ) ,
+            ) ,
+            'BSH.Common.Option.EstimatedTotalProgramTime' => array(
+                'name' => __("Temps de programme total estimé", __FILE__) ,
+                'action' => 'Option',
+                'type' => 'Int',
+                'unit' => 'seconds',
+                'constraints' => array(
+                    'min' => 0,
+                    'max' => 86340
+                ),
+                'available' => array(
                     'Oven',
                     'Dishwasher',
                     'Dryer',
@@ -3816,29 +4999,29 @@ class homeconnect_capabilities {
                         ) ,
                     ) ,
                     'BSH.Common.EnumType.AmbientLightColor.Color1' => array(
-                    'name' => __("Couleur 1", __FILE__) ,
+                        'name' => __("Couleur 1", __FILE__) ,
                         'action' => 'Status',
                         'available' => array(
                             'Hood',
                             'Dishwasher'
                         ) ,
                     ) ,
-										'BSH.Common.EnumType.AmbientLightColor.Color2' => array(
-										    'name' => __("Couleur 2", __FILE__) ,
-										    'action' => 'Status',
-										    'available' => array(
-										        'Hood',
-										        'Dishwasher'
-										    ) ,
-										) ,
-										'BSH.Common.EnumType.AmbientLightColor.Color3' => array(
-										    'name' => __("Couleur 3", __FILE__) ,
-										    'action' => 'Status',
-										    'available' => array(
-										        'Hood',
-										        'Dishwasher'
-										    ) ,
-										) ,
+                    'BSH.Common.EnumType.AmbientLightColor.Color2' => array(
+                        'name' => __("Couleur 2", __FILE__) ,
+                        'action' => 'Status',
+                        'available' => array(
+                            'Hood',
+                            'Dishwasher'
+                        ) ,
+                    ) ,
+                    'BSH.Common.EnumType.AmbientLightColor.Color3' => array(
+                        'name' => __("Couleur 3", __FILE__) ,
+                        'action' => 'Status',
+                        'available' => array(
+                            'Hood',
+                            'Dishwasher'
+                        ) ,
+                    ) ,
 										'BSH.Common.EnumType.AmbientLightColor.Color4' => array(
 										    'name' => __("Couleur 4", __FILE__) ,
 										    'action' => 'Status',
