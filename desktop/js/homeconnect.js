@@ -20,23 +20,19 @@
 			$.ajax({// fonction permettant de faire de l'ajax
 				type: "POST", // methode de transmission des données au fichier php
                 url: "plugins/homeconnect/core/ajax/homeconnect.ajax.php", // url du fichier php
-
                 data: {
                     action: "deleteEqLogic",
                 },
-
                 dataType: 'json',
-
                 error: function (request, status, error) {
                     handleAjaxError(request, status, error);
                 },
-
                 success: function (data) { // si l'appel a bien fonctionné
                     if (data.state != 'ok') {
-                        $('#div_alert').showAlert({message: data.result, level: 'danger'});
+                        $.fn.showAlert({message: data.result, level: 'danger'});
                         return;
                     }
-                    $('#div_alert').showAlert({message: '{{Suppression effectuée}}', level: 'success'});
+                    $.fn.showAlert({message: '{{Suppression effectuée}}', level: 'success'});
                     location.reload();
                 }
 	        });
@@ -59,10 +55,10 @@ function syncHC(force = false) {
 		},
 		success: function (data) { // si l'appel a bien fonctionné
 			if (data.state != 'ok') {
-				$('#div_alert').showAlert({message: data.result, level: 'danger'});
+				$.fn.showAlert({message: data.result, level: 'danger'});
 				return;
 			}
-			$('#div_alert').showAlert({message: '{{Synchronisation réussie}}', level: 'success'});
+			$.fn.showAlert({message: '{{Synchronisation réussie}}', level: 'success'});
 			location.reload();
 		}
 	});
@@ -199,10 +195,11 @@ function addCmdToTable(_cmd) {
     id:  $('.eqLogicAttr[data-l1key=id]').value(),
     filter: {type: 'info'},
     error: function (error) {
-      $('#div_alert').showAlert({message: error.message, level: 'danger'})
+      $.fn.showAlert({message: error.message, level: 'danger'})
     },
     success: function (result) {
-      tr.find('.cmdAttr[data-l1key=value]').append(result)
+      tr.find('.cmdAttr[data-l1key=value]').append(result);
+      tr.find('.cmdAttr[data-l1key=configuration][data-l2key=updateCmdId]').append(result);
       tr.setValues(_cmd, '.cmdAttr')
       jeedom.cmd.changeType(tr, init(_cmd.subType))
     }
