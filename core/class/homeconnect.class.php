@@ -393,14 +393,14 @@ class homeconnect extends eqLogic {
         @session_start();
         $authorizationUrl = self::baseUrl() . self::API_AUTH_URL;
         $clientId = trim(config::byKey('client_id', 'homeconnect', '', true));
-        $redirectUri = urlencode(trim(network::getNetworkAccess('external')) . '/plugins/homeconnect/core/php/callback.php?apikey=' . jeedom::getApiKey('homeconnect'));
+        $redirectUri = urlencode(trim(network::getNetworkAccess('external')) . '/plugins/homeconnect/x.php?k=' . jeedom::getApiKey('homeconnect'));
         if (config::byKey('demo_mode', 'homeconnect')) {
             $parameters['scope'] = implode(' ', ['IdentifyAppliance', 'Monitor', 'Settings', 'CoffeeMaker-Control', 'Dishwasher-Control', 'Dryer-Control', 'Washer-Control']);
             $parameters['user'] = 'me'; // Can be anything non-zero length
             $parameters['client_id'] = trim(config::byKey('demo_client_id', 'homeconnect', '', true));
         } else {
             $parameters['scope'] = implode(' ', ['IdentifyAppliance', 'Monitor', 'Settings', 'Control']);
-            $parameters['redirect_uri'] = trim(network::getNetworkAccess('external')) . '/plugins/homeconnect/core/php/callback.php?apikey=' . jeedom::getApiKey('homeconnect');
+            $parameters['redirect_uri'] = trim(network::getNetworkAccess('external')) . '/plugins/homeconnect/x.php?k=' . jeedom::getApiKey('homeconnect');
             $parameters['client_id'] = trim(config::byKey('client_id', 'homeconnect', '', true));
         }
         $parameters['response_type'] = 'code';
@@ -490,7 +490,7 @@ class homeconnect extends eqLogic {
         if (!config::byKey('demo_mode', 'homeconnect')) {
             $parameters['client_secret'] = trim(config::byKey('client_secret', 'homeconnect', '', true));
         }
-        $parameters['redirect_uri'] = trim(network::getNetworkAccess('external')) . '/plugins/homeconnect/core/php/callback.php?apikey=' . jeedom::getApiKey('homeconnect');
+        $parameters['redirect_uri'] = trim(network::getNetworkAccess('external')) . '/plugins/homeconnect/x.php?k=' . jeedom::getApiKey('homeconnect');
         $parameters['grant_type'] = 'authorization_code';
         $parameters['code'] = config::byKey('auth', 'homeconnect');
         log::add(__CLASS__, 'debug', "Post fields : " . json_encode($parameters));

@@ -81,7 +81,7 @@ if (!isConnect()) {
 				</sup>
 			</label>
 			<div class="col-lg-9">
-				<span><?php echo network::getNetworkAccess('external') . '/plugins/homeconnect/core/php/callback.php?apikey=' . jeedom::getApiKey('homeconnect');?></span>
+				<span><?php echo network::getNetworkAccess('external') . '/plugins/homeconnect/x.php?k=' . jeedom::getApiKey('homeconnect');?></span>
 			</div>
 		</div>
 		<div class="form-group">
@@ -91,7 +91,7 @@ if (!isConnect()) {
 					<i class="fa fa-question-circle tooltips" title="{{Récupérez ce paramètre sur le site Home Connect (https://developer.home-connect.com/applications)}}" style="font-size : 1em;color:grey;"></i>
 				</sup>
 			</label>
-			<div class="col-sm-3">
+			<div class="col-sm-6">
 				<input type="text" class="configKey form-control" data-l1key="client_id"/>
 			</div>
 		</div>
@@ -102,7 +102,7 @@ if (!isConnect()) {
 					<i class="fa fa-question-circle tooltips" title="{{Récupérez ce paramètre sur le site Home Connect (https://developer.home-connect.com/applications)}}" style="font-size : 1em;color:grey;"></i>
 				</sup>
 			</label>
-			<div class="col-sm-3">
+			<div class="col-sm-6">
 				<input type="text" class="configKey form-control" data-l1key="client_secret"/>
 			</div>
 		</div>
