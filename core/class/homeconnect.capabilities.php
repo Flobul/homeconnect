@@ -1639,6 +1639,13 @@ class homeconnect_capabilities {
                     'Dishwasher'
                 ) ,
             ) ,
+            'Dishcare.Dishwasher.Program.MixedLoad' => array(
+                'name' => __("Charge mixte", __FILE__) ,
+                'action' => 'Program',
+                'available' => array(
+                    'Dishwasher'
+                ) ,
+            ) ,
             'Dishcare.Dishwasher.Option.IntensivZone' => array(
                 'name' => __("Zone intensive", __FILE__) ,
                 'action' => 'Option',
@@ -1953,6 +1960,90 @@ class homeconnect_capabilities {
             ) ,
             'Cooking.Oven.Program.HeatingMode.Proof' => array(
                 'name' => __("Levain", __FILE__) ,
+                'action' => 'Program',
+                'available' => array(
+                    'Oven'
+                )
+            ) ,
+            'Cooking.Oven.Program.HeatingMode.HotAir30Steam' => array(
+                'name' => __("Air chaud 30° vapeur", __FILE__) ,
+                'action' => 'Program',
+                'available' => array(
+                    'Oven'
+                )
+            ) ,
+            'Cooking.Oven.Program.HeatingMode.HotAir60Steam' => array(
+                'name' => __("Air chaud 60° vapeur", __FILE__) ,
+                'action' => 'Program',
+                'available' => array(
+                    'Oven'
+                )
+            ) ,
+            'Cooking.Oven.Program.HeatingMode.HotAir80Steam' => array(
+                'name' => __("Air chaud 80° vapeur", __FILE__) ,
+                'action' => 'Program',
+                'available' => array(
+                    'Oven'
+                )
+            ) ,
+            'Cooking.Oven.Program.HeatingMode.HotAir100Steam' => array(
+                'name' => __("Air chaud 100° vapeur", __FILE__) ,
+                'action' => 'Program',
+                'available' => array(
+                    'Oven'
+                )
+            ) ,
+            'Cooking.Oven.Program.HeatingMode.SabbathProgramme' => array(
+                'name' => __("Programme du sabbat", __FILE__) ,
+                'action' => 'Program',
+                'available' => array(
+                    'Oven'
+                )
+            ) ,
+            'Cooking.Oven.Program.Microwave.90Watt' => array(
+                'name' => __("90 W", __FILE__) ,
+                'action' => 'Program',
+                'available' => array(
+                    'Oven'
+                )
+            ) ,
+            'Cooking.Oven.Program.Microwave.180Watt' => array(
+                'name' => __("180 W", __FILE__) ,
+                'action' => 'Program',
+                'available' => array(
+                    'Oven'
+                )
+            ) ,
+            'Cooking.Oven.Program.Microwave.360Watt' => array(
+                'name' => __("360 W", __FILE__) ,
+                'action' => 'Program',
+                'available' => array(
+                    'Oven'
+                )
+            ) ,
+            'Cooking.Oven.Program.Microwave.600Watt' => array(
+                'name' => __("600 W", __FILE__) ,
+                'action' => 'Program',
+                'available' => array(
+                    'Oven'
+                )
+            ) ,
+            'Cooking.Oven.Program.Microwave.900Watt' => array(
+                'name' => __("900 W", __FILE__) ,
+                'action' => 'Program',
+                'available' => array(
+                    'Oven'
+                )
+            ) ,
+            'Cooking.Oven.Program.Microwave.1000Watt' => array(
+                'name' => __("1000 W", __FILE__) ,
+                'action' => 'Program',
+                'available' => array(
+                    'Oven'
+                )
+            ) ,
+            'Cooking.Oven.Program.Microwave.Max' => array(
+                'name' => __("Max", __FILE__) ,
                 'action' => 'Program',
                 'available' => array(
                     'Oven'
