@@ -28,6 +28,7 @@ class homeconnect extends eqLogic {
     const API_TOKEN_URL = "/security/oauth/token"; //client_id=XXX&redirect_uri=XXX&grant_type=authorization_code&code=XXX
     const API_REQUEST_URL = "/api/homeappliances";
     const API_EVENTS_URL = "/api/homeappliances/events";
+    const API_CLIENT_HC = 'https://apiclient.home-connect.com/o2c.html';
 
     /** *************************** Attributs statiques *********************** */
 
@@ -393,14 +394,15 @@ class homeconnect extends eqLogic {
         @session_start();
         $authorizationUrl = self::baseUrl() . self::API_AUTH_URL;
         $clientId = trim(config::byKey('client_id', 'homeconnect', '', true));
-        $redirectUri = urlencode(trim(network::getNetworkAccess('external')) . '/plugins/homeconnect/core/php/callback.php?apikey=' . jeedom::getApiKey('homeconnect'));
+        $redirectUri = urlencode(trim(network::getNetworkAccess('external')) . '/plugins/homeconnect/x.php?k=' . jeedom::getApiKey('homeconnect'));
         if (config::byKey('demo_mode', 'homeconnect')) {
-            $parameters['scope'] = implode(' ', ['IdentifyAppliance', 'Monitor', 'Settings', 'CoffeeMaker-Control', 'Dishwasher-Control', 'Dryer-Control', 'Washer-Control']);
+            $parameters['scope'] = implode(' ', ['IdentifyAppliance', 'Monitor', 'Settings', 'Control']);
             $parameters['user'] = 'me'; // Can be anything non-zero length
             $parameters['client_id'] = trim(config::byKey('demo_client_id', 'homeconnect', '', true));
+            $parameters['redirect_uri'] = self::API_CLIENT_HC;
         } else {
             $parameters['scope'] = implode(' ', ['IdentifyAppliance', 'Monitor', 'Settings', 'Control']);
-            $parameters['redirect_uri'] = trim(network::getNetworkAccess('external')) . '/plugins/homeconnect/core/php/callback.php?apikey=' . jeedom::getApiKey('homeconnect');
+            $parameters['redirect_uri'] = trim(network::getNetworkAccess('external')) . '/plugins/homeconnect/x.php?k=' . jeedom::getApiKey('homeconnect');
             $parameters['client_id'] = trim(config::byKey('client_id', 'homeconnect', '', true));
         }
         $parameters['response_type'] = 'code';
@@ -430,7 +432,13 @@ class homeconnect extends eqLogic {
 
         // Envoie d'une requête GET et récupération du header.
         $curl = curl_init();
-        $options = [CURLOPT_URL => $url, CURLOPT_RETURNTRANSFER => True, CURLOPT_SSL_VERIFYPEER => False, CURLOPT_HEADER => True, CURLINFO_HEADER_OUT => true ];
+        $options = array(
+            CURLOPT_URL => $url,
+            CURLOPT_RETURNTRANSFER => true,
+            CURLOPT_SSL_VERIFYPEER => false,
+            CURLOPT_HEADER => true,
+            CURLINFO_HEADER_OUT => true
+        );
         curl_setopt_array($curl, $options);
         $response = curl_exec($curl);
         $info = curl_getinfo($curl);
@@ -489,15 +497,24 @@ class homeconnect extends eqLogic {
         $parameters['client_id'] = $clientId;
         if (!config::byKey('demo_mode', 'homeconnect')) {
             $parameters['client_secret'] = trim(config::byKey('client_secret', 'homeconnect', '', true));
+            $parameters['redirect_uri'] = trim(network::getNetworkAccess('external')) . '/plugins/homeconnect/x.php?k=' . jeedom::getApiKey('homeconnect');
+        } else {
+            $parameters['redirect_uri'] = self::API_CLIENT_HC;
         }
-        $parameters['redirect_uri'] = trim(network::getNetworkAccess('external')) . '/plugins/homeconnect/core/php/callback.php?apikey=' . jeedom::getApiKey('homeconnect');
         $parameters['grant_type'] = 'authorization_code';
-        $parameters['code'] = config::byKey('auth', 'homeconnect');
-        log::add(__CLASS__, 'debug', "Post fields : " . json_encode($parameters));
+        $parameters['code'] = urldecode(config::byKey('auth', 'homeconnect'));
+        log::add(__CLASS__, 'debug', "Post fields : " . self::buildQueryString($parameters));
 
         // Récupération du Token.
         $curl = curl_init();
-        $options = [CURLOPT_URL => $url, CURLOPT_RETURNTRANSFER => True, CURLOPT_SSL_VERIFYPEER => false, CURLOPT_POST => True, CURLOPT_POSTFIELDS => self::buildQueryString($parameters) ];
+        $options = array(
+            CURLOPT_URL => $url,
+            CURLOPT_RETURNTRANSFER => true,
+            CURLOPT_SSL_VERIFYPEER => false,
+            CURLOPT_HTTPHEADER => array('Content-Type: application/x-www-form-urlencoded'),
+            CURLOPT_POST => true,
+            CURLOPT_POSTFIELDS => self::buildQueryString($parameters)
+        );
         curl_setopt_array($curl, $options);
         $response = json_decode(curl_exec($curl) , true);
         log::add(__CLASS__, 'debug', "Response = " . print_r($response, true));
@@ -563,7 +580,13 @@ class homeconnect extends eqLogic {
 
         // Récupération du Token.
         $curl = curl_init();
-        $options = [CURLOPT_URL => $url, CURLOPT_RETURNTRANSFER => True, CURLOPT_SSL_VERIFYPEER => false, CURLOPT_POST => True, CURLOPT_POSTFIELDS => self::buildQueryString($parameters) ];
+        $options = array(
+            CURLOPT_URL => $url,
+            CURLOPT_RETURNTRANSFER => true,
+            CURLOPT_SSL_VERIFYPEER => false,
+            CURLOPT_POST => true,
+            CURLOPT_POSTFIELDS => self::buildQueryString($parameters)
+        );
         curl_setopt_array($curl, $options);
         $response = json_decode(curl_exec($curl) , true);
         log::add(__CLASS__, 'debug', "Response : " . print_r($response, true));

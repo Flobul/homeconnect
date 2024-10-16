@@ -46,21 +46,28 @@ if (!isConnect()) {
 				<option value="*/5 * * * *">{{Toutes les 5 minutes}}</option>
 				<option value="*/10 * * * *">{{Toutes les 10 minutes}}</option>
 				<option value="*/15 * * * *">{{Toutes les 15 minutes}}</option>
+				<option value="*/20 * * * *">{{Toutes les 20 minutes}}</option>
+				<option value="*/25 * * * *">{{Toutes les 25 minutes}}</option>
 				<option value="*/30 * * * *">{{Toutes les 30 minutes}}</option>
+				<option value="*/35 * * * *">{{Toutes les 35 minutes}}</option>
+				<option value="*/40 * * * *">{{Toutes les 40 minutes}}</option>
 				<option value="*/45 * * * *">{{Toutes les 45 minutes}}</option>
+				<option value="*/50 * * * *">{{Toutes les 50 minutes}}</option>
+				<option value="*/55 * * * *">{{Toutes les 55 minutes}}</option>
+				<option value="*/60 * * * *">{{Toutes les heures}}</option>
 				<option value="">{{Jamais}}</option>
 			</select>
 		</div>
 		</div>
 		<div class="form-group">
 			<label class="col-lg-3 control-label">
-				{{Creation de l'application Jeedom sur le siteHome Connect}}
+				{{Création de l'application Jeedom sur le site Home Connect}}
 				<sup>
-					<i class="fa fa-question-circle tooltips" title="{{Creation des identifiants (https://developer.home-connect.com/applications/add)}}" style="font-size : 1em;color:grey;"></i>
+					<i class="fa fa-question-circle tooltips" title="{{Création des identifiants (https://developer.home-connect.com/applications/add)}}" style="font-size : 1em;color:grey;"></i>
 				</sup>
 			</label>
 			<div class="col-lg-4">
-				<a class="btn btn-info" style="margin-bottom : 5px;" title="Creer Application" href="https://developer.home-connect.com/applications/add" target="_blank">
+				<a class="btn btn-info" style="margin-bottom : 5px;" title="Créer Application" href="https://developer.home-connect.com/applications/add" target="_blank">
 				<i class="fa fa-add"></i>
 				{{Créer Application}}
 				</a>
@@ -74,7 +81,7 @@ if (!isConnect()) {
 				</sup>
 			</label>
 			<div class="col-lg-9">
-				<span><?php echo network::getNetworkAccess('external') . '/plugins/homeconnect/core/php/callback.php?apikey=' . jeedom::getApiKey('homeconnect');?></span>
+				<span><?php echo network::getNetworkAccess('external') . '/plugins/homeconnect/x.php?k=' . jeedom::getApiKey('homeconnect');?></span>
 			</div>
 		</div>
 		<div class="form-group">
@@ -84,7 +91,7 @@ if (!isConnect()) {
 					<i class="fa fa-question-circle tooltips" title="{{Récupérez ce paramètre sur le site Home Connect (https://developer.home-connect.com/applications)}}" style="font-size : 1em;color:grey;"></i>
 				</sup>
 			</label>
-			<div class="col-sm-3">
+			<div class="col-sm-6">
 				<input type="text" class="configKey form-control" data-l1key="client_id"/>
 			</div>
 		</div>
@@ -95,7 +102,7 @@ if (!isConnect()) {
 					<i class="fa fa-question-circle tooltips" title="{{Récupérez ce paramètre sur le site Home Connect (https://developer.home-connect.com/applications)}}" style="font-size : 1em;color:grey;"></i>
 				</sup>
 			</label>
-			<div class="col-sm-3">
+			<div class="col-sm-6">
 				<input type="text" class="configKey form-control" data-l1key="client_secret"/>
 			</div>
 		</div>
@@ -128,7 +135,7 @@ if (!isConnect()) {
                 <sup>
 					<i class="fa fa-question-circle tooltips" title="{{Cochez la case pour n'avoir qu'une seule commande select pour afficher l'ensemble des programmes}}" style="font-size : 1em;color:grey;"></i>
 				</sup>
-            </label>
+      </label>
 			<div class="col-sm-2">
 				<input id="listValueProgram" type="checkbox" class="configKey tooltips" data-l1key="listValueProgram">
 			</div>
