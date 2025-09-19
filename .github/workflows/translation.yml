@@ -11,7 +11,7 @@ jobs:
   auto-translate:
     runs-on: ubuntu-latest
     steps:
-      - uses: Mips2648/plugins-translations@main
+      - uses: Flobul/plugins-translations@patch-2
         with:
           deepl_api_key: ${{ secrets.DEEPL_API_KEY }}
           source_language: fr_FR
