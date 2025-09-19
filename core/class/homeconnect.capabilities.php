@@ -5334,7 +5334,7 @@ class homeconnect_capabilities {
                 )
             ) ,
             'LaundryCare.WasherDryer.Program.FastWashDry.WD45.WD45' => array(
-                'name' => __("", __FILE__) ,
+                'name' => __("45°C", __FILE__) ,
                 'action' => 'Program',
                 'available' => array(
                     'WasherDryer'
