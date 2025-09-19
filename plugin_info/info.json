@@ -2,12 +2,12 @@
 	"id": "homeconnect",
 	"name": "Home Connect",
 	"description": {
-		"fr_FR": "Plugin permettant de récupérer les informations des appareils électroménagers compatibles (Bosch, Siemens Gaggenau, Neff) et de les piloter depuis Jeedom (possibilité rétreinte en fonction du type d'appareil).",
-		"en_US": "Plugin to retrieve information from compatible household appliances (Bosch, Siemens Gaggenau, Neff) and control them from Jeedom (can be reduced according to appliance type).",
-		"es_ES": "Plugin que permite recuperar información de electrodomésticos compatibles (Bosch, Siemens Gaggenau, Neff) y controlarlos desde Jeedom (puede estar limitado según el tipo de electrodoméstico).",
-		"pt_PT": "Plugin que permite obter informações de electrodomésticos compatíveis (Bosch, Siemens Gaggenau, Neff) e controlá-los a partir do Jeedom (pode ser limitado consoante o tipo de eletrodoméstico).",
-		"de_DE": "Plugin, das es ermöglicht, Informationen von kompatiblen Haushaltsgeräten (Bosch, Siemens Gaggenau, Neff) abzurufen und diese von Jeedom aus zu steuern (Möglichkeit je nach Gerätetyp eingeschränkt).",
-		"it_IT": "Plugin che consente di recuperare informazioni dagli elettrodomestici compatibili (Bosch, Siemens Gaggenau, Neff) e di controllarli da Jeedom (può essere limitato a seconda del tipo di elettrodomestico)."
+		"fr_FR": "Plugin permettant de récupérer les informations, via l'API officielle, des appareils électroménagers compatibles (Bosch, Siemens, Gaggenau, Neff, Thermador, Balay, Constructa, Pistsos, Profilo) et de les piloter depuis Jeedom (possibilité rétreinte en fonction du type d'appareil).",
+		"en_US": "Plugin that allows you to retrieve information, via the official API, from compatible household appliances (Bosch, Siemens, Gaggenau, Neff, Thermador, Balay, Constructa, Pistsos, Profilo) and control them from Jeedom (limited functionality depending on the type of appliance).",
+		"es_ES": "Complemento que permite recuperar información, a través de la API oficial, de los electrodomésticos compatibles (Bosch, Siemens, Gaggenau, Neff, Thermador, Balay, Constructa, Pistsos, Profilo) y controlarlos desde Jeedom (posibilidad limitada en función del tipo de aparato).",
+		"pt_PT": "Plugin que permite recuperar informações, através da API oficial, de eletrodomésticos compatíveis (Bosch, Siemens, Gaggenau, Neff, Thermador, Balay, Constructa, Pistsos, Profilo) e controlá-los a partir do Jeedom (possibilidade limitada dependendo do tipo de aparelho).",
+		"de_DE": "Plugin, mit dem über die offizielle API Informationen von kompatiblen Haushaltsgeräten (Bosch, Siemens, Gaggenau, Neff, Thermador, Balay, Constructa, Pistsos, Profilo) abgerufen und diese über Jeedom gesteuert werden können (je nach Gerätetyp eingeschränkte Möglichkeiten).",
+		"it_IT": "Plugin che consente di recuperare le informazioni, tramite l'API ufficiale, dagli elettrodomestici compatibili (Bosch, Siemens, Gaggenau, Neff, Thermador, Balay, Constructa, Pistsos, Profilo) e di controllarli da Jeedom (possibilità limitata a seconda del tipo di dispositivo)."
 	},
 	"licence": "AGPL",
 	"installation": "Vérifiez bien que vous avez correctement configuré la partie Générale -> Administration -> Configuration puis onglets Réseaux, en effet il faut lors de l'association de Jeedom au compte Home Connect que votre Jeedom soit accessible de l'extérieur.",

@@ -2017,7 +2017,7 @@ class homeconnectCmd extends cmd {
     public function execute($_options = array()) {
         // Bien penser dans les fichiers json à mettre dans la configuration
         // key, value, type, constraints et à modifier findProduct
-        log::add('homeconnnect', 'debug', __('Début ', __FILE__) . __FUNCTION__);
+        log::add('homeconnect', 'debug', __('Début ', __FILE__) . __FUNCTION__);
         homeconnect::verifyToken(60);
 
         if ($this->getType() == 'info') {
