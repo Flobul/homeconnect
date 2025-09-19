@@ -23,6 +23,12 @@ class homeconnect_capabilities {
 
     public function __construct()
     {
+        /**
+         * Liste tous les appareils Home connect, les valeurs, type...
+         *
+         * @param			|*Cette fonction ne retourne pas de valeur*|
+         * @return	$KEYS		array		Tableau de toutes les clés
+         */
         $this->appliancesList = [
             'Oven' => __("Four", __FILE__),
             'Dishwasher' => __("Lave-vaisselle", __FILE__),
@@ -41,13 +47,152 @@ class homeconnect_capabilities {
             'WarmingDrawer' => __("Tiroir chauffant", __FILE__)
         ];
 
-      	/**
-         * Liste toutes les clés Home connect, les valeurs, type...
+      	/** Liste toutes les capacités des appareils Home connect, les valeurs, type...
          *
          * @param			|*Cette fonction ne retourne pas de valeur*|
          * @return	$KEYS		array		Tableau de toutes les clés
          */
         $this->appliancesCapabilities = [
+            'BSH.Common.Program.Favorite.001' => array(
+                'name' => __("Favori 1", __FILE__) ,
+                'action' => 'Program',
+                'available' => array(
+                    'Oven'
+                )
+            ) ,
+            'BSH.Common.Program.Favorite.002' => array(
+                'name' => __("Favori 2", __FILE__) ,
+                'action' => 'Program',
+                'available' => array(
+                    'Oven'
+                )
+            ) ,
+            'BSH.Common.Program.Favorite.003' => array(
+                'name' => __("Favori 3", __FILE__) ,
+                'action' => 'Program',
+                'available' => array(
+                    'Oven'
+                )
+            ) ,
+            'BSH.Common.Program.Favorite.004' => array(
+                'name' => __("Favori 4", __FILE__) ,
+                'action' => 'Program',
+                'available' => array(
+                    'Oven'
+                )
+            ) ,
+            'BSH.Common.Program.Favorite.005' => array(
+                'name' => __("Favori 5", __FILE__) ,
+                'action' => 'Program',
+                'available' => array(
+                    'Oven'
+                )
+            ) ,
+            'BSH.Common.Program.Favorite.006' => array(
+                'name' => __("Favori 6", __FILE__) ,
+                'action' => 'Program',
+                'available' => array(
+                    'Oven'
+                )
+            ) ,
+            'BSH.Common.Program.Favorite.007' => array(
+                'name' => __("Favori 7", __FILE__) ,
+                'action' => 'Program',
+                'available' => array(
+                    'Oven'
+                )
+            ) ,
+            'BSH.Common.Program.Favorite.008' => array(
+                'name' => __("Favori 8", __FILE__) ,
+                'action' => 'Program',
+                'available' => array(
+                    'Oven'
+                )
+            ) ,
+            'BSH.Common.Program.Favorite.009' => array(
+                'name' => __("Favori 9", __FILE__) ,
+                'action' => 'Program',
+                'available' => array(
+                    'Oven'
+                )
+            ) ,
+            'BSH.Common.Program.Favorite.010' => array(
+                'name' => __("Favori 10", __FILE__) ,
+                'action' => 'Program',
+                'available' => array(
+                    'Oven'
+                )
+            ) ,
+            'BSH.Common.Program.Favorite.011' => array(
+                'name' => __("Favori 11", __FILE__) ,
+                'action' => 'Program',
+                'available' => array(
+                    'Oven'
+                )
+            ) ,
+            'BSH.Common.Program.Favorite.012' => array(
+                'name' => __("Favori 12", __FILE__) ,
+                'action' => 'Program',
+                'available' => array(
+                    'Oven'
+                )
+            ) ,
+            'BSH.Common.Program.Favorite.013' => array(
+                'name' => __("Favori 13", __FILE__) ,
+                'action' => 'Program',
+                'available' => array(
+                    'Oven'
+                )
+            ) ,
+            'BSH.Common.Program.Favorite.014' => array(
+                'name' => __("Favori 14", __FILE__) ,
+                'action' => 'Program',
+                'available' => array(
+                    'Oven'
+                )
+            ) ,
+            'BSH.Common.Program.Favorite.015' => array(
+                'name' => __("Favori 15", __FILE__) ,
+                'action' => 'Program',
+                'available' => array(
+                    'Oven'
+                )
+            ) ,
+            'BSH.Common.Program.Favorite.016' => array(
+                'name' => __("Favori 16", __FILE__) ,
+                'action' => 'Program',
+                'available' => array(
+                    'Oven'
+                )
+            ) ,
+            'BSH.Common.Program.Favorite.017' => array(
+                'name' => __("Favori 17", __FILE__) ,
+                'action' => 'Program',
+                'available' => array(
+                    'Oven'
+                )
+            ) ,
+            'BSH.Common.Program.Favorite.018' => array(
+                'name' => __("Favori 18", __FILE__) ,
+                'action' => 'Program',
+                'available' => array(
+                    'Oven'
+                )
+            ) ,
+            'BSH.Common.Program.Favorite.019' => array(
+                'name' => __("Favori 19", __FILE__) ,
+                'action' => 'Program',
+                'available' => array(
+                    'Oven'
+                )
+            ) ,
+            'BSH.Common.Program.Favorite.020' => array(
+                'name' => __("Favori 20", __FILE__) ,
+                'action' => 'Program',
+                'available' => array(
+                    'Oven'
+                )
+            ) ,
             'ConsumerProducts.CoffeeMaker.Event.BeanContainerEmpty' => array(
                 'name' => __("Compartiment vide", __FILE__) ,
                 'action' => 'Event',
@@ -488,6 +633,13 @@ class homeconnect_capabilities {
                     ) ,
                 )
             ) ,
+            ConsumerProducts.CoffeeMaker.Program.Beverage.LatteMacchiato => array(
+                'name' => __("Latte macchiato", __FILE__) ,
+                'action' => 'Program',
+                'available' => array(
+                    'CoffeeMaker'
+                )
+            ) ,
             'ConsumerProducts.CoffeeMaker.Program.Beverage.Ristretto' => array(
                 'name' => __("Ristretto", __FILE__) ,
                 'action' => 'Program',
@@ -508,6 +660,13 @@ class homeconnect_capabilities {
             ) ,
             'ConsumerProducts.CoffeeMaker.Program.Beverage.Coffee' => array(
                 'name' => __("Café", __FILE__) ,
+                'action' => 'Program',
+                'available' => array(
+                    'CoffeeMaker'
+                )
+            ) ,
+            'ConsumerProducts.CoffeeMaker.Program.Beverage.CoffeePot' => array(
+                'name' => __("Café en cafetière", __FILE__) ,
                 'action' => 'Program',
                 'available' => array(
                     'CoffeeMaker'
@@ -534,8 +693,22 @@ class homeconnect_capabilities {
                     'CoffeeMaker'
                 )
             ) ,
-            'ConsumerProducts.CoffeeMaker.Program.Beverage.LatteMacchiato' => array(
-                'name' => __("Macchiato au lait", __FILE__) ,
+            'ConsumerProducts.CoffeeMaker.Program.Beverage.CaffeGrande' => array(
+                'name' => __("Grand café", __FILE__) ,
+                'action' => 'Program',
+                'available' => array(
+                    'CoffeeMaker'
+                )
+            ) ,
+            'ConsumerProducts.CoffeeMaker.Program.Beverage.HotWater' => array(
+                'name' => __("Eau chaude", __FILE__) ,
+                'action' => 'Program',
+                'available' => array(
+                    'CoffeeMaker'
+                )
+            ) ,
+            'ConsumerProducts.CoffeeMaker.Program.CleaningModes.ApplianceOnRinsing' => array(
+                'name' => __("Rinçage de l'appareil allumé", __FILE__) ,
                 'action' => 'Program',
                 'available' => array(
                     'CoffeeMaker'
@@ -557,6 +730,97 @@ class homeconnect_capabilities {
             ) ,
             'ConsumerProducts.CoffeeMaker.Program.Beverage.WarmMilk' => array(
                 'name' => __("Lait chaud", __FILE__) ,
+                'action' => 'Program',
+                'available' => array(
+                    'CoffeeMaker'
+                )
+            ) ,
+            'ConsumerProducts.CoffeeMaker.Program.CleaningModes.ApplianceOffRinsing' => array(
+                'name' => __("Rinçage de l'appareil éteint", __FILE__) ,
+                'action' => 'Program',
+                'available' => array(
+                    'CoffeeMaker'
+                )
+            ) ,
+            'ConsumerProducts.CoffeeMaker.Program.CleaningModes.AutoClean'=> array(
+                'name' => __("Rinçage de l'appareil éteint", __FILE__) ,
+                'action' => 'Program',
+                'available' => array(
+                    'CoffeeMaker'
+                )
+            ) ,
+            'ConsumerProducts.CoffeeMaker.Program.CleaningModes.AutoDescale'=> array(
+                'name' => __("Détartrage automatique", __FILE__) ,
+                'action' => 'Program',
+                'available' => array(
+                    'CoffeeMaker'
+                )
+            ) ,
+            'ConsumerProducts.CoffeeMaker.Program.CleaningModes.CalcNClean'=> array(
+                'name' => __("Détartrage et Nettoyage automatique", __FILE__) ,
+                'action' => 'Program',
+                'available' => array(
+                    'CoffeeMaker'
+                )
+            ) ,
+            'ConsumerProducts.CoffeeMaker.Program.CleaningModes.Clean'=> array(
+                'name' => __("Nettoyage", __FILE__) ,
+                'action' => 'Program',
+                'available' => array(
+                    'CoffeeMaker'
+                )
+            ) ,
+            'ConsumerProducts.CoffeeMaker.Program.CleaningModes.CleanBrewingUnitManually'=> array(
+                'name' => __("Nettoyer manuellement l'unité de brassage", __FILE__) ,
+                'action' => 'Program',
+                'available' => array(
+                    'CoffeeMaker'
+                )
+            ) ,
+            'ConsumerProducts.CoffeeMaker.Program.CleaningModes.CleanBrewingUnitManuallyDetailed'=> array(
+                'name' => __("Nettoyer manuellement détaillé l'unité de brassage", __FILE__) ,
+                'action' => 'Program',
+                'available' => array(
+                    'CoffeeMaker'
+                )
+            ) ,
+            'ConsumerProducts.CoffeeMaker.Program.CleaningModes.CleanOutletManually'=> array(
+                'name' => __("Nettoyer la sortie manuellement", __FILE__) ,
+                'action' => 'Program',
+                'available' => array(
+                    'CoffeeMaker'
+                )
+            ) ,
+            'ConsumerProducts.CoffeeMaker.Program.CleaningModes.Descale'=> array(
+                'name' => __("Détartrage", __FILE__) ,
+                'action' => 'Program',
+                'available' => array(
+                    'CoffeeMaker'
+                )
+            ) ,
+            'ConsumerProducts.CoffeeMaker.Program.CleaningModes.FrostProtection'=> array(
+                'name' => __("Protection contre le gel", __FILE__) ,
+                'action' => 'Program',
+                'available' => array(
+                    'CoffeeMaker'
+                )
+            ) ,
+            'ConsumerProducts.CoffeeMaker.Program.CleaningModes.RemoveWaterFilter'=> array(
+                'name' => __("Retirer le filtre à eau", __FILE__) ,
+                'action' => 'Program',
+                'available' => array(
+                    'CoffeeMaker'
+                )
+            ) ,
+            'ConsumerProducts.CoffeeMaker.Program.CleaningModes.ReplaceWaterFilter'=> array(
+                'name' => __("Remplacer le filtre à eau", __FILE__) ,
+                'action' => 'Program',
+                'available' => array(
+                    'CoffeeMaker'
+                )
+            ) ,
+            'ConsumerProducts.CoffeeMaker.Program.CleaningModes.RinseMilkSystem'=> array(
+                'name' => __("Nettoyage du système à lait", __FILE__) ,
                 'action' => 'Program',
                 'available' => array(
                     'CoffeeMaker'
@@ -688,8 +952,85 @@ class homeconnect_capabilities {
                     'CoffeeMaker'
                 )
             ) ,
+            'ConsumerProducts.CoffeeMaker.Program.CoffeeWorld.ColdBrew' => array(
+                'name' => __("Infusion à froid", __FILE__) ,
+                'action' => 'Program',
+                'available' => array(
+                    'CoffeeMaker'
+                )
+            ) ,
+            'ConsumerProducts.CoffeeMaker.Program.CoffeeWorld.ColdBrewMacchiato' => array(
+                'name' => __("Macchiato infusé à froid", __FILE__) ,
+                'action' => 'Program',
+                'available' => array(
+                    'CoffeeMaker'
+                )
+            ) ,
+            'ConsumerProducts.CoffeeMaker.Program.CoffeeWorld.SlowBrew' => array(
+                'name' => __("Infusion lente", __FILE__) ,
+                'action' => 'Program',
+                'available' => array(
+                    'CoffeeMaker'
+                )
+            ) ,
             'ConsumerProducts.CoffeeMaker.Program.CoffeeWorld.DeadEye' => array(
                 'name' => __("DeadEye", __FILE__) ,
+                'action' => 'Program',
+                'available' => array(
+                    'CoffeeMaker'
+                )
+            ) ,
+            'ConsumerProducts.CoffeeMaker.Program.MyCoffee.MyCoffee1' => array(
+                'name' => __("Mon café 1", __FILE__) ,
+                'action' => 'Program',
+                'available' => array(
+                    'CoffeeMaker'
+                )
+            ) ,
+            'ConsumerProducts.CoffeeMaker.Program.MyCoffee.MyCoffee2' => array(
+                'name' => __("Mon café 2", __FILE__) ,
+                'action' => 'Program',
+                'available' => array(
+                    'CoffeeMaker'
+                )
+            ) ,
+            'ConsumerProducts.CoffeeMaker.Program.MyCoffee.MyCoffee3' => array(
+                'name' => __("Mon café 3", __FILE__) ,
+                'action' => 'Program',
+                'available' => array(
+                    'CoffeeMaker'
+                )
+            ) ,
+            'ConsumerProducts.CoffeeMaker.Program.MyCoffee.MyCoffee4' => array(
+                'name' => __("Mon café 4", __FILE__) ,
+                'action' => 'Program',
+                'available' => array(
+                    'CoffeeMaker'
+                )
+            ) ,
+            'ConsumerProducts.CoffeeMaker.Program.MyCoffee.MyCoffee5' => array(
+                'name' => __("Mon café 5", __FILE__) ,
+                'action' => 'Program',
+                'available' => array(
+                    'CoffeeMaker'
+                )
+            ) ,
+            'ConsumerProducts.CoffeeMaker.Program.MyCoffee.MyCoffee6' => array(
+                'name' => __("Mon café 6", __FILE__) ,
+                'action' => 'Program',
+                'available' => array(
+                    'CoffeeMaker'
+                )
+            ) ,
+            'ConsumerProducts.CoffeeMaker.Program.MyCoffee.MyCoffee7' => array(
+                'name' => __("Mon café 7", __FILE__) ,
+                'action' => 'Program',
+                'available' => array(
+                    'CoffeeMaker'
+                )
+            ) ,
+            'ConsumerProducts.CoffeeMaker.Program.MyCoffee.MyCoffee8' => array(
+                'name' => __("Mon café 8", __FILE__) ,
                 'action' => 'Program',
                 'available' => array(
                     'CoffeeMaker'
@@ -809,6 +1150,10 @@ class homeconnect_capabilities {
                         'name' => __("96 °C", __FILE__) ,
                         'action' => 'Option'
                     ) ,
+                    'ConsumerProducts.CoffeeMaker.EnumType.CoffeeTemperature.98C' => array(
+                        'name' => __("98 °C", __FILE__) ,
+                        'action' => 'Option'
+                    ) ,
                     'ConsumerProducts.CoffeeMaker.EnumType.CoffeeTemperature.Normal' => array(
                         'name' => __("Normale", __FILE__) ,
                         'action' => 'Option'
@@ -822,6 +1167,186 @@ class homeconnect_capabilities {
                         'action' => 'Option'
                     ) ,
                 )
+            ) ,
+            'ConsumerProducts.CoffeeMaker.Option.AromaSelect' => array(
+                'name' => __("Sélection d'arôme", __FILE__) ,
+                'action' => 'Option',
+                'type' => 'Enumeration',
+                'available' => array(
+                    'CoffeeMachine'
+                ) ,
+                'enum' => array(
+                    'ConsumerProducts.CoffeeMaker.EnumType.AromaSelect.balanced' => array(
+                        'name' => __("Équilibré", __FILE__) ,
+                        'action' => 'Option'
+                    ) ,
+                    'ConsumerProducts.CoffeeMaker.EnumType.AromaSelect.distinctive' => array(
+                        'name' => __("Distinctif", __FILE__) ,
+                        'action' => 'Option'
+                    ) ,
+                    'ConsumerProducts.CoffeeMaker.EnumType.AromaSelect.fine' => array(
+                        'name' => __("Fin", __FILE__) ,
+                        'action' => 'Option'
+                    ) ,
+                )
+            ) ,
+            'ConsumerProducts.CoffeeMaker.Option.BeverageSize' => array(
+                'name' => __("Taille de la boisson", __FILE__) ,
+                'action' => 'Option',
+                'type' => 'Enumeration',
+                'available' => array(
+                    'CoffeeMachine'
+                ) ,
+                'enum' => array(
+                    'ConsumerProducts.CoffeeMaker.EnumType.BeverageSize.Medium' => array(
+                        'name' => __("Moyenne", __FILE__) ,
+                        'action' => 'Option'
+                    ) ,
+                )
+            ) ,
+            'ConsumerProducts.CoffeeMaker.Option.BeveragesRemaining' => array(
+                'name' => __("Boissons restantes", __FILE__) ,
+                'action' => 'Option',
+                'type' => 'Int',
+                'available' => array(
+                    'CoffeeMachine'
+                ) ,
+            ) ,
+            'ConsumerProducts.CoffeeMaker.Option.Coarsness' => array(
+                'name' => __("Mouture", __FILE__) ,
+                'action' => 'Option',
+                'type' => 'Enumeration',
+                'enum' => array(
+                    'ConsumerProducts.CoffeeMaker.EnumType.Coarsness.Coarsness1' => array(
+                        'name' => __("Mouture 1", __FILE__) ,
+                        'action' => 'Option'
+                    ) ,
+                    'ConsumerProducts.CoffeeMaker.EnumType.Coarsness.Coarsness2' => array(
+                        'name' => __("Mouture 2", __FILE__) ,
+                        'action' => 'Option'
+                    ) ,
+                    'ConsumerProducts.CoffeeMaker.EnumType.Coarsness.Coarsness3' => array(
+                        'name' => __("Mouture 3", __FILE__) ,
+                        'action' => 'Option'
+                    ) ,
+                    'ConsumerProducts.CoffeeMaker.EnumType.Coarsness.Coarsness4' => array(
+                        'name' => __("Mouture 4", __FILE__) ,
+                        'action' => 'Option'
+                    ) ,
+                ) ,
+                'available' => array(
+                    'CoffeeMachine'
+                ) ,
+            ) ,
+            'ConsumerProducts.CoffeeMaker.Option.Coarsness.Recommendation' => array(
+                'name' => __("Recommandation de mouture", __FILE__) ,
+                'action' => 'Option',
+                'type' => 'Enumeration',
+                'available' => array(
+                    'CoffeeMachine'
+                ) ,
+            ) ,
+            'ConsumerProducts.CoffeeMaker.Option.CoffeeStrength' => array(
+                'name' => __("Intensité du café", __FILE__) ,
+                'action' => 'Option',
+                'type' => 'Enumeration',
+                'enum' =>  array(
+                    'ConsumerProducts.CoffeeMaker.EnumType.CoffeeStrength.Strength1' => array(
+                        'name' => __("Intensité 1", __FILE__) ,
+                        'action' => 'Option'
+                    ) ,
+                    'ConsumerProducts.CoffeeMaker.EnumType.CoffeeStrength.Strength2' => array(
+                        'name' => __("Intensité 2", __FILE__) ,
+                        'action' => 'Option'
+                    ) ,
+                    'ConsumerProducts.CoffeeMaker.EnumType.CoffeeStrength.Strength3' => array(
+                        'name' => __("Intensité 3", __FILE__) ,
+                        'action' => 'Option'
+                    ) ,
+                    'ConsumerProducts.CoffeeMaker.EnumType.CoffeeStrength.Strength4' => array(
+                        'name' => __("Intensité 4", __FILE__) ,
+                        'action' => 'Option'
+                    ) ,
+                    'ConsumerProducts.CoffeeMaker.EnumType.CoffeeStrength.Strength5' => array(
+                        'name' => __("Intensité 5", __FILE__) ,
+                        'action' => 'Option'
+                    ) ,
+                    'ConsumerProducts.CoffeeMaker.EnumType.CoffeeStrength.Strength6' => array(
+                        'name' => __("Intensité 6", __FILE__) ,
+                        'action' => 'Option'
+                    ) ,
+                    'ConsumerProducts.CoffeeMaker.EnumType.CoffeeStrength.Strength7' => array(
+                        'name' => __("Intensité 7", __FILE__) ,
+                        'action' => 'Option'
+                    ) ,
+                ) ,
+                'available' => array(
+                    'CoffeeMachine'
+                ) ,
+            ) ,
+            'ConsumerProducts.CoffeeMaker.Option.CoffeeStrength.Recommendation' => array(
+                'name' => __("Recommandation d'intensité", __FILE__) ,
+                'action' => 'Option',
+                'type' => 'Enumeration',
+                'available' => array(
+                    'CoffeeMachine'
+                ) ,
+            ) ,
+            'ConsumerProducts.CoffeeMaker.Option.CoffeeTemperature.Recommendation' => array(
+                'name' => __("Recommandation de température", __FILE__) ,
+                'action' => 'Option',
+                'type' => 'Int',
+                'available' => array(
+                    'CoffeeMachine'
+                ) ,
+            ) ,
+            'ConsumerProducts.CoffeeMaker.Option.FillQuantity.Recommendation' => array(
+                'name' => __("Recommandation de contenance", __FILE__) ,
+                'action' => 'Option',
+                'type' => 'Int',
+                'available' => array(
+                    'CoffeeMachine'
+                ) ,
+            ) ,
+            'ConsumerProducts.CoffeeMaker.Option.FlowRate.Recommendation' => array(
+                'name' => __("Recommandation de débit", __FILE__) ,
+                'action' => 'Option',
+                'type' => 'Enumeration',
+                'enum' => array(
+                    'ConsumerProducts.CoffeeMaker.EnumType.FlowRate.Normal' => array(
+                        'name' => __("Débit normal", __FILE__) ,
+                        'action' => 'Option'
+                    ) ,
+                    'ConsumerProducts.CoffeeMaker.EnumType.FlowRate.Intense' => array(
+                        'name' => __("Débit élevé", __FILE__) ,
+                        'action' => 'Option'
+                    ) ,
+                    'ConsumerProducts.CoffeeMaker.EnumType.FlowRate.IntensePlus' => array(
+                        'name' => __("Débit élevé +", __FILE__) ,
+                        'action' => 'Option'
+                    ) ,
+                ),
+                'available' => array(
+                    'CoffeeMachine'
+                ) ,
+            ) ,
+            'ConsumerProducts.CoffeeMaker.Option.Shot.Count' => array(
+                'name' => __("Nombre de shots", __FILE__) ,
+                'action' => 'Option',
+                'type' => 'Enumeration',
+                'enum' => array(
+                    'ConsumerProducts.CoffeeMaker.EnumType.Shots.Double' => array(
+                        'name' => __("Double", __FILE__) ,
+                        'action' => 'Option'
+                    ) ,
+                    'ConsumerProducts.CoffeeMaker.EnumType.Shots.Undefined' => array(
+                        'name' => __("Indéfini", __FILE__) ,
+                        'action' => 'Option'
+                    ) ,
+                ),
+                'available' => array(
+                    'CoffeeMachine'
+                ) ,
             ) ,
             'ConsumerProducts.CoffeeMaker.Option.BeanContainerSelection' => array(
                 'name' => __("Compartiment à grains", __FILE__) ,
@@ -1225,6 +1750,28 @@ class homeconnect_capabilities {
                     ) ,
                 )
             ) ,
+            'ConsumerProducts.CleaningRobot.Option.SuctionPower' => array(
+                'name' => __("Puissance d'aspiration", __FILE__) ,
+                'action' => 'Option',
+                'type' => 'Enumeration',
+                'available' => array(
+                    'CleaningRobot'
+                ) ,
+                'enum' => array(
+                    'ConsumerProducts.CleaningRobot.EnumType.SuctionPower.Silent' => array(
+                        'name' => __("Silencieux", __FILE__) ,
+                        'action' => 'Option'
+                    ) ,
+                    'ConsumerProducts.CleaningRobot.EnumType.SuctionPower.Standard' => array(
+                        'name' => __("Normal", __FILE__) ,
+                        'action' => 'Option'
+                    ) ,
+                    'ConsumerProducts.CleaningRobot.EnumType.SuctionPower.Max' => array(
+                        'name' => __("Maximal", __FILE__) ,
+                        'action' => 'Option'
+                    ) ,
+                )
+            ) ,
             'ConsumerProducts.CleaningRobot.Setting.CurrentMap' => array(
                 'name' => __("Carte actuelle", __FILE__) ,
                 'action' => 'Setting',
@@ -1523,6 +2070,13 @@ class homeconnect_capabilities {
                     'Dishwasher'
                 ) ,
             ) ,
+            'Dishcare.Dishwasher.Program.QuickD' => array(
+                'name' => __("Rapide D", __FILE__) ,
+                'action' => 'Program',
+                'available' => array(
+                    'Dishwasher'
+                ) ,
+            ) ,
             'Dishcare.Dishwasher.Program.Intensiv70' => array(
                 'name' => __("Intensif 70 °C", __FILE__) ,
                 'action' => 'Program',
@@ -1546,6 +2100,13 @@ class homeconnect_capabilities {
             ) ,
             'Dishcare.Dishwasher.Program.GlassCare' => array(
                 'name' => __("Soin des verres", __FILE__) ,
+                'action' => 'Program',
+                'available' => array(
+                    'Dishwasher'
+                ) ,
+            ) ,
+            'Dishcare.Dishwasher.Program.GlassShine' => array(
+                'name' => __("Brillance du verre", __FILE__) ,
                 'action' => 'Program',
                 'available' => array(
                     'Dishwasher'
@@ -1639,8 +2200,22 @@ class homeconnect_capabilities {
                     'Dishwasher'
                 ) ,
             ) ,
+            'Dishcare.Dishwasher.Program.MaxEfficient' => array(
+                'name' => __("Efficacité maximale", __FILE__) ,
+                'action' => 'Program',
+                'available' => array(
+                    'Dishwasher'
+                ) ,
+            ) ,
             'Dishcare.Dishwasher.Program.MixedLoad' => array(
                 'name' => __("Charge mixte", __FILE__) ,
+                'action' => 'Program',
+                'available' => array(
+                    'Dishwasher'
+                ) ,
+            ) ,
+            'Dishcare.Dishwasher.Program.LearningDishwasher' => array(
+                'name' => __("Apprentissage lave-vaisselle", __FILE__) ,
                 'action' => 'Program',
                 'available' => array(
                     'Dishwasher'
@@ -1718,6 +2293,235 @@ class homeconnect_capabilities {
                     'Dishwasher'
                 )
             ) ,
+            'Dishcare.Dishwasher.Option.DelicateBasket' => array(
+                'name' => __("Panier délicat", __FILE__) ,
+                'action' => 'Option',
+                'type' => 'Boolean',
+                'available' => array(
+                    'Dishwasher'
+                )
+            ) ,
+            'Dishcare.Dishwasher.Option.EnergySafe' => array(
+                'name' => __("Économie d'énergie", __FILE__) ,
+                'action' => 'Option',
+                'type' => 'Boolean',
+                'available' => array(
+                    'Dishwasher'
+                )
+            ) ,
+            'Dishcare.Dishwasher.Option.ExtraRinse' => array(
+                'name' => __("Rinçage supplémentaire", __FILE__) ,
+                'action' => 'Option',
+                'type' => 'Boolean',
+                'available' => array(
+                    'Dishwasher'
+                )
+            ) ,
+            'Dishcare.Dishwasher.Option.FlexSpray.BackLeft' => array(
+                'name' => __("Jet flexible arrière gauche", __FILE__) ,
+                'action' => 'Option',
+                'type' => 'Enumeration',
+                'enum' => array(
+                    'Dishcare.Dishwasher.EnumType.FlexSpray.Intensity.Delicate' => array(
+                        'name' => __("Délicat", __FILE__) ,
+                        'action' => 'Status'
+                    ) ,
+                    'Dishcare.Dishwasher.EnumType.FlexSpray.Intensity.Heavy' => array(
+                        'name' => __("Intense", __FILE__) ,
+                        'action' => 'Status'
+                    ) ,
+                    'Dishcare.Dishwasher.EnumType.FlexSpray.Intensity.Normal' => array(
+                        'name' => __("Normal", __FILE__) ,
+                        'action' => 'Status'
+                    )
+                ),
+                'available' => array(
+                    'Dishwasher'
+                )
+            ) ,
+            'Dishcare.Dishwasher.Option.FlexSpray.BackRight' => array(
+                'name' => __("Jet flexible arrière droit", __FILE__) ,
+                'action' => 'Option',
+                'type' => 'Enumeration',
+                'enum' => array(
+                    'Dishcare.Dishwasher.EnumType.FlexSpray.Intensity.Delicate' => array(
+                        'name' => __("Délicat", __FILE__) ,
+                        'action' => 'Status'
+                    ) ,
+                    'Dishcare.Dishwasher.EnumType.FlexSpray.Intensity.Heavy' => array(
+                        'name' => __("Intense", __FILE__) ,
+                        'action' => 'Status'
+                    ) ,
+                    'Dishcare.Dishwasher.EnumType.FlexSpray.Intensity.Normal' => array(
+                        'name' => __("Normal", __FILE__) ,
+                        'action' => 'Status'
+                    )
+                ),
+                'available' => array(
+                    'Dishwasher'
+                )
+            ) ,
+            'Dishcare.Dishwasher.Option.FlexSpray.FrontLeft' => array(
+                'name' => __("Jet flexible avant gauche", __FILE__) ,
+                'action' => 'Option',
+                'type' => 'Enumeration',
+                'enum' => array(
+                    'Dishcare.Dishwasher.EnumType.FlexSpray.Intensity.Delicate' => array(
+                        'name' => __("Délicat", __FILE__) ,
+                        'action' => 'Status'
+                    ) ,
+                    'Dishcare.Dishwasher.EnumType.FlexSpray.Intensity.Heavy' => array(
+                        'name' => __("Intense", __FILE__) ,
+                        'action' => 'Status'
+                    ) ,
+                    'Dishcare.Dishwasher.EnumType.FlexSpray.Intensity.Normal' => array(
+                        'name' => __("Normal", __FILE__) ,
+                        'action' => 'Status'
+                    )
+                ),
+                'available' => array(
+                    'Dishwasher'
+                )
+            ) ,
+            'Dishcare.Dishwasher.Option.FlexSpray.FrontRight' => array(
+                'name' => __("Jet flexible avant droit", __FILE__) ,
+                'action' => 'Option',
+                'type' => 'Enumeration',
+                'enum' => array(
+                    'Dishcare.Dishwasher.EnumType.FlexSpray.Intensity.Delicate' => array(
+                        'name' => __("Délicat", __FILE__) ,
+                        'action' => 'Status'
+                    ) ,
+                    'Dishcare.Dishwasher.EnumType.FlexSpray.Intensity.Heavy' => array(
+                        'name' => __("Intense", __FILE__) ,
+                        'action' => 'Status'
+                    ) ,
+                    'Dishcare.Dishwasher.EnumType.FlexSpray.Intensity.Normal' => array(
+                        'name' => __("Normal", __FILE__) ,
+                        'action' => 'Status'
+                    )
+                ),
+                'available' => array(
+                    'Dishwasher'
+                )
+            ) ,
+            'Dishcare.Dishwasher.Option.FlexSpray.Type' => array(
+                'name' => __("Type de jet flexible", __FILE__) ,
+                'action' => 'Option',
+                'type' => 'Enumeration',
+                'enum' => array(
+                    'Dishcare.Dishwasher.EnumType.FlexSpray.Type.Back' => array(
+                        'name' => __("Arrière", __FILE__) ,
+                        'action' => 'Status'
+                    ) ,
+                    'Dishcare.Dishwasher.EnumType.FlexSpray.Type.Front' => array(
+                        'name' => __("Avant", __FILE__) ,
+                        'action' => 'Status'
+                    ) ,
+                    'Dishcare.Dishwasher.EnumType.FlexSpray.Type.Individual' => array(
+                        'name' => __("Individuel", __FILE__) ,
+                        'action' => 'Status'
+                    )
+                ),
+                'available' => array(
+                    'Dishwasher'
+                )
+            ) ,
+            'Dishcare.Dishwasher.Option.LearningDishwasher.CleaningLevel' => array(
+                'name' => __("Niveau de nettoyage", __FILE__) ,
+                'action' => 'Option',
+                'type' => 'Enumeration',
+                'enum' => array(
+                    'Dishcare.Dishwasher.EnumType.LearningDishwasher.CleaningLevel.Level0' => array(
+                        'name' => __("Niveau 0", __FILE__) ,
+                        'action' => 'Status'
+                    ) ,
+                    'Dishcare.Dishwasher.EnumType.LearningDishwasher.CleaningLevel.Level1' => array(
+                        'name' => __("Niveau 1", __FILE__) ,
+                        'action' => 'Status'
+                    ) ,
+                ),
+            ),
+            'Dishcare.Dishwasher.Option.LearningDishwasher.DryingLevel' => array(
+                'name' => __("Niveau de séchage", __FILE__) ,
+                'action' => 'Option',
+                'type' => 'Enumeration',
+                'enum' => array(
+                    'Dishcare.Dishwasher.EnumType.LearningDishwasher.DryingLevel.Level0' => array(
+                        'name' => __("Niveau 0", __FILE__) ,
+                        'action' => 'Status'
+                    ) ,
+                    'Dishcare.Dishwasher.EnumType.LearningDishwasher.DryingLevel.Level1' => array(
+                        'name' => __("Niveau 1", __FILE__) ,
+                        'action' => 'Status'
+                    ) ,
+                ),
+                'available' => array(
+                    'Dishwasher'
+                )
+            ) ,
+            'Dishcare.Dishwasher.Option.LearningDishwasher.DurationLevel' => array(
+                'name' => __("Niveau de durée", __FILE__) ,
+                'action' => 'Option',
+                'type' => 'Enumeration',
+                'enum' => array(
+                    'Dishcare.Dishwasher.EnumType.LearningDishwasher.DurationLevel.Level0' => array(
+                        'name' => __("Niveau 0", __FILE__) ,
+                        'action' => 'Status'
+                    ) ,
+                    'Dishcare.Dishwasher.EnumType.LearningDishwasher.DurationLevel.Level1' => array(
+                        'name' => __("Niveau 1", __FILE__) ,
+                        'action' => 'Status'
+                    ) ,
+                    'Dishcare.Dishwasher.EnumType.LearningDishwasher.DurationLevel.Level2' => array(
+                        'name' => __("Niveau 2", __FILE__) ,
+                        'action' => 'Status'
+                    )
+                ),
+                'available' => array(
+                    'Dishwasher'
+                )
+            ) ,
+            'Dishcare.Dishwasher.Option.Pretreatment' => array(
+                'name' => __("Prétrempage", __FILE__) ,
+                'action' => 'Option',
+                'type' => 'Boolean',
+                'available' => array(
+                    'Dishwasher'
+                )
+            ) ,
+            'Dishcare.Dishwasher.Option.SanitationUC' => array(
+                'name' => __("Assainissement UC", __FILE__) ,
+                'action' => 'Option',
+                'type' => 'Boolean',
+                'available' => array(
+                    'Dishwasher'
+                )
+            ) ,
+            'Dishcare.Dishwasher.Option.StorageFunction' => array(
+                'name' => __("Fonction de stockage", __FILE__) ,
+                'action' => 'Option',
+                'type' => 'Boolean',
+                'available' => array(
+                    'Dishwasher'
+                )
+            ) ,
+            'Dishcare.Dishwasher.Option.Turbo' => array(
+                'name' => __("Turbo", __FILE__) ,
+                'action' => 'Option',
+                'type' => 'Boolean',
+                'available' => array(
+                    'Dishwasher'
+                )
+            ) ,
+            'Dishcare.Dishwasher.Option.VarioSpeed' => array(
+                'name' => __("VarioSpeed", __FILE__) ,
+                'action' => 'Option',
+                'type' => 'Boolean',
+                'available' => array(
+                    'Dishwasher'
+                )
+            ) ,
             'Cooking.Common.Event.Hood.GreaseFilterMaxSaturationNearlyReached' => array(
                 'name' => __("Saturation maximale du filtre à graisse presque atteinte", __FILE__) ,
                 'action' => 'Event',
@@ -1764,6 +2568,27 @@ class homeconnect_capabilities {
             ) ,
             'Cooking.Hob.Program.PowerLevelMode' => array(
                 'name' => __("Mode niveau de puissance", __FILE__) ,
+                'action' => 'Program',
+                'available' => array(
+                    'Hob'
+                ) ,
+            ) ,
+            'Cooking.Hob.Program.FryingSensorMode' => array(
+                'name' => __("Mode capteur de friture", __FILE__) ,
+                'action' => 'Program',
+                'available' => array(
+                    'Hob'
+                ) ,
+            ) ,
+            'Cooking.Hob.Program.PowerLevelMode' => array(
+                'name' => __("Mode niveau de puissance", __FILE__) ,
+                'action' => 'Program',
+                'available' => array(
+                    'Hob'
+                ) ,
+            ) ,
+            'Cooking.Hob.Program.PowerMoveMode' => array(
+                'name' => __("Mode puissance maximale", __FILE__) ,
                 'action' => 'Program',
                 'available' => array(
                     'Hob'
@@ -1853,6 +2678,90 @@ class homeconnect_capabilities {
                     'Hob'
                 ) ,
             ) ,
+            'Cooking.Oven.Program.SteamModes.DoughProving' => array(
+                'name' => __("Levage de la pâte", __FILE__) ,
+                'action' => 'Program',
+                'available' => array(
+                    'Oven'
+                )
+            ) ,
+            'Cooking.Oven.Program.SteamModes.Reheat' => array(
+                'name' => __("Réchauffage", __FILE__) ,
+                'action' => 'Program',
+                'available' => array(
+                    'Oven'
+                )
+            ) ,
+            'Cooking.Oven.Program.SteamModes.Steam' => array(
+                'name' => __("Vapeur", __FILE__) ,
+                'action' => 'Program',
+                'available' => array(
+                    'Oven'
+                )
+            ) ,
+            'Cooking.Oven.Program.SubsequentMode.ContinueCooking' => array(
+                'name' => __("Continuer la cuisson", __FILE__) ,
+                'action' => 'Program',
+                'available' => array(
+                    'Oven'
+                )
+            ) ,
+            'Cooking.Oven.Program.SubsequentMode.KeepWarm' => array(
+                'name' => __("Garder au chaud", __FILE__) ,
+                'action' => 'Program',
+                'available' => array(
+                    'Oven'
+                )
+            ) ,
+            'Cooking.Oven.Program.SubsequentMode.LeaveToRest' => array(
+                'name' => __("Laisser reposer", __FILE__) ,
+                'action' => 'Program',
+                'available' => array(
+                    'Oven'
+                )
+            ) ,
+            'Cooking.Oven.Program.SubsequentMode.Microwave' => array(
+                'name' => __("Micro-ondes", __FILE__) ,
+                'action' => 'Program',
+                'available' => array(
+                    'Oven'
+                )
+            ) ,
+            'Cooking.Oven.Program.Cleaning.Draining' => array(
+                'name' => __("Vidange", __FILE__) ,
+                'action' => 'Program',
+                'available' => array(
+                    'Oven'
+                )
+            ) ,
+            'Cooking.Oven.Program.Cleaning.Drying' => array(
+                'name' => __("Séchage", __FILE__) ,
+                'action' => 'Program',
+                'available' => array(
+                    'Oven'
+                )
+            ) ,
+            'Cooking.Oven.Program.Cleaning.Ecolysis' => array(
+                'name' => __("Écolyse", __FILE__) ,
+                'action' => 'Program',
+                'available' => array(
+                    'Oven'
+                )
+            ) ,
+            'Cooking.Oven.Program.Cleaning.Pyrolysis' => array(
+                'name' => __("Pyrolyse", __FILE__) ,
+                'action' => 'Program',
+                'available' => array(
+                    'Oven'
+                )
+            ) ,
+            'Cooking.Oven.Program.CleaningModes.AutoSteamCalibration' => array(
+                'name' => __("Calibrage automatique de la vapeur", __FILE__) ,
+                'action' => 'Program',
+                'available' => array(
+                    'Oven'
+                )
+            ) ,
             'Cooking.Oven.Program.HeatingMode.PreHeating' => array(
                 'name' => __("Préchauffage", __FILE__) ,
                 'action' => 'Program',
@@ -1861,7 +2770,28 @@ class homeconnect_capabilities {
                 )
             ) ,
             'Cooking.Oven.Program.HeatingMode.HotAir' => array(
+                'name' => __("Convection", __FILE__) ,
+                'action' => 'Program',
+                'available' => array(
+                    'Oven'
+                )
+            ) ,
+            'Cooking.Oven.Program.HeatingMode.2DHotAir' => array(
+                'name' => __("Convection 2D", __FILE__) ,
+                'action' => 'Program',
+                'available' => array(
+                    'Oven'
+                )
+            ) ,
+            'Cooking.Oven.Program.HeatingMode.3DHotAir' => array(
                 'name' => __("Convection 3D", __FILE__) ,
+                'action' => 'Program',
+                'available' => array(
+                    'Oven'
+                )
+            ) ,
+            'Cooking.Oven.Program.HeatingMode.AirFry' => array(
+                'name' => __("Friteuse à air chaud", __FILE__) ,
                 'action' => 'Program',
                 'available' => array(
                     'Oven'
@@ -1944,6 +2874,27 @@ class homeconnect_capabilities {
                     'Oven'
                 )
             ) ,
+            'Cooking.Oven.Program.HeatingMode.FullSurfaceGrill' => array(
+                'name' => __("Grill surface totale", __FILE__) ,
+                'action' => 'Program',
+                'available' => array(
+                    'Oven'
+                )
+            ) ,
+            'Cooking.Oven.Program.HeatingMode.GrillLargeArea' => array(
+                'name' => __("Grill grande surface", __FILE__) ,
+                'action' => 'Program',
+                'available' => array(
+                    'Oven'
+                )
+            ) ,
+            'Cooking.Oven.Program.HeatingMode.GrillSmallArea' => array(
+                'name' => __("Grill petite surface", __FILE__) ,
+                'action' => 'Program',
+                'available' => array(
+                    'Oven'
+                )
+            ) ,
             'Cooking.Oven.Program.HeatingMode.Desiccation' => array(
                 'name' => __("Déshydratation", __FILE__) ,
                 'action' => 'Program',
@@ -1960,6 +2911,13 @@ class homeconnect_capabilities {
             ) ,
             'Cooking.Oven.Program.HeatingMode.Proof' => array(
                 'name' => __("Levain", __FILE__) ,
+                'action' => 'Program',
+                'available' => array(
+                    'Oven'
+                )
+            ) ,
+            'Cooking.Oven.Program.HeatingMode.HotAirGentle' => array(
+                'name' => __("Air chaud doux", __FILE__) ,
                 'action' => 'Program',
                 'available' => array(
                     'Oven'
@@ -2016,6 +2974,13 @@ class homeconnect_capabilities {
             ) ,
             'Cooking.Oven.Program.Microwave.360Watt' => array(
                 'name' => __("360 W", __FILE__) ,
+                'action' => 'Program',
+                'available' => array(
+                    'Oven'
+                )
+            ) ,
+            'Cooking.Oven.Program.Microwave.450Watt' => array(
+                'name' => __("450 W", __FILE__) ,
                 'action' => 'Program',
                 'available' => array(
                     'Oven'
@@ -2288,6 +3253,172 @@ class homeconnect_capabilities {
                     'Oven'
                 )
             ) ,
+            'Cooking.Oven.Program.Dish.Automatic.Conv.Steam.BonelessPorkNeckJoint' => array(
+                'name' => __("Jambon de porc désossé", __FILE__) ,
+                'action' => 'Option',
+                'type' => 'Double',
+                'available' => array(
+                    'Oven'
+                ) ,
+            ) ,
+            'Cooking.Oven.Program.Dish.Automatic.Microwave.GefluegelteileAuftauen' => array(
+                'name' => __("Décongélation des morceaux de volaille", __FILE__) ,
+                'action' => 'Option',
+                'type' => 'Double',
+                'available' => array(
+                    'Oven'
+                ) ,
+            ) ,
+            'Cooking.Oven.Program.Dish.Automatic.Microwave.Haehnchenteile' => array(
+                'name' => __("Morceaux de poulet", __FILE__) ,
+                'action' => 'Option',
+                'type' => 'Double',
+                'available' => array(
+                    'Oven'
+                ) ,
+            ) ,
+            'Cooking.Oven.Program.Dish.Automatic.Microwave.PommesFrites' => array(
+                'name' => __("Frites", __FILE__) ,
+                'action' => 'Option',
+                'type' => 'Double',
+                'available' => array(
+                    'Oven'
+                ) ,
+            ) ,
+            'Cooking.Oven.Program.Dish.Recommendation.Conv.MeatProbe.GooseBreast' => array(
+                'name' => __("Magret d'oie", __FILE__) ,
+                'action' => 'Option',
+                'type' => 'Double',
+                'available' => array(
+                    'Oven'
+                ) ,
+            ) ,
+            'Cooking.Oven.Program.Dish.Recommendation.Conv.Steam.MeatProbe.BonelessPorkNeckJoint' => array(
+                'name' => __("Jambon de porc désossé vapeur", __FILE__) ,
+                'action' => 'Option',
+                'type' => 'Double',
+                'available' => array(
+                    'Oven'
+                ) ,
+            ) ,
+            'Cooking.Oven.Program.Dish.Recommendation.Conv.Steam.MeatProbe.TurkeyBreast' => array(
+                'name' => __("Température cible pour l'enceinte vzpeur", __FILE__) ,
+                'action' => 'Option',
+                'type' => 'Double',
+                'available' => array(
+                    'Oven'
+                ) ,
+            ) ,
+            'Cooking.Oven.Program.Dish.Recommendation.Conv.Steam.PartCookedBreadRollsOrBaguette' => array(
+                'name' => __("Température cible pour l'enceinte vapeur", __FILE__) ,
+                'action' => 'Option',
+                'type' => 'Double',
+                'available' => array(
+                    'Oven'
+                ) ,
+            ) ,
+            'Cooking.Oven.Program.Dish.Recommendation.FullSteam.Broccoli' => array(
+                'name' => __("Brocoli à la vapeur", __FILE__) ,
+                'action' => 'Option',
+                'type' => 'Double',
+                'available' => array(
+                    'Oven'
+                ) ,
+            ) ,
+            'Cooking.Oven.Program.Dish.SubsequentCooking' => array(
+                'name' => __("Cuisson ultérieure", __FILE__) ,
+                'action' => 'Option',
+                'type' => 'Double',
+                'available' => array(
+                    'Oven'
+                ) ,
+            ) ,
+            'Cooking.Oven.Option.AirExchange' => array(
+                'name' => __("Échange d'air", __FILE__) ,
+                'action' => 'Option',
+                'type' => 'Boolean',
+                'available' => array(
+                    'Oven'
+                ) ,
+            ) ,
+            'Cooking.Oven.Option.HeatupProgress' => array(
+                'name' => __("Progression du préchauffage", __FILE__) ,
+                'action' => 'Option',
+                'type' => 'Double',
+                'available' => array(
+                    'Oven'
+                ) ,
+            ) ,
+            'Cooking.Oven.Option.MeatProbeTemperatureV2' => array(
+                'name' => __("Température de la sonde à viande V2", __FILE__) ,
+                'action' => 'Option',
+                'type' => 'Double',
+                'available' => array(
+                    'Oven'
+                ) ,
+            ) ,
+            'Cooking.Oven.Option.MicrowavePower' => array(
+                'name' => __("Puissance du micro-ondes", __FILE__) ,
+                'action' => 'Option',
+                'type' => 'Enumeration',
+                'enum' => array(
+                    'Cooking.Oven.EnumType.MicrowavePower.Off' => array(
+                        'name' => __("Éteint", __FILE__) ,
+                        'action' => 'Status'
+                    ) ,
+                ),
+                'available' => array(
+                    'Oven'
+                ) ,
+            ) ,
+            'Cooking.Oven.Option.PyrolysisLevel' => array(
+                'name' => __("Niveau de pyrolyse", __FILE__) ,
+                'action' => 'Option',
+                'type' => 'Enumeration',
+                'enum' => array(
+                    'Cooking.Oven.EnumType.PyrolysisLevel.Level01' => array(
+                        'name' => __("Niveau 1", __FILE__) ,
+                        'action' => 'Status'
+                    ) ,
+                    'Cooking.Oven.EnumType.PyrolysisLevel.Level02' => array(
+                        'name' => __("Niveau 2", __FILE__) ,
+                        'action' => 'Status'
+                    ) ,
+                    'Cooking.Oven.EnumType.PyrolysisLevel.Level03' => array(
+                        'name' => __("Niveau 3", __FILE__) ,
+                        'action' => 'Status'
+                    ) ,
+                ),
+                'available' => array(
+                    'Oven'
+                ) ,
+            ) ,
+            'Cooking.Oven.Option.SteamAssistLevel' => array(
+                'name' => __("Niveau d'assistance à la vapeur", __FILE__) ,
+                'action' => 'Option',
+                'type' => 'Enumeration',
+                'enum' => array(
+                    'Cooking.Oven.EnumType.AddedSteam.Off' => array(
+                        'name' => __("Éteint", __FILE__) ,
+                        'action' => 'Status'
+                    ) ,
+                    'Cooking.Oven.EnumType.AddedSteam.On' => array(
+                        'name' => __("Allumé", __FILE__) ,
+                        'action' => 'Status'
+                    ) ,
+                ),
+                'available' => array(
+                    'Oven'
+                ) ,
+            ) ,
+            'Cooking.Oven.Option.SteamBoost' => array(
+                'name' => __("Boost vapeur", __FILE__) ,
+                'action' => 'Option',
+                'type' => 'Boolean',
+                'available' => array(
+                    'Oven'
+                ) ,
+            ) ,
             'Cooking.Oven.Option.SetpointTemperature' => array(
                 'name' => __("Température cible pour l'enceinte", __FILE__) ,
                 'action' => 'Option',
@@ -2450,6 +3581,14 @@ class homeconnect_capabilities {
                     ) ,
                 )
             ) ,
+            'Cooking.Common.Option.Hood.Boost' => array(
+                'name' => __("Boost", __FILE__) ,
+                'action' => 'Option',
+                'type' => 'Boolean',
+                'available' => array(
+                    'Hood'
+                ) ,
+            ) ,
             'Cooking.Common.Program.Hood.Automatic' => array(
                 'name' => __("Automatique", __FILE__) ,
                 'action' => 'Status'
@@ -2460,6 +3599,10 @@ class homeconnect_capabilities {
             ) ,
             'Cooking.Common.Program.Hood.DelayedShutOff' => array(
                 'name' => __("Arrêt différé", __FILE__) ,
+                'action' => 'Status'
+            ) ,
+            'Cooking.Common.Program.Hood.Interval' => array(
+                'name' => __("Intervalle", __FILE__) ,
                 'action' => 'Status'
             ) ,
             'Cooking.Common.Setting.Lighting' => array(
@@ -2529,6 +3672,79 @@ class homeconnect_capabilities {
                 'available' => array(
                     'Hood'
                 ) ,
+            ) ,
+            'HeatingVentilationAirConditioning.AirConditioner.Program.Auto' => array(
+                'name' => __("Auto", __FILE__) ,
+                'action' => 'Program',
+                'available' => array(
+                    'AirConditioner'
+                )
+            ) ,
+            'HeatingVentilationAirConditioning.AirConditioner.Program.Cool' => array(
+                'name' => __("Frais", __FILE__) ,
+                'action' => 'Program',
+                'available' => array(
+                    'AirConditioner'
+                )
+            ) ,
+            'HeatingVentilationAirConditioning.AirConditioner.Program.Dry' => array(
+                'name' => __("Sec", __FILE__) ,
+                'action' => 'Program',
+                'available' => array(
+                    'AirConditioner'
+                )
+            ) ,
+            'HeatingVentilationAirConditioning.AirConditioner.Program.Fan' => array(
+                'name' => __("Ventilation", __FILE__) ,
+                'action' => 'Program',
+                'available' => array(
+                    'AirConditioner'
+                )
+            ) ,
+            'HeatingVentilationAirConditioning.AirConditioner.Program.Heat' => array(
+                'name' => __("Chauffage", __FILE__) ,
+                'action' => 'Program',
+                'available' => array(
+                    'AirConditioner'
+                )
+            ) ,
+            'HeatingVentilationAirConditioning.AirConditioner.Program.ActiveClean' => array(
+                'name' => __("Nettoyage actif", __FILE__) ,
+                'action' => 'Program',
+                'available' => array(
+                    'AirConditioner'
+                )
+            ) ,
+            'HeatingVentilationAirConditioning.AirConditioner.Option.FanSpeedMode' => array(
+                'name' => __("Mode de vitesse du ventilateur", __FILE__) ,
+                'action' => 'Option',
+                'type' => 'Enumeration',
+                'available' => array(
+                    'AirConditioner'
+                ) ,
+                'enum' => array(
+                    'HeatingVentilationAirConditioning.AirConditioner.EnumType.FanSpeedMode.Auto' => array(
+                        'name' => __("Auto", __FILE__) ,
+                        'action' => 'Status'
+                    ) ,
+                    'HeatingVentilationAirConditioning.AirConditioner.EnumType.FanSpeedMode.Manual' => array(
+                        'name' => __("Manuel", __FILE__) ,
+                        'action' => 'Status'
+                    ) ,
+                )
+            ) ,
+            'HeatingVentilationAirConditioning.AirConditioner.Option.FanSpeedPercentage' => array(
+                'name' => __("Pourcentage de vitesse du ventilateur", __FILE__) ,
+                'action' => 'Option',
+                'type' => 'Int',
+                'unit' => '%',
+                'constraints' => array(
+                    'min' => 0,
+                    'max' => 100
+                ),
+                'available' => array(
+                    'AirConditioner'
+                )
             ) ,
             'LaundryCare.Dryer.Program.Cotton' => array(
                 'name' => __("Coton", __FILE__) ,
@@ -2604,6 +3820,14 @@ class homeconnect_capabilities {
             ) ,
             'LaundryCare.Dryer.Program.BusinessShirts' => array(
                 'name' => __("Chemises de travail", __FILE__) ,
+                'action' => 'Program',
+                'available' => array(
+                    'Dryer',
+                    'WasherDryer'
+                )
+            ) ,
+            'LaundryCare.Dryer.Program.BusinessShirts.EasyIron' => array(
+                'name' => __("Chemises de travail repassage facile", __FILE__) ,
                 'action' => 'Program',
                 'available' => array(
                     'Dryer',
@@ -2786,6 +4010,126 @@ class homeconnect_capabilities {
                     'WasherDryer'
                 )
             ) ,
+            'LaundryCare.Dryer.Program.Bedlinens' => array(
+                'name' => __("Linge de lit", __FILE__) ,
+                'action' => 'Program',
+                'available' => array(
+                    'Dryer',
+                    'WasherDryer'
+                )
+            ) ,
+            'LaundryCare.Dryer.Program.ColdRefresh.1Piece' => array(
+                'name' => __("Rafraîchissement froid 1 pièce", __FILE__) ,
+                'action' => 'Program',
+                'available' => array(
+                    'Dryer',
+                    'WasherDryer'
+                )
+            ) ,
+            'LaundryCare.Dryer.Program.ColdRefresh.5Piece' => array(
+                'name' => __("Rafraîchissement froid 5 pièces", __FILE__) ,
+                'action' => 'Program',
+                'available' => array(
+                    'Dryer',
+                    'WasherDryer'
+                )
+            ) ,
+            'LaundryCare.Dryer.Program.ColdRefresh.Business' => array(
+                'name' => __("Rafraîchissement à froid travail", __FILE__) ,
+                'action' => 'Program',
+                'available' => array(
+                    'Dryer',
+                    'WasherDryer'
+                )
+            ) ,
+            'LaundryCare.Dryer.Program.ColdRefresh.ColdRefresh.ColdRefresh' => array(
+                'name' => __("Rafraîchissement à froid", __FILE__) ,
+                'action' => 'Program',
+                'available' => array(
+                    'Dryer',
+                    'WasherDryer'
+                )
+            ) ,
+            'LaundryCare.Dryer.Program.ConnectedDry' => array(
+                'name' => __("Sec connecté", __FILE__) ,
+                'action' => 'Program',
+                'available' => array(
+                    'Dryer',
+                    'WasherDryer'
+                )
+            ) ,
+            'LaundryCare.Dryer.Program.Cotton.CottonEco' => array(
+                'name' => __("Coton éco", __FILE__) ,
+                'action' => 'Program',
+                'available' => array(
+                    'Dryer',
+                    'WasherDryer'
+                )
+            ) ,
+            'LaundryCare.Dryer.Program.Cotton.Eco4060' => array(
+                'name' => __("Coton éco 40°C 60°C", __FILE__) ,
+                'action' => 'Program',
+                'available' => array(
+                    'Dryer',
+                    'WasherDryer'
+                )
+            ) ,
+            'LaundryCare.Dryer.Program.EasyCare.EasyCare' => array(
+                'name' => __("Facile d'entretien", __FILE__) ,
+                'action' => 'Program',
+                'available' => array(
+                    'Dryer',
+                    'WasherDryer'
+                )
+            ) ,
+            'LaundryCare.Dryer.Program.InBasket.WoolBasket' => array(
+                'name' => __("Panier à laine", __FILE__) ,
+                'action' => 'Program',
+                'available' => array(
+                    'Dryer',
+                    'WasherDryer'
+                )
+            ) ,
+            'LaundryCare.Dryer.Program.MaintenanceCare1.MaintenanceCare1.QuickCare' => array(
+                'name' => __("Entretien rapide", __FILE__) ,
+                'action' => 'Program',
+                'available' => array(
+                    'Dryer',
+                    'WasherDryer'
+                )
+            ) ,
+            'LaundryCare.Dryer.Program.MaintenanceCare2.MaintenanceCare2.DepthCare' => array(
+                'name' => __("Entretien en profondeur", __FILE__) ,
+                'action' => 'Program',
+                'available' => array(
+                    'Dryer',
+                    'WasherDryer'
+                )
+            ) ,
+            'LaundryCare.Dryer.Program.Outdoor.Sportswear' => array(
+                'name' => __("Vêtements de sport", __FILE__) ,
+                'action' => 'Program',
+                'available' => array(
+                    'Dryer',
+                    'WasherDryer'
+                )
+            ) ,
+            'LaundryCare.Dryer.Program.TimeCold.AirFluff' => array(
+                'name' => __("Duvet d'air", __FILE__) ,
+                'action' => 'Program',
+                'available' => array(
+                    'Dryer',
+                    'WasherDryer'
+                )
+            ) ,
+            'LaundryCare.Dryer.Program.WoolFinish' => array(
+                'name' => __("Finition laine", __FILE__) ,
+                'action' => 'Program',
+                'available' => array(
+                    'Dryer',
+                    'WasherDryer'
+                )
+            ) ,
             'LaundryCare.Dryer.Option.DryingTarget' => array(
                 'name' => __("Degré de séchage", __FILE__) ,
                 'action' => 'Option',
@@ -2830,6 +4174,103 @@ class homeconnect_capabilities {
                         'name' => __("Anti-pli min. 240", __FILE__) ,
                         'action' => 'Option'
                     ) ,
+                )
+            ) ,
+            'LaundryCare.Dryer.Option.ConnectedDry.OriginalProgramTime' => array(
+                'name' => __("Durée du programme d'origine", __FILE__) ,
+                'action' => 'Option',
+                'type' => 'Int',
+                'unit' => 'min',
+                'constraints' => array(
+                    'min' => 0,
+                    'max' => 300
+                ),
+                'available' => array(
+                    'Dryer',
+                    'WasherDryer'
+                )
+            ) ,
+            'LaundryCare.Dryer.Option.DryingTargetAdjustment' => array(
+                'name' => __("Ajustement du degré de séchage", __FILE__) ,
+                'action' => 'Option',
+                'type' => 'Enumeration',
+                'enum' => array(
+                    'LaundryCare.Dryer.EnumType.DryingTargetAdjustment.Off' => array(
+                        'name' => __("Désactivé", __FILE__) ,
+                        'action' => 'Option'
+                    ) ,
+                    'LaundryCare.Dryer.EnumType.DryingTargetAdjustment.Plus1' => array(
+                        'name' => __("Plus 1", __FILE__) ,
+                        'action' => 'Option'
+                    ) ,
+                    'LaundryCare.Dryer.EnumType.DryingTargetAdjustment.Plus2' => array(
+                        'name' => __("Plus 2", __FILE__) ,
+                        'action' => 'Option'
+                    ) ,
+                    'LaundryCare.Dryer.EnumType.DryingTargetAdjustment.Plus3' => array(
+                        'name' => __("Plus 3", __FILE__) ,
+                        'action' => 'Option'
+                    )
+                ),
+                'available' => array(
+                    'Dryer',
+                    'WasherDryer'
+                )
+            ) ,
+            'LaundryCare.Dryer.Option.Gentle' => array(
+                'name' => __("Délicat", __FILE__) ,
+                'action' => 'Option',
+                'type' => 'Boolean',
+                'available' => array(
+                    'Dryer',
+                    'WasherDryer'
+                )
+            ) ,
+            'LaundryCare.Dryer.Option.HalfLoad' => array(
+                'name' => __("Demi-charge", __FILE__) ,
+                'action' => 'Option',
+                'type' => 'Boolean',
+                'available' => array(
+                    'Dryer',
+                    'WasherDryer'
+                )
+            ) ,
+            'LaundryCare.Dryer.Option.ProcessPhase' => array(
+                'name' => __("Phase de processus", __FILE__) ,
+                'action' => 'Option',
+                'type' => 'Enumeration',
+                'enum' => array(
+                    'LaundryCare.Dryer.EnumType.ProcessPhase.CupboardDryReached' => array(
+                        'name' => __("Prêt à ranger atteint", __FILE__) ,
+                        'action' => 'Status'
+                    ) ,
+                    'LaundryCare.Dryer.EnumType.ProcessPhase.Drying' => array(
+                        'name' => __("Séchage", __FILE__) ,
+                        'action' => 'Status'
+                    ) ,
+                    'LaundryCare.Dryer.EnumType.ProcessPhase.FinishedAntiCrease' => array(
+                        'name' => __("Fini anti-froissement", __FILE__) ,
+                        'action' => 'Status'
+                    ) ,
+                    'LaundryCare.Dryer.EnumType.ProcessPhase.IronDryReached' => array(
+                        'name' => __("Prêt à repasser atteint", __FILE__) ,
+                        'action' => 'Status'
+                    )
+                )
+            ) ,
+            'LaundryCare.Dryer.Option.Refresher' => array(
+                'name' => __("Rafraîchisseur", __FILE__) ,
+                'action' => 'Option',
+                'type' => 'Enumeration',
+                'enum' => array(
+                    'LaundryCare.Dryer.EnumType.Refresher.Shirt1' => array(
+                        'name' => __("Chemise 1", __FILE__) ,
+                        'action' => 'Status'
+                    ) ,
+                ),
+                'available' => array(
+                    'Dryer',
+                    'WasherDryer'
                 )
             ) ,
             'LaundryCare.Dryer.Event.DryingProcessFinished' => array(
@@ -2958,6 +4399,97 @@ class homeconnect_capabilities {
                 'name' => __("Recommandation de charges", __FILE__) ,
                 'action' => 'Option'
             ) ,
+            'LaundryCare.Common.Option.LowTemperatureHygiene' => array(
+                'name' => __("Hygiène basse température", __FILE__) ,
+                'action' => 'Option',
+                'type' => 'Boolean',
+            ) ,
+            'LaundryCare.Common.Option.ProcessPhase' => array(
+                'name' => __("Phase de processus", __FILE__) ,
+                'action' => 'Option',
+                'type' => 'Enumeration',
+                'enum' => array(
+                    'LaundryCare.Common.EnumType.ProcessPhase.DetectingLoad' => array(
+                        'name' => __("Détection de la charge", __FILE__) ,
+                        'action' => 'Status'
+                    ) ,
+                    'LaundryCare.Common.EnumType.ProcessPhase.CleaningHeatExchanger' => array(
+                        'name' => __("Nettoyage de l'échangeur de chaleur", __FILE__) ,
+                        'action' => 'Status'
+                    ) ,
+                    'LaundryCare.Common.EnumType.ProcessPhase.CupboardDryReached' => array(
+                        'name' => __("Prêt à ranger atteint", __FILE__) ,
+                        'action' => 'Status'
+                    ) ,
+                    'LaundryCare.Common.EnumType.ProcessPhase.DetectingTextile' => array(
+                        'name' => __("Détection du textile", __FILE__) ,
+                        'action' => 'Status'
+                    ) ,
+                    'LaundryCare.Common.EnumType.ProcessPhase.Drying' => array(
+                        'name' => __("Séchage", __FILE__) ,
+                        'action' => 'Status'
+                    ) ,
+                    'LaundryCare.Common.EnumType.ProcessPhase.Fluffing' => array(
+                        'name' => __("Rembourrage", __FILE__) ,
+                        'action' => 'Status'
+                    ) ,
+                    'LaundryCare.Common.EnumType.ProcessPhase.GuardingWrinkle' => array(
+                        'name' => __("Protection contre les plis", __FILE__) ,
+                        'action' => 'Status'
+                    ) ,
+                    'LaundryCare.Common.EnumType.ProcessPhase.Heating' => array(
+                        'name' => __("Chauffage", __FILE__) ,
+                        'action' => 'Status'
+                    ) ,
+                    'LaundryCare.Common.EnumType.ProcessPhase.IntermediateSpin' => array(
+                        'name' => __("Essorage intermédiaire", __FILE__) ,
+                        'action' => 'Status'
+                    ) ,
+                    'LaundryCare.Common.EnumType.ProcessPhase.IronDryReached' => array(
+                        'name' => __("Prêt à repasser atteint", __FILE__) ,
+                        'action' => 'Status'
+                    ) ,
+                    'LaundryCare.Common.EnumType.ProcessPhase.Prewash' => array(
+                        'name' => __("Prélavage", __FILE__) ,
+                        'action' => 'Status'
+                    ) ,
+                    'LaundryCare.Common.EnumType.ProcessPhase.Rinsing' => array(
+                        'name' => __("Rinçage", __FILE__) ,
+                        'action' => 'Status'
+                    ) ,
+                    'LaundryCare.Common.EnumType.ProcessPhase.RinsingSoftener' => array(
+                        'name' => __("Rinçage adoucissant", __FILE__) ,
+                        'action' => 'Status'
+                    ) ,
+                    'LaundryCare.Common.EnumType.ProcessPhase.SpinningFinal' => array(
+                        'name' => __("Essorage final", __FILE__) ,
+                        'action' => 'Status'
+                    ) ,
+                    'LaundryCare.Common.EnumType.ProcessPhase.Undefined' => array(
+                        'name' => __("Non défini", __FILE__) ,
+                        'action' => 'Status'
+                    ) ,
+                    'LaundryCare.Common.EnumType.ProcessPhase.Washing' => array(
+                        'name' => __("Lavage", __FILE__) ,
+                        'action' => 'Status'
+                    )
+                ),
+            ) ,
+            'LaundryCare.Common.Option.ReferToProgram' => array(
+                'name' => __("Se référer au programme", __FILE__) ,
+                'action' => 'Option',
+                'type' => 'String',
+            ) ,
+            'LaundryCare.Common.Option.SilentMode' => array(
+                'name' => __("Mode silencieux", __FILE__) ,
+                'action' => 'Option',
+                'type' => 'Boolean',
+            ) ,
+            'LaundryCare.Common.Option.SpeedPerfect' => array(
+                'name' => __("Vitesse parfaite", __FILE__) ,
+                'action' => 'Option',
+                'type' => 'Boolean',
+            ) ,
             'LaundryCare.Washer.Program.Cotton' => array(
                 'name' => __("Coton", __FILE__) ,
                 'action' => 'Program',
@@ -3014,6 +4546,15 @@ class homeconnect_capabilities {
                     'WasherDryer'
                 )
             ) ,
+            'LaundryCare.Washer.Program.HygienePlus' => array(
+                'name' => __("hygiène plus", __FILE__) ,
+                'action' => 'Program',
+                'available' => array(
+                    'Washer',
+                    'WasherDryer'
+                )
+            ) ,
+
             'LaundryCare.Washer.Program.Wool' => array(
                 'name' => __("Laine", __FILE__) ,
                 'action' => 'Program',
@@ -3070,6 +4611,22 @@ class homeconnect_capabilities {
                     'WasherDryer'
                 )
             ) ,
+            'LaundryCare.Washer.Program.SportShoes' => array(
+                'name' => __("Chaussures de sport", __FILE__) ,
+                'action' => 'Program',
+                'available' => array(
+                    'Washer',
+                    'WasherDryer'
+                )
+            ) ,
+            'LaundryCare.Washer.Program.Steaming.Steaming' => array(
+                'name' => __("Lavage à la vapeur.", __FILE__) ,
+                'action' => 'Program',
+                'available' => array(
+                    'Washer',
+                    'WasherDryer'
+                )
+            ) ,
             'LaundryCare.Washer.Program.WashAndDry.60' => array(
                 'name' => __("Lavage&Séchage 60 min.", __FILE__) ,
                 'action' => 'Program',
@@ -3080,6 +4637,14 @@ class homeconnect_capabilities {
             ) ,
             'LaundryCare.Washer.Program.WashAndDry.90' => array(
                 'name' => __("Lavage&Séchage 90 min.", __FILE__) ,
+                'action' => 'Program',
+                'available' => array(
+                    'Washer',
+                    'WasherDryer'
+                )
+            ) ,
+            'LaundryCare.Washer.Program.WaterProofIDOS.WaterProofIDOS.WaterProofIDOS' => array(
+                'name' => __("Dosage étanche", __FILE__) ,
                 'action' => 'Program',
                 'available' => array(
                     'Washer',
@@ -3150,6 +4715,39 @@ class homeconnect_capabilities {
                     'WasherDryer'
                 )
             ) ,
+            'LaundryCare.Washer.Program.DownDuvet.Duvet' => array(
+                'name' => __("Duvet de plumes", __FILE__) ,
+                'action' => 'Program',
+                'available' => array(
+                    'Washer',
+                    'WasherDryer'
+                )
+            ) ,
+            'LaundryCare.Washer.Program.Mix.NightWash' => array(
+                'name' => __("Lavage de nuit", __FILE__) ,
+                'action' => 'Program',
+                'available' => array(
+                    'Washer',
+                    'WasherDryer'
+                )
+            ) ,
+            'LaundryCare.Washer.Program.PowerSpeed59' => array(
+                'name' => __("PowerSpeed 59", __FILE__) ,
+                'action' => 'Program',
+                'available' => array(
+                    'Washer',
+                    'WasherDryer'
+                )
+            ) ,
+            'LaundryCare.Washer.Program.Super153045.Super30' => array(
+                'name' => __("Super 30'", __FILE__) ,
+                'action' => 'Program',
+                'available' => array(
+                    'Washer',
+                    'WasherDryer'
+                )
+            ) ,
+
             'LaundryCare.Washer.Program.Monsoon' => array(
                 'name' => __("Mousson", __FILE__) ,
                 'action' => 'Program',
@@ -3208,6 +4806,14 @@ class homeconnect_capabilities {
             ) ,
             'LaundryCare.Washer.Program.Super153045.Super15' => array(
                 'name' => __("Express 15 min.", __FILE__) ,
+                'action' => 'Program',
+                'available' => array(
+                    'Washer',
+                    'WasherDryer'
+                )
+            ) ,
+            'LaundryCare.Washer.Program.Super153045.Super15' => array(
+                'name' => __("Express 30 min.", __FILE__) ,
                 'action' => 'Program',
                 'available' => array(
                     'Washer',
@@ -3535,7 +5141,277 @@ class homeconnect_capabilities {
                     ) ,
                 ),
             ) ,
+            'LaundryCare.Washer.Option.EISA' => array(
+                'name' => __("EISA", __FILE__) ,
+                'action' => 'Option',
+                'type' => 'Boolean',
+                'available' => array(
+                    'Washer',
+                    'WasherDryer'
+                )
+            ) ,
+            'LaundryCare.Washer.Option.IDos1.Active' => array(
+                'name' => __("i-DOS 1: Activé", __FILE__) ,
+                'action' => 'Option',
+                'type' => 'Boolean',
+                'available' => array(
+                    'Washer',
+                    'WasherDryer'
+                )
+            ) ,
+            'LaundryCare.Washer.Option.IDos1Active' => array(
+                'name' => __("i-DOS 1: Activé", __FILE__) ,
+                'action' => 'Option',
+                'type' => 'Boolean',
+                'available' => array(
+                    'Washer',
+                    'WasherDryer'
+                )
+            ) ,
+            'LaundryCare.Washer.Option.IDos2.Active' => array(
+                'name' => __("i-DOS 2: Activé", __FILE__) ,
+                'action' => 'Option',
+                'type' => 'Boolean',
+                'available' => array(
+                    'Washer',
+                    'WasherDryer'
+                )
+            ) ,
+            'LaundryCare.Washer.Option.IDos2Active' => array(
+                'name' => __("i-DOS 2: Activé", __FILE__) ,
+                'action' => 'Option',
+                'type' => 'Boolean',
+                'available' => array(
+                    'Washer',
+                    'WasherDryer'
+                )
+            ) ,
+            'LaundryCare.Washer.Option.IntensivePlus' => array(
+                'name' => __("Intensive Plus", __FILE__) ,
+                'action' => 'Option',
+                'type' => 'Boolean',
+                'available' => array(
+                    'Washer',
+                    'WasherDryer'
+                )
+            ) ,
+            'LaundryCare.Washer.Option.MiniLoad' => array(
+                'name' => __("Mini Charge", __FILE__) ,
+                'action' => 'Option',
+                'type' => 'Boolean',
+                'available' => array(
+                    'Washer',
+                    'WasherDryer'
+                )
+            ) ,
+            'LaundryCare.Washer.Option.MultipleSoak' => array(
+                'name' => __("Multi-Prélavage", __FILE__) ,
+                'action' => 'Option',
+                'type' => 'Enumeration',
+                'enum' => array(
+                    'LaundryCare.Washer.EnumType.MultipleSoak.Off' => array(
+                        'name' => __("Désactivé", __FILE__) ,
+                        'action' => 'Option'
+                    ) ,
+                    'LaundryCare.Washer.EnumType.MultipleSoak.On' => array(
+                        'name' => __("Activé", __FILE__) ,
+                        'action' => 'Option'
+                    ) ,
+                ),
+                'available' => array(
+                    'Washer',
+                    'WasherDryer'
+                )
+            ) ,
+            'LaundryCare.Washer.Option.ProcessPhase' => array(
+                'name' => __("Phase de Processus", __FILE__) ,
+                'action' => 'Option',
+                'type' => 'Enumeration',
+                'enum' => array(
+                    'LaundryCare.Washer.EnumType.ProcessPhase.AutomaticDirtDetection' => array(
+                        'name' => __("Détection automatique de la saleté", __FILE__) ,
+                        'action' => 'Option'
+                    ) ,
+                    'LaundryCare.Washer.EnumType.ProcessPhase.AutomaticTextileDetection' => array(
+                        'name' => __("Détection automatique du textile", __FILE__) ,
+                        'action' => 'Option'
+                    ) ,
+                    'LaundryCare.Washer.EnumType.ProcessPhase.DetergentDispensing' => array(
+                        'name' => __("Distribution de détergent", __FILE__) ,
+                        'action' => 'Option'
+                    ) ,
+                    'LaundryCare.Washer.EnumType.ProcessPhase.Emptying' => array(
+                        'name' => __("Vidange", __FILE__) ,
+                        'action' => 'Option'
+                    ) ,
+                    'LaundryCare.Washer.EnumType.ProcessPhase.ExtraRinsingFoam' => array(
+                        'name' => __("Mousse de rinçage supplémentaire", __FILE__) ,
+                        'action' => 'Option'
+                    ) ,
+                    'LaundryCare.Washer.EnumType.ProcessPhase.FinalSpinning' => array(
+                        'name' => __("Essorage final", __FILE__) ,
+                        'action' => 'Option'
+                    ) ,
+                    'LaundryCare.Washer.EnumType.ProcessPhase.LoadAdjustActive' => array(
+                        'name' => __("Ajustement de charge actif", __FILE__) ,
+                        'action' => 'Option'
+                    ) ,
+                    'LaundryCare.Washer.EnumType.ProcessPhase.Rinsing' => array(
+                        'name' => __("Rinçage", __FILE__) ,
+                        'action' => 'Option'
+                    ) ,
+                    'LaundryCare.Washer.EnumType.ProcessPhase.RinsingSpinning' => array(
+                        'name' => __("Rinçage et essorage", __FILE__) ,
+                        'action' => 'Option'
+                    ) ,
+                    'LaundryCare.Washer.EnumType.ProcessPhase.RinsingWithAquaSensor' => array(
+                        'name' => __("Rinçage avec capteur Aqua", __FILE__) ,
+                        'action' => 'Option'
+                    ) ,
+                    'LaundryCare.Washer.EnumType.ProcessPhase.Undefined' => array(
+                        'name' => __("Indéfini", __FILE__) ,
+                        'action' => 'Option'
+                    ) ,
+                    'LaundryCare.Washer.EnumType.ProcessPhase.Washing' => array(
+                        'name' => __("Lavage", __FILE__) ,
+                        'action' => 'Option'
+                    ) ,
+                ),
+                'available' => array(
+                    'Washer',
+                    'WasherDryer'
+                )
+            ) ,
+            'LaundryCare.Washer.Option.WaterAndRinsePlus1' => array(
+                'name' => __("Eau et Rinçage Plus 1", __FILE__) ,
+                'action' => 'Option',
+                'type' => 'Boolean',
+                'available' => array(
+                    'Washer',
+                    'WasherDryer'
+                )
+            ),
             'LaundryCare.WasherDryer.Program.Cotton' => array(
+                'name' => __("Coton", __FILE__) ,
+                'action' => 'Program',
+                'available' => array(
+                    'WasherDryer'
+                )
+            ) ,
+            'LaundryCare.WasherDryer.Program.DarkWash.DarkWash.DarkWash' => array(
+                'name' => __("Lavage foncé", __FILE__) ,
+                'action' => 'Program',
+                'available' => array(
+                    'WasherDryer'
+                )
+            ) ,
+            'LaundryCare.WasherDryer.Program.DelicatesSilk' => array(
+                'name' => __("Délicat/Soie", __FILE__) ,
+                'action' => 'Program',
+                'available' => array(
+                    'WasherDryer'
+                )
+            ) ,
+            'LaundryCare.WasherDryer.Program.DelicatesSilk.DelicatesSilk.DelicatesSilk' => array(
+                'name' => __("Délicat/Soie", __FILE__) ,
+                'action' => 'Program',
+                'available' => array(
+                    'WasherDryer'
+                )
+            ) ,
+            'LaundryCare.WasherDryer.Program.DrumCleanDry.DrumCare.DrumCare' => array(
+                'name' => __("Entretien du tambour", __FILE__) ,
+                'action' => 'Program',
+                'available' => array(
+                    'WasherDryer'
+                )
+            ) ,
+            'LaundryCare.WasherDryer.Program.EasyCare.HHSynthetics.HHSynthetics' => array(
+                'name' => __("Synthétiques HH", __FILE__) ,
+                'action' => 'Program',
+                'available' => array(
+                    'WasherDryer'
+                )
+            ) ,
+            'LaundryCare.WasherDryer.Program.FastWashDry.WD45.WD45' => array(
+                'name' => __("", __FILE__) ,
+                'action' => 'Program',
+                'available' => array(
+                    'WasherDryer'
+                )
+            ) ,
+            'LaundryCare.WasherDryer.Program.LabelEU19.LabelEU19.Eco4060' => array(
+                'name' => __("EU 19 éco 40°C 60°C", __FILE__) ,
+                'action' => 'Program',
+                'available' => array(
+                    'WasherDryer'
+                )
+            ) ,
+            'LaundryCare.WasherDryer.Program.Mix.HHMix.HHMix' => array(
+                'name' => __("Mix HH", __FILE__) ,
+                'action' => 'Program',
+                'available' => array(
+                    'WasherDryer'
+                )
+            ) ,
+            'LaundryCare.WasherDryer.Program.MyTime.MyTime.MyTime' => array(
+                'name' => __("Mon temps", __FILE__) ,
+                'action' => 'Program',
+                'available' => array(
+                    'WasherDryer'
+                )
+            ) ,
+            'LaundryCare.WasherDryer.Program.RefreshWD.Refresh.Refresh' => array(
+                'name' => __("Rafraichissement", __FILE__) ,
+                'action' => 'Program',
+                'available' => array(
+                    'WasherDryer'
+                )
+            ) ,
+            'LaundryCare.WasherDryer.Program.Rinse.Rinse.Rinse' => array(
+                'name' => __("Rinser", __FILE__) ,
+                'action' => 'Program',
+                'available' => array(
+                    'WasherDryer'
+                )
+            ) ,
+            'LaundryCare.WasherDryer.Program.Rinse' => array(
+                'name' => __("Rinser", __FILE__) ,
+                'action' => 'Program',
+                'available' => array(
+                    'WasherDryer'
+                )
+            ) ,
+            'LaundryCare.WasherDryer.Program.Sensitive.Sensitive.Sensitive' => array(
+                'name' => __("Sensible", __FILE__) ,
+                'action' => 'Program',
+                'available' => array(
+                    'WasherDryer'
+                )
+            ) ,
+            'LaundryCare.WasherDryer.Program.ShirtsBlouses.ShirtsBlouses.ShirtsBlouses' => array(
+                'name' => __("Chemises et chemisiers", __FILE__) ,
+                'action' => 'Program',
+                'available' => array(
+                    'WasherDryer'
+                )
+            ) ,
+            'LaundryCare.WasherDryer.Program.SportShoes.SportShoes.SportShoes' => array(
+                'name' => __("Chaussures de sport", __FILE__) ,
+                'action' => 'Program',
+                'available' => array(
+                    'WasherDryer'
+                )
+            ) ,
+            'LaundryCare.WasherDryer.Program.Wool.Wool.Wool' => array(
+                'name' => __("Laine", __FILE__) ,
+                'action' => 'Program',
+                'available' => array(
+                    'WasherDryer'
+                )
+            ) ,
+
+            'LaundryCare.WasherDryer.Program.Cotton.Cotton.Cotton' => array(
                 'name' => __("Coton", __FILE__) ,
                 'action' => 'Program',
                 'available' => array(
@@ -3615,6 +5491,74 @@ class homeconnect_capabilities {
             'LaundryCare.WasherDryer.Program.ShirtsBlouses.ShirtsBlouses' => array(
                 'name' => __("Chemises", __FILE__) ,
                 'action' => 'Program',
+                'available' => array(
+                    'WasherDryer'
+                )
+            ) ,
+            'LaundryCare.WasherDryer.Option.DryingTarget' => array(
+                'name' => __("Cible de séchage", __FILE__) ,
+                'action' => 'Option',
+                'type' => 'Enumeration',
+                'available' => array(
+                    'WasherDryer'
+                ),
+                'enum' => array(
+                    'LaundryCare.WasherDryer.EnumType.DryingTargetWD.IronDry' => array(
+                        'name' => __("Repassage", __FILE__) ,
+                        'action' => 'Option'
+                    ) ,
+                    'LaundryCare.WasherDryer.EnumType.DryingTargetWD.GentleDry' => array(
+                        'name' => __("Séchage délicat", __FILE__) ,
+                        'action' => 'Option'
+                    ) ,
+                    'LaundryCare.WasherDryer.EnumType.DryingTargetWD.CupboardDry' => array(
+                        'name' => __("Séchage en armoire", __FILE__) ,
+                        'action' => 'Option'
+                    ) ,
+                    'LaundryCare.WasherDryer.EnumType.DryingTargetWD.CupboardDryPlus' => array(
+                        'name' => __("Séchage en armoire plus", __FILE__) ,
+                        'action' => 'Option'
+                    ) ,
+                    'LaundryCare.WasherDryer.EnumType.DryingTargetWD.ExtraDry' => array(
+                        'name' => __("Séchage extra", __FILE__) ,
+                        'action' => 'Option'
+                    )
+                )
+            ) ,
+            'LaundryCare.WasherDryer.Option.LowTemperatureHygiene' => array(
+                'name' => __("Hygiène basse température", __FILE__) ,
+                'action' => 'Option',
+                'type' => 'Boolean',
+                'available' => array(
+                    'WasherDryer'
+                )
+            ) ,
+            'LaundryCare.WasherDryer.Option.ProgramMode' => array(
+                'name' => __("Mode programme", __FILE__) ,
+                'action' => 'Option',
+                'type' => 'Enumeration',
+                'available' => array(
+                    'WasherDryer'
+                ),
+                'enum' => array(
+                    'LaundryCare.WasherDryer.EnumType.ProgramMode.Drying' => array(
+                        'name' => __("Séchage", __FILE__) ,
+                        'action' => 'Option'
+                    ) ,
+                    'LaundryCare.WasherDryer.EnumType.ProgramMode.Washing' => array(
+                        'name' => __("Lavage", __FILE__) ,
+                        'action' => 'Option'
+                    ) ,
+                    'LaundryCare.WasherDryer.EnumType.ProgramMode.WashingAndDrying' => array(
+                        'name' => __("Lavage et séchage", __FILE__) ,
+                        'action' => 'Option'
+                    )
+                )
+            ) ,
+            'LaundryCare.WasherDryer.Option.WrinkleGuardBoost' => array(
+                'name' => __("Boost anti-froissement", __FILE__) ,
+                'action' => 'Option',
+                'type' => 'Boolean',
                 'available' => array(
                     'WasherDryer'
                 )
@@ -4418,6 +6362,39 @@ class homeconnect_capabilities {
                     'max' => 100
                 ),
             ) ,
+            'BSH.Common.Option.BaseProgram' => array(
+                'name' => __("Programme de base", __FILE__) ,
+                'action' => 'Option',
+                'type' => 'String'
+            ) ,
+            'BSH.Common.Option.CurrentStepRemainingTime' => array(
+                'name' => __("Temps restant de l'étape en cours", __FILE__) ,
+                'action' => 'Option',
+                'type' => 'Int',
+                'unit' => 'seconds',
+                'constraints' => array(
+                    'min' => 0,
+                    'max' => 86340
+                ),
+                'available' => array(
+                    'Dishwasher',
+                    'Dryer',
+                    'Washer',
+                    'WasherDryer'
+                ) ,
+            ) ,
+            'BSH.Common.Option.ProgramName' => array(
+                'name' => __("Nom du programme", __FILE__) ,
+                'action' => 'Option'
+            ) ,
+            'BSH.Common.Option.RemainingProgramTime.AutoCounting' => array(
+                'name' => __("Comptage automatique du temps de programme restant", __FILE__) ,
+                'action' => 'Option'
+            ) ,
+            'BSH.Common.Option.RemainingProgramTimeEstimationState' => array(
+                'name' => __("État d'estimation du temps restant du programme", __FILE__) ,
+                'action' => 'Option'
+            ) ,
             'BSH.Common.Event.ProgramAborted' => array(
                 'name' => __("Programme annulé", __FILE__) ,
                 'action' => 'Event',
@@ -4603,6 +6580,11 @@ class homeconnect_capabilities {
                         ) ,
                     ) ,
                 )
+            ) ,
+            'BSH.Common.Status.InteriorIlluminationActive' => array(
+                'name' => __("Lumière intérieure active", __FILE__) ,
+                'action' => 'Status',
+                'type' => 'Boolean'
             ) ,
             'BSH.Common.Status.OperationState' => array(
                 'name' => __("Statut de fonctionnement", __FILE__) ,
@@ -5113,774 +7095,774 @@ class homeconnect_capabilities {
                             'Dishwasher'
                         ) ,
                     ) ,
-										'BSH.Common.EnumType.AmbientLightColor.Color4' => array(
-										    'name' => __("Couleur 4", __FILE__) ,
-										    'action' => 'Status',
-										    'available' => array(
-										        'Hood',
-										        'Dishwasher'
-										    ) ,
-										) ,
-										'BSH.Common.EnumType.AmbientLightColor.Color5' => array(
-										    'name' => __("Couleur 5", __FILE__) ,
-										    'action' => 'Status',
-										    'available' => array(
-										        'Hood',
-										        'Dishwasher'
-										    ) ,
-										) ,
-										'BSH.Common.EnumType.AmbientLightColor.Color6' => array(
-										    'name' => __("Couleur 6", __FILE__) ,
-										    'action' => 'Status',
-										    'available' => array(
-										        'Hood',
-										        'Dishwasher'
-										    ) ,
-										) ,
-										'BSH.Common.EnumType.AmbientLightColor.Color7' => array(
-										    'name' => __("Couleur 7", __FILE__) ,
-										    'action' => 'Status',
-										    'available' => array(
-										        'Hood',
-										        'Dishwasher'
-										    ) ,
-										) ,
-										'BSH.Common.EnumType.AmbientLightColor.Color8' => array(
-										    'name' => __("Couleur 8", __FILE__) ,
-										    'action' => 'Status',
-										    'available' => array(
-										        'Hood',
-										        'Dishwasher'
-										    ) ,
-										) ,
-										'BSH.Common.EnumType.AmbientLightColor.Color9' => array(
-										    'name' => __("Couleur 9", __FILE__) ,
-										    'action' => 'Status',
-										    'available' => array(
-										        'Hood',
-										        'Dishwasher'
-										    ) ,
-										) ,
-										'BSH.Common.EnumType.AmbientLightColor.Color10' => array(
-										    'name' => __("Couleur 10", __FILE__) ,
-										    'action' => 'Status',
-										    'available' => array(
-										        'Hood',
-										        'Dishwasher'
-										    ) ,
-										) ,
-										'BSH.Common.EnumType.AmbientLightColor.Color11' => array(
-										    'name' => __("Couleur 11", __FILE__) ,
-										    'action' => 'Status',
-										    'available' => array(
-										        'Hood',
-										        'Dishwasher'
-										    ) ,
-										) ,
-										'BSH.Common.EnumType.AmbientLightColor.Color12' => array(
-										    'name' => __("Couleur 12", __FILE__) ,
-										    'action' => 'Status',
-										    'available' => array(
-										        'Hood',
-										        'Dishwasher'
-										    ) ,
-										) ,
-										'BSH.Common.EnumType.AmbientLightColor.Color13' => array(
-										    'name' => __("Couleur 13", __FILE__) ,
-										    'action' => 'Status',
-										    'available' => array(
-										        'Hood',
-										        'Dishwasher'
-										    ) ,
-										) ,
-										'BSH.Common.EnumType.AmbientLightColor.Color14' => array(
-										    'name' => __("Couleur 14", __FILE__) ,
-										    'action' => 'Status',
-										    'available' => array(
-										        'Hood',
-										        'Dishwasher'
-										    ) ,
-										) ,
-										'BSH.Common.EnumType.AmbientLightColor.Color15' => array(
-										    'name' => __("Couleur 15", __FILE__) ,
-										    'action' => 'Status',
-										    'available' => array(
-										        'Hood',
-										        'Dishwasher'
-										    ) ,
-										) ,
-										'BSH.Common.EnumType.AmbientLightColor.Color16' => array(
-										    'name' => __("Couleur 16", __FILE__) ,
-										    'action' => 'Status',
-										    'available' => array(
-										        'Hood',
-										        'Dishwasher'
-										    ) ,
-										) ,
-										'BSH.Common.EnumType.AmbientLightColor.Color17' => array(
-										    'name' => __("Couleur 17", __FILE__) ,
-										    'action' => 'Status',
-										    'available' => array(
-										        'Hood',
-										        'Dishwasher'
-										    ) ,
-										) ,
-										'BSH.Common.EnumType.AmbientLightColor.Color18' => array(
-										    'name' => __("Couleur 18", __FILE__) ,
-										    'action' => 'Status',
-										    'available' => array(
-										        'Hood',
-										        'Dishwasher'
-										    ) ,
-										) ,
-										'BSH.Common.EnumType.AmbientLightColor.Color19' => array(
-										    'name' => __("Couleur 19", __FILE__) ,
-										    'action' => 'Status',
-										    'available' => array(
-										        'Hood',
-										        'Dishwasher'
-										    ) ,
-										) ,
-										'BSH.Common.EnumType.AmbientLightColor.Color20' => array(
-										    'name' => __("Couleur 20", __FILE__) ,
-										    'action' => 'Status',
-										    'available' => array(
-										        'Hood',
-										        'Dishwasher'
-										    ) ,
-										) ,
-										'BSH.Common.EnumType.AmbientLightColor.Color21' => array(
-										    'name' => __("Couleur 21", __FILE__) ,
-										    'action' => 'Status',
-										    'available' => array(
-										        'Hood',
-										        'Dishwasher'
-										    ) ,
-										) ,
-										'BSH.Common.EnumType.AmbientLightColor.Color22' => array(
-										    'name' => __("Couleur 22", __FILE__) ,
-										    'action' => 'Status',
-										    'available' => array(
-										        'Hood',
-										        'Dishwasher'
-										    ) ,
-										) ,
-										'BSH.Common.EnumType.AmbientLightColor.Color23' => array(
-										    'name' => __("Couleur 23", __FILE__) ,
-										    'action' => 'Status',
-										    'available' => array(
-										        'Hood',
-										        'Dishwasher'
-										    ) ,
-										) ,
-										'BSH.Common.EnumType.AmbientLightColor.Color24' => array(
-										    'name' => __("Couleur 24", __FILE__) ,
-										    'action' => 'Status',
-										    'available' => array(
-										        'Hood',
-										        'Dishwasher'
-										    ) ,
-										) ,
-										'BSH.Common.EnumType.AmbientLightColor.Color25' => array(
-										    'name' => __("Couleur 25", __FILE__) ,
-										    'action' => 'Status',
-										    'available' => array(
-										        'Hood',
-										        'Dishwasher'
-										    ) ,
-										) ,
-										'BSH.Common.EnumType.AmbientLightColor.Color26' => array(
-										    'name' => __("Couleur 26", __FILE__) ,
-										    'action' => 'Status',
-										    'available' => array(
-										        'Hood',
-										        'Dishwasher'
-										    ) ,
-										) ,
-										'BSH.Common.EnumType.AmbientLightColor.Color27' => array(
-										    'name' => __("Couleur 27", __FILE__) ,
-										    'action' => 'Status',
-										    'available' => array(
-										        'Hood',
-										        'Dishwasher'
-										    ) ,
-										) ,
-										'BSH.Common.EnumType.AmbientLightColor.Color28' => array(
-										    'name' => __("Couleur 28", __FILE__) ,
-										    'action' => 'Status',
-										    'available' => array(
-										        'Hood',
-										        'Dishwasher'
-										    ) ,
-										) ,
-										'BSH.Common.EnumType.AmbientLightColor.Color29' => array(
-										    'name' => __("Couleur 29", __FILE__) ,
-										    'action' => 'Status',
-										    'available' => array(
-										        'Hood',
-										        'Dishwasher'
-										    ) ,
-										) ,
-										'BSH.Common.EnumType.AmbientLightColor.Color30' => array(
-										    'name' => __("Couleur 30", __FILE__) ,
-										    'action' => 'Status',
-										    'available' => array(
-										        'Hood',
-										        'Dishwasher'
-										    ) ,
-										) ,
-										'BSH.Common.EnumType.AmbientLightColor.Color31' => array(
-										    'name' => __("Couleur 31", __FILE__) ,
-										    'action' => 'Status',
-										    'available' => array(
-										        'Hood',
-										        'Dishwasher'
-										    ) ,
-										) ,
-										'BSH.Common.EnumType.AmbientLightColor.Color32' => array(
-										    'name' => __("Couleur 32", __FILE__) ,
-										    'action' => 'Status',
-										    'available' => array(
-										        'Hood',
-										        'Dishwasher'
-										    ) ,
-										) ,
-										'BSH.Common.EnumType.AmbientLightColor.Color33' => array(
-										    'name' => __("Couleur 33", __FILE__) ,
-										    'action' => 'Status',
-										    'available' => array(
-										        'Hood',
-										        'Dishwasher'
-										    ) ,
-										) ,
-										'BSH.Common.EnumType.AmbientLightColor.Color14' => array(
-										    'name' => __("Couleur 34", __FILE__) ,
-										    'action' => 'Status',
-										    'available' => array(
-										        'Hood',
-										        'Dishwasher'
-										    ) ,
-										) ,
-										'BSH.Common.EnumType.AmbientLightColor.Color15' => array(
-										    'name' => __("Couleur 35", __FILE__) ,
-										    'action' => 'Status',
-										    'available' => array(
-										        'Hood',
-										        'Dishwasher'
-										    ) ,
-										) ,
-										'BSH.Common.EnumType.AmbientLightColor.Color36' => array(
-										    'name' => __("Couleur 36", __FILE__) ,
-										    'action' => 'Status',
-										    'available' => array(
-										        'Hood',
-										        'Dishwasher'
-										    ) ,
-										) ,
-										'BSH.Common.EnumType.AmbientLightColor.Color37' => array(
-										    'name' => __("Couleur 37", __FILE__) ,
-										    'action' => 'Status',
-										    'available' => array(
-										        'Hood',
-										        'Dishwasher'
-										    ) ,
-										) ,
-										'BSH.Common.EnumType.AmbientLightColor.Color38' => array(
-										    'name' => __("Couleur 38", __FILE__) ,
-										    'action' => 'Status',
-										    'available' => array(
-										        'Hood',
-										        'Dishwasher'
-										    ) ,
-										) ,
-										'BSH.Common.EnumType.AmbientLightColor.Color39' => array(
-										    'name' => __("Couleur 39", __FILE__) ,
-										    'action' => 'Status',
-										    'available' => array(
-										        'Hood',
-										        'Dishwasher'
-										    ) ,
-										) ,
-										'BSH.Common.EnumType.AmbientLightColor.Color40' => array(
-										    'name' => __("Couleur 40", __FILE__) ,
-										    'action' => 'Status',
-										    'available' => array(
-										        'Hood',
-										        'Dishwasher'
-										    ) ,
-										) ,
-										'BSH.Common.EnumType.AmbientLightColor.Color41' => array(
-										    'name' => __("Couleur 41", __FILE__) ,
-										    'action' => 'Status',
-										    'available' => array(
-										        'Hood',
-										        'Dishwasher'
-										    ) ,
-										) ,
-										'BSH.Common.EnumType.AmbientLightColor.Color42' => array(
-										    'name' => __("Couleur 42", __FILE__) ,
-										    'action' => 'Status',
-										    'available' => array(
-										        'Hood',
-										        'Dishwasher'
-										    ) ,
-										) ,
-										'BSH.Common.EnumType.AmbientLightColor.Color43' => array(
-										    'name' => __("Couleur 43", __FILE__) ,
-										    'action' => 'Status',
-										    'available' => array(
-										        'Hood',
-										        'Dishwasher'
-										    ) ,
-										) ,
-										'BSH.Common.EnumType.AmbientLightColor.Color44' => array(
-										    'name' => __("Couleur 44", __FILE__) ,
-										    'action' => 'Status',
-										    'available' => array(
-										        'Hood',
-										        'Dishwasher'
-										    ) ,
-										) ,
-										'BSH.Common.EnumType.AmbientLightColor.Color45' => array(
-										    'name' => __("Couleur 45", __FILE__) ,
-										    'action' => 'Status',
-										    'available' => array(
-										        'Hood',
-										        'Dishwasher'
-										    ) ,
-										) ,
-										'BSH.Common.EnumType.AmbientLightColor.Color46' => array(
-										    'name' => __("Couleur 46", __FILE__) ,
-										    'action' => 'Status',
-										    'available' => array(
-										        'Hood',
-										        'Dishwasher'
-										    ) ,
-										) ,
-										'BSH.Common.EnumType.AmbientLightColor.Color47' => array(
-										    'name' => __("Couleur 47", __FILE__) ,
-										    'action' => 'Status',
-										    'available' => array(
-										        'Hood',
-										        'Dishwasher'
-										    ) ,
-										) ,
-										'BSH.Common.EnumType.AmbientLightColor.Color48' => array(
-										    'name' => __("Couleur 48", __FILE__) ,
-										    'action' => 'Status',
-										    'available' => array(
-										        'Hood',
-										        'Dishwasher'
-										    ) ,
-										) ,
-										'BSH.Common.EnumType.AmbientLightColor.Color49' => array(
-										    'name' => __("Couleur 49", __FILE__) ,
-										    'action' => 'Status',
-										    'available' => array(
-										        'Hood',
-										        'Dishwasher'
-										    ) ,
-										) ,
-										'BSH.Common.EnumType.AmbientLightColor.Color50' => array(
-										    'name' => __("Couleur 50", __FILE__) ,
-										    'action' => 'Status',
-										    'available' => array(
-										        'Hood',
-										        'Dishwasher'
-										    ) ,
-										) ,
-										'BSH.Common.EnumType.AmbientLightColor.Color51' => array(
-										    'name' => __("Couleur 51", __FILE__) ,
-										    'action' => 'Status',
-										    'available' => array(
-										        'Hood',
-										        'Dishwasher'
-										    ) ,
-										) ,
-										'BSH.Common.EnumType.AmbientLightColor.Color52' => array(
-										    'name' => __("Couleur 52", __FILE__) ,
-										    'action' => 'Status',
-										    'available' => array(
-										        'Hood',
-										        'Dishwasher'
-										    ) ,
-										) ,
-										'BSH.Common.EnumType.AmbientLightColor.Color53' => array(
-										    'name' => __("Couleur 53", __FILE__) ,
-										    'action' => 'Status',
-										    'available' => array(
-										        'Hood',
-										        'Dishwasher'
-										    ) ,
-										) ,
-										'BSH.Common.EnumType.AmbientLightColor.Color54' => array(
-										    'name' => __("Couleur 54", __FILE__) ,
-										    'action' => 'Status',
-										    'available' => array(
-										        'Hood',
-										        'Dishwasher'
-										    ) ,
-										) ,
-										'BSH.Common.EnumType.AmbientLightColor.Color55' => array(
-										    'name' => __("Couleur 55", __FILE__) ,
-										    'action' => 'Status',
-										    'available' => array(
-										        'Hood',
-										        'Dishwasher'
-										    ) ,
-										) ,
-										'BSH.Common.EnumType.AmbientLightColor.Color56' => array(
-										    'name' => __("Couleur 56", __FILE__) ,
-										    'action' => 'Status',
-										    'available' => array(
-										        'Hood',
-										        'Dishwasher'
-										    ) ,
-										) ,
-										'BSH.Common.EnumType.AmbientLightColor.Color57' => array(
-										    'name' => __("Couleur 57", __FILE__) ,
-										    'action' => 'Status',
-										    'available' => array(
-										        'Hood',
-										        'Dishwasher'
-										    ) ,
-										) ,
-										'BSH.Common.EnumType.AmbientLightColor.Color58' => array(
-										    'name' => __("Couleur 58", __FILE__) ,
-										    'action' => 'Status',
-										    'available' => array(
-										        'Hood',
-										        'Dishwasher'
-										    ) ,
-										) ,
-										'BSH.Common.EnumType.AmbientLightColor.Color59' => array(
-										    'name' => __("Couleur 59", __FILE__) ,
-										    'action' => 'Status',
-										    'available' => array(
-										        'Hood',
-										        'Dishwasher'
-										    ) ,
-										) ,
-										'BSH.Common.EnumType.AmbientLightColor.Color60' => array(
-										    'name' => __("Couleur 60", __FILE__) ,
-										    'action' => 'Status',
-										    'available' => array(
-										        'Hood',
-										        'Dishwasher'
-										    ) ,
-										) ,
-										'BSH.Common.EnumType.AmbientLightColor.Color61' => array(
-										    'name' => __("Couleur 61", __FILE__) ,
-										    'action' => 'Status',
-										    'available' => array(
-										        'Hood',
-										        'Dishwasher'
-										    ) ,
-										) ,
-										'BSH.Common.EnumType.AmbientLightColor.Color62' => array(
-										    'name' => __("Couleur 62", __FILE__) ,
-										    'action' => 'Status',
-										    'available' => array(
-										        'Hood',
-										        'Dishwasher'
-										    ) ,
-										) ,
-										'BSH.Common.EnumType.AmbientLightColor.Color63' => array(
-										    'name' => __("Couleur 63", __FILE__) ,
-										    'action' => 'Status',
-										    'available' => array(
-										        'Hood',
-										        'Dishwasher'
-										    ) ,
-										) ,
-										'BSH.Common.EnumType.AmbientLightColor.Color64' => array(
-										    'name' => __("Couleur 64", __FILE__) ,
-										    'action' => 'Status',
-										    'available' => array(
-										        'Hood',
-										        'Dishwasher'
-										    ) ,
-										) ,
-										'BSH.Common.EnumType.AmbientLightColor.Color65' => array(
-										    'name' => __("Couleur 65", __FILE__) ,
-										    'action' => 'Status',
-										    'available' => array(
-										        'Hood',
-										        'Dishwasher'
-										    ) ,
-										) ,
-										'BSH.Common.EnumType.AmbientLightColor.Color66' => array(
-										    'name' => __("Couleur 66", __FILE__) ,
-										    'action' => 'Status',
-										    'available' => array(
-										        'Hood',
-										        'Dishwasher'
-										    ) ,
-										) ,
-										'BSH.Common.EnumType.AmbientLightColor.Color67' => array(
-										    'name' => __("Couleur 67", __FILE__) ,
-										    'action' => 'Status',
-										    'available' => array(
-										        'Hood',
-										        'Dishwasher'
-										    ) ,
-										) ,
-										'BSH.Common.EnumType.AmbientLightColor.Color68' => array(
-										    'name' => __("Couleur 68", __FILE__) ,
-										    'action' => 'Status',
-										    'available' => array(
-										        'Hood',
-										        'Dishwasher'
-										    ) ,
-										) ,
-										'BSH.Common.EnumType.AmbientLightColor.Color69' => array(
-										    'name' => __("Couleur 69", __FILE__) ,
-										    'action' => 'Status',
-										    'available' => array(
-										        'Hood',
-										        'Dishwasher'
-										    ) ,
-										) ,
-										'BSH.Common.EnumType.AmbientLightColor.Color70' => array(
-										    'name' => __("Couleur 70", __FILE__) ,
-										    'action' => 'Status',
-										    'available' => array(
-										        'Hood',
-										        'Dishwasher'
-										    ) ,
-										) ,
-										'BSH.Common.EnumType.AmbientLightColor.Color71' => array(
-										    'name' => __("Couleur 71", __FILE__) ,
-										    'action' => 'Status',
-										    'available' => array(
-										        'Hood',
-										        'Dishwasher'
-										    ) ,
-										) ,
-										'BSH.Common.EnumType.AmbientLightColor.Color72' => array(
-										    'name' => __("Couleur 72", __FILE__) ,
-										    'action' => 'Status',
-										    'available' => array(
-										        'Hood',
-										        'Dishwasher'
-										    ) ,
-										) ,
-										'BSH.Common.EnumType.AmbientLightColor.Color73' => array(
-										    'name' => __("Couleur 73", __FILE__) ,
-										    'action' => 'Status',
-										    'available' => array(
-										        'Hood',
-										        'Dishwasher'
-										    ) ,
-										) ,
-										'BSH.Common.EnumType.AmbientLightColor.Color74' => array(
-										    'name' => __("Couleur 74", __FILE__) ,
-										    'action' => 'Status',
-										    'available' => array(
-										        'Hood',
-										        'Dishwasher'
-										    ) ,
-										) ,
-										'BSH.Common.EnumType.AmbientLightColor.Color75' => array(
-										    'name' => __("Couleur 75", __FILE__) ,
-										    'action' => 'Status',
-										    'available' => array(
-										        'Hood',
-										        'Dishwasher'
-										    ) ,
-										) ,
-										'BSH.Common.EnumType.AmbientLightColor.Color76' => array(
-										    'name' => __("Couleur 76", __FILE__) ,
-										    'action' => 'Status',
-										    'available' => array(
-										        'Hood',
-										        'Dishwasher'
-										    ) ,
-										) ,
-										'BSH.Common.EnumType.AmbientLightColor.Color77' => array(
-										    'name' => __("Couleur 77", __FILE__) ,
-										    'action' => 'Status',
-										    'available' => array(
-										        'Hood',
-										        'Dishwasher'
-										    ) ,
-										) ,
-										'BSH.Common.EnumType.AmbientLightColor.Color78' => array(
-										    'name' => __("Couleur 78", __FILE__) ,
-										    'action' => 'Status',
-										    'available' => array(
-										        'Hood',
-										        'Dishwasher'
-										    ) ,
-										) ,
-										'BSH.Common.EnumType.AmbientLightColor.Color79' => array(
-										    'name' => __("Couleur 79", __FILE__) ,
-										    'action' => 'Status',
-										    'available' => array(
-										        'Hood',
-										        'Dishwasher'
-										    ) ,
-										) ,
-										'BSH.Common.EnumType.AmbientLightColor.Color80' => array(
-										    'name' => __("Couleur 80", __FILE__) ,
-										    'action' => 'Status',
-										    'available' => array(
-										        'Hood',
-										        'Dishwasher'
-										    ) ,
-										) ,
-										'BSH.Common.EnumType.AmbientLightColor.Color81' => array(
-										    'name' => __("Couleur 81", __FILE__) ,
-										    'action' => 'Status',
-										    'available' => array(
-										        'Hood',
-										        'Dishwasher'
-										    ) ,
-										) ,
-										'BSH.Common.EnumType.AmbientLightColor.Color82' => array(
-										    'name' => __("Couleur 82", __FILE__) ,
-										    'action' => 'Status',
-										    'available' => array(
-										        'Hood',
-										        'Dishwasher'
-										    ) ,
-										) ,
-										'BSH.Common.EnumType.AmbientLightColor.Color83' => array(
-										    'name' => __("Couleur 83", __FILE__) ,
-										    'action' => 'Status',
-										    'available' => array(
-										        'Hood',
-										        'Dishwasher'
-										    ) ,
-										) ,
-										'BSH.Common.EnumType.AmbientLightColor.Color84' => array(
-										    'name' => __("Couleur 84", __FILE__) ,
-										    'action' => 'Status',
-										    'available' => array(
-										        'Hood',
-										        'Dishwasher'
-										    ) ,
-										) ,
-										'BSH.Common.EnumType.AmbientLightColor.Color85' => array(
-										    'name' => __("Couleur 85", __FILE__) ,
-										    'action' => 'Status',
-										    'available' => array(
-										        'Hood',
-										        'Dishwasher'
-										    ) ,
-										) ,
-										'BSH.Common.EnumType.AmbientLightColor.Color86' => array(
-										    'name' => __("Couleur 86", __FILE__) ,
-										    'action' => 'Status',
-										    'available' => array(
-										        'Hood',
-										        'Dishwasher'
-										    ) ,
-										) ,
-										'BSH.Common.EnumType.AmbientLightColor.Color87' => array(
-										    'name' => __("Couleur 87", __FILE__) ,
-										    'action' => 'Status',
-										    'available' => array(
-										        'Hood',
-										        'Dishwasher'
-										    ) ,
-										) ,
-										'BSH.Common.EnumType.AmbientLightColor.Color88' => array(
-										    'name' => __("Couleur 88", __FILE__) ,
-										    'action' => 'Status',
-										    'available' => array(
-										        'Hood',
-										        'Dishwasher'
-										    ) ,
-										) ,
-										'BSH.Common.EnumType.AmbientLightColor.Color89' => array(
-										    'name' => __("Couleur 89", __FILE__) ,
-										    'action' => 'Status',
-										    'available' => array(
-										        'Hood',
-										        'Dishwasher'
-										    ) ,
-										) ,
-										'BSH.Common.EnumType.AmbientLightColor.Color90' => array(
-										    'name' => __("Couleur 90", __FILE__) ,
-										    'action' => 'Status',
-										    'available' => array(
-										        'Hood',
-										        'Dishwasher'
-										    ) ,
-										) ,
-										'BSH.Common.EnumType.AmbientLightColor.Color91' => array(
-										    'name' => __("Couleur 91", __FILE__) ,
-										    'action' => 'Status',
-										    'available' => array(
-										        'Hood',
-										        'Dishwasher'
-										    ) ,
-										) ,
-										'BSH.Common.EnumType.AmbientLightColor.Color92' => array(
-										    'name' => __("Couleur 92", __FILE__) ,
-										    'action' => 'Status',
-										    'available' => array(
-										        'Hood',
-										        'Dishwasher'
-										    ) ,
-										) ,
-										'BSH.Common.EnumType.AmbientLightColor.Color93' => array(
-										    'name' => __("Couleur 93", __FILE__) ,
-										    'action' => 'Status',
-										    'available' => array(
-										        'Hood',
-										        'Dishwasher'
-										    ) ,
-										) ,
-										'BSH.Common.EnumType.AmbientLightColor.Color94' => array(
-										    'name' => __("Couleur 94", __FILE__) ,
-										    'action' => 'Status',
-										    'available' => array(
-										        'Hood',
-										        'Dishwasher'
-										    ) ,
-										) ,
-										'BSH.Common.EnumType.AmbientLightColor.Color95' => array(
-										    'name' => __("Couleur 95", __FILE__) ,
-										    'action' => 'Status',
-										    'available' => array(
-										        'Hood',
-										        'Dishwasher'
-										    ) ,
-										) ,
-										'BSH.Common.EnumType.AmbientLightColor.Color96' => array(
-										    'name' => __("Couleur 96", __FILE__) ,
-										    'action' => 'Status',
-										    'available' => array(
-										        'Hood',
-										        'Dishwasher'
-										    ) ,
-										) ,
-										'BSH.Common.EnumType.AmbientLightColor.Color97' => array(
-										    'name' => __("Couleur 97", __FILE__) ,
-										    'action' => 'Status',
-										    'available' => array(
-										        'Hood',
-										        'Dishwasher'
-										    ) ,
-										) ,
-										'BSH.Common.EnumType.AmbientLightColor.Color98' => array(
-										    'name' => __("Couleur 98", __FILE__) ,
-										    'action' => 'Status',
-										    'available' => array(
-										        'Hood',
-										        'Dishwasher'
-										    ) ,
-										) ,
-										'BSH.Common.EnumType.AmbientLightColor.Color99' => array(
-										    'name' => __("Couleur 99", __FILE__) ,
-										    'action' => 'Status',
-										    'available' => array(
-										        'Hood',
-										        'Dishwasher'
-										    ) ,
-										) ,
+					'BSH.Common.EnumType.AmbientLightColor.Color4' => array(
+						'name' => __("Couleur 4", __FILE__) ,
+					    'action' => 'Status',
+						'available' => array(
+							'Hood',
+					        'Dishwasher'
+						) ,
+					) ,
+					'BSH.Common.EnumType.AmbientLightColor.Color5' => array(
+					    'name' => __("Couleur 5", __FILE__) ,
+					    'action' => 'Status',
+					     'available' => array(
+					        'Hood',
+					        'Dishwasher'
+					    ) ,
+					) ,
+					'BSH.Common.EnumType.AmbientLightColor.Color6' => array(
+					    'name' => __("Couleur 6", __FILE__) ,
+					    'action' => 'Status',
+					    'available' => array(
+					        'Hood',
+					        'Dishwasher'
+					    ) ,
+					) ,
+					'BSH.Common.EnumType.AmbientLightColor.Color7' => array(
+					    'name' => __("Couleur 7", __FILE__) ,
+					    'action' => 'Status',
+					    'available' => array(
+					        'Hood',
+					        'Dishwasher'
+					    ) ,
+					) ,
+					'BSH.Common.EnumType.AmbientLightColor.Color8' => array(
+					    'name' => __("Couleur 8", __FILE__) ,
+					    'action' => 'Status',
+					    'available' => array(
+					        'Hood',
+					        'Dishwasher'
+					    ) ,
+					) ,
+					'BSH.Common.EnumType.AmbientLightColor.Color9' => array(
+					    'name' => __("Couleur 9", __FILE__) ,
+					    'action' => 'Status',
+					    'available' => array(
+					        'Hood',
+					        'Dishwasher'
+					    ) ,
+					) ,
+					'BSH.Common.EnumType.AmbientLightColor.Color10' => array(
+					    'name' => __("Couleur 10", __FILE__) ,
+					    'action' => 'Status',
+					    'available' => array(
+					        'Hood',
+					        'Dishwasher'
+					    ) ,
+					) ,
+					'BSH.Common.EnumType.AmbientLightColor.Color11' => array(
+					    'name' => __("Couleur 11", __FILE__) ,
+					    'action' => 'Status',
+					    'available' => array(
+					        'Hood',
+					        'Dishwasher'
+					    ) ,
+					) ,
+					'BSH.Common.EnumType.AmbientLightColor.Color12' => array(
+					    'name' => __("Couleur 12", __FILE__) ,
+					    'action' => 'Status',
+					    'available' => array(
+					        'Hood',
+					        'Dishwasher'
+					    ) ,
+					) ,
+					'BSH.Common.EnumType.AmbientLightColor.Color13' => array(
+					    'name' => __("Couleur 13", __FILE__) ,
+					    'action' => 'Status',
+					    'available' => array(
+					        'Hood',
+					        'Dishwasher'
+					    ) ,
+					) ,
+					'BSH.Common.EnumType.AmbientLightColor.Color14' => array(
+					    'name' => __("Couleur 14", __FILE__) ,
+					    'action' => 'Status',
+					    'available' => array(
+					        'Hood',
+					        'Dishwasher'
+					    ) ,
+					) ,
+					'BSH.Common.EnumType.AmbientLightColor.Color15' => array(
+					    'name' => __("Couleur 15", __FILE__) ,
+					    'action' => 'Status',
+					    'available' => array(
+					        'Hood',
+					        'Dishwasher'
+					    ) ,
+					) ,
+					'BSH.Common.EnumType.AmbientLightColor.Color16' => array(
+					    'name' => __("Couleur 16", __FILE__) ,
+					    'action' => 'Status',
+					    'available' => array(
+					        'Hood',
+					        'Dishwasher'
+					    ) ,
+					) ,
+					'BSH.Common.EnumType.AmbientLightColor.Color17' => array(
+					    'name' => __("Couleur 17", __FILE__) ,
+					    'action' => 'Status',
+					    'available' => array(
+					        'Hood',
+					        'Dishwasher'
+					    ) ,
+					) ,
+					'BSH.Common.EnumType.AmbientLightColor.Color18' => array(
+					    'name' => __("Couleur 18", __FILE__) ,
+					    'action' => 'Status',
+					    'available' => array(
+					        'Hood',
+					        'Dishwasher'
+					    ) ,
+					) ,
+					'BSH.Common.EnumType.AmbientLightColor.Color19' => array(
+					    'name' => __("Couleur 19", __FILE__) ,
+					    'action' => 'Status',
+					    'available' => array(
+					        'Hood',
+					        'Dishwasher'
+					    ) ,
+					) ,
+					'BSH.Common.EnumType.AmbientLightColor.Color20' => array(
+					    'name' => __("Couleur 20", __FILE__) ,
+					    'action' => 'Status',
+					    'available' => array(
+					        'Hood',
+					        'Dishwasher'
+					    ) ,
+					) ,
+					'BSH.Common.EnumType.AmbientLightColor.Color21' => array(
+					    'name' => __("Couleur 21", __FILE__) ,
+					    'action' => 'Status',
+					    'available' => array(
+					        'Hood',
+					        'Dishwasher'
+					    ) ,
+					) ,
+					'BSH.Common.EnumType.AmbientLightColor.Color22' => array(
+					    'name' => __("Couleur 22", __FILE__) ,
+					    'action' => 'Status',
+					    'available' => array(
+					        'Hood',
+					        'Dishwasher'
+					    ) ,
+					) ,
+					'BSH.Common.EnumType.AmbientLightColor.Color23' => array(
+					    'name' => __("Couleur 23", __FILE__) ,
+					    'action' => 'Status',
+					    'available' => array(
+					        'Hood',
+					        'Dishwasher'
+					    ) ,
+					) ,
+					'BSH.Common.EnumType.AmbientLightColor.Color24' => array(
+					    'name' => __("Couleur 24", __FILE__) ,
+					    'action' => 'Status',
+					    'available' => array(
+					        'Hood',
+					        'Dishwasher'
+					    ) ,
+					) ,
+					'BSH.Common.EnumType.AmbientLightColor.Color25' => array(
+					    'name' => __("Couleur 25", __FILE__) ,
+					    'action' => 'Status',
+					    'available' => array(
+					        'Hood',
+					        'Dishwasher'
+					    ) ,
+					) ,
+					'BSH.Common.EnumType.AmbientLightColor.Color26' => array(
+					    'name' => __("Couleur 26", __FILE__) ,
+					    'action' => 'Status',
+					    'available' => array(
+					        'Hood',
+					        'Dishwasher'
+					    ) ,
+					) ,
+					'BSH.Common.EnumType.AmbientLightColor.Color27' => array(
+					    'name' => __("Couleur 27", __FILE__) ,
+					    'action' => 'Status',
+					    'available' => array(
+					        'Hood',
+					        'Dishwasher'
+					    ) ,
+					) ,
+					'BSH.Common.EnumType.AmbientLightColor.Color28' => array(
+					    'name' => __("Couleur 28", __FILE__) ,
+					    'action' => 'Status',
+					    'available' => array(
+					        'Hood',
+					        'Dishwasher'
+					    ) ,
+					) ,
+					'BSH.Common.EnumType.AmbientLightColor.Color29' => array(
+					    'name' => __("Couleur 29", __FILE__) ,
+					    'action' => 'Status',
+					    'available' => array(
+					        'Hood',
+					        'Dishwasher'
+					    ) ,
+					) ,
+					'BSH.Common.EnumType.AmbientLightColor.Color30' => array(
+					    'name' => __("Couleur 30", __FILE__) ,
+					    'action' => 'Status',
+					    'available' => array(
+					        'Hood',
+					        'Dishwasher'
+					    ) ,
+					) ,
+					'BSH.Common.EnumType.AmbientLightColor.Color31' => array(
+					    'name' => __("Couleur 31", __FILE__) ,
+					    'action' => 'Status',
+					    'available' => array(
+					        'Hood',
+					        'Dishwasher'
+					    ) ,
+					) ,
+					'BSH.Common.EnumType.AmbientLightColor.Color32' => array(
+					    'name' => __("Couleur 32", __FILE__) ,
+					    'action' => 'Status',
+					    'available' => array(
+					        'Hood',
+					        'Dishwasher'
+					    ) ,
+					) ,
+					'BSH.Common.EnumType.AmbientLightColor.Color33' => array(
+					    'name' => __("Couleur 33", __FILE__) ,
+					    'action' => 'Status',
+					    'available' => array(
+					        'Hood',
+					        'Dishwasher'
+					    ) ,
+					) ,
+					'BSH.Common.EnumType.AmbientLightColor.Color14' => array(
+					    'name' => __("Couleur 34", __FILE__) ,
+					    'action' => 'Status',
+					    'available' => array(
+					        'Hood',
+					        'Dishwasher'
+					    ) ,
+					) ,
+					'BSH.Common.EnumType.AmbientLightColor.Color15' => array(
+					    'name' => __("Couleur 35", __FILE__) ,
+					    'action' => 'Status',
+					    'available' => array(
+					        'Hood',
+					        'Dishwasher'
+					    ) ,
+					) ,
+					'BSH.Common.EnumType.AmbientLightColor.Color36' => array(
+					    'name' => __("Couleur 36", __FILE__) ,
+					    'action' => 'Status',
+					    'available' => array(
+					        'Hood',
+					        'Dishwasher'
+					    ) ,
+					) ,
+					'BSH.Common.EnumType.AmbientLightColor.Color37' => array(
+					    'name' => __("Couleur 37", __FILE__) ,
+					    'action' => 'Status',
+					    'available' => array(
+					        'Hood',
+					        'Dishwasher'
+					    ) ,
+					) ,
+					'BSH.Common.EnumType.AmbientLightColor.Color38' => array(
+					    'name' => __("Couleur 38", __FILE__) ,
+					    'action' => 'Status',
+					    'available' => array(
+					        'Hood',
+					        'Dishwasher'
+					    ) ,
+					) ,
+					'BSH.Common.EnumType.AmbientLightColor.Color39' => array(
+					    'name' => __("Couleur 39", __FILE__) ,
+					    'action' => 'Status',
+					    'available' => array(
+					        'Hood',
+					        'Dishwasher'
+					    ) ,
+					) ,
+					'BSH.Common.EnumType.AmbientLightColor.Color40' => array(
+					    'name' => __("Couleur 40", __FILE__) ,
+					    'action' => 'Status',
+					    'available' => array(
+					        'Hood',
+					        'Dishwasher'
+					    ) ,
+					) ,
+					'BSH.Common.EnumType.AmbientLightColor.Color41' => array(
+					    'name' => __("Couleur 41", __FILE__) ,
+					    'action' => 'Status',
+					    'available' => array(
+					        'Hood',
+					        'Dishwasher'
+					    ) ,
+					) ,
+					'BSH.Common.EnumType.AmbientLightColor.Color42' => array(
+					    'name' => __("Couleur 42", __FILE__) ,
+					    'action' => 'Status',
+					    'available' => array(
+					        'Hood',
+					        'Dishwasher'
+					    ) ,
+					) ,
+					'BSH.Common.EnumType.AmbientLightColor.Color43' => array(
+					    'name' => __("Couleur 43", __FILE__) ,
+					    'action' => 'Status',
+					    'available' => array(
+					        'Hood',
+					        'Dishwasher'
+					    ) ,
+					) ,
+					'BSH.Common.EnumType.AmbientLightColor.Color44' => array(
+					    'name' => __("Couleur 44", __FILE__) ,
+					    'action' => 'Status',
+					    'available' => array(
+					        'Hood',
+					        'Dishwasher'
+					    ) ,
+					) ,
+					'BSH.Common.EnumType.AmbientLightColor.Color45' => array(
+					    'name' => __("Couleur 45", __FILE__) ,
+					    'action' => 'Status',
+					    'available' => array(
+					        'Hood',
+					        'Dishwasher'
+					    ) ,
+					) ,
+					'BSH.Common.EnumType.AmbientLightColor.Color46' => array(
+					    'name' => __("Couleur 46", __FILE__) ,
+					    'action' => 'Status',
+					    'available' => array(
+					        'Hood',
+					        'Dishwasher'
+					    ) ,
+					) ,
+					'BSH.Common.EnumType.AmbientLightColor.Color47' => array(
+					    'name' => __("Couleur 47", __FILE__) ,
+					    'action' => 'Status',
+					    'available' => array(
+					        'Hood',
+					        'Dishwasher'
+					    ) ,
+					) ,
+					'BSH.Common.EnumType.AmbientLightColor.Color48' => array(
+					    'name' => __("Couleur 48", __FILE__) ,
+					    'action' => 'Status',
+					    'available' => array(
+					        'Hood',
+					        'Dishwasher'
+					    ) ,
+					) ,
+					'BSH.Common.EnumType.AmbientLightColor.Color49' => array(
+					    'name' => __("Couleur 49", __FILE__) ,
+					    'action' => 'Status',
+					    'available' => array(
+					        'Hood',
+					        'Dishwasher'
+					    ) ,
+					) ,
+					'BSH.Common.EnumType.AmbientLightColor.Color50' => array(
+					    'name' => __("Couleur 50", __FILE__) ,
+					    'action' => 'Status',
+					    'available' => array(
+					        'Hood',
+					        'Dishwasher'
+					    ) ,
+					) ,
+					'BSH.Common.EnumType.AmbientLightColor.Color51' => array(
+					    'name' => __("Couleur 51", __FILE__) ,
+					    'action' => 'Status',
+					    'available' => array(
+					        'Hood',
+					        'Dishwasher'
+					    ) ,
+					) ,
+					'BSH.Common.EnumType.AmbientLightColor.Color52' => array(
+					    'name' => __("Couleur 52", __FILE__) ,
+					    'action' => 'Status',
+					    'available' => array(
+					        'Hood',
+					        'Dishwasher'
+					    ) ,
+					) ,
+					'BSH.Common.EnumType.AmbientLightColor.Color53' => array(
+					    'name' => __("Couleur 53", __FILE__) ,
+					    'action' => 'Status',
+					    'available' => array(
+					        'Hood',
+					        'Dishwasher'
+					    ) ,
+					) ,
+					'BSH.Common.EnumType.AmbientLightColor.Color54' => array(
+					    'name' => __("Couleur 54", __FILE__) ,
+					    'action' => 'Status',
+					    'available' => array(
+					        'Hood',
+					        'Dishwasher'
+					    ) ,
+					) ,
+					'BSH.Common.EnumType.AmbientLightColor.Color55' => array(
+					    'name' => __("Couleur 55", __FILE__) ,
+					    'action' => 'Status',
+					    'available' => array(
+					        'Hood',
+					        'Dishwasher'
+					    ) ,
+					) ,
+					'BSH.Common.EnumType.AmbientLightColor.Color56' => array(
+					    'name' => __("Couleur 56", __FILE__) ,
+					    'action' => 'Status',
+					    'available' => array(
+					        'Hood',
+					        'Dishwasher'
+					    ) ,
+					) ,
+					'BSH.Common.EnumType.AmbientLightColor.Color57' => array(
+					    'name' => __("Couleur 57", __FILE__) ,
+					    'action' => 'Status',
+					    'available' => array(
+					        'Hood',
+					        'Dishwasher'
+					    ) ,
+					) ,
+					'BSH.Common.EnumType.AmbientLightColor.Color58' => array(
+					    'name' => __("Couleur 58", __FILE__) ,
+					    'action' => 'Status',
+					    'available' => array(
+					        'Hood',
+					        'Dishwasher'
+					    ) ,
+					) ,
+					'BSH.Common.EnumType.AmbientLightColor.Color59' => array(
+					    'name' => __("Couleur 59", __FILE__) ,
+					    'action' => 'Status',
+					    'available' => array(
+					        'Hood',
+					        'Dishwasher'
+					    ) ,
+					) ,
+					'BSH.Common.EnumType.AmbientLightColor.Color60' => array(
+					    'name' => __("Couleur 60", __FILE__) ,
+					    'action' => 'Status',
+					    'available' => array(
+					        'Hood',
+					        'Dishwasher'
+					    ) ,
+					) ,
+					'BSH.Common.EnumType.AmbientLightColor.Color61' => array(
+					    'name' => __("Couleur 61", __FILE__) ,
+					    'action' => 'Status',
+					    'available' => array(
+					        'Hood',
+					        'Dishwasher'
+					    ) ,
+					) ,
+					'BSH.Common.EnumType.AmbientLightColor.Color62' => array(
+					    'name' => __("Couleur 62", __FILE__) ,
+					    'action' => 'Status',
+					    'available' => array(
+					        'Hood',
+					        'Dishwasher'
+					    ) ,
+					) ,
+					'BSH.Common.EnumType.AmbientLightColor.Color63' => array(
+					    'name' => __("Couleur 63", __FILE__) ,
+					    'action' => 'Status',
+					    'available' => array(
+					        'Hood',
+					        'Dishwasher'
+					    ) ,
+					) ,
+					'BSH.Common.EnumType.AmbientLightColor.Color64' => array(
+					    'name' => __("Couleur 64", __FILE__) ,
+					    'action' => 'Status',
+					    'available' => array(
+					        'Hood',
+					        'Dishwasher'
+					    ) ,
+					) ,
+					'BSH.Common.EnumType.AmbientLightColor.Color65' => array(
+					    'name' => __("Couleur 65", __FILE__) ,
+					    'action' => 'Status',
+					    'available' => array(
+					        'Hood',
+					        'Dishwasher'
+					    ) ,
+					) ,
+					'BSH.Common.EnumType.AmbientLightColor.Color66' => array(
+					    'name' => __("Couleur 66", __FILE__) ,
+					    'action' => 'Status',
+					    'available' => array(
+					        'Hood',
+					        'Dishwasher'
+					    ) ,
+					) ,
+					'BSH.Common.EnumType.AmbientLightColor.Color67' => array(
+					    'name' => __("Couleur 67", __FILE__) ,
+					    'action' => 'Status',
+					    'available' => array(
+					        'Hood',
+					        'Dishwasher'
+					    ) ,
+					) ,
+					'BSH.Common.EnumType.AmbientLightColor.Color68' => array(
+					    'name' => __("Couleur 68", __FILE__) ,
+					    'action' => 'Status',
+					    'available' => array(
+					        'Hood',
+					        'Dishwasher'
+					    ) ,
+					) ,
+					'BSH.Common.EnumType.AmbientLightColor.Color69' => array(
+					    'name' => __("Couleur 69", __FILE__) ,
+					    'action' => 'Status',
+					    'available' => array(
+					        'Hood',
+					        'Dishwasher'
+					    ) ,
+					) ,
+					'BSH.Common.EnumType.AmbientLightColor.Color70' => array(
+					    'name' => __("Couleur 70", __FILE__) ,
+					    'action' => 'Status',
+					    'available' => array(
+					        'Hood',
+					        'Dishwasher'
+					    ) ,
+					) ,
+					'BSH.Common.EnumType.AmbientLightColor.Color71' => array(
+					    'name' => __("Couleur 71", __FILE__) ,
+					    'action' => 'Status',
+					    'available' => array(
+					        'Hood',
+					        'Dishwasher'
+					    ) ,
+					) ,
+					'BSH.Common.EnumType.AmbientLightColor.Color72' => array(
+					    'name' => __("Couleur 72", __FILE__) ,
+					    'action' => 'Status',
+					    'available' => array(
+					        'Hood',
+					        'Dishwasher'
+					    ) ,
+					) ,
+					'BSH.Common.EnumType.AmbientLightColor.Color73' => array(
+					    'name' => __("Couleur 73", __FILE__) ,
+					    'action' => 'Status',
+					    'available' => array(
+					        'Hood',
+					        'Dishwasher'
+					    ) ,
+					) ,
+					'BSH.Common.EnumType.AmbientLightColor.Color74' => array(
+					    'name' => __("Couleur 74", __FILE__) ,
+					    'action' => 'Status',
+					    'available' => array(
+					        'Hood',
+					        'Dishwasher'
+					    ) ,
+					) ,
+					'BSH.Common.EnumType.AmbientLightColor.Color75' => array(
+					    'name' => __("Couleur 75", __FILE__) ,
+					    'action' => 'Status',
+					    'available' => array(
+					        'Hood',
+					        'Dishwasher'
+					    ) ,
+					) ,
+					'BSH.Common.EnumType.AmbientLightColor.Color76' => array(
+					    'name' => __("Couleur 76", __FILE__) ,
+					    'action' => 'Status',
+					    'available' => array(
+					        'Hood',
+					        'Dishwasher'
+					    ) ,
+					) ,
+					'BSH.Common.EnumType.AmbientLightColor.Color77' => array(
+					    'name' => __("Couleur 77", __FILE__) ,
+					    'action' => 'Status',
+					    'available' => array(
+					        'Hood',
+					        'Dishwasher'
+					    ) ,
+					) ,
+					'BSH.Common.EnumType.AmbientLightColor.Color78' => array(
+					    'name' => __("Couleur 78", __FILE__) ,
+					    'action' => 'Status',
+					    'available' => array(
+					        'Hood',
+					        'Dishwasher'
+					    ) ,
+					) ,
+					'BSH.Common.EnumType.AmbientLightColor.Color79' => array(
+					    'name' => __("Couleur 79", __FILE__) ,
+					    'action' => 'Status',
+					    'available' => array(
+					        'Hood',
+					        'Dishwasher'
+					    ) ,
+					) ,
+					'BSH.Common.EnumType.AmbientLightColor.Color80' => array(
+					    'name' => __("Couleur 80", __FILE__) ,
+					    'action' => 'Status',
+					    'available' => array(
+					        'Hood',
+					        'Dishwasher'
+					    ) ,
+					) ,
+					'BSH.Common.EnumType.AmbientLightColor.Color81' => array(
+					    'name' => __("Couleur 81", __FILE__) ,
+					    'action' => 'Status',
+					    'available' => array(
+					        'Hood',
+					        'Dishwasher'
+					    ) ,
+					) ,
+					'BSH.Common.EnumType.AmbientLightColor.Color82' => array(
+					    'name' => __("Couleur 82", __FILE__) ,
+					    'action' => 'Status',
+					    'available' => array(
+					        'Hood',
+					        'Dishwasher'
+					    ) ,
+					) ,
+					'BSH.Common.EnumType.AmbientLightColor.Color83' => array(
+					    'name' => __("Couleur 83", __FILE__) ,
+					    'action' => 'Status',
+					    'available' => array(
+					        'Hood',
+					        'Dishwasher'
+					    ) ,
+					) ,
+					'BSH.Common.EnumType.AmbientLightColor.Color84' => array(
+					    'name' => __("Couleur 84", __FILE__) ,
+					    'action' => 'Status',
+					    'available' => array(
+					        'Hood',
+					        'Dishwasher'
+					    ) ,
+					) ,
+					'BSH.Common.EnumType.AmbientLightColor.Color85' => array(
+					    'name' => __("Couleur 85", __FILE__) ,
+					    'action' => 'Status',
+					    'available' => array(
+					        'Hood',
+					        'Dishwasher'
+					    ) ,
+					) ,
+					'BSH.Common.EnumType.AmbientLightColor.Color86' => array(
+					    'name' => __("Couleur 86", __FILE__) ,
+					    'action' => 'Status',
+					    'available' => array(
+					        'Hood',
+					        'Dishwasher'
+					    ) ,
+					) ,
+					'BSH.Common.EnumType.AmbientLightColor.Color87' => array(
+					    'name' => __("Couleur 87", __FILE__) ,
+					    'action' => 'Status',
+					    'available' => array(
+					        'Hood',
+					        'Dishwasher'
+					    ) ,
+					) ,
+					'BSH.Common.EnumType.AmbientLightColor.Color88' => array(
+					    'name' => __("Couleur 88", __FILE__) ,
+					    'action' => 'Status',
+					    'available' => array(
+					        'Hood',
+					        'Dishwasher'
+					    ) ,
+					) ,
+					'BSH.Common.EnumType.AmbientLightColor.Color89' => array(
+					    'name' => __("Couleur 89", __FILE__) ,
+					    'action' => 'Status',
+					    'available' => array(
+					        'Hood',
+					        'Dishwasher'
+					    ) ,
+					) ,
+					'BSH.Common.EnumType.AmbientLightColor.Color90' => array(
+					    'name' => __("Couleur 90", __FILE__) ,
+					    'action' => 'Status',
+					    'available' => array(
+					        'Hood',
+					        'Dishwasher'
+					    ) ,
+					) ,
+					'BSH.Common.EnumType.AmbientLightColor.Color91' => array(
+					    'name' => __("Couleur 91", __FILE__) ,
+					    'action' => 'Status',
+					    'available' => array(
+					        'Hood',
+					        'Dishwasher'
+					    ) ,
+					) ,
+					'BSH.Common.EnumType.AmbientLightColor.Color92' => array(
+					    'name' => __("Couleur 92", __FILE__) ,
+					    'action' => 'Status',
+					    'available' => array(
+					        'Hood',
+					        'Dishwasher'
+					    ) ,
+					) ,
+					'BSH.Common.EnumType.AmbientLightColor.Color93' => array(
+					    'name' => __("Couleur 93", __FILE__) ,
+					    'action' => 'Status',
+					    'available' => array(
+					        'Hood',
+					        'Dishwasher'
+					    ) ,
+					) ,
+					'BSH.Common.EnumType.AmbientLightColor.Color94' => array(
+					    'name' => __("Couleur 94", __FILE__) ,
+					    'action' => 'Status',
+					    'available' => array(
+					        'Hood',
+					        'Dishwasher'
+					    ) ,
+					) ,
+					'BSH.Common.EnumType.AmbientLightColor.Color95' => array(
+					    'name' => __("Couleur 95", __FILE__) ,
+					    'action' => 'Status',
+					    'available' => array(
+					        'Hood',
+					        'Dishwasher'
+					    ) ,
+					) ,
+					'BSH.Common.EnumType.AmbientLightColor.Color96' => array(
+					    'name' => __("Couleur 96", __FILE__) ,
+					    'action' => 'Status',
+					    'available' => array(
+					        'Hood',
+					        'Dishwasher'
+					    ) ,
+					) ,
+					'BSH.Common.EnumType.AmbientLightColor.Color97' => array(
+					    'name' => __("Couleur 97", __FILE__) ,
+					    'action' => 'Status',
+					    'available' => array(
+					        'Hood',
+					        'Dishwasher'
+					    ) ,
+					) ,
+					'BSH.Common.EnumType.AmbientLightColor.Color98' => array(
+					    'name' => __("Couleur 98", __FILE__) ,
+					    'action' => 'Status',
+					    'available' => array(
+					        'Hood',
+					        'Dishwasher'
+					    ) ,
+					) ,
+					'BSH.Common.EnumType.AmbientLightColor.Color99' => array(
+					    'name' => __("Couleur 99", __FILE__) ,
+					    'action' => 'Status',
+					    'available' => array(
+					        'Hood',
+					        'Dishwasher'
+					    ) ,
+					) ,
                 )
             ) ,
             'BSH.Common.Setting.AmbientLightCustomColor' => array(
@@ -5902,7 +7884,7 @@ class homeconnect_capabilities {
                 'Command',
                 'type' => 'Boolean'
             ) ,
-    ];
+        ];
     }
 }
 
