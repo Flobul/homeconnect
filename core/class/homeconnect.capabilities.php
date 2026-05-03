@@ -633,7 +633,7 @@ class homeconnect_capabilities {
                     ) ,
                 )
             ) ,
-            ConsumerProducts.CoffeeMaker.Program.Beverage.LatteMacchiato => array(
+            'ConsumerProducts.CoffeeMaker.Program.Beverage.LatteMacchiato' => array(
                 'name' => __("Latte macchiato", __FILE__) ,
                 'action' => 'Program',
                 'available' => array(
