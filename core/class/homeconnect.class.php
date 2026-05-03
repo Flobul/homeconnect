@@ -402,7 +402,7 @@ class homeconnect extends eqLogic {
             $parameters['redirect_uri'] = self::API_CLIENT_HC;
         } else {
             $parameters['scope'] = implode(' ', ['IdentifyAppliance', 'Monitor', 'Settings', 'Control']);
-            $parameters['redirect_uri'] = trim(network::getNetworkAccess('external')) . '/plugins/homeconnect/x.php?k=' . jeedom::getApiKey('homeconnect');
+            //$parameters['redirect_uri'] = trim(network::getNetworkAccess('external')) . '/plugins/homeconnect/x.php?k=' . jeedom::getApiKey('homeconnect');
             $parameters['client_id'] = trim(config::byKey('client_id', 'homeconnect', '', true));
         }
         $parameters['response_type'] = 'code';
@@ -497,7 +497,7 @@ class homeconnect extends eqLogic {
         $parameters['client_id'] = $clientId;
         if (!config::byKey('demo_mode', 'homeconnect')) {
             $parameters['client_secret'] = trim(config::byKey('client_secret', 'homeconnect', '', true));
-            $parameters['redirect_uri'] = trim(network::getNetworkAccess('external')) . '/plugins/homeconnect/x.php?k=' . jeedom::getApiKey('homeconnect');
+            //$parameters['redirect_uri'] = trim(network::getNetworkAccess('external')) . '/plugins/homeconnect/x.php?k=' . jeedom::getApiKey('homeconnect');
         } else {
             $parameters['redirect_uri'] = self::API_CLIENT_HC;
         }
