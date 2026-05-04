@@ -23,4 +23,4 @@ if (init('link') == '') {
 $link = init('link');
 ?>
 
-<iframe src="<?php echo $link; ?>" height="100%" width="100%">You need a Frames Capable browser to view this content.</iframe>
+<iframe src="<?php echo htmlspecialchars($link, ENT_QUOTES, 'UTF-8'); ?>" height="100%" width="100%">You need a Frames Capable browser to view this content.</iframe>

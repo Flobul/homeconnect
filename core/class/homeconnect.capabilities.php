@@ -44,7 +44,8 @@ class homeconnect_capabilities {
             'Hood' => __("Hotte", __FILE__),
             'CleaningRobot' => __("Robot de nettoyage", __FILE__),
             'CookProcessor' => __("Robot cuiseur", __FILE__),
-            'WarmingDrawer' => __("Tiroir chauffant", __FILE__)
+            'WarmingDrawer' => __("Tiroir chauffant", __FILE__),
+            'AirConditioner' => __("Climatiseur", __FILE__)
         ];
 
       	/** Liste toutes les capacités des appareils Home connect, les valeurs, type...
@@ -198,7 +199,7 @@ class homeconnect_capabilities {
                 'action' => 'Event',
                 'type' => 'Enumeration',
                 'available' => array(
-                    'CoffeeMachine'
+                    'CoffeeMaker'
                 ) ,
                 'enum' => array(
                     'BSH.Common.EnumType.EventPresentState.Present' => array(
@@ -220,7 +221,7 @@ class homeconnect_capabilities {
                 'action' => 'Event',
                 'type' => 'Enumeration',
                 'available' => array(
-                    'CoffeeMachine'
+                    'CoffeeMaker'
                 ) ,
                 'enum' => array(
                     'BSH.Common.EnumType.EventPresentState.Present' => array(
@@ -242,7 +243,7 @@ class homeconnect_capabilities {
                 'action' => 'Event',
                 'type' => 'Enumeration',
                 'available' => array(
-                    'CoffeeMachine'
+                    'CoffeeMaker'
                 ) ,
                 'enum' => array(
                     'BSH.Common.EnumType.EventPresentState.Present' => array(
@@ -264,7 +265,7 @@ class homeconnect_capabilities {
                 'action' => 'Event',
                 'type' => 'Enumeration',
                 'available' => array(
-                    'CoffeeMachine'
+                    'CoffeeMaker'
                 ) ,
                 'enum' => array(
                     'BSH.Common.EnumType.EventPresentState.Present' => array(
@@ -286,7 +287,7 @@ class homeconnect_capabilities {
                 'action' => 'Event',
                 'type' => 'Enumeration',
                 'available' => array(
-                    'CoffeeMachine'
+                    'CoffeeMaker'
                 ) ,
                 'enum' => array(
                     'BSH.Common.EnumType.EventPresentState.Present' => array(
@@ -308,7 +309,7 @@ class homeconnect_capabilities {
                 'action' => 'Event',
                 'type' => 'Enumeration',
                 'available' => array(
-                    'CoffeeMachine'
+                    'CoffeeMaker'
                 ) ,
                 'enum' => array(
                     'BSH.Common.EnumType.EventPresentState.Present' => array(
@@ -330,7 +331,7 @@ class homeconnect_capabilities {
                 'action' => 'Event',
                 'type' => 'Enumeration',
                 'available' => array(
-                    'CoffeeMachine'
+                    'CoffeeMaker'
                 ) ,
                 'enum' => array(
                     'BSH.Common.EnumType.EventPresentState.Present' => array(
@@ -352,7 +353,7 @@ class homeconnect_capabilities {
                 'action' => 'Event',
                 'type' => 'Enumeration',
                 'available' => array(
-                    'CoffeeMachine'
+                    'CoffeeMaker'
                 ) ,
                 'enum' => array(
                     'BSH.Common.EnumType.EventPresentState.Present' => array(
@@ -374,7 +375,7 @@ class homeconnect_capabilities {
                 'action' => 'Event',
                 'type' => 'Enumeration',
                 'available' => array(
-                    'CoffeeMachine'
+                    'CoffeeMaker'
                 ) ,
                 'enum' => array(
                     'BSH.Common.EnumType.EventPresentState.Present' => array(
@@ -396,7 +397,7 @@ class homeconnect_capabilities {
                 'action' => 'Event',
                 'type' => 'Enumeration',
                 'available' => array(
-                    'CoffeeMachine'
+                    'CoffeeMaker'
                 ) ,
                 'enum' => array(
                     'BSH.Common.EnumType.EventPresentState.Present' => array(
@@ -418,7 +419,7 @@ class homeconnect_capabilities {
                 'action' => 'Event',
                 'type' => 'Enumeration',
                 'available' => array(
-                    'CoffeeMachine'
+                    'CoffeeMaker'
                 ) ,
                 'enum' => array(
                     'BSH.Common.EnumType.EventPresentState.Present' => array(
@@ -440,7 +441,7 @@ class homeconnect_capabilities {
                 'action' => 'Event',
                 'type' => 'Enumeration',
                 'available' => array(
-                    'CoffeeMachine'
+                    'CoffeeMaker'
                 ) ,
                 'enum' => array(
                     'BSH.Common.EnumType.EventPresentState.Present' => array(
@@ -462,7 +463,7 @@ class homeconnect_capabilities {
                 'action' => 'Event',
                 'type' => 'Enumeration',
                 'available' => array(
-                    'CoffeeMachine'
+                    'CoffeeMaker'
                 ) ,
                 'enum' => array(
                     'BSH.Common.EnumType.EventPresentState.Present' => array(
@@ -484,7 +485,7 @@ class homeconnect_capabilities {
                 'action' => 'Event',
                 'type' => 'Enumeration',
                 'available' => array(
-                    'CoffeeMachine'
+                    'CoffeeMaker'
                 ) ,
                 'enum' => array(
                     'BSH.Common.EnumType.EventPresentState.Present' => array(
@@ -506,7 +507,7 @@ class homeconnect_capabilities {
                 'action' => 'Event',
                 'type' => 'Enumeration',
                 'available' => array(
-                    'CoffeeMachine'
+                    'CoffeeMaker'
                 ) ,
                 'enum' => array(
                     'BSH.Common.EnumType.EventPresentState.Present' => array(
@@ -528,7 +529,7 @@ class homeconnect_capabilities {
                 'action' => 'Event',
                 'type' => 'Enumeration',
                 'available' => array(
-                    'CoffeeMachine'
+                    'CoffeeMaker'
                 ) ,
                 'enum' => array(
                     'BSH.Common.EnumType.EventPresentState.Present' => array(
@@ -550,7 +551,7 @@ class homeconnect_capabilities {
                 'action' => 'Event',
                 'type' => 'Enumeration',
                 'available' => array(
-                    'CoffeeMachine'
+                    'CoffeeMaker'
                 ) ,
                 'enum' => array(
                     'BSH.Common.EnumType.EventPresentState.Present' => array(
@@ -572,7 +573,7 @@ class homeconnect_capabilities {
                 'action' => 'Event',
                 'type' => 'Enumeration',
                 'available' => array(
-                    'CoffeeMachine'
+                    'CoffeeMaker'
                 ) ,
                 'enum' => array(
                     'BSH.Common.EnumType.EventPresentState.Present' => array(
@@ -594,7 +595,7 @@ class homeconnect_capabilities {
                 'action' => 'Event',
                 'type' => 'Enumeration',
                 'available' => array(
-                    'CoffeeMachine'
+                    'CoffeeMaker'
                 ) ,
                 'enum' => array(
                     'BSH.Common.EnumType.EventPresentState.Present' => array(
@@ -616,7 +617,7 @@ class homeconnect_capabilities {
                 'action' => 'Event',
                 'type' => 'Enumeration',
                 'available' => array(
-                    'CoffeeMachine'
+                    'CoffeeMaker'
                 ) ,
                 'enum' => array(
                     'BSH.Common.EnumType.EventPresentState.Present' => array(
@@ -1041,7 +1042,7 @@ class homeconnect_capabilities {
                 'action' => 'Option',
                 'type' => 'Enumeration',
                 'available' => array(
-                    'CoffeeMachine'
+                    'CoffeeMaker'
                 ) ,
                 'enum' => array(
                     'ConsumerProducts.CoffeeMaker.EnumType.BeanAmount.VeryMild' => array(
@@ -1115,7 +1116,7 @@ class homeconnect_capabilities {
                 'action' => 'Option',
                 'type' => 'Int',
                 'available' => array(
-                    'CoffeeMachine'
+                    'CoffeeMaker'
                 ) ,
             ) ,
             'ConsumerProducts.CoffeeMaker.Option.CoffeeTemperature' => array(
@@ -1123,7 +1124,7 @@ class homeconnect_capabilities {
                 'action' => 'Option',
                 'type' => 'Enumeration',
                 'available' => array(
-                    'CoffeeMachine'
+                    'CoffeeMaker'
                 ) ,
                 'enum' => array(
                     'ConsumerProducts.CoffeeMaker.EnumType.CoffeeTemperature.88C' => array(
@@ -1173,7 +1174,7 @@ class homeconnect_capabilities {
                 'action' => 'Option',
                 'type' => 'Enumeration',
                 'available' => array(
-                    'CoffeeMachine'
+                    'CoffeeMaker'
                 ) ,
                 'enum' => array(
                     'ConsumerProducts.CoffeeMaker.EnumType.AromaSelect.balanced' => array(
@@ -1195,7 +1196,7 @@ class homeconnect_capabilities {
                 'action' => 'Option',
                 'type' => 'Enumeration',
                 'available' => array(
-                    'CoffeeMachine'
+                    'CoffeeMaker'
                 ) ,
                 'enum' => array(
                     'ConsumerProducts.CoffeeMaker.EnumType.BeverageSize.Medium' => array(
@@ -1209,7 +1210,7 @@ class homeconnect_capabilities {
                 'action' => 'Option',
                 'type' => 'Int',
                 'available' => array(
-                    'CoffeeMachine'
+                    'CoffeeMaker'
                 ) ,
             ) ,
             'ConsumerProducts.CoffeeMaker.Option.Coarsness' => array(
@@ -1235,7 +1236,7 @@ class homeconnect_capabilities {
                     ) ,
                 ) ,
                 'available' => array(
-                    'CoffeeMachine'
+                    'CoffeeMaker'
                 ) ,
             ) ,
             'ConsumerProducts.CoffeeMaker.Option.Coarsness.Recommendation' => array(
@@ -1243,7 +1244,7 @@ class homeconnect_capabilities {
                 'action' => 'Option',
                 'type' => 'Enumeration',
                 'available' => array(
-                    'CoffeeMachine'
+                    'CoffeeMaker'
                 ) ,
             ) ,
             'ConsumerProducts.CoffeeMaker.Option.CoffeeStrength' => array(
@@ -1281,7 +1282,7 @@ class homeconnect_capabilities {
                     ) ,
                 ) ,
                 'available' => array(
-                    'CoffeeMachine'
+                    'CoffeeMaker'
                 ) ,
             ) ,
             'ConsumerProducts.CoffeeMaker.Option.CoffeeStrength.Recommendation' => array(
@@ -1289,7 +1290,7 @@ class homeconnect_capabilities {
                 'action' => 'Option',
                 'type' => 'Enumeration',
                 'available' => array(
-                    'CoffeeMachine'
+                    'CoffeeMaker'
                 ) ,
             ) ,
             'ConsumerProducts.CoffeeMaker.Option.CoffeeTemperature.Recommendation' => array(
@@ -1297,7 +1298,7 @@ class homeconnect_capabilities {
                 'action' => 'Option',
                 'type' => 'Int',
                 'available' => array(
-                    'CoffeeMachine'
+                    'CoffeeMaker'
                 ) ,
             ) ,
             'ConsumerProducts.CoffeeMaker.Option.FillQuantity.Recommendation' => array(
@@ -1305,7 +1306,7 @@ class homeconnect_capabilities {
                 'action' => 'Option',
                 'type' => 'Int',
                 'available' => array(
-                    'CoffeeMachine'
+                    'CoffeeMaker'
                 ) ,
             ) ,
             'ConsumerProducts.CoffeeMaker.Option.FlowRate.Recommendation' => array(
@@ -1327,7 +1328,7 @@ class homeconnect_capabilities {
                     ) ,
                 ),
                 'available' => array(
-                    'CoffeeMachine'
+                    'CoffeeMaker'
                 ) ,
             ) ,
             'ConsumerProducts.CoffeeMaker.Option.Shot.Count' => array(
@@ -1345,7 +1346,7 @@ class homeconnect_capabilities {
                     ) ,
                 ),
                 'available' => array(
-                    'CoffeeMachine'
+                    'CoffeeMaker'
                 ) ,
             ) ,
             'ConsumerProducts.CoffeeMaker.Option.BeanContainerSelection' => array(
@@ -1353,7 +1354,7 @@ class homeconnect_capabilities {
                 'action' => 'Option',
                 'type' => 'Enumeration',
                 'available' => array(
-                    'CoffeeMachine'
+                    'CoffeeMaker'
                 ) ,
                 'enum' => array(
                     'ConsumerProducts.CoffeeMaker.EnumType.BeanContainerSelection.Left' => array(
@@ -1371,7 +1372,7 @@ class homeconnect_capabilities {
                 'action' => 'Option',
                 'type' => 'Enumeration',
                 'available' => array(
-                    'CoffeeMachine'
+                    'CoffeeMaker'
                 ) ,
                 'enum' => array(
                     'ConsumerProducts.CoffeeMaker.EnumType.FlowRate.Normal' => array(
@@ -1400,7 +1401,7 @@ class homeconnect_capabilities {
                 'action' => 'Option',
                 'type' => 'Enumeration',
                 'available' => array(
-                    'CoffeeMachine'
+                    'CoffeeMaker'
                 ) ,
                 'enum' => array(
                     'ConsumerProducts.CoffeeMaker.EnumType.CoffeeMilkRatio.10Percent' => array(
@@ -1471,7 +1472,7 @@ class homeconnect_capabilities {
                 'action' => 'Option',
                 'type' => 'Enumeration',
                 'available' => array(
-                    'CoffeeMachine'
+                    'CoffeeMaker'
                 ) ,
                 'enum' => array(
                     'ConsumerProducts.CoffeeMaker.EnumType.HotWaterTemperature.WhiteTea' => array(
@@ -1581,7 +1582,7 @@ class homeconnect_capabilities {
                 'action' => 'Setting',
                 'type' => 'Boolean',
                 'available' => array(
-                    'CoffeeMachine'
+                    'CoffeeMaker'
                 )
             ) ,
             'ConsumerProducts.CoffeeMaker.Status.BeverageCounterCoffee' => array(
@@ -1589,7 +1590,7 @@ class homeconnect_capabilities {
                 'action' => 'Status',
                 'type' => 'Int',
                 'available' => array(
-                    'CoffeeMachine'
+                    'CoffeeMaker'
                 )
             ) ,
             'ConsumerProducts.CoffeeMaker.Status.BeverageCounterPowderCoffee' => array(
@@ -1597,7 +1598,7 @@ class homeconnect_capabilities {
                 'action' => 'Status',
                 'type' => 'Int',
                 'available' => array(
-                    'CoffeeMachine'
+                    'CoffeeMaker'
                 ) ,
             ) ,
             'ConsumerProducts.CoffeeMaker.Status.BeverageCounterHotWater' => array(
@@ -1605,7 +1606,7 @@ class homeconnect_capabilities {
                 'action' => 'Status',
                 'type' => 'Int',
                 'available' => array(
-                    'CoffeeMachine'
+                    'CoffeeMaker'
                 ) ,
             ) ,
             'ConsumerProducts.CoffeeMaker.Status.BeverageCounterHotWaterCups' => array(
@@ -1613,7 +1614,7 @@ class homeconnect_capabilities {
                 'action' => 'Status',
                 'type' => 'Int',
                 'available' => array(
-                    'CoffeeMachine'
+                    'CoffeeMaker'
                 ) ,
             ) ,
             'ConsumerProducts.CoffeeMaker.Status.BeverageCounterHotMilk' => array(
@@ -1621,7 +1622,7 @@ class homeconnect_capabilities {
                 'action' => 'Status',
                 'type' => 'Int',
                 'available' => array(
-                    'CoffeeMachine'
+                    'CoffeeMaker'
                 ) ,
             ) ,
             'ConsumerProducts.CoffeeMaker.Status.BeverageCounterFrothyMilk' => array(
@@ -1629,7 +1630,7 @@ class homeconnect_capabilities {
                 'action' => 'Status',
                 'type' => 'Int',
                 'available' => array(
-                    'CoffeeMachine'
+                    'CoffeeMaker'
                 ) ,
             ) ,
             'ConsumerProducts.CoffeeMaker.Status.BeverageCounterMilk' => array(
@@ -1637,7 +1638,7 @@ class homeconnect_capabilities {
                 'action' => 'Status',
                 'type' => 'Int',
                 'available' => array(
-                    'CoffeeMachine'
+                    'CoffeeMaker'
                 ) ,
             ) ,
             'ConsumerProducts.CoffeeMaker.Status.BeverageCounterCoffeeAndMilk' => array(
@@ -1645,7 +1646,7 @@ class homeconnect_capabilities {
                 'action' => 'Status',
                 'type' => 'Int',
                 'available' => array(
-                    'CoffeeMachine'
+                    'CoffeeMaker'
                 ) ,
             ) ,
             'ConsumerProducts.CoffeeMaker.Status.BeverageCounterRistrettoEspresso' => array(
@@ -1653,7 +1654,7 @@ class homeconnect_capabilities {
                 'action' => 'Status',
                 'type' => 'Int',
                 'available' => array(
-                    'CoffeeMachine'
+                    'CoffeeMaker'
                 ) ,
             ) ,
             'ConsumerProducts.CleaningRobot.Option.ReferenceMapId' => array(
@@ -2677,6 +2678,68 @@ class homeconnect_capabilities {
                 'available' => array(
                     'Hob'
                 ) ,
+            ) ,
+            'Cooking.Hob.Setting.Ventilation' => array(
+                'name' => __("Niveau de ventilation", __FILE__) ,
+                'action' => 'Setting',
+                'type' => 'Enumeration',
+                'available' => array(
+                    'Hob'
+                ) ,
+                'enum' => array(
+                    'Cooking.Hob.EnumType.Ventilation.Off' => array(
+                        'name' => __("Arrêt", __FILE__) ,
+                        'action' => 'Status'
+                    ) ,
+                    'Cooking.Hob.EnumType.Ventilation.Level01' => array(
+                        'name' => __("Niveau 1", __FILE__) ,
+                        'action' => 'Status'
+                    ) ,
+                    'Cooking.Hob.EnumType.Ventilation.Level03' => array(
+                        'name' => __("Niveau 2", __FILE__) ,
+                        'action' => 'Status'
+                    ) ,
+                    'Cooking.Hob.EnumType.Ventilation.Level05' => array(
+                        'name' => __("Niveau 3", __FILE__) ,
+                        'action' => 'Status'
+                    ) ,
+                    'Cooking.Hob.EnumType.Ventilation.Level07' => array(
+                        'name' => __("Niveau 4", __FILE__) ,
+                        'action' => 'Status'
+                    ) ,
+                    'Cooking.Hob.EnumType.Ventilation.Level09' => array(
+                        'name' => __("Niveau 5", __FILE__) ,
+                        'action' => 'Status'
+                    ) ,
+                    'Cooking.Hob.EnumType.Ventilation.Level11' => array(
+                        'name' => __("Niveau 6", __FILE__) ,
+                        'action' => 'Status'
+                    ) ,
+                    'Cooking.Hob.EnumType.Ventilation.Level13' => array(
+                        'name' => __("Niveau 7", __FILE__) ,
+                        'action' => 'Status'
+                    ) ,
+                    'Cooking.Hob.EnumType.Ventilation.Level15' => array(
+                        'name' => __("Niveau 8", __FILE__) ,
+                        'action' => 'Status'
+                    ) ,
+                    'Cooking.Hob.EnumType.Ventilation.Level17' => array(
+                        'name' => __("Niveau 9", __FILE__) ,
+                        'action' => 'Status'
+                    ) ,
+                    'Cooking.Hob.EnumType.Ventilation.BoostLevel1' => array(
+                        'name' => __("Intensif 1", __FILE__) ,
+                        'action' => 'Status'
+                    ) ,
+                    'Cooking.Hob.EnumType.Ventilation.BoostLevel2' => array(
+                        'name' => __("Intensif 2", __FILE__) ,
+                        'action' => 'Status'
+                    ) ,
+                    'Cooking.Hob.EnumType.Ventilation.AfterRun' => array(
+                        'name' => __("Postcirculation", __FILE__) ,
+                        'action' => 'Status'
+                    ) ,
+                )
             ) ,
             'Cooking.Oven.Program.SteamModes.DoughProving' => array(
                 'name' => __("Levage de la pâte", __FILE__) ,
@@ -3715,6 +3778,15 @@ class homeconnect_capabilities {
                     'AirConditioner'
                 )
             ) ,
+            'HeatingVentilationAirConditioning.AirConditioner.Option.SetpointTemperature' => array(
+                'name' => __("Température de consigne", __FILE__) ,
+                'action' => 'Option',
+                'type' => 'Double',
+                'unit' => '°C',
+                'available' => array(
+                    'AirConditioner'
+                )
+            ) ,
             'HeatingVentilationAirConditioning.AirConditioner.Option.FanSpeedMode' => array(
                 'name' => __("Mode de vitesse du ventilateur", __FILE__) ,
                 'action' => 'Option',
@@ -3723,8 +3795,8 @@ class homeconnect_capabilities {
                     'AirConditioner'
                 ) ,
                 'enum' => array(
-                    'HeatingVentilationAirConditioning.AirConditioner.EnumType.FanSpeedMode.Auto' => array(
-                        'name' => __("Auto", __FILE__) ,
+                    'HeatingVentilationAirConditioning.AirConditioner.EnumType.FanSpeedMode.Automatic' => array(
+                        'name' => __("Automatique", __FILE__) ,
                         'action' => 'Status'
                     ) ,
                     'HeatingVentilationAirConditioning.AirConditioner.EnumType.FanSpeedMode.Manual' => array(
@@ -6196,7 +6268,7 @@ class homeconnect_capabilities {
                 'action' => 'Option',
                 'type' => 'String',
                 'available' => array(
-                    'CoffeeMachine',
+                    'CoffeeMaker',
                     'Cooktop',
                     'Hood',
                     'Oven',
@@ -6213,7 +6285,7 @@ class homeconnect_capabilities {
                 'action' => 'Option',
                 'type' => 'String',
                 'available' => array(
-                    'CoffeeMachine',
+                    'CoffeeMaker',
                     'Cooktop',
                     'Hood',
                     'Oven',
@@ -6279,7 +6351,7 @@ class homeconnect_capabilities {
                     'max' => 86340
                 ),
                 'available' => array(
-                    'CoffeeMachine',
+                    'CoffeeMaker',
                     'Hood',
                     'Oven',
                     'Dishwasher',
@@ -6332,7 +6404,7 @@ class homeconnect_capabilities {
                     'max' => 100
                 ),
                 'available' => array(
-                    'CoffeeMachine',
+                    'CoffeeMaker',
                     'Hood',
                     'Oven',
                     'WarmingDrawer',
@@ -6519,10 +6591,6 @@ class homeconnect_capabilities {
                     ) ,
                 )
             ) ,
-            'BSH.Common.Status.CameraState' => array(
-                'name' => __("État de la caméra", __FILE__) ,
-                'action' => 'Status'
-            ) ,
             'BSH.Common.Status.DoorState' => array(
                 'name' => __("Porte", __FILE__) ,
                 'action' => 'Status',
@@ -6591,7 +6659,7 @@ class homeconnect_capabilities {
                 'action' => 'Status',
                 'type' => 'Enumeration',
                 'available' => array(
-                    'CoffeeMachine',
+                    'CoffeeMaker',
                     'CookProcessor',
                     'Cooktop',
                     'Hood',
@@ -6608,7 +6676,7 @@ class homeconnect_capabilities {
                         'name' => __("Inactif", __FILE__) ,
                         'action' => 'Status',
                         'available' => array(
-                            'CoffeeMachine',
+                            'CoffeeMaker',
                             'CookProcessor',
                             'Cooktop',
                             'Hood',
@@ -6625,7 +6693,7 @@ class homeconnect_capabilities {
                         'name' => __("Prêt", __FILE__) ,
                         'action' => 'Status',
                         'available' => array(
-                            'CoffeeMachine',
+                            'CoffeeMaker',
                             'CookProcessor',
                             'Cooktop',
                             'Oven',
@@ -6653,7 +6721,7 @@ class homeconnect_capabilities {
                         'name' => __("En fonctionnement", __FILE__) ,
                         'action' => 'Status',
                         'available' => array(
-                            'CoffeeMachine',
+                            'CoffeeMaker',
                             'CookProcessor',
                             'Cooktop',
                             'Hood',
@@ -6683,7 +6751,7 @@ class homeconnect_capabilities {
                         'name' => __("Action requise", __FILE__) ,
                         'action' => 'Status',
                         'available' => array(
-                            'CoffeeMachine',
+                            'CoffeeMaker',
                             'CookProcessor',
                             'Cooktop',
                             'Oven',
@@ -6698,7 +6766,7 @@ class homeconnect_capabilities {
                         'name' => __("Terminé", __FILE__) ,
                         'action' => 'Status',
                         'available' => array(
-                            'CoffeeMachine',
+                            'CoffeeMaker',
                             'CookProcessor',
                             'Cooktop',
                             'Oven',
@@ -6713,7 +6781,7 @@ class homeconnect_capabilities {
                         'name' => __("Erreur", __FILE__) ,
                         'action' => 'Status',
                         'available' => array(
-                            'CoffeeMachine',
+                            'CoffeeMaker',
                             'CookProcessor',
                             'Cooktop',
                             'Oven',
@@ -6728,7 +6796,7 @@ class homeconnect_capabilities {
                         'name' => __("Abandon", __FILE__) ,
                         'action' => 'Status',
                         'available' => array(
-                            'CoffeeMachine',
+                            'CoffeeMaker',
                             'CookProcessor',
                             'Cooktop',
                             'Oven',
@@ -6742,7 +6810,7 @@ class homeconnect_capabilities {
                         'name' => __("Démarrage à distance", __FILE__) ,
                         'action' => 'Status',
                         'available' => array(
-                            'CoffeeMachine',
+                            'CoffeeMaker',
                             'Hood',
                             'Oven',
                             'WarmingDrawer',
@@ -6770,7 +6838,7 @@ class homeconnect_capabilities {
                         'name' => __("Appareil en fonctionnement", __FILE__) ,
                         'action' => 'Status',
                         'available' => array(
-                            'CoffeeMachine',
+                            'CoffeeMaker',
                             'Cooktop',
                             'Hood',
                             'Oven',
@@ -6787,7 +6855,7 @@ class homeconnect_capabilities {
                 'action' => 'Setting',
                 'type' => 'Enumeration',
                 'available' => array(
-                    'CoffeeMachine',
+                    'CoffeeMaker',
                     'CookProcessor',
                     'Cooktop',
                     'Hood',
@@ -6817,7 +6885,7 @@ class homeconnect_capabilities {
                         'name' => __("Activé", __FILE__) ,
                         'action' => 'Status',
                         'available' => array(
-                            'CoffeeMachine',
+                            'CoffeeMaker',
                             'CookProcessor',
                             'Cooktop',
                             'Hood',
@@ -6840,7 +6908,7 @@ class homeconnect_capabilities {
                         'available' => array(
                             'Oven',
                             'WarmingDrawer',
-                            'CoffeeMachine',
+                            'CoffeeMaker',
                             'CleaningRobot',
                             'CookProcessor'
                         ) ,
@@ -6934,7 +7002,7 @@ class homeconnect_capabilities {
                 'action' => 'Setting',
                 'type' => 'Enumeration',
                 'available' => array(
-                    'CoffeeMachine',
+                    'CoffeeMaker',
                     'Cooktop',
                     'Oven',
                     'WarmingDrawer',
@@ -6948,7 +7016,7 @@ class homeconnect_capabilities {
                         'name' => __("Celsius", __FILE__) ,
                         'action' => 'Setting',
                         'available' => array(
-                            'CoffeeMachine',
+                            'CoffeeMaker',
                             'Cooktop',
                             'Oven',
                             'WarmingDrawer',
@@ -6962,7 +7030,7 @@ class homeconnect_capabilities {
                         'name' => __("Fahrenheit", __FILE__) ,
                         'action' => 'Setting',
                         'available' => array(
-                            'CoffeeMachine',
+                            'CoffeeMaker',
                             'Cooktop',
                             'Oven',
                             'WarmingDrawer',
@@ -6979,21 +7047,21 @@ class homeconnect_capabilities {
                 'action' => 'Setting',
                 'type' => 'Enumeration',
                 'available' => array(
-                    'CoffeeMachine'
+                    'CoffeeMaker'
                 ) ,
                 'enum' => array(
                     'BSH.Common.EnumType.LiquidVolumeUnit.FluidOunces' => array(
                         'name' => __("Onces liquides", __FILE__) ,
                         'action' => 'Setting',
                         'available' => array(
-                            'CoffeeMachine'
+                            'CoffeeMaker'
                         ) ,
                     ) ,
                     'BSH.Common.EnumType.LiquidVolumeUnit.MilliLiter' => array(
                         'name' => __("Millilitres", __FILE__) ,
                         'action' => 'Setting',
                         'available' => array(
-                            'CoffeeMachine'
+                            'CoffeeMaker'
                         ) ,
                     ) ,
                 )
@@ -7003,7 +7071,7 @@ class homeconnect_capabilities {
                 'action' => 'Setting',
                 'type' => 'Boolean',
                 'available' => array(
-                    'CoffeeMachine',
+                    'CoffeeMaker',
                     'Cooktop',
                     'Oven',
                     'WarmingDrawer',

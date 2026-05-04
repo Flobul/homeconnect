@@ -27,8 +27,13 @@ try {
 	ajax::init();
 
 	if (init('action') == 'loginHomeConnect') {
-		if (network::getUserLocation() == 'internal') {
-			throw new Exception(__("Connexion impossible : connectez-vous à votre Jeedom par l'accès externe, pas par l'accès interne", __FILE__));
+        $externalAddr = config::byKey('externalAddr', 'core', '');
+        $currentHost = $_SERVER['HTTP_HOST'] ?? '';
+        $isInternal = ($externalAddr == '' || strpos($currentHost, parse_url($externalAddr, PHP_URL_HOST) ?: $externalAddr) === false);
+
+        if ($isInternal) {
+
+            throw new Exception(__("Connexion impossible : connectez-vous à votre Jeedom par l'accès externe, pas par l'accès interne", __FILE__));
 		}
 		if (config::byKey('demo_mode','homeconnect')) {
 			homeconnect::authDemoRequest();
@@ -59,11 +64,11 @@ try {
         }
         $url = homeconnect::API_REQUEST_URL . '/'. $eqLogic->getConfiguration('haid') . '/' . init('path');
         $parameters = array('data' => array('key' => init('data_key'), 'value' => init('data_value')));
+        $payload = json_encode($parameters);
         log::add('homeconnect', 'debug',"Paramètres de la requête pour exécuter la commande :");
-        log::add('homeconnect', 'debug',"Method : " . $method);
+        log::add('homeconnect', 'debug',"Method : PUT");
         log::add('homeconnect', 'debug',"Url : " . $url);
         log::add('homeconnect', 'debug',"Payload : " . $payload);
-        $payload = json_encode($parameters);
         $response = homeconnect::request($url, $payload, 'PUT', array());
 		ajax::success($response);
 	}

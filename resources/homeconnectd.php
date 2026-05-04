@@ -15,7 +15,7 @@ require_once dirname(__FILE__) . '/../core/class/homeconnect.class.php';
             "Cache-Control: no-cache",
             "Connection: keep-alive",
             "Keep-Alive: 120",
-            "Host: api.home-connect.com",
+            "Host: " . parse_url(homeconnect::baseUrl(), PHP_URL_HOST),
             "Accept-Language: " . config::byKey('language', 'core', 'fr_FR'),
             "Authorization: Bearer " . config::byKey('access_token','homeconnect'),
         ];

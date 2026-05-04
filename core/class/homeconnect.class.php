@@ -77,10 +77,9 @@ class homeconnect extends eqLogic {
         if (isset($tableData[$_key])) {
             return $tableData[$_key][$_detail];
         } else {
-            return $_key;
             log::add(__CLASS__, 'debug', __FUNCTION__ . __(' La clé ', __FILE__) . $_key . __(' est introuvable', __FILE__));
+            return $_key;
         }
-        return false;
     }
 
     public static function deamon_info() {
@@ -196,7 +195,7 @@ class homeconnect extends eqLogic {
          *
          * @return	 		string		URL contenant la requête
          */
-        return http_build_query($params, null, '&', PHP_QUERY_RFC3986);
+        return http_build_query($params, '', '&', PHP_QUERY_RFC3986);
     }
 
     public static function lastSegment($separator, $key) {
@@ -449,7 +448,7 @@ class homeconnect extends eqLogic {
             // Récupération du message d'erreur pour log.
             preg_match("/[\{].*[\}]/", $response, $matches);
             log::add(__CLASS__, 'debug', __('Erreur : Code erreur ', __FILE__) . $info['http_code'] . ' : ' . print_r($matches, true));
-            throw new Exception("Erreur : " . print_r($matches));
+            throw new Exception("Erreur : " . print_r($matches, true));
             return;
         }
 
@@ -920,7 +919,7 @@ class homeconnect extends eqLogic {
                 if (is_object($cmd)) {
                     $eqLogic->checkAndUpdateCmd($cmd, $key['connected']);
 
-                    log::add(__CLASS__, 'debug', __('MAJ du status connected ', __FILE__) . $eqLogic->getConfiguration('type', '') . ' ' . $eqLogic->getConfiguration('haId', '') . __(' Valeur : ', __FILE__) . $key['connected'] ? __('Oui', __FILE__) : __('Non', __FILE__));
+                    log::add(__CLASS__, 'debug', __('MAJ du status connected ', __FILE__) . $eqLogic->getConfiguration('type', '') . ' ' . $eqLogic->getConfiguration('haId', '') . __(' Valeur : ', __FILE__) . ($key['connected'] ? __('Oui', __FILE__) : __('Non', __FILE__)));
 
                 } else {
                     log::add(__CLASS__, 'debug', __('Erreur : La commande connected n\'existe pas ', __FILE__) . $eqLogic->getConfiguration('type', '') . ' ' . $eqLogic->getConfiguration('haId', ''));
@@ -1058,7 +1057,7 @@ class homeconnect extends eqLogic {
                         }
                         $eqLogic->updateInfoCmdValue($cmdLogicalId, $items);
                     } else {
-                        log::add(__CLASS__, 'debug', __('L\'appareil n\'existe pas ou n\'est pas activé ', __FILE__) . $array['haId']);
+                        log::add(__CLASS__, 'debug', __('L\'appareil n\'existe pas ou n\'est pas activé ', __FILE__) . $evenement['haId']);
                     }
                 }
             }
@@ -1208,7 +1207,7 @@ class homeconnect extends eqLogic {
                     $cmd->setConfiguration('step', $cmdData['constraints']['stepsize']);
                     $arr['step'] = $cmdData['constraints']['stepsize'];
                 } else {
-                    $$arr['step'] = 1;
+                    $arr['step'] = 1;
                 }
                 /*if ($cmd->getConfiguration('maxValue') >= 1000) {
                 $arr['bigstep'] = 900;
@@ -1618,7 +1617,7 @@ class homeconnect extends eqLogic {
                                 $cmd->setConfiguration('step', $optionData['constraints']['stepsize']);
                                 $arr['step'] = $optionData['constraints']['stepsize'];
                             } else {
-                                $$arr['step'] = 1;
+                                $arr['step'] = 1;
                             }
                             /*if ($cmd->getConfiguration('maxValue') >= 1000) {
                             $arr['bigstep'] = 900;
@@ -1785,7 +1784,10 @@ class homeconnect extends eqLogic {
                 // Pas de programme actif
                 // A voir : mettre à jour les autres commandes (états et réglages)
                 log::add(__CLASS__, 'debug', __('Pas de key ou key = SDK.Error.NoProgram ', __FILE__) . $programType);
-                $this->checkAndUpdateCmd($nameCmd, __('Aucun', __FILE__));
+                $cmdNone = $this->getCmd('info', $nameCmd);
+                if (is_object($cmdNone)) {
+                    $this->checkAndUpdateCmd($cmdNone, __('Aucun', __FILE__));
+                }
             }
         } else {
             log::add(__CLASS__, 'debug', __('Dans lookProgram request a retourné faux', __FILE__));
@@ -1811,7 +1813,7 @@ class homeconnect extends eqLogic {
 
             if (isset($programdata['data']['key'])) {
                 $actionCmd = $this->createActionCmd($programdata['data'], 'programs/' . strtolower($programType), 'Program');
-                log::add(__CLASS__, 'debug', __FUNCTION__ . __(' Création commande action Programme disponible ', __FILE__) . json_encode($programName['data']));
+                log::add(__CLASS__, 'debug', __FUNCTION__ . __(' Création commande action Programme disponible ', __FILE__) . json_encode($programdata['data']));
                 if ($programType == 'Selected' || $programType == 'Active') {
                     $infoCmd = $this->getCmd('info', 'GET::BSH.Common.Root.' . $programType . 'Program');
                     if (is_object($infoCmd)) {
@@ -1866,7 +1868,7 @@ class homeconnect extends eqLogic {
                     $configOpt = array_merge($opt, $cmdProgram->getConfiguration('listOptions', array()));
                     $configOpt = array_unique($configOpt);
                     $cmdProgram->setConfiguration('listOptions', $configOpt)->save();
-                    log::add(__CLASS__, 'debug', __('Ajout des options disponibles dans la commande PUT::', __FILE__). $programKey . ' ' . print_r($configOpt, true));
+                    log::add(__CLASS__, 'debug', __('Ajout des options disponibles dans la commande PUT::', __FILE__). $_key . ' ' . print_r($configOpt, true));
                 }
             }
         }
