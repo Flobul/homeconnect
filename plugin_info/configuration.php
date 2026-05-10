@@ -23,7 +23,7 @@ if (!isConnect()) {
 }
 ?>
 
-<form class="form-horizontal">
+<form class="form-horizontal" id="configuration_plugin_homeconnect">
 	<fieldset>
 		<div class="form-group">
 			<label class="col-lg-3 control-label" >{{Pièce par défaut pour les appareils}}</label>
@@ -74,14 +74,15 @@ if (!isConnect()) {
 			</div>
 		</div>
 		<div class="form-group">
-			<label class="col-lg-3 control-label">
+			<label class="col-sm-3 control-label">
 				{{Redirect URI}}
 				<sup>
 					<i class="fa fa-question-circle tooltips" title="{{Cette URL sera demandée sur le site Home Connect pour la création des identifiants (https://developer.home-connect.com/applications/add)}}" style="font-size : 1em;color:grey;"></i>
 				</sup>
 			</label>
-			<div class="col-lg-9">
-				<span><?php echo network::getNetworkAccess('external') . '/plugins/homeconnect/x.php?k=' . jeedom::getApiKey('homeconnect');?></span>
+			<div class="col-sm-9">
+				<input type="text" class="form-control" id="redirectUriHomeconnect" readonly="readonly" value="<?php echo network::getNetworkAccess('external') . '/plugins/homeconnect/x.php?k=' . jeedom::getApiKey('homeconnect');?>"/>
+                <span id="textRedirectUriHomeconnect" style="font-style:italic;">ⓘ <?php echo strlen(network::getNetworkAccess('external') . '/plugins/homeconnect/x.php?k=' . jeedom::getApiKey('homeconnect'));?> caractères (max. 128)</span>
 			</div>
 		</div>
 		<div class="form-group">
@@ -124,8 +125,10 @@ if (!isConnect()) {
 			</div>
 		</div>
 		<div class="form-group">
-			<label class="col-sm-3 control-label">{{Se connecter}}</label>
-			<div class="col-sm 3">
+			<label class="col-sm-3 control-label">
+				{{Se connecter}}
+			</label>
+			<div class="col-sm-3">
 				<a class="btn btn-warning" id="bt_loginHomeConnect"><i class="fas fa-sign-in-alt"></i> {{Appareils réels}}</a>				  <a class="btn btn-warning" id="bt_loginDemoHomeConnect"><i class="fas fa-sign-in-alt"></i> {{Démo (Simulateurs)}}</a>
 			</div>
 		</div>
@@ -153,75 +156,4 @@ if (!isConnect()) {
   </fieldset>
 </form>
 
-<script>
-$('.configKey[data-l1key=demo_mode]').on('change', function() {
-	if ($(this).value()=='1') { $('#bt_loginDemoHomeConnect').show(); $('#bt_loginHomeConnect').hide();} else { $('#bt_loginDemoHomeConnect').hide(); $('#bt_loginHomeConnect').show();}
-});
-$('#bt_loginHomeConnect').on('click', function () {
-	$.ajax({ // fonction permettant de faire de l'ajax
-		type: "POST", // methode de transmission des données au fichier php
-		url: "plugins/homeconnect/core/ajax/homeconnect.ajax.php", // url du fichier php
-		data: {
-			action: "loginHomeConnect"
-		},
-		dataType: 'json',
-		error: function (request, status, error) {
-			handleAjaxError(request, status, error);
-		},
-		success: function (data) {
-			if (data.state != 'ok') {
-				$('#div_alert').showAlert({message: data.result, level: 'danger'});
-				return;
-			}
-			window.location.href = data.result.redirect;
-		}
-	});
-});
-$('#bt_loginDemoHomeConnect').on('click', function () {
-	$.ajax({ // fonction permettant de faire de l'ajax
-		type: "POST", // methode de transmission des données au fichier php
-		url: "plugins/homeconnect/core/ajax/homeconnect.ajax.php", // url du fichier php
-		data: {
-			action: "loginHomeConnect"
-		},
-		dataType: 'json',
-		error: function (request, status, error) {
-			handleAjaxError(request, status, error);
-		},
-		success: function (data) {
-			if (data.state != 'ok') {
-				$('#div_alert').showAlert({message: data.result, level: 'danger'});
-				return;
-			}
-		}
-	});
-});
-
-$('#bt_savePluginLogConfig').off('click').on('click', function () {
-   var plugin = $('#span_plugin_id').text();
-   var logPluginLevel = $('#div_plugin_log').getValues('.configKey')[0];
-   var logPluginLeveltoStr = JSON.stringify(logPluginLevel);
-   $('.bt_plugin_conf_view_log').each(function () {
-       var filename = $(this).attr('data-log');
-       logPluginLeveltoStr = logPluginLeveltoStr.replace("log::level::" + plugin, "log::level::" + filename);
-       newLogPluginLevel = JSON.parse(logPluginLeveltoStr);
-       jeedom.config.save({
-           configuration: newLogPluginLevel,
-           error: function(error) {
-              $.fn.showAlert({
-                message: error.message,
-                level: 'danger'
-              })
-           },
-           success: function() {
-              $.fn.showAlert({
-                message: '{{Sauvegarde de la configuration des logs}} <i>' + filename + '</i> {{effectuée}}',
-                level: 'success'
-              })
-              modifyWithoutSave = false
-           }
-       });
-   });
-});
-
-</script>
+<?php include_file('desktop', 'configuration', 'js', 'homeconnect'); ?>

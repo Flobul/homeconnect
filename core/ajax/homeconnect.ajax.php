@@ -32,7 +32,6 @@ try {
         $isInternal = ($externalAddr == '' || strpos($currentHost, parse_url($externalAddr, PHP_URL_HOST) ?: $externalAddr) === false);
 
         if ($isInternal) {
-
             throw new Exception(__("Connexion impossible : connectez-vous à votre Jeedom par l'accès externe, pas par l'accès interne", __FILE__));
 		}
 		if (config::byKey('demo_mode','homeconnect')) {
