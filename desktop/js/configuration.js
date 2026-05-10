@@ -35,16 +35,14 @@ if (divPluginConfiguration) {
         var _target = null;
 
         if (_target = event.target.closest('#bt_loginHomeConnect, #bt_loginDemoHomeConnect')) {
-            _target.disabled = true;
+            _target.setAttribute('disabled', 'true');
             _target.innerHTML = '<i class="fas fa-spinner fa-spin"></i> {{Connexion en cours...}}';
-
+            var element = _target;
             homeconnectAjax(
                 { action: 'loginHomeConnect' },
                 function(data) {
-                    _target.disabled = false;
-                    _target.innerHTML = '<i class="fas fa-fingerprint"></i> {{Se connecter}}';
-
-                    console.log('[HomeConnect] Réponse loginHomeConnect :', data);
+                    element.setAttribute('disabled', 'false');
+                    element.innerHTML = '<i class="fas fa-fingerprint"></i> {{Se connecter}}';
 
                     if (!data || data.result === false) {
                         jeedomUtils.showAlert({
@@ -53,23 +51,23 @@ if (divPluginConfiguration) {
                         });
                         return;
                     }
-                    if (data.result && data.result.token) {
+                    if (data.result && data.result.redirect) {
                         jeedomUtils.showAlert({
                             message: '<i class="fas fa-check-circle"></i> {{Connexion au compte HomeConnect réussie.}}' +
-                                     '<br><small>{{Identifiant compte}} : <strong>' + (data.result.accountID || '') + '</strong></small>',
+                                     '<br>{{Vous allez être redirigé vers HomeConnect pour autoriser l\'accès de Jeedom à votre compte.}}',
                             level: 'success'
                         });
 			            window.location.href = data.result.redirect;
                         return;
                     }
                     jeedomUtils.showAlert({
-                        message: '{{Erreur lors de la connexion}} : ' + (data.result && data.result.message ? data.result.message : '{{erreur inconnue}}'),
+                        message: '{{Erreur lors de la connexion}} :<br>' + data.result,
                         level: 'danger'
                     });
                 },
                 function(error) {
-                    _target.disabled = false;
-                    _target.innerHTML = '<i class="fas fa-fingerprint"></i> {{Se connecter}}';
+                    element.setAttribute('disabled', 'false');
+                    element.innerHTML = '<i class="fas fa-fingerprint"></i> {{Se connecter}}';
                     console.error('[HomeConnect] Erreur AJAX :', error);
                     jeedomUtils.showAlert({
                         message: '{{Erreur de communication avec le serveur.}}',
