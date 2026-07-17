@@ -24,6 +24,7 @@ class homeconnect extends eqLogic {
 
     /** *************************** Constantes ******************************** */
 
+    public static $_pluginVersion = '2026-07-17';
     const API_AUTH_URL = "/security/oauth/authorize"; //?client_id=XXX&redirect_uri=XXX&response_type=code&scope=XXX&state=XXX
     const API_TOKEN_URL = "/security/oauth/token"; //client_id=XXX&redirect_uri=XXX&grant_type=authorization_code&code=XXX
     const API_REQUEST_URL = "/api/homeappliances";
@@ -411,7 +412,7 @@ class homeconnect extends eqLogic {
         cache::set('homeconnect::state', $state, 600);
         // Construction de l'url.
         $url = $authorizationUrl . "?" . self::buildQueryString($parameters);
-        log::add(__CLASS__, 'debug', "Url : " . $url);
+        log::add(__CLASS__, 'debug', "Url : " . $authorizationUrl);
         log::add(__CLASS__, 'debug', __('Fin ', __FILE__) . __FUNCTION__);
         return $url;
     }
@@ -460,7 +461,7 @@ class homeconnect extends eqLogic {
 
             if ($explode[0] == "code") {
                 config::save('auth', $explode[1], 'homeconnect');
-                log::add(__CLASS__, 'debug', __('Code d\'autorisation récupéré ', __FILE__) . $explode[1]);
+                log::add(__CLASS__, 'debug', __('Code d\'autorisation récupéré', __FILE__));
                 homeconnect::tokenRequest();
             }
         }
@@ -502,7 +503,7 @@ class homeconnect extends eqLogic {
         }
         $parameters['grant_type'] = 'authorization_code';
         $parameters['code'] = urldecode(config::byKey('auth', 'homeconnect'));
-        log::add(__CLASS__, 'debug', "Post fields : " . self::buildQueryString($parameters));
+        log::add(__CLASS__, 'debug', "OAuth grant type : " . $parameters['grant_type']);
 
         // Récupération du Token.
         $curl = curl_init();
@@ -516,7 +517,6 @@ class homeconnect extends eqLogic {
         );
         curl_setopt_array($curl, $options);
         $response = json_decode(curl_exec($curl) , true);
-        log::add(__CLASS__, 'debug', "Response = " . print_r($response, true));
         $http_code = curl_getinfo($curl, CURLINFO_HTTP_CODE);
         curl_close($curl);
 
@@ -540,12 +540,9 @@ class homeconnect extends eqLogic {
         config::save('expires_in', $expires_in, 'homeconnect');
         config::save('id_token', $response['id_token'], 'homeconnect');
 
-        log::add(__CLASS__, 'debug', 'Access token : ' . $response['access_token']);
-        log::add(__CLASS__, 'debug', 'Refresh token : ' . $response['refresh_token']);
         log::add(__CLASS__, 'debug', 'Token type : ' . $response['token_type']);
         log::add(__CLASS__, 'debug', 'Scope : ' . $response['scope']);
         log::add(__CLASS__, 'debug', 'Expires in : ' . $expires_in);
-        log::add(__CLASS__, 'debug', 'Id token : ' . $response['id_token']);
         log::add(__CLASS__, 'debug', __('Fin ', __FILE__) . __FUNCTION__);
     }
 
@@ -575,7 +572,7 @@ class homeconnect extends eqLogic {
             $parameters['client_secret'] = trim(config::byKey('client_secret', 'homeconnect', '', true));
         }
         $parameters['refresh_token'] = config::byKey('refresh_token', 'homeconnect', '', true);
-        log::add(__CLASS__, 'debug', "Post fields : " . json_encode($parameters));
+        log::add(__CLASS__, 'debug', "OAuth grant type : " . $parameters['grant_type']);
 
         // Récupération du Token.
         $curl = curl_init();
@@ -588,7 +585,6 @@ class homeconnect extends eqLogic {
         );
         curl_setopt_array($curl, $options);
         $response = json_decode(curl_exec($curl) , true);
-        log::add(__CLASS__, 'debug', "Response : " . print_r($response, true));
         $http_code = curl_getinfo($curl, CURLINFO_HTTP_CODE);
         curl_close($curl);
 
@@ -618,12 +614,9 @@ class homeconnect extends eqLogic {
         config::save('expires_in', $expires_in, 'homeconnect');
         config::save('id_token', $response['id_token'], 'homeconnect');
 
-        log::add(__CLASS__, 'debug', 'Access token : ' . $response['access_token']);
-        log::add(__CLASS__, 'debug', 'Refresh token : ' . $response['refresh_token']);
         log::add(__CLASS__, 'debug', 'Token type : ' . $response['token_type']);
         log::add(__CLASS__, 'debug', 'Scope : ' . $response['scope']);
         log::add(__CLASS__, 'debug', 'Expires in : ' . $expires_in);
-        log::add(__CLASS__, 'debug', 'Id token : ' . $response['id_token']);
         log::add(__CLASS__, 'debug', __('Fin ', __FILE__) . __FUNCTION__);
     }
 

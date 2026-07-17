@@ -1,6 +1,7 @@
 {
 	"id": "homeconnect",
 	"name": "Home Connect",
+	"pluginVersion": "2026-07-17",
 	"description": {
 		"fr_FR": "Plugin permettant de récupérer les informations, via l'API officielle, des appareils électroménagers compatibles (Bosch, Siemens, Gaggenau, Neff, Thermador, Balay, Constructa, Pistsos, Profilo) et de les piloter depuis Jeedom (possibilité rétreinte en fonction du type d'appareil).",
 		"en_US": "Plugin that allows you to retrieve information, via the official API, from compatible household appliances (Bosch, Siemens, Gaggenau, Neff, Thermador, Balay, Constructa, Pistsos, Profilo) and control them from Jeedom (limited functionality depending on the type of appliance).",
@@ -12,7 +13,7 @@
 	"licence": "AGPL",
 	"installation": "Vérifiez bien que vous avez correctement configuré la partie Générale -> Administration -> Configuration puis onglets Réseaux, en effet il faut lors de l'association de Jeedom au compte Home Connect que votre Jeedom soit accessible de l'extérieur.",
 	"author": "Sartog (modifié par Flobul)",
-	"require": "3.3",
+	"require": "4.4",
 	"category": "devicecommunication",
 	"changelog": "https://flobul-domotique.fr/liste-des-versions-du-plugin-homeconnect-pour-jeedom/",
 	"changelog_beta": "https://flobul-domotique.fr/liste-des-versions-du-plugin-homeconnect-pour-jeedom/",
