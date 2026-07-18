@@ -26,13 +26,13 @@ function homeconnect_install() {
 		$resuDir = __DIR__ . '/../../widget/core/template/dashboard';
 		if (file_exists($resuDir)) { // plugin widget déjà installé
 			$file = '/cmd.info.numeric.dureev3.html';
-			shell_exec("cp $srcDir$file $resuDir");
+			@copy($srcDir . $file, $resuDir . $file);
 		}
 		$srcDir	 = __DIR__ . '/../core/template/mobile';
 		$resuDir = __DIR__ . '/../../widget/core/template/mobile';
 		if (file_exists($resuDir)) { // plugin widget déjà installé
 			$file = '/cmd.info.numeric.dureev3.html';
-			shell_exec("cp $srcDir$file $resuDir");
+			@copy($srcDir . $file, $resuDir . $file);
 		}
 	}
 }
@@ -44,13 +44,13 @@ function homeconnect_update() {
 		$resuDir = __DIR__ . '/../../widget/core/template/dashboard';
 		if (file_exists($resuDir)) { // plugin widget déjà installé
 			$file = '/cmd.info.numeric.dureev3.html';
-			shell_exec("cp $srcDir$file $resuDir");
+			@copy($srcDir . $file, $resuDir . $file);
 		}
 		$srcDir	 = __DIR__ . '/../core/template/mobile';
 		$resuDir = __DIR__ . '/../../widget/core/template/mobile';
 		if (file_exists($resuDir)) { // plugin widget déjà installé
 			$file = '/cmd.info.numeric.dureev3.html';
-			shell_exec("cp $srcDir$file $resuDir");
+			@copy($srcDir . $file, $resuDir . $file);
 		}
 	}
 	// Fix pour mon oubli

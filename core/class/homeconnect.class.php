@@ -24,7 +24,7 @@ class homeconnect extends eqLogic {
 
     /** *************************** Constantes ******************************** */
 
-    public static $_pluginVersion = '2026-07-17';
+    public static $_pluginVersion = '2026-07-18';
     const API_AUTH_URL = "/security/oauth/authorize"; //?client_id=XXX&redirect_uri=XXX&response_type=code&scope=XXX&state=XXX
     const API_TOKEN_URL = "/security/oauth/token"; //client_id=XXX&redirect_uri=XXX&grant_type=authorization_code&code=XXX
     const API_REQUEST_URL = "/api/homeappliances";
@@ -238,6 +238,9 @@ class homeconnect extends eqLogic {
         $ch = curl_init(self::baseUrl() . $url);
         curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, true);
         curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 2);
+        curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, 10);
+        curl_setopt($ch, CURLOPT_TIMEOUT, 30);
+        curl_setopt($ch, CURLOPT_FOLLOWLOCATION, false);
         curl_setopt($ch, CURLOPT_CUSTOMREQUEST, $method);
 
         $requestHeaders = array(
@@ -259,6 +262,11 @@ class homeconnect extends eqLogic {
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
         curl_setopt($ch, CURLOPT_HTTPHEADER, $requestHeaders);
         $result = curl_exec($ch);
+        if ($result === false) {
+            $error = curl_error($ch);
+            curl_close($ch);
+            throw new RuntimeException(__('Erreur réseau Home Connect : ', __FILE__) . $error);
+        }
         $code = curl_getinfo($ch, CURLINFO_HTTP_CODE);
         curl_close($ch);
 
@@ -268,11 +276,11 @@ class homeconnect extends eqLogic {
         log::add(__CLASS__, 'debug', __('Nombre de requêtes envoyées aujourd\'hui ', __FILE__) . $totalRequests);
 
         if ($code == '200' || $code == '204') {
-            log::add(__CLASS__, 'debug', __('La requête ', __FILE__) . $method . ' : ' . $url . __(' a réussi, code ', __FILE__) . $code . __(', résultat ', __FILE__) . $result);
+            log::add(__CLASS__, 'debug', __('La requête ', __FILE__) . $method . ' : ' . $url . __(' a réussi, code ', __FILE__) . $code);
             return $result;
         } else {
             // Traitement des erreurs
-            log::add(__CLASS__, 'debug', __('La requête ', __FILE__) . $method . ' : ' . $url . __(' a retourné un code d\'erreur ', __FILE__) . $code . __(', résultat ', __FILE__) . $result);
+            log::add(__CLASS__, 'debug', __('La requête ', __FILE__) . $method . ' : ' . $url . __(' a retourné un code d\'erreur ', __FILE__) . $code);
             switch ($code) {
                 case 400:
                     // "Bad Request", desc: "Error occurred (e.g. validation error - value is out of range)"
