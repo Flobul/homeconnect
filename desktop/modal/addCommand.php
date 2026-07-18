@@ -35,7 +35,7 @@ if (!is_object($eqLogic)) {
   <div class="tab-content" id="div_displayCmdConfigure" style="overflow-x:hidden">
   <div class="input-group pull-right" style="display:inline-flex">
     <span class="input-group-btn">
-      </a><a class="btn btn-success btn-sm roundedRight roundedLeft" id="bt_cmdCreateSave"><i class="fas fa-check-circle"></i> {{Sauvegarder}}</a>
+      <a class="btn btn-success btn-sm roundedRight roundedLeft" id="bt_cmdCreateSave"><i class="fas fa-check-circle"></i> {{Sauvegarder}}</a>
     </span>
   </div>
     <div role="tabpanel" class="tab-pane active" id="cmd_information">
@@ -144,57 +144,48 @@ if (!is_object($eqLogic)) {
 </div>
 
 <script>
-console.log(cmdsParam['BSH.Common.Setting.TemperatureUnit']['enum'].length)
+document.getElementById('bt_cmdCreateSave')?.addEventListener('click', function() {
+	const key = document.getElementById('sel_object')?.value || '';
 
-  for (const [key, value] of Object.entries(cmdsParam['BSH.Common.Setting.TemperatureUnit']['enum'])) {
-  console.log(value);
-}
-
-
-$('#bt_cmdCreateSave').off().on('click',function() {
-	var cle = $("#cmd_information #sel_object option:selected").value();
-    console.log('cle',cle)
-      console.log('zetzet',cmdsParam[cle]['name'])
-
-	if(cle == '' || !cmdsParam[cle]){
-          $('#div_alert').showAlert({message: '{{Veuillez sélectionnez une commande}}', level: 'danger'});
-    } else {
-        var path = '';
-        if (cmdsParam[cle]['action'] == 'Program') {
-            path = 'programs/active';
-        } else if (cmdsParam[cle]['action'] == 'Setting') {
-            path = 'settings/' + cle;
-        } else if (cmdsParam[cle]['action'] == 'Status') {
-            path = 'status/' + cle;
-        }  else if (cmdsParam[cle]['action'] == 'Option') {
-            path = 'status/' + cle;
-        }
-        var subType = 'other';
-        var listValue = '';
-        if (cmdsParam[cle]['type'] == 'Enumeration') {
-            subType = 'select';
-            for (const [key, value] of Object.entries(cmdsParam[cle]['enum'])) {
-                listValue += key + '|' + value.name + ';';
-            }
-            listValue.substring(0,listValue.length-1);
-        }
-		var cmdData = {
-			name: cmdsParam[cle]['name'],
-			type: 'action',
-			subType: subType,
-			logicalId: 'PUT::' + cle,
-			isVisible: 1,
-			configuration: {
-				"path": path,
-				"key": cle,
-				"category": cmdsParam[cle]['action'],
-				...(listValue != '') && {"listValue": listValue, "value": "#select#"}
-			}
- 	     };
-		addCmdToTable(cmdData);
-        modifyWithoutSave = true
-        $('#md_modal').dialog('close');
-		$('#div_alert').showAlert({message: '{{Commande créée avec succès ! Cliquez sur Sauvegarder pour enregistrer la commande.}}', level: 'success'});
-    }
+		if (key === '' || !cmdsParam[key]) {
+	          jeedomUtils.showAlert({message: '{{Veuillez sélectionner une commande}}', level: 'danger'});
+	    } else {
+	        var path = '';
+	        if (cmdsParam[key]['action'] == 'Program') {
+	            path = 'programs/active';
+	        } else if (cmdsParam[key]['action'] == 'Setting') {
+	            path = 'settings/' + key;
+	        } else if (cmdsParam[key]['action'] == 'Status') {
+	            path = 'status/' + key;
+	        }  else if (cmdsParam[key]['action'] == 'Option') {
+	            path = 'status/' + key;
+	        }
+	        var subType = 'other';
+	        var listValue = '';
+	        if (cmdsParam[key]['type'] == 'Enumeration') {
+	            subType = 'select';
+	            for (const [enumKey, value] of Object.entries(cmdsParam[key]['enum'])) {
+	                listValue += enumKey + '|' + value.name + ';';
+	            }
+	            listValue = listValue.slice(0, -1);
+	        }
+			var cmdData = {
+				name: cmdsParam[key]['name'],
+				type: 'action',
+				subType: subType,
+				logicalId: 'PUT::' + key,
+				isVisible: 1,
+				configuration: {
+					"path": path,
+					"key": key,
+					"category": cmdsParam[key]['action'],
+					...(listValue != '') && {"listValue": listValue, "value": "#select#"}
+				}
+			};
+			addCmdToTable(cmdData);
+	        modifyWithoutSave = true;
+	        jeeDialog.get('#md_modal')?.close();
+			jeedomUtils.showAlert({message: '{{Commande créée avec succès ! Cliquez sur Sauvegarder pour enregistrer la commande.}}', level: 'success'});
+	    }
 });
 </script>

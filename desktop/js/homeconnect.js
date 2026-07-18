@@ -14,10 +14,10 @@
  * You should have received a copy of the GNU General Public License
  * along with Jeedom. If not, see <http://www.gnu.org/licenses/>.
  */
- $('#bt_deleteEqLogic').on('click', function () {
-	bootbox.confirm('{{Cette action supprimera tous les appareils. Faites une synchronisation pour les re-créer}}', function(result) {
+document.getElementById('bt_deleteEqLogic')?.addEventListener('click', function () {
+	jeeDialog.confirm('{{Cette action supprimera tous les appareils. Faites une synchronisation pour les re-créer}}', function(result) {
 		if (result) {
-			$.ajax({// fonction permettant de faire de l'ajax
+			domUtils.ajax({
 				type: "POST", // methode de transmission des données au fichier php
                 url: "plugins/homeconnect/core/ajax/homeconnect.ajax.php", // url du fichier php
                 data: {
@@ -29,10 +29,10 @@
                 },
                 success: function (data) { // si l'appel a bien fonctionné
                     if (data.state != 'ok') {
-                        $.fn.showAlert({message: data.result, level: 'danger'});
+                        jeedomUtils.showAlert({message: data.result, level: 'danger'});
                         return;
                     }
-                    $.fn.showAlert({message: '{{Suppression effectuée}}', level: 'success'});
+                    jeedomUtils.showAlert({message: '{{Suppression effectuée}}', level: 'success'});
                     location.reload();
                 }
 	        });
@@ -42,7 +42,7 @@
 
 function syncHC(force = false) {
 
-	$.ajax({ // fonction permettant de faire de l'ajax
+	domUtils.ajax({
 		type: "POST", // methode de transmission des données au fichier php
 		url: "plugins/homeconnect/core/ajax/homeconnect.ajax.php", // url du fichier php
 		data: {
@@ -55,69 +55,49 @@ function syncHC(force = false) {
 		},
 		success: function (data) { // si l'appel a bien fonctionné
 			if (data.state != 'ok') {
-				$.fn.showAlert({message: data.result, level: 'danger'});
+				jeedomUtils.showAlert({message: data.result, level: 'danger'});
 				return;
 			}
-			$.fn.showAlert({message: '{{Synchronisation réussie}}', level: 'success'});
+			jeedomUtils.showAlert({message: '{{Synchronisation réussie}}', level: 'success'});
 			location.reload();
 		}
 	});
 }
 
- $('#bt_syncHomeConnect').on('click', function () {
-	bootbox.dialog({
-      title: '{{Synchronisation}}',
-      message: '<p>{{Vos appareils doivent être allumés, WiFi activé et sans programme en cours.}}</p>{{Oui : Ne récupère que la liste des appareils et des commandes de fichier de configuration}}<br/>{{Forcer : consomme beaucoup de requêtes pour récupérer à nouveau tous les programmes et options}}',
-      buttons: {
-          confirm: {
-              label: '<i class="fa fa-check"></i> {{Oui}}',
-              className: 'btn-success',
-              callback: function(){
-                  syncHC(false);
-              }
-          },
-          force: {
-              label: '<i class="fas fa-check-double"></i> {{Forcer}}',
-              className: 'btn-success',
-              callback: function(){
-                  syncHC(true);
-              }
-          },
-          cancel: {
-              label: '<i class="fa fa-times"></i> {{Annuler}}',
-              className: 'btn btn-danger'
-          },
-        }
-	});
-});
-
-$('#bt_healthHomeConnect').on('click', function () {
-	$('#md_modal').dialog({title: "{{Santé Home Connect}}"});
-	$('#md_modal').load('index.php?v=d&plugin=homeconnect&modal=health').dialog('open');
-});
-
-$('body').delegate('.cmdAttr[data-action=configureCommand]', 'click', function() {
-    $('#md_modal').dialog({
-        title: "{{Configuration de la commande}}"
+document.getElementById('bt_syncHomeConnect')?.addEventListener('click', function () {
+	jeeDialog.confirm('{{Forcer la récupération complète des programmes et options ? Une synchronisation normale ne récupère que les appareils et commandes connus.}}', function(force) {
+      syncHC(force === true);
     });
-    $('#md_modal').load('index.php?v=d&plugin=homeconnect&modal=command.configure&id=' + $(this).closest('.cmd').getValues('.cmdAttr')[0]['id']).dialog('open');
 });
 
-$('.cmdAction[data-action=addCommand]').on('click', function() {
-    $('#md_modal').dialog({
-        title: "{{Assistant de création de commande}}"
-    });
-    $('#md_modal').load('index.php?v=d&plugin=homeconnect&modal=addCommand&eqLogic_id='+$('.eqLogicAttr[data-l1key=id]').value()).dialog('open');
+document.getElementById('bt_healthHomeConnect')?.addEventListener('click', function () {
+	jeeDialog.dialog({id: 'md_modal', title: '{{Santé Home Connect}}', contentUrl: 'index.php?v=d&plugin=homeconnect&modal=health'});
 });
 
-$('.eqLogicAttr[data-l1key=configuration][data-l2key=type]').on('change',function(){
-    if($(this).value() == null){
+document.body.addEventListener('click', function(event) {
+  const configureButton = event.target.closest('.cmdAttr[data-action="configureCommand"]');
+  if (configureButton) {
+    const command = configureButton.closest('.cmd').getJeeValues('.cmdAttr')[0];
+    jeeDialog.dialog({id: 'md_modal', title: '{{Configuration de la commande}}', contentUrl: 'index.php?v=d&plugin=homeconnect&modal=command.configure&id=' + command.id});
+  }
+});
+
+document.querySelector('.cmdAction[data-action="addCommand"]')?.addEventListener('click', function() {
+    const eqLogicId = document.querySelector('.eqLogicAttr[data-l1key="id"]').jeeValue();
+    jeeDialog.dialog({id: 'md_modal', title: '{{Assistant de création de commande}}', contentUrl: 'index.php?v=d&plugin=homeconnect&modal=addCommand&eqLogic_id=' + eqLogicId});
+});
+
+document.querySelector('.eqLogicAttr[data-l1key="configuration"][data-l2key="type"]')?.addEventListener('change', function(){
+    if (!this.value) {
 	    return;
     }
-	$('#img_device').attr("src", 'plugins/homeconnect/core/config/images/'+$(this).value()+'.png');
+	document.getElementById('img_device').src = 'plugins/homeconnect/core/config/images/' + this.value + '.png';
 });
 
-$("#table_cmd").sortable({axis: "y", cursor: "move", items: ".cmd", placeholder: "ui-state-highlight", tolerance: "intersect", forcePlaceholderSize: true});
+const commandTableBody = document.querySelector('#table_cmd tbody');
+if (commandTableBody && typeof Sortable !== 'undefined') {
+  new Sortable(commandTableBody, {draggable: '.cmd', animation: 150});
+}
 /*
  * Fonction pour l'ajout de commande, appellé automatiquement par plugin.template
  */
@@ -189,20 +169,20 @@ function addCmdToTable(_cmd) {
   tr += '</div>';
   tr += '</td>';
   tr += '</tr>';
-  $('#table_cmd tbody').append(tr);
-  var tr = $('#table_cmd tbody tr').last()
+  commandTableBody.insertAdjacentHTML('beforeend', tr);
+  const newRow = commandTableBody.lastElementChild;
   jeedom.eqLogic.buildSelectCmd({
-    id:  $('.eqLogicAttr[data-l1key=id]').value(),
+    id: document.querySelector('.eqLogicAttr[data-l1key="id"]').jeeValue(),
     filter: {type: 'info'},
     error: function (error) {
-      $.fn.showAlert({message: error.message, level: 'danger'})
+      jeedomUtils.showAlert({message: error.message, level: 'danger'})
     },
     success: function (result) {
-      tr.find('.cmdAttr[data-l1key=value]').append(result);
-      tr.find('.cmdAttr[data-l1key=configuration][data-l2key=updateCmdId]').append(result);
-      tr.setValues(_cmd, '.cmdAttr')
-      jeedom.cmd.changeType(tr, init(_cmd.subType))
+      newRow.querySelector('.cmdAttr[data-l1key="value"]')?.insertAdjacentHTML('beforeend', result);
+      newRow.querySelector('.cmdAttr[data-l1key="configuration"][data-l2key="updateCmdId"]')?.insertAdjacentHTML('beforeend', result);
+      newRow.setJeeValues(_cmd, '.cmdAttr')
+      jeedom.cmd.changeType(newRow, init(_cmd.subType))
     }
   })
-  jeedom.cmd.changeType($('#table_cmd tbody tr:last'), init(_cmd.subType));
+  jeedom.cmd.changeType(newRow, init(_cmd.subType));
 }

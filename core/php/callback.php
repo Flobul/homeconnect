@@ -13,7 +13,8 @@ if (!cache::exist('homeconnect::state')) {
 }
 $state = cache::byKey('homeconnect::state')->getValue();
 
-if (empty($_GET['state']) || !isset($state) || $_GET['state'] !== $state) {
+$receivedState = (string) init('state');
+if ($receivedState === '' || !is_string($state) || !hash_equals($state, $receivedState)) {
 	if (cache::exist('homeconnect::state')) {
         cache::delete('homeconnect::state');
     }
@@ -21,7 +22,11 @@ if (empty($_GET['state']) || !isset($state) || $_GET['state'] !== $state) {
 }
 cache::delete('homeconnect::state');
 
-config::save('auth', init('code'), 'homeconnect');
+$code = (string) init('code');
+if ($code === '') {
+	throw new Exception(__('Code d\'autorisation manquant', __FILE__));
+}
+config::save('auth', $code, 'homeconnect');
 log::add('homeconnect', 'debug', "│ Code d'autorisation sauvegardé.");
 homeconnect::tokenRequest();
 log::add('homeconnect', 'debug',"└────────── Fin de Callback");

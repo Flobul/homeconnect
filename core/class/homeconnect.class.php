@@ -236,7 +236,8 @@ class homeconnect extends eqLogic {
          * @return	$result		array		Résultat de la requête (json)
          */
         $ch = curl_init(self::baseUrl() . $url);
-        curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0);
+        curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, true);
+        curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 2);
         curl_setopt($ch, CURLOPT_CUSTOMREQUEST, $method);
 
         $requestHeaders = array(
@@ -435,7 +436,8 @@ class homeconnect extends eqLogic {
         $options = array(
             CURLOPT_URL => $url,
             CURLOPT_RETURNTRANSFER => true,
-            CURLOPT_SSL_VERIFYPEER => false,
+            CURLOPT_SSL_VERIFYPEER => true,
+            CURLOPT_SSL_VERIFYHOST => 2,
             CURLOPT_HEADER => true,
             CURLINFO_HEADER_OUT => true
         );
@@ -510,7 +512,8 @@ class homeconnect extends eqLogic {
         $options = array(
             CURLOPT_URL => $url,
             CURLOPT_RETURNTRANSFER => true,
-            CURLOPT_SSL_VERIFYPEER => false,
+            CURLOPT_SSL_VERIFYPEER => true,
+            CURLOPT_SSL_VERIFYHOST => 2,
             CURLOPT_HTTPHEADER => array('Content-Type: application/x-www-form-urlencoded'),
             CURLOPT_POST => true,
             CURLOPT_POSTFIELDS => self::buildQueryString($parameters)
@@ -579,7 +582,8 @@ class homeconnect extends eqLogic {
         $options = array(
             CURLOPT_URL => $url,
             CURLOPT_RETURNTRANSFER => true,
-            CURLOPT_SSL_VERIFYPEER => false,
+            CURLOPT_SSL_VERIFYPEER => true,
+            CURLOPT_SSL_VERIFYHOST => 2,
             CURLOPT_POST => true,
             CURLOPT_POSTFIELDS => self::buildQueryString($parameters)
         );

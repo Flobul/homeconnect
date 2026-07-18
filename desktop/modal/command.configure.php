@@ -38,7 +38,7 @@ $jsonPresent = false;
   <div class="tab-content" id="div_displayCmdConfigure" style="overflow-x:hidden">
   <div class="input-group pull-right" style="display:inline-flex">
     <span class="input-group-btn">
-      </a><a class="btn btn-success btn-sm roundedLeft roundedRight" id="bt_cmdConfigureSave"><i class="fas fa-check-circle"></i> {{Ajouter}}</a>
+      <a class="btn btn-success btn-sm roundedLeft roundedRight" id="bt_cmdConfigureSave"><i class="fas fa-check-circle"></i> {{Ajouter}}</a>
     </span>
   </div>
     <div role="tabpanel" class="tab-pane active" id="cmd_information">
@@ -79,6 +79,7 @@ $jsonPresent = false;
 
                 <div class="col-xs-9">
                   <?php if ($cmd->getConfiguration('key', '') !== '') {
+					  $tr = '';
                       $table = new homeconnect_capabilities();
                       $tableData = $table->appliancesCapabilities;
                       if (isset($tableData[$cmd->getConfiguration('key')])) {
@@ -90,9 +91,7 @@ $jsonPresent = false;
                                 case 'Enumeration':
                                   if (isset($data['enum'])) {
                                       foreach ($data['enum'] as $enum => $enumValue) {
-                                          if (isset($enumValue['available'])) {
-                                              $disabled = $enumValue['available'];
-                                          }
+											  $disabled = $enumValue['available'] ?? array();
                                           $isDisable = (in_array($cmd->getEqLogic()->getConfiguration('type'), $disabled)) ? '': 'disabled';
                                           $tr .= '<span>';
                                           $tr .= '<span class="label label-info data_key">'.$enum.'</span>';
@@ -138,47 +137,50 @@ $jsonPresent = false;
 </div>
 
 <script>
-$(function() {
-  //modal title:
-  var title = '{{Configuration commande}}'
-  title += ' : ' + cmdInfo.eqLogicName
-  title += ' <span class="cmdName">[' + cmdInfo.name + '] <em>(' + cmdInfo.type + ')</em></span>'
-  $('#div_displayCmdConfigure').parents('.ui-dialog').find('.ui-dialog-title').html(title)
-  if ($('#eqLogicConfigureTab').length) {
-    $('#cmdConfigureTab').parents('.ui-dialog').css('top', "50px")
-  }
-})
+const commandConfigure = document.getElementById('div_displayCmdConfigure');
+const dialog = commandConfigure?.closest('.ui-dialog');
+const dialogTitle = dialog?.querySelector('.ui-dialog-title');
+if (dialogTitle) {
+  dialogTitle.innerHTML = '{{Configuration commande}} : ' + cmdInfo.eqLogicName
+    + ' <span class="cmdName">[' + cmdInfo.name + '] <em>(' + cmdInfo.type + ')</em></span>';
+}
+if (document.getElementById('eqLogicConfigureTab')) {
+  const commandDialog = document.getElementById('cmdConfigureTab')?.closest('.ui-dialog');
+  if (commandDialog) commandDialog.style.top = '50px';
+}
 
-$('#div_displayCmdConfigure').setValues(cmdInfo, '.cmdAttr');
+commandConfigure?.setJeeValues(cmdInfo, '.cmdAttr');
 
-$('.bt_testEnum').off('click').on('click',function() {
-    var elbutton = $(this);
-	$.ajax({ // fonction permettant de faire de l'ajax
-		type: "POST", // methode de transmission des données au fichier php
-		url: "plugins/homeconnect/core/ajax/homeconnect.ajax.php", // url du fichier php
-		data: {
-			action: "testEnum",
-			data_key: cmdInfo.configuration.key,
-            data_value: elbutton.parent().find('.data_value').value(),
-            path: cmdInfo.configuration.path,
-            eqLogic_id: cmdInfo.eqLogic_id
+document.querySelectorAll('.bt_testEnum').forEach(function(button) {
+  button.addEventListener('click', function() {
+	domUtils.ajax({
+			type: "POST", // methode de transmission des données au fichier php
+			url: "plugins/homeconnect/core/ajax/homeconnect.ajax.php", // url du fichier php
+			data: {
+				action: "testEnum",
+				data_key: cmdInfo.configuration.key,
+	            data_value: button.parentElement.querySelector('.data_value')?.textContent || '',
+	            path: cmdInfo.configuration.path,
+	            eqLogic_id: cmdInfo.eqLogic_id
 		},
 		dataType: 'json',
 		error: function (request, status, error) {
 			handleAjaxError(request, status, error);
 		},
-		success: function (data) {
-			if (data.state != 'ok') {
-				$.fn.showAlert({message: data.result, level: 'danger'});
-				return;
+			success: function (data) {
+				if (data.state != 'ok') {
+					jeedomUtils.showAlert({message: data.result, level: 'danger'});
+					return;
+				}
+	            const result = button.parentElement.querySelector('#resultTestEnum');
+	            if (result) result.textContent = data.result;
 			}
-            elbutton.next('#resultTestEnum').html(data)
-		}
+		});
 	});
 });
 
-  $('#bt_cmdConfigureSave').on('click', function(event) {
-    var cmd = $('#div_displayCmdConfigure').getValues('.cmdAttr')[0];
+  document.getElementById('bt_cmdConfigureSave')?.addEventListener('click', function() {
+	    var cmd = commandConfigure.getJeeValues('.cmdAttr')[0];
     var req = (cmdInfo.type == 'action')?'PUT::':'GET::';
     cmdInfo.logicalId = req + cmd.configuration.key;
     cmdInfo.configuration = {}
@@ -187,20 +189,20 @@ $('.bt_testEnum').off('click').on('click',function() {
     cmdInfo.configuration.category = cmd.configuration.category;
     cmdInfo.configuration.value = cmd.configuration.value;
     jeedom.cmd.save({
-      cmd: cmdInfo,
-      error: function(error) {
-        $('#md_displayCmdConfigure').showAlert({
+	      cmd: cmdInfo,
+	      error: function(error) {
+	        jeedomUtils.showAlert({
           message: error.message,
           level: 'danger'
         })
       },
-      success: function(data) {
-        modifyWithoutSave = false
-        $('#md_displayCmdConfigure').showAlert({
+	      success: function(data) {
+	        modifyWithoutSave = false;
+	        jeedomUtils.showAlert({
           message: '{{Sauvegarde réussie}}',
           level: 'success'
         })
       }
-    })
-  })
+	    });
+	  });
 </script>

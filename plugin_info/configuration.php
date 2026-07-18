@@ -17,14 +17,31 @@
 
 require_once dirname(__FILE__) . '/../../../core/php/core.inc.php';
 include_file('core', 'authentification', 'php');
-if (!isConnect()) {
+if (!isConnect('admin')) {
 	include_file('desktop', '404', 'php');
 	die();
 }
+$plugin = plugin::byId('homeconnect');
+$update = $plugin->getUpdate();
 ?>
 
 <form class="form-horizontal" id="configuration_plugin_homeconnect">
 	<fieldset>
+		<legend><i class="fas fa-info-circle"></i> {{Général}}</legend>
+		<div class="form-group">
+			<div class="col-lg-4">
+				<?php if (is_object($update)) { ?>
+					<div><label>{{Branche}} :</label> <span class="label label-info"><?php echo htmlspecialchars($update->getConfiguration('version', 'stable')); ?></span></div>
+					<div><label>{{Source}} :</label> <?php echo htmlspecialchars($update->getSource()); ?></div>
+					<div><label>{{Version}} :</label> <?php echo htmlspecialchars($update->getLocalVersion()); ?></div>
+				<?php } ?>
+			</div>
+			<div class="col-lg-6">
+				<a class="btn btn-success btn-sm" target="_blank" rel="noopener noreferrer" href="<?php echo htmlspecialchars($plugin->getDocumentation()); ?>"><i class="fas fa-book"></i> {{Documentation}}</a>
+				<a class="btn btn-default btn-sm" target="_blank" rel="noopener noreferrer" href="<?php echo htmlspecialchars($plugin->getChangelog()); ?>"><i class="fas fa-list"></i> {{Changelog}}</a>
+			</div>
+		</div>
+		<legend><i class="fas fa-cog"></i> {{Paramètres}}</legend>
 		<div class="form-group">
 			<label class="col-lg-3 control-label" >{{Pièce par défaut pour les appareils}}</label>
 			<div class="col-lg-3">
@@ -104,7 +121,7 @@ if (!isConnect()) {
 				</sup>
 			</label>
 			<div class="col-sm-6">
-				<input type="text" class="configKey form-control" data-l1key="client_secret"/>
+				<input type="password" class="configKey form-control" data-l1key="client_secret"/>
 			</div>
 		</div>
 		<div class="form-group">

@@ -1,8 +1,10 @@
-![License](https://badgen.net/github/license/jmvedrine/homeconnect) ![Language](https://badgen.net/badge/Language/PHP/blue)
-![Last Commit](https://badgen.net/github/last-commit/jmvedrine/homeconnect)
-![Open Issues](https://badgen.net/github/open-issues/jmvedrine/homeconnect) ![Open Issues](https://badgen.net/github/open-prs/jmvedrine/homeconnect)
-
 # Jeedom plugin for Home Connect appliances.
+
+[![License](https://img.shields.io/github/license/Flobul/homeconnect?style=flat-square)](https://github.com/Flobul/homeconnect)
+[![Language](https://img.shields.io/github/languages/top/Flobul/homeconnect?style=flat-square)](https://github.com/Flobul/homeconnect)
+[![Last commit](https://img.shields.io/github/last-commit/Flobul/homeconnect?style=flat-square)](https://github.com/Flobul/homeconnect/commits)
+[![Open issues](https://img.shields.io/github/issues/Flobul/homeconnect?style=flat-square)](https://github.com/Flobul/homeconnect/issues)
+[![Open pull requests](https://img.shields.io/github/issues-pr/Flobul/homeconnect?style=flat-square)](https://github.com/Flobul/homeconnect/pulls)
 
 <img src="plugin_info/homeconnect_icon.png" align="right">
 

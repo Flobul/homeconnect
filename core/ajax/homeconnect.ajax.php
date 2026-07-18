@@ -74,7 +74,7 @@ try {
 	if (version_compare(jeedom::version(), '4.4', '>=')) {
 		ajax::error(displayException($e), $e->getCode());
 	} else {
-		ajax::error(displayExeption($e), $e->getCode());
+		ajax::error(displayException($e), $e->getCode());
 	}
 }
 ?>
