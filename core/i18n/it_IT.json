@@ -961,7 +961,6 @@
         ", forcée : ": "forzato :",
         ", nom ": "nome",
         ", nom : ": "nome :",
-        ", résultat ": "risultati",
         ", valeur ": "valore",
         "Accès à cette ressource non autorisé ou appareil non lié à cet utilisateur": "Accesso non autorizzato a questa risorsa o dispositivo non collegato a questo utente",
         "Ajout des options disponibles dans la commande PUT::": "Aggiunte le opzioni disponibili nel comando PUT::",
@@ -984,7 +983,7 @@
         "Cette action ne peut pas être exécutée pour cet appareil ": "Questa azione non può essere eseguita per questo dispositivo",
         "Cette ressource n\\'est pas disponible": "Questa risorsa non è disponibile",
         "Clé manquante dans une option de programme": "Chiave mancante in un'opzione del programma",
-        "Code d\\'autorisation récupéré ": "Codice di autorizzazione recuperato",
+        "Code d\\'autorisation récupéré": "Codice di autorizzazione recuperato",
         "Commande action other rien à ajuster ": "Azione di comando altre rien à ajuster",
         "Commande arrêter": "Comando di arresto",
         "Commande du daemon ": "Controllo demone",
@@ -1018,6 +1017,7 @@
         "Erreur inconnue, code ": "Errore sconosciuto, codice",
         "Erreur interne du serveur": "Errore interno del server",
         "Erreur lors de l\\'exécution du cron ": "Errore durante l'esecuzione di cron",
+        "Erreur réseau Home Connect : ": "Errore di rete Home Connect: ",
         "Fichier erroné ": "File sbagliato",
         "Fichier introuvable ": "File non trovato",
         "Fin ": "Fin",
@@ -1122,9 +1122,25 @@
         "Événement brut reçu ": "Evento grezzo ricevuto",
         "Événements capturés ": "Eventi catturati"
     },
+    "plugins\/homeconnect\/core\/php\/callback.php": {
+        "Code d\\'autorisation manquant": "Codice di autorizzazione mancante"
+    },
+    "plugins\/homeconnect\/desktop\/js\/configuration.js": {
+        "Connexion au compte HomeConnect réussie.": "Accesso all'account HomeConnect effettuato con successo.",
+        "Connexion en cours...": "Accesso in corso...",
+        "Donner mon avis": "Lascia una recensione",
+        "Erreur de communication avec le serveur.": "Errore di comunicazione con il server.",
+        "Erreur lors de la connexion": "Erreur lors de la connexion",
+        "Erreur lors de la connexion, veuillez vérifier vos identifiant et mot de passe.": "Errore durante l'accesso, si prega di verificare nome utente e password.",
+        "Modification en cours...": "Modifica in corso...",
+        "Redirect URI copiée dans le presse-papier": "URI di reindirizzamento copiato negli appunti",
+        "Sauvegarde de la configuration des logs": "Backup della configurazione del registro",
+        "Se connecter": "Connettiti",
+        "Vous allez être redirigé vers HomeConnect pour autoriser l\\'accès de Jeedom à votre compte.": "Verrai reindirizzato a HomeConnect per autorizzare l'accesso di Jeedom al tuo account.",
+        "effectuée": "realizzato"
+    },
     "plugins\/homeconnect\/desktop\/js\/homeconnect.js": {
         "Afficher": "Mostra",
-        "Annuler": "Cancella",
         "Assistant de création de commande": "Creazione guidata dell'ordine",
         "Aucune": "Aucune",
         "Cette action supprimera tous les appareils. Faites une synchronisation pour les re-créer": "Questa azione cancella tutti i dispositivi. Sincronizzare per ricrearli",
@@ -1132,8 +1148,7 @@
         "Commande d\\'information à mettre à jour": "Commande d\\'information à mettre à jour",
         "Commande info liée": "Comando info correlato",
         "Configuration de la commande": "Impostazione comando",
-        "Forcer": "Forza",
-        "Forcer : consomme beaucoup de requêtes pour récupérer à nouveau tous les programmes et options": "Forza: consuma molte richieste per recuperare di nuovo tutti i programmi e le opzioni",
+        "Forcer la récupération complète des programmes et options ? Une synchronisation normale ne récupère que les appareils et commandes connus.": "Forzare il recupero completo dei programmi e delle opzioni? Una sincronizzazione normale recupera solo i dispositivi e i comandi noti.",
         "Historiser": "Storicizza",
         "Liste": "Liste",
         "Liste de valeur|texte séparé par ;": "Liste de valeur|texte séparé par ;",
@@ -1141,17 +1156,13 @@
         "Min": "Min",
         "Modification de la commande": "Modifica del comando",
         "Nom de la commande": "Nome del comando",
-        "Oui": "Sì",
-        "Oui : Ne récupère que la liste des appareils et des commandes de fichier de configuration": "Sì: recupera solo l'elenco dei dispositivi e i comandi del file di configurazione",
         "Santé Home Connect": "Salute Casa Connect",
         "Suppression de la commande": "Eliminazione del comando",
         "Suppression effectuée": "Cancellazione effettuata",
-        "Synchronisation": "Sincronizzazione",
         "Synchronisation réussie": "Sincronizzazione di successo",
         "Tester": "Prova",
         "Unité": "Unità",
-        "Valeur de l\\'information": "Valore delle informazioni",
-        "Vos appareils doivent être allumés, WiFi activé et sans programme en cours.": "I dispositivi devono essere accesi, con il WiFi abilitato e nessun programma in esecuzione."
+        "Valeur de l\\'information": "Valore delle informazioni"
     },
     "plugins\/homeconnect\/desktop\/modal\/addCommand.php": {
         "401 - Accès non autorisé": "401 - Accesso non autorizzato",
@@ -1160,10 +1171,12 @@
         "Commande créée avec succès ! Cliquez sur Sauvegarder pour enregistrer la commande.": "Ordine creato con successo! Fare clic su Salva per salvare l'ordine.",
         "L\\'id de l\\'équipement ne peut etre vide : ": "L'ID dell'apparecchiatura non può essere vuoto:",
         "Sauvegarder": "Sauvegarder",
-        "Veuillez sélectionnez une commande": "Selezionare un ordine"
+        "Veuillez sélectionner une commande": "Selezionare un comando"
     },
     "plugins\/homeconnect\/desktop\/modal\/authorisation.php": {
-        "Le lien ne peut être vide : ": "Il link non può essere vuoto:"
+        "401 - Accès non autorisé": "401 - Accesso non autorizzato",
+        "Le lien ne peut être vide : ": "Il link non può essere vuoto:",
+        "Lien d’autorisation non autorisé": "Link di autorizzazione non autorizzato"
     },
     "plugins\/homeconnect\/desktop\/modal\/command.configure.php": {
         "401 - Accès non autorisé": "401 - Accesso non autorizzato",
@@ -1232,7 +1245,9 @@
         "Appareils réels": "Dispositivi reali",
         "Aucune": "Aucune",
         "Auto-actualisation (cron)": "Aggiornamento automatico (cron)",
+        "Branche": "Ramo",
         "Cette URL sera demandée sur le site Home Connect pour la création des identifiants (https:\/\/developer.home-connect.com\/applications\/add)": "Questo URL sarà richiesto sul sito Home Connect per la creazione di identificatori (https:\/\/developer.home-connect.com\/applications\/add)",
+        "Changelog": "Changelog",
         "Client ID": "ID cliente",
         "Client ID pour le mode démo": "ID cliente per la modalità demo",
         "Client Secret": "Segreto del cliente",
@@ -1240,17 +1255,20 @@
         "Création de l'application Jeedom sur le site Home Connect": "Creazione dell'applicazione Jeedom sul sito web di Home Connect",
         "Création des identifiants (https:\/\/developer.home-connect.com\/applications\/add)": "Creazione di identificatori (https:\/\/developer.home-connect.com\/applications\/add)",
         "Créer Application": "Creare un'applicazione",
+        "Documentation": "Documentazione",
         "Démo (Simulateurs)": "Demo (Simulatori)",
         "Force l'ajout de tous les programmes": "Forzare l'aggiunta di tutti i programmi",
         "Génère les programmes dans une seule commande en liste": "Genera programmi con un unico comando di lista",
+        "Général": "Principale",
         "Jamais": "Jamais",
         "Mode démo (appareils simulés)": "Modalità demo (dispositivi simulati)",
+        "Paramètres": "Impostazioni",
         "Pièce par défaut pour les appareils": "Parte predefinita per i dispositivi",
         "Redirect URI": "Reindirizzamento URI",
         "Récupérez ce paramètre sur le site Home Connect (https:\/\/developer.home-connect.com\/applications)": "Recuperare questo parametro dal sito web di Home Connect (https:\/\/developer.home-connect.com\/applications)",
         "Récupérez ce paramètre sur le site Home Connect (https:\/\/developer.home-connect.com\/applications) dans le carré API Web Client": "Recuperare questo parametro dal sito Home Connect (https:\/\/developer.home-connect.com\/applications) nel quadrato API del client Web",
-        "Sauvegarde de la configuration des logs": "Backup della configurazione del registro",
         "Se connecter": "Connettiti",
+        "Source": "Sorgente",
         "Toutes les 10 minutes": "Ogni 10 minuti",
         "Toutes les 15 minutes": "Ogni 15 minuti",
         "Toutes les 20 minutes": "Ogni 20 minuti",
@@ -1264,6 +1282,6 @@
         "Toutes les 55 minutes": "Ogni 55 minuti",
         "Toutes les heures": "Ogni ora",
         "Toutes les minutes": "Ogni minuto",
-        "effectuée": "realizzato"
+        "Version": "Versione"
     }
 }
