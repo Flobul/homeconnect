@@ -156,25 +156,15 @@ class homeconnect extends eqLogic {
          * @return	 		bool		Etat du démon
          */
         log::add('homeconnectd', 'info', __('Arrêt du service homeconnect', __FILE__));
-        $cmd = '/homeconnectd.php';
-        exec('sudo kill -9 $(ps aux | grep "' . $cmd . '" | awk \'{print $2}\')');
-        sleep(1);
-        exec('sudo kill -9 $(ps aux | grep "' . $cmd . '" | awk \'{print $2}\')');
-        sleep(1);
-        $deamon_info = self::deamon_info();
-        if ($deamon_info['state'] == 'ok') {
-            exec('sudo kill -9 $(ps aux | grep "' . $cmd . '" | awk \'{print $2}\')');
-            sleep(1);
-        } else {
-            return true;
+        foreach (system::ps('homeconnectd.php') as $process) {
+            if (isset($process['pid']) && is_numeric($process['pid'])) {
+                system::kill((int) $process['pid']);
+            }
         }
-        $deamon_info = self::deamon_info();
-        if ($deamon_info['state'] == 'ok') {
-            exec('sudo kill -9 $(ps aux | grep "' . $cmd . '" | awk \'{print $2}\')');
-            sleep(1);
-            return true;
-        }
+        sleep(1);
+        $stopped = self::deamon_info()['state'] !== 'ok';
         log::add('homeconnectd', 'info', __('Service homeconnect arrêté', __FILE__));
+        return $stopped;
     }
 
     public static function baseUrl() {

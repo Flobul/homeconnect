@@ -16,11 +16,20 @@
 * along with Jeedom. If not, see <http://www.gnu.org/licenses/>.
 */
 
+if (!isConnect('admin')) {
+	throw new Exception('{{401 - Accès non autorisé}}');
+}
+
 if (init('link') == '') {
 	throw new Exception('{{Le lien ne peut être vide : }}');
 }
 
 $link = init('link');
+$parts = parse_url($link);
+$allowedHosts = array('api.home-connect.com', 'simulator.home-connect.com');
+if (!is_array($parts) || strtolower($parts['scheme'] ?? '') !== 'https' || !in_array(strtolower($parts['host'] ?? ''), $allowedHosts, true)) {
+	throw new Exception('{{Lien d’autorisation non autorisé}}');
+}
 ?>
 
 <iframe src="<?php echo htmlspecialchars($link, ENT_QUOTES, 'UTF-8'); ?>" height="100%" width="100%">You need a Frames Capable browser to view this content.</iframe>
