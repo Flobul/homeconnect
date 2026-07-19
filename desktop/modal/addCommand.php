@@ -184,7 +184,7 @@ document.getElementById('bt_cmdCreateSave')?.addEventListener('click', function(
 			};
 			addCmdToTable(cmdData);
 	        modifyWithoutSave = true;
-	        jeeDialog.get('#md_modal')?.close();
+	        jeeDialog.get('#md_homeconnectAddCommand')?.destroy();
 			jeedomUtils.showAlert({message: '{{Commande créée avec succès ! Cliquez sur Sauvegarder pour enregistrer la commande.}}', level: 'success'});
 	    }
 });

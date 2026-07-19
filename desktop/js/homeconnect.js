@@ -71,20 +71,20 @@ document.getElementById('bt_syncHomeConnect')?.addEventListener('click', functio
 });
 
 document.getElementById('bt_healthHomeConnect')?.addEventListener('click', function () {
-	jeeDialog.dialog({id: 'md_modal', title: '{{Santé Home Connect}}', contentUrl: 'index.php?v=d&plugin=homeconnect&modal=health'});
+		jeeDialog.dialog({id: 'md_homeconnectHealth', title: '{{Santé Home Connect}}', contentUrl: 'index.php?v=d&plugin=homeconnect&modal=health'});
 });
 
 document.body.addEventListener('click', function(event) {
   const configureButton = event.target.closest('.cmdAttr[data-action="configureCommand"]');
   if (configureButton) {
     const command = configureButton.closest('.cmd').getJeeValues('.cmdAttr')[0];
-    jeeDialog.dialog({id: 'md_modal', title: '{{Configuration de la commande}}', contentUrl: 'index.php?v=d&plugin=homeconnect&modal=command.configure&id=' + command.id});
+    jeeDialog.dialog({id: 'md_homeconnectCommandConfigure', title: '{{Configuration de la commande}}', contentUrl: 'index.php?v=d&plugin=homeconnect&modal=command.configure&id=' + encodeURIComponent(command.id)});
   }
 });
 
 document.querySelector('.cmdAction[data-action="addCommand"]')?.addEventListener('click', function() {
     const eqLogicId = document.querySelector('.eqLogicAttr[data-l1key="id"]').jeeValue();
-    jeeDialog.dialog({id: 'md_modal', title: '{{Assistant de création de commande}}', contentUrl: 'index.php?v=d&plugin=homeconnect&modal=addCommand&eqLogic_id=' + eqLogicId});
+    jeeDialog.dialog({id: 'md_homeconnectAddCommand', title: '{{Assistant de création de commande}}', contentUrl: 'index.php?v=d&plugin=homeconnect&modal=addCommand&eqLogic_id=' + encodeURIComponent(eqLogicId)});
 });
 
 document.querySelector('.eqLogicAttr[data-l1key="configuration"][data-l2key="type"]')?.addEventListener('change', function(){
